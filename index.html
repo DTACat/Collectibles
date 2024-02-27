@@ -128,6 +128,19 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .fallbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1157407583993339935.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
 
 
@@ -180,6 +193,12 @@
             margin-right: auto;
             padding: 5%;
         }
+        .fallbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
 
 
         .elementbannertext2 {
@@ -222,6 +241,13 @@
             margin-left: auto;
             margin-right: auto;
             width: 29em;
+            margin-top: -40px;
+        }
+        .fallbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 18em;
             margin-top: -40px;
         }
 
@@ -318,6 +344,18 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+        .falldecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
 
         .elementeffectimage {
@@ -378,6 +416,16 @@
             height: 400px;
             padding: 10px;
             border: 2px solid darkgreen;
+            border-radius: 20px;
+        }
+        .falleffectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 400px;
+            padding: 10px;
+            border: 2px solid orange;
             border-radius: 20px;
         }
 
@@ -465,6 +513,19 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .falldecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 330px;
+            height: 550px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            background-color: rgb(173, 113, 23);
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
 
         .elementeffects {
@@ -541,6 +602,19 @@
             border: 2px solid darkgreen;
             border-radius: 50px;
             background-color: rgb(8, 68, 24);
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .falleffects {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 330px;
+            height: 880px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            background-color: rgb(173, 113, 23);
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -753,6 +827,27 @@
         }
         .halloweenomenslogo:hover {
             content: url(https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/ghost-skull/intro.png)
+        }
+
+
+        .fallleavelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true)
+        }
+        .fallspicelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=true)
+        }
+        .fallfroghatlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=true)
+        }
+        .fallfoxhatlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=true)
+        }
+
+        .fallfoliagelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/intro-branch.png)
+        }
+        .fallfroglogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/intro.png)
         }
 
 
@@ -1929,6 +2024,156 @@
             </div>
 
         </div>
+        <div class="fall">
+
+            <!-- Fall -->
+
+            <div class="banner fallbanner">
+               <img class="fallbannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1157407583993339934.png?size=480">
+               <a class="sillywords fallbannertext2">There's a calm and cozy vibe in the air.</a>
+            </div>
+
+            <div id="fallitems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="falldecorow decorow">
+                    <div class="falldecos fallleave">
+                        <h1 class="sillywords">Fall Leaves</h1>
+
+                        <img class="falldecoimage fallleavelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=false">
+
+                        <a class="sillywords fallleavetext">Behold nature's dance.</a>
+
+                        <a class="sillywords fallleaveprice price">US$7.99 - US$5.49</a>
+
+                        <button class="button1" onclick="copyfallleave()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true" id="copyfallleave">
+                    </div>
+                    <div class="falldecos fallspice">
+                        <h1 class="sillywords">Pumpkin Spice</h1>
+
+                        <img class="falldecoimage fallspicelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=false">
+
+                        <a class="sillywords fallspicetext">Sweets and spice make everything nice.</a>
+
+                        <a class="sillywords fallspiceprice price">US$7.99 - US$5.49</a>
+
+                        <button class="button1" onclick="copyfallspice()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=true" id="copyfallspice">
+                    </div>
+                    <div class="falldecos fallfroghat">
+                        <h1 class="sillywords">Frog Hat</h1>
+
+                        <img class="falldecoimage fallfroghatlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=false">
+
+                        <a class="sillywords fallfroghattext">Frogs and fashion go together.</a>
+
+                        <a class="sillywords fallfroghatprice price">US$7.99 - US$5.49</a>
+
+                        <button class="button1" onclick="copyfallfroghat()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=true" id="copyfallfroghat">
+                    </div>
+                    <div class="falldecos fallfoxhat">
+                        <h1 class="sillywords">Fox Hat</h1>
+
+                        <img class="falldecoimage fallfoxhatlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=false">
+
+                        <a class="sillywords fallfoxhattext">Charming, cozy, and a little bit nosy.</a>
+
+                        <a class="sillywords fallfoxhatprice price">US$7.99 - US$5.49</a>
+
+                        <button class="button1" onclick="copyfallfoxhat()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=true" id="copyfallfoxhat">
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1">Profile Effects</a>
+                <div class="falleffectrow effectrow">
+                    <div class="falleffects fallfoliage">
+                        <h1 class="sillywords">Fall Foliage</h1>
+
+                        <img class="falleffectimage fallfoliagelogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/leaves/thumbnail.png">
+
+                        <a class="sillywords fallfoliagetext">Getting ready for sweater weather.</a>
+
+                        <a class="sillywords fallfoliageprice price">US$9.99 - US$6.99</a>
+
+                        <button class="button1" onclick="copyfallfoliage1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/intro-branch.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copyfallfoliage2()">Copy Loop</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/loop.png">
+                        <button class="button1">Open Loop</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/intro-branch.png" id="copyfallfoliage1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/loop.png" id="copyfallfoliage2">
+                    </div>
+                    <div class="falleffects fallfrog">
+                        <h1 class="sillywords">Lillypad Life</h1>
+
+                        <img class="falleffectimage fallfroglogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/thumbnail.png">
+
+                        <a class="sillywords fallfrogtext">*ribbit*</a>
+
+                        <a class="sillywords fallfrogprice price">US$9.99 - US$6.99</a>
+
+                        <button class="button1" onclick="copyfallfrog1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/intro.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copyfallfrog2()">Copy Loop</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/loop.png">
+                        <button class="button1">Open Loop</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/intro.png" id="copyfallfrog1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/loop.png" id="copyfallfrog2">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -2323,6 +2568,57 @@
         }
         function copyhalloweenomens2() {
            var copyText = document.getElementById("copyhalloweenomens2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyfallleave() {
+           var copyText = document.getElementById("copyfallleave");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallspice() {
+           var copyText = document.getElementById("copyfallspice");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfroghat() {
+           var copyText = document.getElementById("copyfallfroghat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfoxhat() {
+           var copyText = document.getElementById("copyfallfoxhat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyfallfoliage1() {
+           var copyText = document.getElementById("copyfallfoliage1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfoliage2() {
+           var copyText = document.getElementById("copyfallfoliage2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfrog1() {
+           var copyText = document.getElementById("copyfallfrog1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfrog2() {
+           var copyText = document.getElementById("copyfallfrog2");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
