@@ -3,7 +3,7 @@
 
 <head>
     <base target="_blank">
-    <title>Discord Shop</title>
+    <title>Shop Archives</title>
     <meta content="Discord Collectibles" property="og:title" />
     <meta content="A list of all Discord Shop Items" property="og:description" />
     <meta content="https://dtacat.github.io/Collectibles/" property="og:url" />
@@ -15,7 +15,7 @@
             color: white;
         }
         .loadtext {
-            margin-top: -60px;
+            margin-top: -20px;
         }
         .darkmode {
             background-color: #333538;
@@ -39,8 +39,8 @@
         }
         .server-button {
             cursor: pointer;
-            width: 5em;
-            height: 5em;
+            width: 10em;
+            height: 3em;
         }
         .disabled {
             opacity: 0.6;
@@ -48,6 +48,10 @@
         }
         .darkmode1 {
             background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
         }
 
 
@@ -181,6 +185,19 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .breakfastbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1149563083245768704.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
 
 
@@ -257,6 +274,12 @@
             margin-right: auto;
             padding: 5%;
         }
+        .breakfastbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
 
         
         .animev2bannertext2 {
@@ -328,6 +351,13 @@
             margin-left: auto;
             margin-right: auto;
             width: 15em;
+            margin-top: -40px;
+        }
+        .breakfastbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 26em;
             margin-top: -40px;
         }
 
@@ -472,6 +502,18 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+        .breakfastdecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
         
         .animev2effectimage {
@@ -572,6 +614,16 @@
             height: 380px;
             padding: 10px;
             border: 2px solid pink;
+            border-radius: 20px;
+        }
+        .breakfasteffectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 380px;
+            padding: 10px;
+            border: 2px solid orange;
             border-radius: 20px;
         }
 
@@ -711,6 +763,19 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .breakfastdecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 550px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(185, 134, 39), rgb(68, 61, 23));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
 
         .animev2effects {
@@ -843,6 +908,19 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .breakfasteffects {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 880px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(185, 134, 39), rgb(68, 61, 23));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
         
         .decorow {
@@ -858,7 +936,7 @@
 
 
 
-        .animev2decos, .elementdecos, .lunardecos, .cyberdecos, .monsterdecos, .elementeffects, .lunareffects, .cybereffects, .monstereffects, .fantasydecos, .animedecos {
+        .animev2decos, .elementdecos, .lunardecos, .cyberdecos, .monsterdecos, .elementeffects, .lunareffects, .cybereffects, .monstereffects, .fantasydecos, .animedecos, .breakfastdecos {
             margin-top: 10px;
         }
 
@@ -1034,7 +1112,7 @@
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_42f43a32539de2f3f30a348dc8a880e1.png?size=240&passthrough=true)
         }
         .monsterhoplogo:hover {
-            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_42f43a32539de2f3f30a348dc8a880e1.png?size=240&passthrough=true)
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_be797b0a0efafd45a9ee49aaedbde4d2.png?size=240&passthrough=ture)
         }
 
         .monsterheartprofilelogo:hover {
@@ -1188,6 +1266,32 @@
         }
 
 
+        .breakfasttoastlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true)
+        }
+        .breakfastcoffeelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=true)
+        }
+        .breakfastegglogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=true)
+        }
+        .breakfastjamlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=true)
+        }
+        .breakfastnutlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=true)
+        }
+        .breakfastcakelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=true)
+        }
+
+        .breakfastcereallogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/intro.png)
+        }
+        .breakfastplatelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/intro.png)
+        }
+
     </style>
 </head>
 
@@ -1195,11 +1299,11 @@
 
     <div class="loading">
         <a href="https://discord.gg/Mcwh7hGcWb">
-            <button title="Discord Server" class="button server-button"> </button>
+            <button title="Discord Server" class="button server-button">Discord Server</button>
         </a>
         
-        
-        <h1 class="loadtext">Disclaimer</h1> Items will only contain 2 links, anymore than that will not be listed here. Some Descriptions/Titles may be inaccurate due to size issues. Anime and Anime V2 will not be combined.
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Items will only contain 2 links, anymore than that will not be listed here. Some Descriptions/Titles may be inaccurate due to size issues. Anime and Anime V2 will not be combined.</a>
+
     </div>
 
 
@@ -1658,8 +1762,8 @@
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202070083816661043">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=true" id="copylunarfan">
                     </div>
@@ -1677,8 +1781,8 @@
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_63b29ec5b1ea6bb01c2251049838d822.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202073882111266846">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_63b29ec5b1ea6bb01c2251049838d822.png?size=240&passthrough=true" id="copylunarlantern">
                     </div>
@@ -1696,8 +1800,8 @@
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_0f4f1b40921ce680b60007e94427d1f2.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202073775840178206">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_0f4f1b40921ce680b60007e94427d1f2.png?size=240&passthrough=true" id="copylunarfire">
                     </div>
@@ -1715,8 +1819,8 @@
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_445566ed965b2c1632a5b45c92f32d11.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202073975178665984">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_445566ed965b2c1632a5b45c92f32d11.png?size=240&passthrough=true" id="copylunarsmile">
                     </div>
@@ -1734,8 +1838,8 @@
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_1b1df0ae8c2d34afd85da5c22a0d761a.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202445890909110323">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_1b1df0ae8c2d34afd85da5c22a0d761a.png?size=240&passthrough=true" id="copylunarlucky">
                     </div>
@@ -1753,8 +1857,8 @@
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_50b440810b1bbd89f6284f36d40ad0af.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202074101343322184">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_50b440810b1bbd89f6284f36d40ad0af.png?size=240&passthrough=true" id="copylunarkoi">
                     </div>
@@ -1781,8 +1885,8 @@
                         <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-05/dragon-dance/loop.png">
                         <button class="button1">Open Loop</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202061726212947968">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-06/dragon-dance/intro_02c49bbfe7.png" id="copylunardragondance1">
 
@@ -1807,8 +1911,8 @@
                         <a href="https://github.com/DTACat/Custom-Effects-And-Decorations-Discord-Theme/tree/main?tab=readme-ov-file#fortune-flurry">
                             <button class="button1">Open More</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202059628112777256">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-01/fortune-flurry/intro.png" id="copylunarfortuneflurry1">
 
@@ -1833,8 +1937,8 @@
                         <a href="https://github.com/DTACat/Custom-Effects-And-Decorations-Discord-Theme?tab=readme-ov-file#midnight-celebration">
                         <button class="button1">Open More</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1202061510529257522">
-                        <button class="button1">Open In Shop</button></a>
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-01/midnight-celebration/intro.png" id="copylunarcelebration1">
 
@@ -3261,6 +3365,194 @@
             </div>
 
         </div>
+        <div class="breakfast">
+
+            <!-- Breakfast -->
+
+            <div class="banner breakfastbanner">
+               <img class="breakfastbannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1149563080074854410.png?size=480">
+               <a class="sillywords breakfastbannertext2">Breakfast is definitely the most important meal of the day.</a>
+            </div>
+
+            <div id="breakfastitems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="breakfastdecorow decorow">
+                    <div class="breakfastdecos breakfasttoast">
+                        <h1 class="sillywords">Toast</h1>
+
+                        <img class="breakfastdecoimage breakfasttoastlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=false">
+
+                        <a class="sillywords breakfasttoasttext">It is toast.</a>
+
+                        <a class="sillywords breakfasttoastprice price">US$3.99 - US$2.99</a>
+
+                        <button class="button1" onclick="copybreakfasttoast()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true" id="copybreakfasttoast">
+                    </div>
+                    <div class="breakfastdecos breakfastcoffee">
+                        <h1 class="sillywords">Morning Coffee</h1>
+
+                        <img class="breakfastdecoimage breakfastcoffeelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=false">
+
+                        <a class="sillywords breakfastcoffeetext">Dont talk to me until I finish this.</a>
+
+                        <a class="sillywords breakfastcoffeeprice price">US$3.99 - US$2.99</a>
+
+                        <button class="button1" onclick="copybreakfastcoffee()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=true" id="copybreakfastcoffee">
+                    </div>
+                    <div class="breakfastdecos breakfastegg">
+                        <h1 class="sillywords">Fried Egg</h1>
+
+                        <img class="breakfastdecoimage breakfastegglogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=false">
+
+                        <a class="sillywords breakfasteggtext">I like mine sunny side-up.</a>
+
+                        <a class="sillywords breakfasteggprice price">US$3.99 - US$2.99</a>
+
+                        <button class="button1" onclick="copybreakfastegg()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=true" id="copybreakfastegg">
+                    </div>
+                    <div class="breakfastdecos breakfastjam">
+                        <h1 class="sillywords">Blueberry Jam</h1>
+
+                        <img class="breakfastdecoimage breakfastjamlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=false">
+
+                        <a class="sillywords breakfastjamtext">MMMM JUICY.</a>
+
+                        <a class="sillywords breakfastjamprice price">US$3.99 - US$2.99</a>
+
+                        <button class="button1" onclick="copybreakfastjam()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=true" id="copybreakfastjam">
+                    </div>
+                    <div class="breakfastdecos breakfastnut">
+                        <h1 class="sillywords">Donut</h1>
+
+                        <img class="breakfastdecoimage breakfastnutlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=false">
+
+                        <a class="sillywords breakfastnuttext">Never enough sprinkles.</a>
+
+                        <a class="sillywords breakfastnutprice price">US$3.99 - US$2.99</a>
+
+                        <button class="button1" onclick="copybreakfastnut()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=true" id="copybreakfastnut">
+                    </div>
+                    <div class="breakfastdecos breakfastcake">
+                        <h1 class="sillywords">Pancakes</h1>
+
+                        <img class="breakfastdecoimage breakfastcakelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=false">
+
+                        <a class="sillywords breakfastcaketext">How high can you stack em?</a>
+
+                        <a class="sillywords breakfastcakeprice price">US$3.99 - US$2.99</a>
+
+                        <button class="button1" onclick="copybreakfastcake()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=true" id="copybreakfastcake">
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1">Profile Effects</a>
+                <div class="breakfasteffectrow effectrow">
+                    <div class="breakfasteffects breakfastcereal">
+                        <h1 class="sillywords">Discord-Os</h1>
+
+                        <img class="falleffectimage breakfastcereallogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/thumbnail.png">
+
+                        <a class="sillywords breakfastcerealtext">Bet you can't have just one bowl.</a>
+
+                        <a class="sillywords breakfastcerealprice price">US$11.99 - US$8.49</a>
+
+                        <button class="button1" onclick="copybreakfastcereal1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/intro.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copybreakfastcereal2()">Copy Loop</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/loop.png">
+                        <button class="button1">Open Loop</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/intro.png" id="copybreakfastcereal1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/loop.png" id="copybreakfastcereal2">
+                    </div>
+                    <div class="breakfasteffects breakfastplate">
+                        <h1 class="sillywords">Breakfast Plate</h1>
+
+                        <img class="falleffectimage breakfastplatelogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/thumbnail.png">
+
+                        <a class="sillywords breakfastplatetext">The best meal for any time of day.</a>
+
+                        <a class="sillywords breakfastplateprice price">US$11.99 - US$8.49</a>
+
+                        <button class="button1" onclick="copybreakfastplate1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/intro.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copybreakfastplate2()">Copy Loop</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/loop.png">
+                        <button class="button1">Open Loop</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/intro.png" id="copybreakfastplate1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/loop.png" id="copybreakfastplate2">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -3579,6 +3871,12 @@
         }
         function copymonsterglop() {
            var copyText = document.getElementById("copymonsterglop");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterhop() {
+           var copyText = document.getElementById("copymonsterhop");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
@@ -3973,6 +4271,69 @@
         }
         function copyanimefuckingfalseadvertisingifyouaskme2() {
            var copyText = document.getElementById("copyanimefuckingfalseadvertisingifyouaskme2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copybreakfasttoast() {
+           var copyText = document.getElementById("copybreakfasttoast");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastcoffee() {
+           var copyText = document.getElementById("copybreakfastcoffee");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastegg() {
+           var copyText = document.getElementById("copybreakfastegg");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastjam() {
+           var copyText = document.getElementById("copybreakfastjam");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastnut() {
+           var copyText = document.getElementById("copybreakfastnut");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastcake() {
+           var copyText = document.getElementById("copybreakfastcake");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copybreakfastcereal1() {
+           var copyText = document.getElementById("copybreakfastcereal1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastcereal2() {
+           var copyText = document.getElementById("copybreakfastcereal2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastplate1() {
+           var copyText = document.getElementById("copybreakfastplate1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastplate2() {
+           var copyText = document.getElementById("copybreakfastplate2");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
