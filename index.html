@@ -4,10 +4,11 @@
 <head>
     <base target="_blank">
     <title>Shop Archives</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" type="image/x-icon"/>
     <meta content="Shop Archives" property="og:title" />
     <meta content="A list of all Discord Collectibles" property="og:description" />
     <meta content="https://dtacat.github.io/Collectibles/" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/DTACat/Custom-Effects-And-Decorations-Discord-Theme/main/Images/Banner-Small.png" property="og:image" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" property="og:image" />
     <meta content="#5e8a1d" data-react-helmet="true" name="theme-color" />
     <style>
         body {
@@ -54,7 +55,20 @@
             position: fixed;
         }
 
-
+        
+        .springtoonsbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid cyan;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Springtoons-Collection/Banner-Image.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
         .animev2banner {
             display: block;
             margin-left: auto;
@@ -211,6 +225,32 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .festivebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid cyan;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1174459349607919687.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .archivebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid purple;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/Archive.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
 
 
@@ -227,6 +267,12 @@
         }
 
         
+        .springtoonsbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3%;
+        }
         .animev2bannertext1 {
             display: block;
             margin-left: auto;
@@ -299,8 +345,22 @@
             margin-right: auto;
             padding: 7%;
         }
+        .festivebannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0%;
+        }
 
         
+        .springtoonsbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1em;
+            margin-top: -30px;
+            color: black;
+        }
         .animev2bannertext2 {
             display: block;
             margin-left: auto;
@@ -386,6 +446,21 @@
             width: 22em;
             margin-top: -50px;
         }
+        .festivebannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 14em;
+            margin-top: 10px;
+        }
+        .archivebannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 28em;
+            margin-top: 200px;
+            color: black;
+        }
 
 
         .itemtext1 {
@@ -408,6 +483,18 @@
         }
 
         
+        .springtoonsdecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
         .animev2decoimage {
             display: block;
             margin-left: auto;
@@ -552,8 +639,43 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+        .festivedecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .archivedecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
 
         
+        .springtoonseffectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 400px;
+            padding: 10px;
+            border: 2px solid cyan;
+            border-radius: 20px;
+        }
         .animev2effectimage {
             display: block;
             margin-left: auto;
@@ -561,7 +683,7 @@
             width: 200px;
             height: 400px;
             padding: 10px;
-            border: 2px solid purple;
+            border: 2px solid cyan;
             border-radius: 20px;
         }
         .elementeffectimage {
@@ -681,6 +803,20 @@
         }
 
         
+        .springtoonsdecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 550px;
+            border: 2px solid cyan;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(87, 171, 182), rgb(31, 62, 66));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
         .animev2decos {
             display: inline-block;
             margin-left: auto;
@@ -849,8 +985,50 @@
             background-repeat: no-repeat;
             margin-top: 10px;
         }
+        .festivedecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 470px;
+            border: 2px solid cyan;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(19, 91, 158),rgb(8, 64, 77));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        .archivedecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 470px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(136, 145, 10), rgb(44, 37, 3));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
 
-
+        
+        .springtoonseffects {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 880px;
+            border: 2px solid cyan;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(87, 171, 182), rgb(31, 62, 66));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
         .animev2effects {
             display: inline-block;
             margin-left: auto;
@@ -1071,6 +1249,20 @@
         .sillywords {
             font-family: Arial, Helvetica, sans-serif;
         }
+
+
+
+        .springtoonspetallogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/intro-pse01.png)
+        }
+        .springtoonsfellowshiplogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/fellowship-of-the-spring/intro-fose01.png)
+        }
+        .springtoonsbloomlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/spring-bloom/intro-sbe01.png)
+        }
+
+
         .animev2catlogo:hover {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=240&passthrough=true)
         }
@@ -1462,6 +1654,9 @@
         <a href="https://discord.gg/Mcwh7hGcWb">
             <button title="Discord Server" class="button server-button">Discord Server</button>
         </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
         
         <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Items will only contain 2 links, anymore than that will not be listed here. Some Descriptions/Titles may be inaccurate due to size issues. Anime and Anime V2 will not be combined.</a>
 
@@ -1470,6 +1665,124 @@
 
 
     <div class="itemlist">
+        <div class="springtoons">
+            <!-- Spring Toons -->
+
+            <div class="banner springtoonsbanner">
+               <img class="springtoonsbannertext1" src=" ">
+               <a class="sillywords springtoonsbannertext2">Soon</a>
+            </div>
+
+            <div id="springtoonsitems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="springtoonsdecorow decorow">
+                    <div class="springtoonsdecos springtoons000">
+                        <h1 class="sillywords">???</h1>
+
+                        <img class="springtoonsdecoimage springtoonscatlogo" src=" ">
+
+                        <a class="sillywords springtoons000text">???</a>
+
+                        <a class="sillywords springtoons000price price">US$?.?? - US$?.??</a>
+
+                        <button class="button1" onclick="copyspringtoons000()">Copy Link</button>
+
+                        <a href=" ">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value=" " id="copyspringtoons000">
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1">Profile Effects</a>
+                <div class="springtoonseffectrow effectrow">
+                    <div class="springtoonseffects springtoonspetal">
+                        <h1 class="sillywords">Petal Serenade</h1>
+
+                        <img class="springtoonseffectimage springtoonspetallogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/thumbnail.png">
+
+                        <a class="sillywords springtoonspetaltext">A cascade of floral delight.</a>
+
+                        <a class="sillywords springtoonspetalprice price">US$?.?? - US$?.??</a>
+
+                        <button class="button1" onclick="copyspringtoonspetal1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/intro-pse01.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copyspringtoonspetal2()">Copy Idle</button>
+
+                        <a href=" ">
+                        <button class="button1">Open More</button></a>
+
+                        <a href="https://discord.com/shop#itemSkuId=1217626509737459852">
+                        <button class="button1">Open In Shop</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/intro-pse01.png" id="copyspringtoonspetal1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/idle-petals.png" id="copyspringtoonspetal2">
+                    </div>
+                    <div class="springtoonseffects springtoonsfellowship">
+                        <h1 class="sillywords">Fellowship of the Spring</h1>
+
+                        <img class="springtoonseffectimage springtoonsfellowshiplogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/fellowship-of-the-spring/thumbnail.png">
+
+                        <a class="sillywords springtoonsfellowshiptext">They only gather around this time of the year.</a>
+
+                        <a class="sillywords springtoonsfellowshipprice price">US$?.?? - US$?.??</a>
+
+                        <button class="button1" onclick="copyspringtoonsfellowship1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/fellowship-of-the-spring/intro-fose01.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copyspringtoonsfellowship2()">Copy Idle</button>
+
+                        <a href=" ">
+                        <button class="button1">Open More</button></a>
+
+                        <a href="https://discord.com/shop#itemSkuId=1217627051217911848">
+                        <button class="button1">Open In Shop</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/fellowship-of-the-spring/intro-fose01.png" id="copyspringtoonsfellowship1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/fellowship-of-the-spring/idle-critters.png" id="copyspringtoonsfellowship2">
+                    </div>
+                    <div class="springtoonseffects springtoonsbloom">
+                        <h1 class="sillywords">Spring Bloom</h1>
+
+                        <img class="springtoonseffectimage springtoonsbloomlogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/spring-bloom/thumbnail.png">
+
+                        <a class="sillywords springtoonsbloomtext">Welcome to my garden.</a>
+
+                        <a class="sillywords springtoonsbloomprice price">US$?.?? - US$?.??</a>
+
+                        <button class="button1" onclick="copyspringtoonsbloom1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/spring-bloom/intro-sbe01.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copyspringtoonsbloom2()">Copy Idle</button>
+
+                        <a href=" ">
+                        <button class="button1">Open More</button></a>
+
+                        <a href="https://discord.com/shop#itemSkuId=1217627230818009171">
+                        <button class="button1">Open In Shop</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/spring-bloom/intro-sbe01.png" id="copyspringtoonsbloom1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/spring-bloom/idle-flowers.png" id="copyspringtoonsbloom2">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
         <div class="animev2">
             <!-- Anime V2 -->
 
@@ -1482,7 +1795,7 @@
                <a class="sillywords itemtext1">Avatar Decorations</a>
                 <div class="animev2decorow decorow">
                     <div class="animev2decos animev2cat">
-                        <h1 class="sillywords">Cat Ears </h1>
+                        <h1 class="sillywords">Cat Ears</h1>
 
                         <img class="animev2decoimage animev2catlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=240&passthrough=false">
 
@@ -4180,8 +4493,8 @@
 
                         <button class="button1" onclick="copydisxlightning2()">Copy Loop</button>
 
-                        <a href="https://cdn.discordapp.com/assets/profile_effects/lightning/loop1.png">
-                        <button class="button1">Open Loop</button></a>
+                        <a href=" ">
+                        <button class="button1">Open More</button></a>
 
                         <a href=" ">
                         <button class="button1">Unavailable</button></a>
@@ -4196,10 +4509,314 @@
             </div>
 
         </div>
+        <div class="festive">
+
+            <!-- Festive -->
+
+            <div class="banner festivebanner">
+                <img class="festivebannertext1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/1bfd23a3bce7dd3602576977d2640c2a.png">
+               <a class="sillywords festivebannertext2">Add holiday flair to your avatar.</a>
+            </div>
+
+            <div id="festiveitems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="festivedecorow decorow">
+                    <div class="festivedecos festive001">
+                        <h1 class="sillywords">Winter Blanket</h1>
+
+                        <img class="festivedecoimage festive001logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/d18194dde6a25243aac60dbfc96c865e.png">
+
+                        <a class="sillywords festive001text">To keep yourself warm.</a>
+
+                        <button class="button1" onclick="copyfestive001()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/d18194dde6a25243aac60dbfc96c865e.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/d18194dde6a25243aac60dbfc96c865e.png" id="copyfestive001">
+                    </div>
+                    <div class="festivedecos festive002">
+                        <h1 class="sillywords">Winter Blanket</h1>
+
+                        <img class="festivedecoimage festive002logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/19fb51c7beb224f4b7bd92dfae19eef9.png">
+
+                        <a class="sillywords festive002text">To keep yourself warm.</a>
+
+                        <button class="button1" onclick="copyfestive002()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/19fb51c7beb224f4b7bd92dfae19eef9.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/19fb51c7beb224f4b7bd92dfae19eef9.png" id="copyfestive002">
+                    </div>
+                    <div class="festivedecos festive003">
+                        <h1 class="sillywords">Winter Blanket</h1>
+
+                        <img class="festivedecoimage festive003logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/e5efdb815dd85d95c7b2b0bc058ae022.png">
+
+                        <a class="sillywords festive003text">To keep yourself warm.</a>
+
+                        <button class="button1" onclick="copyfestive003()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/e5efdb815dd85d95c7b2b0bc058ae022.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/e5efdb815dd85d95c7b2b0bc058ae022.png" id="copyfestive003">
+                    </div>
+                    <div class="festivedecos festive004">
+                        <h1 class="sillywords">Winter Blanket</h1>
+
+                        <img class="festivedecoimage festive004logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/efcef8651f8610303f4e640ec1d72f32.png">
+
+                        <a class="sillywords festive004text">To keep yourself warm.</a>
+
+                        <button class="button1" onclick="copyfestive004()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/efcef8651f8610303f4e640ec1d72f32.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/efcef8651f8610303f4e640ec1d72f32.png" id="copyfestive004">
+                    </div>
+
+
+                    <!--GIFT-->
+                    <div class="festivedecos festive005">
+                        <h1 class="sillywords">Christmas Gift</h1>
+
+                        <img class="festivedecoimage festive005logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/48616578e1ae4b478a348b89295b1291.png">
+
+                        <a class="sillywords festive005text">Whats inside? Oh! its you.</a>
+
+                        <button class="button1" onclick="copyfestive005()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/48616578e1ae4b478a348b89295b1291.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/48616578e1ae4b478a348b89295b1291.png" id="copyfestive005">
+                    </div>
+                    <div class="festivedecos festive006">
+                        <h1 class="sillywords">Christmas Gift</h1>
+
+                        <img class="festivedecoimage festive006logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/b7227df1ea3bc0a0ce2d42142661dffd.png">
+
+                        <a class="sillywords festive006text">Whats inside? Oh! its you.</a>
+
+                        <button class="button1" onclick="copyfestive006()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/b7227df1ea3bc0a0ce2d42142661dffd.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/b7227df1ea3bc0a0ce2d42142661dffd.png" id="copyfestive006">
+                    </div>
+                    <div class="festivedecos festive007">
+                        <h1 class="sillywords">Christmas Gift</h1>
+
+                        <img class="festivedecoimage festive007logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/87c2474b0a56e9c865944860acb61eef.png">
+
+                        <a class="sillywords festive007text">Whats inside? Oh! its you.</a>
+
+                        <button class="button1" onclick="copyfestive007()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/87c2474b0a56e9c865944860acb61eef.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/87c2474b0a56e9c865944860acb61eef.png" id="copyfestive007">
+                    </div>
+                    <div class="festivedecos festive008">
+                        <h1 class="sillywords">Christmas Gift</h1>
+
+                        <img class="festivedecoimage festive008logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/56fe57bd07c18dc619b611d663a94f83.png">
+
+                        <a class="sillywords festive008text">Whats inside? Oh! its you.</a>
+
+                        <button class="button1" onclick="copyfestive008()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/56fe57bd07c18dc619b611d663a94f83.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/56fe57bd07c18dc619b611d663a94f83.png" id="copyfestive008">
+                    </div>
+                    <div class="festivedecos festive009">
+                        <h1 class="sillywords">Christmas Gift</h1>
+
+                        <img class="festivedecoimage festive009logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/96f9d595b550a916d160d1f4830d365e.png">
+
+                        <a class="sillywords festive009text">Whats inside? Oh! its you.</a>
+
+                        <button class="button1" onclick="copyfestive009()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/96f9d595b550a916d160d1f4830d365e.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/96f9d595b550a916d160d1f4830d365e.png" id="copyfestive009">
+                    </div>
+
+
+                    <!-- Lights -->
+                    <div class="festivedecos festive010">
+                        <h1 class="sillywords">String Lights</h1>
+
+                        <img class="festivedecoimage festive010logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/64bf518f7498de884acba06de2d0fffa.png">
+
+                        <a class="sillywords festive010text">String up some holiday cheer.</a>
+
+                        <button class="button1" onclick="copyfestive010()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/64bf518f7498de884acba06de2d0fffa.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/64bf518f7498de884acba06de2d0fffa.png" id="copyfestive010">
+                    </div>
+                    <div class="festivedecos festive011">
+                        <h1 class="sillywords">String Lights</h1>
+
+                        <img class="festivedecoimage festive011logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/8eb0f4a3b624b36aad174610bb4802a0.png">
+
+                        <a class="sillywords festive011text">String up some holiday cheer.</a>
+
+                        <button class="button1" onclick="copyfestive011()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/bd9189e9280d3b0514cf14454a043485.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/bd9189e9280d3b0514cf14454a043485.png" id="copyfestive011">
+                    </div>
+                    <div class="festivedecos festive012">
+                        <h1 class="sillywords">String Lights</h1>
+
+                        <img class="festivedecoimage festive012logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/93e952df46c0e7dfdb3801af041a4760.png">
+
+                        <a class="sillywords festive012text">String up some holiday cheer.</a>
+
+                        <button class="button1" onclick="copyfestive012()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/93e952df46c0e7dfdb3801af041a4760.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/93e952df46c0e7dfdb3801af041a4760.png" id="copyfestive012">
+                    </div>
+                    <div class="festivedecos festive013">
+                        <h1 class="sillywords">String Lights</h1>
+
+                        <img class="festivedecoimage festive013logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/e91b79d2b2daabfab14ae6de83733272.png">
+
+                        <a class="sillywords festive013text">String up some holiday cheer.</a>
+
+                        <button class="button1" onclick="copyfestive013()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/7d0b4ef2ef73677d34513b015e0eb9d1.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/7d0b4ef2ef73677d34513b015e0eb9d1.png" id="copyfestive013">
+                    </div>
+                    <div class="festivedecos festive014">
+                        <h1 class="sillywords">String Lights</h1>
+
+                        <img class="festivedecoimage festive014logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/7f3c45108744e92d8e8847fa7ca5b190.png">
+
+                        <a class="sillywords festive014text">String up some holiday cheer.</a>
+
+                        <button class="button1" onclick="copyfestive014()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/7f3c45108744e92d8e8847fa7ca5b190.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/7f3c45108744e92d8e8847fa7ca5b190.png" id="copyfestive014">
+                    </div>
+                    <div class="festivedecos festive015">
+                        <h1 class="sillywords">String Lights</h1>
+
+                        <img class="festivedecoimage festive015logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/32c9efb92599a4619ac02d11b882b85e.png">
+
+                        <a class="sillywords festive015text">String up some holiday cheer.</a>
+
+                        <button class="button1" onclick="copyfestive015()">Copy Link</button>
+
+                        <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/32c9efb92599a4619ac02d11b882b85e.png">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/32c9efb92599a4619ac02d11b882b85e.png" id="copyfestive015">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="archive">
+
+            <!-- Archive -->
+
+            <div class="banner archivebanner">
+               <a class="sillywords archivebannertext2">List of old Avatar Decorations that dont really have a category.</a>
+            </div>
+
+            <div id="archiveitems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="archivedecorow decorow">
+                    <div class="archivedecos archive001">
+                        <h1 class="sillywords">Toast</h1>
+
+                        <img class="archivedecoimage archive001logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=false">
+
+                        <a class="sillywords archive001text">It is toast.</a>
+
+                        <button class="button1" onclick="copyarchive001()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true" id="copyarchive001">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
     <script>
+        function copyspringtoonspetal1() {
+            var copyText = document.getElementById("copyspringtoonspetal1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonspetal2() {
+            var copyText = document.getElementById("copyspringtoonspetal2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsfellowship1() {
+            var copyText = document.getElementById("copyspringtoonsfellowship1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsfellowship2() {
+            var copyText = document.getElementById("copyspringtoonsfellowship2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsbloom1() {
+            var copyText = document.getElementById("copyspringtoonsbloom1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsbloom2() {
+            var copyText = document.getElementById("copyspringtoonsbloom2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+
         function copyanimev2cat() {
             var copyText = document.getElementById("copyanimev2cat");
             copyText.select();
