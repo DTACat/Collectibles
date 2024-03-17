@@ -238,6 +238,19 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+        .summerbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1157407583993339935.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
         .archivebanner {
             display: block;
             margin-left: auto;
@@ -453,6 +466,13 @@
             width: 14em;
             margin-top: 10px;
         }
+        .summerbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 14em;
+            margin-top: 200px;
+        }
         .archivebannertext2 {
             display: block;
             margin-left: auto;
@@ -640,6 +660,18 @@
             background-position: center;
         }
         .festivedecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .summerdecoimage {
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -999,6 +1031,20 @@
             background-repeat: no-repeat;
             margin-top: 10px;
         }
+        .summerdecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 470px;
+            border: 2px solid orange;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(173, 113, 23), rgb(56, 36, 7));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
         .archivedecos {
             display: inline-block;
             margin-left: auto;
@@ -1235,6 +1281,7 @@
         .loadtext {
             position: relative;
             text-align: center;
+            margin-bottom: 10px;
         }
         .newtext {
             width: 50px;
@@ -1677,6 +1724,68 @@
             content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/eeea4012c5c57b925e7087a8b036c3cb.png)
         }
 
+
+        .summer001logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9c70ff0db80d85ee6d9690a0eeded0c8.png?size=240&passthrough=true)
+        }
+        .summer002logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_37dc2b53b273a457ff19ac2e3fda7e4c.png?size=240&passthrough=true)
+        }
+        .summer003logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_669e4e5337a7ebeffd87fe3f1008535f.png?size=240&passthrough=true)
+        }
+        .summer004logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=true)
+        }
+        .summer005logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_fc5d8621ab57442f49662f7f76a56212.png?size=240&passthrough=true)
+        }
+        .summer006logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_549ba042b8adef872b7a52ebb563dc69.png?size=240&passthrough=true)
+        }
+        .summer007logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9b1a98ba163aeea50dc0ca42988acf1d.png?size=240&passthrough=true)
+        }
+        .summer008logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_33950b8d93e3ac1ae95c733d281fa7b5.png?size=240&passthrough=true)
+        }
+        .summer009logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_0b2d5d75d4f1287befda6b2180aec41d.png?size=240&passthrough=true)
+        }
+        .summer010logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_8f4e2c88d0b00a2e6eefdbe0a70944ec.png?size=240&passthrough=true)
+        }
+        .summer011logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_683904e98e8e7bca912125d360293cc6.png?size=240&passthrough=true)
+        }
+        .summer012logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_32c66e3421b5599cf0d1ebabc29dcd16.png?size=240&passthrough=true)
+        }
+        .summer013logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_c58a9fe37aa945ca41892f04fc61314b.png?size=240&passthrough=true)
+        }
+        .summer014logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_bf320a6355b8315bc37b188b84f1fe21.png?size=240&passthrough=true)
+        }
+        .summer015logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_49e93656ed29488809cb49b10a6854c6.png?size=240&passthrough=true)
+        }
+        .summer016logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_ffed32256ce57750cc9a87ed62b0a5ba.png?size=240&passthrough=true)
+        }
+        .summer017logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_700e6968d847aaa78b7063dc44b8ca9f.png?size=240&passthrough=true)
+        }
+        .summer018logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_30e06cfb4d725995f890b537529f94cd.png?size=240&passthrough=true)
+        }
+        .summer019logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_a7505dd1b4213f3969a2beef68404633.png?size=240&passthrough=true)
+        }
+        .summer020logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_f2627b85499c9c65683bff2e47c5f0d4.png?size=240&passthrough=true)
+        }
+
     </style>
 </head>
 
@@ -1693,7 +1802,10 @@
             <button title="Youtube" class="button server-button">Youtube</button>
         </a>
         
-        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Items will only contain 2 links, anymore than that will not be listed here. Some Descriptions/Titles may be inaccurate due to size issues. Anime and Anime V2 will not be combined.</a>
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
+        Items will only contain 2 links, anymore than that will not be listed here. 
+        Some Descriptions/Titles may be inaccurate due to size issues. 
+        Anime and Anime V2 will not be combined.</a>
 
     </div>
 
@@ -4974,6 +5086,303 @@
             </div>
 
         </div>
+        <div class="summer">
+
+            <!-- Summer -->
+
+            <div class="banner summerbanner">
+               <a class="sillywords summerbannertext2">Add more flair to your avatar.</a>
+            </div>
+
+            <div id="summeritems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="summerdecorow decorow">
+                    <div class="summerdecos summer001">
+                        <h1 class="sillywords">Blossoms</h1>
+
+                        <img class="summerdecoimage summer001logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9c70ff0db80d85ee6d9690a0eeded0c8.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer001text">Close your eyes and breathe.</a>
+
+                        <button class="button1" onclick="copysummer001()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9c70ff0db80d85ee6d9690a0eeded0c8.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9c70ff0db80d85ee6d9690a0eeded0c8.png?size=240&passthrough=true" id="copysummer001">
+                    </div>
+                    <div class="summerdecos summer002">
+                        <h1 class="sillywords">Blossoms</h1>
+
+                        <img class="summerdecoimage summer002logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_37dc2b53b273a457ff19ac2e3fda7e4c.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer002text">Close your eyes and breathe.</a>
+
+                        <button class="button1" onclick="copysummer002()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_37dc2b53b273a457ff19ac2e3fda7e4c.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_37dc2b53b273a457ff19ac2e3fda7e4c.png?size=240&passthrough=true" id="copysummer002">
+                    </div>
+                    <div class="summerdecos summer003">
+                        <h1 class="sillywords">Blossoms</h1>
+
+                        <img class="summerdecoimage summer003logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_669e4e5337a7ebeffd87fe3f1008535f.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer003text">Close your eyes and breathe.</a>
+
+                        <button class="button1" onclick="copysummer003()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_669e4e5337a7ebeffd87fe3f1008535f.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_669e4e5337a7ebeffd87fe3f1008535f.png?size=240&passthrough=true" id="copysummer003">
+                    </div>
+                    <div class="summerdecos summer004">
+                        <h1 class="sillywords">Blossoms</h1>
+
+                        <img class="summerdecoimage summer004logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer004text">Close your eyes and breathe.</a>
+
+                        <button class="button1" onclick="copysummer004()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=true" id="copysummer004">
+                    </div>
+                    <div class="summerdecos summer005">
+                        <h1 class="sillywords">Mushroom</h1>
+
+                        <img class="summerdecoimage summer005logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_fc5d8621ab57442f49662f7f76a56212.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer005text">A mushroom.</a>
+
+                        <button class="button1" onclick="copysummer005()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_fc5d8621ab57442f49662f7f76a56212.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_fc5d8621ab57442f49662f7f76a56212.png?size=240&passthrough=true" id="copysummer005">
+                    </div>
+                    <div class="summerdecos summer006">
+                        <h1 class="sillywords">Mushroom</h1>
+
+                        <img class="summerdecoimage summer006logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_549ba042b8adef872b7a52ebb563dc69.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer006text">A mushroom.</a>
+
+                        <button class="button1" onclick="copysummer006()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_549ba042b8adef872b7a52ebb563dc69.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_549ba042b8adef872b7a52ebb563dc69.png?size=240&passthrough=true" id="copysummer006">
+                    </div>
+                    <div class="summerdecos summer007">
+                        <h1 class="sillywords">Mushroom</h1>
+
+                        <img class="summerdecoimage summer007logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9b1a98ba163aeea50dc0ca42988acf1d.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer007text">A mushroom.</a>
+
+                        <button class="button1" onclick="copysummer007()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9b1a98ba163aeea50dc0ca42988acf1d.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9b1a98ba163aeea50dc0ca42988acf1d.png?size=240&passthrough=true" id="copysummer007">
+                    </div>
+                    <div class="summerdecos summer008">
+                        <h1 class="sillywords">Mushroom</h1>
+
+                        <img class="summerdecoimage summer008logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_33950b8d93e3ac1ae95c733d281fa7b5.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer008text">A mushroom.</a>
+
+                        <button class="button1" onclick="copysummer008()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_33950b8d93e3ac1ae95c733d281fa7b5.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_33950b8d93e3ac1ae95c733d281fa7b5.png?size=240&passthrough=true" id="copysummer008">
+                    </div>
+                    <div class="summerdecos summer009">
+                        <h1 class="sillywords">a_0b2d5d75d4f1287befda6b2180aec41d.png</h1>
+
+                        <img class="summerdecoimage summer009logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_0b2d5d75d4f1287befda6b2180aec41d.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer009text">a_0b2d5d75d4f1287befda6b2180aec41d.png</a>
+
+                        <button class="button1" onclick="copysummer009()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_0b2d5d75d4f1287befda6b2180aec41d.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_0b2d5d75d4f1287befda6b2180aec41d.png?size=240&passthrough=true" id="copysummer009">
+                    </div>
+                    <div class="summerdecos summer010">
+                        <h1 class="sillywords">Frog</h1>
+
+                        <img class="summerdecoimage summer010logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_8f4e2c88d0b00a2e6eefdbe0a70944ec.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer010text">*ribbit*</a>
+
+                        <button class="button1" onclick="copysummer010()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_8f4e2c88d0b00a2e6eefdbe0a70944ec.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_8f4e2c88d0b00a2e6eefdbe0a70944ec.png?size=240&passthrough=true" id="copysummer010">
+                    </div>
+                    <div class="summerdecos summer011">
+                        <h1 class="sillywords">Frog</h1>
+
+                        <img class="summerdecoimage summer011logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_683904e98e8e7bca912125d360293cc6.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer011text">*ribbit*</a>
+
+                        <button class="button1" onclick="copysummer011()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_683904e98e8e7bca912125d360293cc6.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_683904e98e8e7bca912125d360293cc6.png?size=240&passthrough=true" id="copysummer011">
+                    </div>
+                    <div class="summerdecos summer012">
+                        <h1 class="sillywords">Frog</h1>
+
+                        <img class="summerdecoimage summer012logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_32c66e3421b5599cf0d1ebabc29dcd16.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer012text">*ribbit*</a>
+
+                        <button class="button1" onclick="copysummer012()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_32c66e3421b5599cf0d1ebabc29dcd16.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_32c66e3421b5599cf0d1ebabc29dcd16.png?size=240&passthrough=true" id="copysummer012">
+                    </div>
+                    <div class="summerdecos summer013">
+                        <h1 class="sillywords">Frog</h1>
+
+                        <img class="summerdecoimage summer013logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_c58a9fe37aa945ca41892f04fc61314b.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer013text">*ribbit*</a>
+
+                        <button class="button1" onclick="copysummer013()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_c58a9fe37aa945ca41892f04fc61314b.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_c58a9fe37aa945ca41892f04fc61314b.png?size=240&passthrough=true" id="copysummer013">
+                    </div>
+                    <div class="summerdecos summer014">
+                        <h1 class="sillywords">Lazy Cat</h1>
+
+                        <img class="summerdecoimage summer014logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_bf320a6355b8315bc37b188b84f1fe21.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer014text">Couch potato.</a>
+
+                        <button class="button1" onclick="copysummer014()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_bf320a6355b8315bc37b188b84f1fe21.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_bf320a6355b8315bc37b188b84f1fe21.png?size=240&passthrough=true" id="copysummer014">
+                    </div>
+                    <div class="summerdecos summer015">
+                        <h1 class="sillywords">Lazy Cat</h1>
+
+                        <img class="summerdecoimage summer015logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_49e93656ed29488809cb49b10a6854c6.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer015text">Couch potato.</a>
+
+                        <button class="button1" onclick="copysummer015()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_49e93656ed29488809cb49b10a6854c6.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_49e93656ed29488809cb49b10a6854c6.png?size=240&passthrough=true" id="copysummer015">
+                    </div>
+                    <div class="summerdecos summer016">
+                        <h1 class="sillywords">Lazy Cat</h1>
+
+                        <img class="summerdecoimage summer016logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_ffed32256ce57750cc9a87ed62b0a5ba.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer016text">Couch potato.</a>
+
+                        <button class="button1" onclick="copysummer016()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_ffed32256ce57750cc9a87ed62b0a5ba.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_ffed32256ce57750cc9a87ed62b0a5ba.png?size=240&passthrough=true" id="copysummer016">
+                    </div>
+                    <div class="summerdecos summer017">
+                        <h1 class="sillywords">Lazy Cat</h1>
+
+                        <img class="summerdecoimage summer017logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_700e6968d847aaa78b7063dc44b8ca9f.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer017text">Couch potato.</a>
+
+                        <button class="button1" onclick="copysummer017()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_700e6968d847aaa78b7063dc44b8ca9f.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_700e6968d847aaa78b7063dc44b8ca9f.png?size=240&passthrough=true" id="copysummer017">
+                    </div>
+                    <div class="summerdecos summer018">
+                        <h1 class="sillywords">Bunnies</h1>
+
+                        <img class="summerdecoimage summer018logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_30e06cfb4d725995f890b537529f94cd.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer018text">Hop! Hop! Hop!</a>
+
+                        <button class="button1" onclick="copysummer018()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_30e06cfb4d725995f890b537529f94cd.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_30e06cfb4d725995f890b537529f94cd.png?size=240&passthrough=true" id="copysummer018">
+                    </div>
+                    <div class="summerdecos summer019">
+                        <h1 class="sillywords">Bunnies</h1>
+
+                        <img class="summerdecoimage summer019logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_a7505dd1b4213f3969a2beef68404633.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer019text">Hop! Hop! Hop!</a>
+
+                        <button class="button1" onclick="copysummer019()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_a7505dd1b4213f3969a2beef68404633.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_a7505dd1b4213f3969a2beef68404633.png?size=240&passthrough=true" id="copysummer019">
+                    </div>
+                    <div class="summerdecos summer020">
+                        <h1 class="sillywords">Bunnies</h1>
+
+                        <img class="summerdecoimage summer020logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_f2627b85499c9c65683bff2e47c5f0d4.png?size=240&passthrough=false">
+
+                        <a class="sillywords summer020text">Hop! Hop! Hop!</a>
+
+                        <button class="button1" onclick="copysummer020()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_f2627b85499c9c65683bff2e47c5f0d4.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_f2627b85499c9c65683bff2e47c5f0d4.png?size=240&passthrough=true" id="copysummer020">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
         <div class="archive">
 
             <!-- Archive -->
@@ -6154,6 +6563,128 @@
         }
         function copyfestive029() {
            var copyText = document.getElementById("copyfestive029");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copysummer001() {
+           var copyText = document.getElementById("copysummer001");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer002() {
+           var copyText = document.getElementById("copysummer002");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer003() {
+           var copyText = document.getElementById("copysummer003");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer004() {
+           var copyText = document.getElementById("copysummer004");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer005() {
+           var copyText = document.getElementById("copysummer005");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer006() {
+           var copyText = document.getElementById("copysummer006");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer007() {
+           var copyText = document.getElementById("copysummer007");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer008() {
+           var copyText = document.getElementById("copysummer008");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer009() {
+           var copyText = document.getElementById("copysummer009");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer010() {
+           var copyText = document.getElementById("copysummer010");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer011() {
+           var copyText = document.getElementById("copysummer011");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer012() {
+           var copyText = document.getElementById("copysummer012");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer013() {
+           var copyText = document.getElementById("copysummer013");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer014() {
+           var copyText = document.getElementById("copysummer014");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer015() {
+           var copyText = document.getElementById("copysummer015");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer016() {
+           var copyText = document.getElementById("copysummer016");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer017() {
+           var copyText = document.getElementById("copysummer017");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer018() {
+           var copyText = document.getElementById("copysummer018");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer019() {
+           var copyText = document.getElementById("copysummer019");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer020() {
+           var copyText = document.getElementById("copysummer020");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
