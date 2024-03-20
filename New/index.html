@@ -1,1 +1,1990 @@
-wip
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Not Shop Archives</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" type="image/x-icon"/>
+    <meta content="Outdated asf New... UI " property="og:title" />
+    <meta content="Use the OG SA instead" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" property="og:image" />
+    <meta content="#5e8a1d" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #333538;
+            color: white;
+        }
+
+        .springtoonsbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid purple;
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1149562891666731108.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .sringtoonsbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3%;
+        }
+
+        .springtoonsbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 2em;
+            margin-top: -50px;
+        }
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 10px;
+            border-color: rgb(148, 89, 1);
+            background-color: rgb(219, 174, 26);
+            cursor: pointer;
+        }
+
+        .springtoonsdecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .springtoonseffectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 400px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #333538;
+        }
+
+        .springtoonsdecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 360px;
+            height: 550px;
+            border-radius: 50px;
+            border: solid gray;
+            background-image: linear-gradient(rgb(97, 97, 97), rgb(29, 29, 29));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+
+        .springtoonseffects {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 360px;
+            height: 880px;
+            border-radius: 50px;
+            border: solid gray;
+            background-image: linear-gradient(rgb(97, 97, 97), rgb(29, 29, 29));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .banner {
+            margin-top: 100px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .springtoonspetallogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/intro-pse01.png)
+        }
+        .springtoonsfellowshiplogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/fellowship-of-the-spring/intro-fose01.png)
+        }
+        .springtoonsbloomlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/spring-bloom/intro-sbe01.png)
+        }
+
+
+        .animev2catlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=240&passthrough=true)
+        }
+        .animev2ki2logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_f3af281c65cf0cf590e9e1f59e9c6cf6.png?size=240&passthrough=true)
+        }
+        .animev2heartlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_3e1fc3c7ee2e34e8176f4737427e8f4f.png?size=240&passthrough=true)
+        }
+        .animev2dismaylogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_51d3bb502109eec26c76386ec980bc8b.png?size=240&passthrough=true)
+        }
+        .animev2ragelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_a0db4314b8cc271c8f472357aa895005.png?size=240&passthrough=true)
+        }
+        .animev2crylogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_4cc97277177b166fd7d4af3bdb370815.png?size=240&passthrough=true)
+        }
+
+        .animev2dreamlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-28/dreamy/intro.png)
+        }
+        .animev2kilogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-28/ki-detonate/intro.png)
+        }
+        .animev2sushilogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-28/sushi-mania/intro.png)
+        }
+
+
+        .elementfirelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_a065206df7b011a5510e4e5bca7d49be.png?size=160&passthrough=true)
+        }
+        .elementwaterlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_250640ab00a8837a1d56f35879138177.png?size=240&passthrough=true)
+        }
+        .elementwindlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_554b7c34f7b6c709f19535aacb128e7b.png?size=240&passthrough=true)
+        }
+        .elementearthlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_fa014594d4b2b4249e1098c0adc85b47.png?size=240&passthrough=true)
+        }
+        .elementlightninglogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_365eed4178528fe8293c4212e8e2d5cb.png?size=240&passthrough=true)
+        }
+        .elementbalancelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_82e4df4028396ad5ccaaafb397fa6248.png?size=240&passthrough=true)
+        }
+
+        .elementrockslidelogo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Rock-Slide-Intro-Loop.png)
+        }
+        .elementvortexlogo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Vortex-Intro-Loop.png)
+        }
+        .elementmasterylogo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Mastery-Intro-Loop.png)
+        }
+
+
+        .lunarfanlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=true)
+        }
+        .lunarlanternlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_63b29ec5b1ea6bb01c2251049838d822.png?size=240&passthrough=true)
+        }
+        .lunarfirecrackerslogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_0f4f1b40921ce680b60007e94427d1f2.png?size=240&passthrough=true)
+        }
+        .lunarsmilelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_445566ed965b2c1632a5b45c92f32d11.png?size=240&passthrough=true)
+        }
+        .lunarluckylogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_1b1df0ae8c2d34afd85da5c22a0d761a.png?size=240&passthrough=true)
+        }
+        .lunarkoilogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_50b440810b1bbd89f6284f36d40ad0af.png?size=240&passthrough=true)
+        }
+
+        .lunardancelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-06/dragon-dance/intro_02c49bbfe7.png)
+        }
+        .lunarfortunelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-01/fortune-flurry/intro.png)
+        }
+        .lunarcelebrationlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-01/midnight-celebration/intro.png)
+        }
+
+
+        .cyberglitchlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_e90ebc0114e7bdc30353c8b11953ea41.png?size=240&passthrough=true)
+        }
+        .cybercyberlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_c6b3bc1dc49e5b284dca0b6437831004.png?size=240&passthrough=true)
+        }
+        .cybersunriselogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_cc83efd93ecd6e41857449c3c0ef9b22.png?size=240&passthrough=true)
+        }
+        .cyberimplantlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_172fa9da0af8698e37f5e5de76637439.png?size=240&passthrough=true)
+        }
+
+        .cybernightrunnerlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-1-18/cyberpunk-nightrunner/intro.png)
+        }
+        .cybererrorlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-1-18/cyberpunk-uplinkerror/intro.png)
+        }
+
+
+        .monsterbeamlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_e11ac0d3f2b1301173847b84a1a3268f.png?size=240&passthrough=true)
+        }
+        .monsterfartlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_ea8e2e628bacdddb1ef18cb382aa454c.png?size=240&passthrough=true)
+        }
+        .monsterchucklogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_68b9ced89df522993b81a33f43490ef1.png?size=240&passthrough=true)
+        }
+        .monsterheartlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_8b7ad8479ad8cc9996b508b75410e2f9.png?size=240&passthrough=true)
+        }
+        .monsterchewlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_129e3e818c8319e031d34d4194cf8ecd.png?size=240&passthrough=true)
+        }
+        .monsterdoodlelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_48ca99fcfa4ecc11acdc323534a0ecbb.png?size=240&passthrough=true)
+        }
+        .monstergloplogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_42f43a32539de2f3f30a348dc8a880e1.png?size=240&passthrough=true)
+        }
+        .monsterhoplogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_be797b0a0efafd45a9ee49aaedbde4d2.png?size=240&passthrough=ture)
+        }
+
+        .monsterheartprofilelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-30/heartzilla/intro.png)
+        }
+        .monsterpoplogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-30/monster-pop/intro-monster.png)
+        }
+        
+
+        .winter2024logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_a46f14932ac02de32f64139d3b9057b8.png?size=240&passthrough=true)
+        }
+        .winterpinelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_a0fafb7c7ee7f1e5b1442f44f3aa14b7.png?size=240&passthrough=true)
+        }
+        .winterglobelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_85a8f9ca60cb4328378270a7f13ed7fd.png?size=240&passthrough=true)
+        }
+        .winterlightslogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_88f42fb7360d8224a670a50c3496f315.png?size=240&passthrough=true)
+        }
+
+        .winterdecklogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-28/deck-the-halls/intro.png)
+        }
+        .wintersuslogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-28/snowy-shenanigans/intro.png)
+        }
+
+
+
+        .halloweencatlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_ad4e2cad924bbb3a2fddf5c527370479.png?size=240&passthrough=true)
+        }
+        .halloweenghostlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_b9a64088e30fd3a6f2456c2e0f44f173.png?size=240&passthrough=true)
+        }
+        .halloweenminionlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_f979ba5f9c2ba83db3149cc02f489f7c.png?size=240&passthrough=true)
+        }
+        .halloweenjacklogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_50939e8f95b0ddfa596809480b0eb3e1.png?size=240&passthrough=true)
+        }
+
+
+        .halloweengraffitilogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/punk-girl/intro.png)
+        }
+        .halloweenslimelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/zombie-slime/intro.png)
+        }
+        .halloweenomenslogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/ghost-skull/intro.png)
+        }
+
+
+        .fallleavelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true)
+        }
+        .fallspicelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=true)
+        }
+        .fallfroghatlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=true)
+        }
+        .fallfoxhatlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=true)
+        }
+
+        .fallfoliagelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/intro-branch.png)
+        }
+        .fallfroglogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/intro.png)
+        }
+
+
+        .fantasyswordlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_0f5d6c4dd8ae74662ee9c40722a56cbd.png?size=240&passthrough=true)
+        }
+        .fantasypotionlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_1dbc603c181999b9815cb426dfec71a6.png?size=240&passthrough=true)
+        }
+        .fantasyfairylogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_fe3c76cac2adf426832a7e495e8329d3.png?size=240&passthrough=true)
+        }
+        .fantasystafflogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_db9baf0ba7cf449d2b027c06309dbe8d.png?size=240&passthrough=true)
+        }
+        .fantasystoneslogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_d650e22f6c4bab4fc0969e9d35edbcb0.png?size=240&passthrough=true)
+        }
+        .fantasyshieldlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_29a0533cb3de61aa8179810188f3830d.png?size=240&passthrough=true)
+        }
+        .fantasyskulllogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_9d67a1cbf81fe7197c871e94f619b04b.png?size=240&passthrough=true)
+        }
+        .fantasykeylogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_4c9f2ec29c05755456dbce45d8190ed4.png?size=240&passthrough=true)
+        }
+
+        .fantasywaterlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/splash/intro.png)
+        }
+        .fantasytreelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-5/sakura/intro.png)
+        }
+        .fantasyvinelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/vines/intro.png)
+        }
+        .fantasydustlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/fairy/loop.png)
+        }
+
+
+        .animeenergylogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_c7e1751e8122f1b475cb3006966fb28c.png?size=240&passthrough=true)
+        }
+        .animesoullogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_c3c09bd122898be35093d0d59850f627.png?size=240&passthrough=true)
+        }
+        .animesweatlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_55c9d0354290afa8b7fe47ea9bd7dbcf.png?size=240&passthrough=true)
+        }
+        .animestarlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_d72066b8cecbadd9fc951913ebcc384f.png?size=240&passthrough=true)
+        }
+        .animelovelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_8ffa2ba9bff18e96b76c2e66fd0d7fa3.png?size=240&passthrough=true)
+        }
+        .animeshocklogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_f1b2fd4706ab02b54d3a58f84b3ef564.png?size=240&passthrough=true)
+        }
+        .animeangerlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_3c97a2d37f433a7913a1c7b7a735d000.png?size=240&passthrough=true)
+        }
+
+        .animeheartslogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/magic-girl/intro.png)
+        }
+        .animewindowlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-5/earthquake/intro.png)
+        }
+        .animestrikelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-5/shuriken/intro.png)
+        }
+        .animefuckingfalseadvertisingifyouaskmelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/sayan/intro.png)
+        }
+
+
+        .breakfasttoastlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true)
+        }
+        .breakfastcoffeelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=true)
+        }
+        .breakfastegglogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=true)
+        }
+        .breakfastjamlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=true)
+        }
+        .breakfastnutlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=true)
+        }
+        .breakfastcakelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=true)
+        }
+
+        .breakfastcereallogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/intro.png)
+        }
+        .breakfastplatelogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/intro.png)
+        }
+
+
+        .disxheadsetbluelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_d3da36040163ee0f9176dfe7ced45cdc.png?size=240&passthrough=true)
+        }
+        .disxheadsetpurplelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_87b1052cdc7d46a00a699ef2b76cbfa4.png?size=240&passthrough=true)
+        }
+        .disxheadsetyellowlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_23309e19e3396c5e0b15583caf969417.png?size=240&passthrough=true)
+        }
+        .disxuibluelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_fbe9b75665ee364ff5759d8821d52373.png?size=240&passthrough=true)
+        }
+        .disxuipurplelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_fed43ab12698df65902ba06727e20c0e.png?size=240&passthrough=true)
+        }
+        .disxuiyellowlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_6b729e0b276ed0ad71d2e81c2c1732f3.png?size=240&passthrough=true)
+        }
+        .disxhelmet1bluelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_b9a2121138d6b16b3310f349794af0e1.png?size=240&passthrough=true)
+        }
+        .disxhelmet1purplelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_424582087fdf527e3ad8383fd7654f21.png?size=240&passthrough=true)
+        }
+        .disxhelmet1yellowlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_2efbb7db0d4e12acacbce419166115de.png?size=240&passthrough=true)
+        }
+        .disxhelmet2bluelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_bb31faaec1be1ef5ff32dcdc5f37efbf.png?size=240&passthrough=true)
+        }
+        .disxhelmet2purplelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_3c8344f05cc053e27bc7a3ea47412679.png?size=240&passthrough=true)
+        }
+        .disxhelmet2yellowlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_96f06e3e52bbd906f93951e362c38d32.png?size=240&passthrough=true)
+        }
+        .disxringsbluelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_88765df09a036906b376704bd8dc27ba.png?size=240&passthrough=true)
+        }
+        .disxringspurplelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_898d52a79941712fd34b9218e0d80837.png?size=240&passthrough=true)
+        }
+        .disxringsyellowlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_5aa45e649f5f8ed3a10784bf83d63945.png?size=240&passthrough=true)
+        }
+        .disxsmokebluelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_6bf24f16330d65de9a7b686a8c55d48d.png?size=240&passthrough=true)
+        }
+        .disxsmokepurplelogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_2135f24a35ce3606677ceecca5a502cc.png?size=240&passthrough=true)
+        }
+        .disxsmokeyellowlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_10b9f886b513b77ccdd67c8784f1a496.png?size=240&passthrough=true)
+        }
+        .disxsawlogo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v3_a_9cd7e573f48859a995266a0a8345f336.png?size=240&passthrough=true)
+        }
+
+        .disxboostlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-7/boost-relic/intro.png)
+        }
+        .disxcyberlogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-7/cyberspace/intro.png)
+        }
+        .disxlightninglogo:hover {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/lightning/intro.png)
+        }
+
+
+        .festive011logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/bd9189e9280d3b0514cf14454a043485.png)
+        }
+        .festive012logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/caa099ee0308108e854dd9fa2dcfd2a6.png)
+        }
+        .festive013logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/7d0b4ef2ef73677d34513b015e0eb9d1.png)
+        }
+        .festive014logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/d52ff7e94c1374b4df069eee29a989cd.png)
+        }
+        .festive015logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/63b0c16f26ec12091437a265de2ac957.png)
+        }
+        .festive021logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/ae6f444cc3493d2a6bcb56f174d81fa6.png)
+        }
+        .festive023logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/d1a04a8d71425e30795c318b9c405b4a.png)
+        }
+        .festive025logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/a48630591c4ebf9bebf7bac7e116a885.png)
+        }
+        .festive027logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/e1e62ba56c9f267b4185338417beab0e.png)
+        }
+        .festive029logo:hover {
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/eeea4012c5c57b925e7087a8b036c3cb.png)
+        }
+
+
+        .summer001logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9c70ff0db80d85ee6d9690a0eeded0c8.png?size=240&passthrough=true)
+        }
+        .summer002logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_37dc2b53b273a457ff19ac2e3fda7e4c.png?size=240&passthrough=true)
+        }
+        .summer003logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_669e4e5337a7ebeffd87fe3f1008535f.png?size=240&passthrough=true)
+        }
+        .summer004logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=true)
+        }
+        .summer005logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_fc5d8621ab57442f49662f7f76a56212.png?size=240&passthrough=true)
+        }
+        .summer006logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_549ba042b8adef872b7a52ebb563dc69.png?size=240&passthrough=true)
+        }
+        .summer007logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_9b1a98ba163aeea50dc0ca42988acf1d.png?size=240&passthrough=true)
+        }
+        .summer008logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_33950b8d93e3ac1ae95c733d281fa7b5.png?size=240&passthrough=true)
+        }
+        .summer009logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_0b2d5d75d4f1287befda6b2180aec41d.png?size=240&passthrough=true)
+        }
+        .summer010logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_8f4e2c88d0b00a2e6eefdbe0a70944ec.png?size=240&passthrough=true)
+        }
+        .summer011logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_683904e98e8e7bca912125d360293cc6.png?size=240&passthrough=true)
+        }
+        .summer012logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_32c66e3421b5599cf0d1ebabc29dcd16.png?size=240&passthrough=true)
+        }
+        .summer013logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_c58a9fe37aa945ca41892f04fc61314b.png?size=240&passthrough=true)
+        }
+        .summer014logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_bf320a6355b8315bc37b188b84f1fe21.png?size=240&passthrough=true)
+        }
+        .summer015logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_49e93656ed29488809cb49b10a6854c6.png?size=240&passthrough=true)
+        }
+        .summer016logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_ffed32256ce57750cc9a87ed62b0a5ba.png?size=240&passthrough=true)
+        }
+        .summer017logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_700e6968d847aaa78b7063dc44b8ca9f.png?size=240&passthrough=true)
+        }
+        .summer018logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_30e06cfb4d725995f890b537529f94cd.png?size=240&passthrough=true)
+        }
+        .summer019logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_a7505dd1b4213f3969a2beef68404633.png?size=240&passthrough=true)
+        }
+        .summer020logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/v2_a_f2627b85499c9c65683bff2e47c5f0d4.png?size=240&passthrough=true)
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="itemlist">
+        <div class="springtoons">
+            <!-- Spring Toons -->
+
+            <div class="banner springtoonsbanner">
+               <img class="springtoonsbannertext1" src=" ">
+               <a class="sillywords springtoonsbannertext2">Yeah im never thouching this ever again</a>
+            </div>
+
+            <div id="springtoonsitems">
+               <a class="sillywords itemtext1">Avatar Decorations</a>
+                <div class="springtoonsdecorow decorow">
+                    <div class="springtoonsdecos springtoons000">
+
+                        <img class="springtoonsdecoimage springtoonscatlogo" src=" ">
+
+                        <h1 class="sillywords">???</h1>
+
+                        <a class="sillywords springtoons000text">???</a>
+
+                        <a class="sillywords springtoons000price price">US$5.99 - US$4.99</a>
+
+                        <button class="button1" onclick="copyspringtoons000()">Copy Link</button>
+
+                        <a href=" ">
+                        <button class="button1">Open</button></a>
+
+                        <a href=" ">
+                        <button class="button1">Unavailable</button></a>
+
+                        <input class="hidden" type="text-input" value=" " id="copyspringtoons000">
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1">Profile Effects</a>
+                <div class="springtoonseffectrow effectrow">
+                    <div class="springtoonseffects springtoonspetal">
+
+                        <img class="springtoonseffectimage springtoonspetallogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/thumbnail.png">
+
+                        <h1 class="sillywords">Petal Serenade</h1>
+
+                        <a class="sillywords springtoonspetaltext">A cascade of floral delight.</a>
+
+                        <a class="sillywords springtoonspetalprice price">US$5.99 - US$4.99</a>
+
+                        <button class="button1" onclick="copyspringtoonspetal1()">Copy Intro</button>
+
+                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/intro-pse01.png">
+                        <button class="button1">Open Intro</button></a>
+
+                        <button class="button1" onclick="copyspringtoonspetal2()">Copy Idle</button>
+
+                        <a href=" ">
+                        <button class="button1">Open More</button></a>
+
+                        <a href="https://discord.com/shop#itemSkuId=1217626509737459852">
+                        <button class="button1">Open In Shop</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/intro-pse01.png" id="copyspringtoonspetal1">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-11/petal-serenade/idle-petals.png" id="copyspringtoonspetal2">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function copyspringtoonspetal1() {
+            var copyText = document.getElementById("copyspringtoonspetal1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonspetal2() {
+            var copyText = document.getElementById("copyspringtoonspetal2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsfellowship1() {
+            var copyText = document.getElementById("copyspringtoonsfellowship1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsfellowship2() {
+            var copyText = document.getElementById("copyspringtoonsfellowship2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsbloom1() {
+            var copyText = document.getElementById("copyspringtoonsbloom1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyspringtoonsbloom2() {
+            var copyText = document.getElementById("copyspringtoonsbloom2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+
+        function copyanimev2cat() {
+            var copyText = document.getElementById("copyanimev2cat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2ki2() {
+            var copyText = document.getElementById("copyanimev2ki2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2heart() {
+            var copyText = document.getElementById("copyanimev2heart");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2dismay() {
+            var copyText = document.getElementById("copyanimev2dismay");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2rage() {
+            var copyText = document.getElementById("copyanimev2rage");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2cry() {
+            var copyText = document.getElementById("copyanimev2cry");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyanimev2dream1() {
+            var copyText = document.getElementById("copyanimev2dream1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2dream2() {
+            var copyText = document.getElementById("copyanimev2dream2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2ki1() {
+            var copyText = document.getElementById("copyanimev2ki1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2ki2() {
+            var copyText = document.getElementById("copyanimev2ki2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2sushi1() {
+            var copyText = document.getElementById("copyanimev2sushi1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimev2sushi2() {
+            var copyText = document.getElementById("copyanimev2sushi2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyelementfire() {
+            var copyText = document.getElementById("copyelementfire");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementwater() {
+           var copyText = document.getElementById("copyelementwater");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementwind() {
+           var copyText = document.getElementById("copyelementwind");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementearth() {
+           var copyText = document.getElementById("copyelementearth");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementlightning() {
+           var copyText = document.getElementById("copyelementlightning");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementbalance() {
+           var copyText = document.getElementById("copyelementbalance");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyelementrockslide1() {
+           var copyText = document.getElementById("copyelementrockslide1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementrockslide2() {
+           var copyText = document.getElementById("copyelementrockslide2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementvortex1() {
+           var copyText = document.getElementById("copyelementvortex1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementvortex2() {
+           var copyText = document.getElementById("copyelementvortex2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementmastery1() {
+           var copyText = document.getElementById("copyelementmastery1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyelementmastery2() {
+           var copyText = document.getElementById("copyelementmastery2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copylunarfan() {
+           var copyText = document.getElementById("copylunarfan");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarlantern() {
+           var copyText = document.getElementById("copylunarlantern");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarfire() {
+           var copyText = document.getElementById("copylunarfire");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarsmile() {
+           var copyText = document.getElementById("copylunarsmile");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarlucky() {
+           var copyText = document.getElementById("copylunarlucky");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarkoi() {
+           var copyText = document.getElementById("copylunarkoi");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copylunardragondance1() {
+           var copyText = document.getElementById("copylunardragondance1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunardragondance2() {
+           var copyText = document.getElementById("copylunardragondance2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarfortuneflurry1() {
+           var copyText = document.getElementById("copylunarfortuneflurry1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarfortuneflurry2() {
+           var copyText = document.getElementById("copylunarfortuneflurry2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarcelebration1() {
+           var copyText = document.getElementById("copylunarcelebration1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylunarcelebration2() {
+           var copyText = document.getElementById("copylunarcelebration2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        
+        
+        function copycyberglitch() {
+           var copyText = document.getElementById("copycyberglitch");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copycybercyber() {
+           var copyText = document.getElementById("copycybercyber");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copycybersunrise() {
+           var copyText = document.getElementById("copycybersunrise");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copycyberimplant() {
+           var copyText = document.getElementById("copycyberimplant");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copycybernightrunner1() {
+           var copyText = document.getElementById("copycybernightrunner1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copycybernightrunner2() {
+           var copyText = document.getElementById("copycybernightrunner2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copycybererror1() {
+           var copyText = document.getElementById("copycybererror1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copycybererror2() {
+           var copyText = document.getElementById("copycybererror2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copymonsterbeam() {
+           var copyText = document.getElementById("copymonsterbeam");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterfart() {
+           var copyText = document.getElementById("copymonsterfart");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterchuck() {
+           var copyText = document.getElementById("copymonsterchuck");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterheart() {
+           var copyText = document.getElementById("copymonsterheart");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterchew() {
+           var copyText = document.getElementById("copymonsterchew");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterdoodle() {
+           var copyText = document.getElementById("copymonsterdoodle");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterglop() {
+           var copyText = document.getElementById("copymonsterglop");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterhop() {
+           var copyText = document.getElementById("copymonsterhop");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copymonstergoo1() {
+           var copyText = document.getElementById("copymonstergoo1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonstergoo2() {
+           var copyText = document.getElementById("copymonstergoo2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterheartprofile1() {
+           var copyText = document.getElementById("copymonsterheartprofile1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterheartprofile2() {
+           var copyText = document.getElementById("copymonsterheartprofile2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterpop1() {
+           var copyText = document.getElementById("copymonsterpop1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copymonsterpop2() {
+           var copyText = document.getElementById("copymonsterpop2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copywinter2024() {
+           var copyText = document.getElementById("copywinter2024");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copywinterpine() {
+           var copyText = document.getElementById("copywinterpine");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copywinterglobe() {
+           var copyText = document.getElementById("copywinterglobe");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copywinterlights() {
+           var copyText = document.getElementById("copywinterlights");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copywinterdeck1() {
+           var copyText = document.getElementById("copywinterdeck1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copywinterdeck2() {
+           var copyText = document.getElementById("copywinterdeck2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copywintersus1() {
+           var copyText = document.getElementById("copywintersus1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copywintersus2() {
+           var copyText = document.getElementById("copywintersus2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyhalloweencat() {
+           var copyText = document.getElementById("copyhalloweencat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenghost() {
+           var copyText = document.getElementById("copyhalloweenghost");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenminion() {
+           var copyText = document.getElementById("copyhalloweenminion");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenjack() {
+           var copyText = document.getElementById("copyhalloweenjack");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyhalloweengraffiti1() {
+           var copyText = document.getElementById("copyhalloweengraffiti1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweengraffiti2() {
+           var copyText = document.getElementById("copyhalloweengraffiti2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenslime1() {
+           var copyText = document.getElementById("copyhalloweenslime1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenslime2() {
+           var copyText = document.getElementById("copyhalloweenslime2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenomens1() {
+           var copyText = document.getElementById("copyhalloweenomens1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyhalloweenomens2() {
+           var copyText = document.getElementById("copyhalloweenomens2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyfallleave() {
+           var copyText = document.getElementById("copyfallleave");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallspice() {
+           var copyText = document.getElementById("copyfallspice");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfroghat() {
+           var copyText = document.getElementById("copyfallfroghat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfoxhat() {
+           var copyText = document.getElementById("copyfallfoxhat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyfallfoliage1() {
+           var copyText = document.getElementById("copyfallfoliage1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfoliage2() {
+           var copyText = document.getElementById("copyfallfoliage2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfrog1() {
+           var copyText = document.getElementById("copyfallfrog1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfallfrog2() {
+           var copyText = document.getElementById("copyfallfrog2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyfantasysword() {
+           var copyText = document.getElementById("copyfantasysword");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasypotion() {
+           var copyText = document.getElementById("copyfantasypotion");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasyfairy() {
+           var copyText = document.getElementById("copyfantasyfairy");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasystaff() {
+           var copyText = document.getElementById("copyfantasystaff");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasystones() {
+           var copyText = document.getElementById("copyfantasystones");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasyshield() {
+           var copyText = document.getElementById("copyfantasyshield");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasyskull() {
+           var copyText = document.getElementById("copyfantasyskull");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasykey() {
+           var copyText = document.getElementById("copyfantasykey");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyfantasywater1() {
+           var copyText = document.getElementById("copyfantasywater1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasywater2() {
+           var copyText = document.getElementById("copyfantasywater2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasytree1() {
+           var copyText = document.getElementById("copyfantasytree1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasytree2() {
+           var copyText = document.getElementById("copyfantasytree2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasyvine1() {
+           var copyText = document.getElementById("copyfantasyvine1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasyvine2() {
+           var copyText = document.getElementById("copyfantasyvine2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasydust1() {
+           var copyText = document.getElementById("copyfantasydust1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfantasydust2() {
+           var copyText = document.getElementById("copyfantasydust2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyanimeenergy() {
+           var copyText = document.getElementById("copyanimeenergy");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimesoul() {
+           var copyText = document.getElementById("copyanimesoul");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimesweat() {
+           var copyText = document.getElementById("copyanimesweat");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimestar() {
+           var copyText = document.getElementById("copyanimestar");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimelove() {
+           var copyText = document.getElementById("copyanimelove");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimeshock() {
+           var copyText = document.getElementById("copyanimeshock");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimeanger() {
+           var copyText = document.getElementById("copyanimeanger");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copyanimehearts1() {
+           var copyText = document.getElementById("copyanimehearts1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimehearts2() {
+           var copyText = document.getElementById("copyanimehearts2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimewindow1() {
+           var copyText = document.getElementById("copyanimewindow1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimewindow2() {
+           var copyText = document.getElementById("copyanimewindow2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimestrike1() {
+           var copyText = document.getElementById("copyanimestrike1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimestrike2() {
+           var copyText = document.getElementById("copyanimestrike2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimefuckingfalseadvertisingifyouaskme1() {
+           var copyText = document.getElementById("copyanimefuckingfalseadvertisingifyouaskme1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyanimefuckingfalseadvertisingifyouaskme2() {
+           var copyText = document.getElementById("copyanimefuckingfalseadvertisingifyouaskme2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copybreakfasttoast() {
+           var copyText = document.getElementById("copybreakfasttoast");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastcoffee() {
+           var copyText = document.getElementById("copybreakfastcoffee");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastegg() {
+           var copyText = document.getElementById("copybreakfastegg");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastjam() {
+           var copyText = document.getElementById("copybreakfastjam");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastnut() {
+           var copyText = document.getElementById("copybreakfastnut");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastcake() {
+           var copyText = document.getElementById("copybreakfastcake");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copybreakfastcereal1() {
+           var copyText = document.getElementById("copybreakfastcereal1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastcereal2() {
+           var copyText = document.getElementById("copybreakfastcereal2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastplate1() {
+           var copyText = document.getElementById("copybreakfastplate1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copybreakfastplate2() {
+           var copyText = document.getElementById("copybreakfastplate2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copydisxheadsetblue() {
+           var copyText = document.getElementById("copydisxheadsetblue");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxheadsetpurple() {
+           var copyText = document.getElementById("copydisxheadsetpurple");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxheadsetyellow() {
+           var copyText = document.getElementById("copydisxheadsetyellow");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxuiblue() {
+           var copyText = document.getElementById("copydisxuiblue");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxuipurple() {
+           var copyText = document.getElementById("copydisxuipurple");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxuiyellow() {
+           var copyText = document.getElementById("copydisxuiyellow");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxhelmet1blue() {
+           var copyText = document.getElementById("copydisxhelmet1blue");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxhelmet1purple() {
+           var copyText = document.getElementById("copydisxhelmet1purple");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxhelmet1yellow() {
+           var copyText = document.getElementById("copydisxhelmet1yellow");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxhelmet2blue() {
+           var copyText = document.getElementById("copydisxhelmet2blue");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxhelmet2purple() {
+           var copyText = document.getElementById("copydisxhelmet2purple");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxhelmet2yellow() {
+           var copyText = document.getElementById("copydisxhelmet2yellow");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxringsblue() {
+           var copyText = document.getElementById("copydisxringsblue");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxringspurple() {
+           var copyText = document.getElementById("copydisxringspurple");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxringsyellow() {
+           var copyText = document.getElementById("copydisxringsyellow");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxsmokeblue() {
+           var copyText = document.getElementById("copydisxsmokeblue");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxsmokepurple() {
+           var copyText = document.getElementById("copydisxsmokepurple");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxsmokeyellow() {
+           var copyText = document.getElementById("copydisxsmokeyellow");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxsaw() {
+           var copyText = document.getElementById("copydisxsaw");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copydisxboost1() {
+           var copyText = document.getElementById("copydisxboost1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxboost2() {
+           var copyText = document.getElementById("copydisxboost2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxcyber1() {
+           var copyText = document.getElementById("copydisxcyber1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxcyber2() {
+           var copyText = document.getElementById("copydisxcyber2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightning1() {
+           var copyText = document.getElementById("copydisxlightning1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightning2() {
+           var copyText = document.getElementById("copydisxlightning2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copyfestive001() {
+           var copyText = document.getElementById("copyfestive001");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive002() {
+           var copyText = document.getElementById("copyfestive002");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive003() {
+           var copyText = document.getElementById("copyfestive003");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive004() {
+           var copyText = document.getElementById("copyfestive004");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive005() {
+           var copyText = document.getElementById("copyfestive005");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive006() {
+           var copyText = document.getElementById("copyfestive006");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive007() {
+           var copyText = document.getElementById("copyfestive007");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive008() {
+           var copyText = document.getElementById("copyfestive008");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive009() {
+           var copyText = document.getElementById("copyfestive009");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive010() {
+           var copyText = document.getElementById("copyfestive010");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive011() {
+           var copyText = document.getElementById("copyfestive011");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive012() {
+           var copyText = document.getElementById("copyfestive012");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive013() {
+           var copyText = document.getElementById("copyfestive013");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive014() {
+           var copyText = document.getElementById("copyfestive014");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive015() {
+           var copyText = document.getElementById("copyfestive015");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive016() {
+           var copyText = document.getElementById("copyfestive016");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive017() {
+           var copyText = document.getElementById("copyfestive017");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive018() {
+           var copyText = document.getElementById("copyfestive018");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive019() {
+           var copyText = document.getElementById("copyfestive019");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive020() {
+           var copyText = document.getElementById("copyfestive020");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive021() {
+           var copyText = document.getElementById("copyfestive021");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive022() {
+           var copyText = document.getElementById("copyfestive022");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive023() {
+           var copyText = document.getElementById("copyfestive023");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive024() {
+           var copyText = document.getElementById("copyfestive024");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive025() {
+           var copyText = document.getElementById("copyfestive025");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive026() {
+           var copyText = document.getElementById("copyfestive026");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive027() {
+           var copyText = document.getElementById("copyfestive027");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive028() {
+           var copyText = document.getElementById("copyfestive028");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copyfestive029() {
+           var copyText = document.getElementById("copyfestive029");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+
+        function copysummer001() {
+           var copyText = document.getElementById("copysummer001");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer002() {
+           var copyText = document.getElementById("copysummer002");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer003() {
+           var copyText = document.getElementById("copysummer003");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer004() {
+           var copyText = document.getElementById("copysummer004");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer005() {
+           var copyText = document.getElementById("copysummer005");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer006() {
+           var copyText = document.getElementById("copysummer006");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer007() {
+           var copyText = document.getElementById("copysummer007");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer008() {
+           var copyText = document.getElementById("copysummer008");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer009() {
+           var copyText = document.getElementById("copysummer009");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer010() {
+           var copyText = document.getElementById("copysummer010");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer011() {
+           var copyText = document.getElementById("copysummer011");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer012() {
+           var copyText = document.getElementById("copysummer012");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer013() {
+           var copyText = document.getElementById("copysummer013");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer014() {
+           var copyText = document.getElementById("copysummer014");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer015() {
+           var copyText = document.getElementById("copysummer015");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer016() {
+           var copyText = document.getElementById("copysummer016");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer017() {
+           var copyText = document.getElementById("copysummer017");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer018() {
+           var copyText = document.getElementById("copysummer018");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer019() {
+           var copyText = document.getElementById("copysummer019");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copysummer020() {
+           var copyText = document.getElementById("copysummer020");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+
+</html>
