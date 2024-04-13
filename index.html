@@ -1452,6 +1452,16 @@
         * {
             text-decoration: none;
         }
+
+        .lofi1logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true)
+        }
+        .lofi2logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true)
+        }
+        .lofi3logo:hover {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_49c479e15533fb4c02eb320c9c137433.png?size=240&passthrough=true)
+        }
         
         .lofistudylogo:hover {
             content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/intro.png)
@@ -2037,24 +2047,62 @@
             <div id="lofiitems">
                <a class="sillywords itemtext1">Avatar Decorations</a>
                 <div class="lofidecorow decorow">
-                    <div class="lofidecos lofi---">
+                    <div class="lofidecos lofi1">
                         <h1 class="sillywords">???</h1>
 
-                        <img class="lofidecoimage lofi---logo" src=" ?size=240&passthrough=false">
+                        <img class="lofidecoimage lofi1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=false">
 
-                        <a class="sillywords lofi---text">???</a>
+                        <a class="sillywords lofi1text">???</a>
 
-                        <a class="sillywords lofi---price price">US$??.99 - US$??.99</a>
+                        <a class="sillywords lofi1price price">US$??.99 - US$??.99</a>
 
-                        <button class="button1" onclick="copylofia()">Copy Link</button>
+                        <button class="button1" onclick="copylofi1()">Copy Link</button>
 
-                        <a href=" ?size=240&passthrough=true">
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true">
                         <button class="button1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId= ">
                         <button class="button1">Open In Shop (SKU ID)</button></a>
 
-                        <input class="hidden" type="text-input" value=" ?size=240&passthrough=true" id="copylofia">
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true" id="copylofi1">
+                    </div>
+                    <div class="lofidecos lofi2">
+                        <h1 class="sillywords">???</h1>
+
+                        <img class="lofidecoimage lofi2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=false">
+
+                        <a class="sillywords lofi2text">???</a>
+
+                        <a class="sillywords lofi2price price">US$??.99 - US$??.99</a>
+
+                        <button class="button1" onclick="copylofi2()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href="https://discord.com/shop#itemSkuId= ">
+                        <button class="button1">Open In Shop (SKU ID)</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true" id="copylofi2">
+                    </div>
+                    <div class="lofidecos lofi3">
+                        <h1 class="sillywords">???</h1>
+
+                        <img class="lofidecoimage lofi3logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_49c479e15533fb4c02eb320c9c137433.png?size=240&passthrough=false">
+
+                        <a class="sillywords lofi3text">???</a>
+
+                        <a class="sillywords lofi3price price">US$??.99 - US$??.99</a>
+
+                        <button class="button1" onclick="copylofi3()">Copy Link</button>
+
+                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_49c479e15533fb4c02eb320c9c137433.png?size=240&passthrough=true">
+                        <button class="button1">Open</button></a>
+
+                        <a href="https://discord.com/shop#itemSkuId= ">
+                        <button class="button1">Open In Shop (SKU ID)</button></a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_49c479e15533fb4c02eb320c9c137433.png?size=240&passthrough=true" id="copylofi3">
                     </div>
 
                 </div>
@@ -6039,6 +6087,25 @@
     </div>
 
     <script>
+
+        function copylofi1() {
+            var copyText = document.getElementById("copylofi1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofi2() {
+            var copyText = document.getElementById("copylofi2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofi3() {
+            var copyText = document.getElementById("copylofi3");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
 
         function copylofistudy1() {
             var copyText = document.getElementById("copylofistudy1");
