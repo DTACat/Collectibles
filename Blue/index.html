@@ -1523,7 +1523,7 @@
             display: none;
         }
         .lofi1 .button-holder  {
-            margin-top: -120px;
+            margin-top: -79px;
         }
         .lofi1:hover .button-holder  {
             margin-top: 0px;
@@ -1548,18 +1548,62 @@
             display: none;
         }
         .lofi2 .button-holder  {
-            margin-top: -120px;
+            margin-top: -79px;
         }
         .lofi2:hover .button-holder  {
             margin-top: 0px;
         }
 
-        .lofi3logo:hover {
+        .lofi3:hover .lofi3logo {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=true)
         }
-        .lofi4logo:hover {
+        .lofi3 .button1 {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .lofi3:hover .button1 {
+            opacity: 100%;
+        }
+        .lofi3 .lofi3fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .lofi3:hover .lofi3fade {
+            opacity: 0%;
+            display: none;
+        }
+        .lofi3 .button-holder  {
+            margin-top: -79px;
+        }
+        .lofi3:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        .lofi4:hover .lofi4logo {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true)
         }
+        .lofi4 .button1 {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .lofi4:hover .button1 {
+            opacity: 100%;
+        }
+        .lofi4 .lofi3fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .lofi4:hover .lofi4fade {
+            opacity: 0%;
+            display: none;
+        }
+        .lofi4 .button-holder  {
+            margin-top: -79px;
+        }
+        .lofi4:hover .button-holder  {
+            margin-top: 0px;
+        }
+
         .lofi5logo:hover {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true)
         }
@@ -2167,7 +2211,7 @@
 
                         <img class="lofidecoimage lofi1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_49c479e15533fb4c02eb320c9c137433.png?size=240&passthrough=false">
 
-                        <h1 class="sillywords lofi1text lofi1fade">Never miss a beat.</h1>
+                        <a class="sillywords lofi1text lofi1fade">Never miss a beat.</a>
 
                         <h1 class="sillywords lofi1price price lofi1fade">US$5.99 - US$4.99</h1>
 
@@ -2189,11 +2233,11 @@
                     <div class="lofidecos lofi2">
                         <h1 class="sillywords">Cozy Cat</h1>
 
-                        <a class="sillywords lofi2text">SKU ID: 1228246010116050965</a>
+                        <a class="sillywords lofi2text">SKU ID: 1228251144065777765</a>
 
                         <img class="lofidecoimage lofi2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=false">
 
-                        <h1 class="sillywords lofi2text lofi2fade">Vibing one catnap at a time.</h1>
+                        <a class="sillywords lofi2text lofi2fade">Vibing one catnap at a time.</a>
 
                         <h1 class="sillywords lofi2price price lofi2fade">US$5.99 - US$4.99</h1>
 
@@ -2214,38 +2258,50 @@
                     <div class="lofidecos lofi3">
                         <h1 class="sillywords">Oasis</h1>
 
+                        <a class="sillywords lofi3text">SKU ID: 1228251351415263242</a>
+
                         <img class="lofidecoimage lofi3logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=false">
 
-                        <a class="sillywords lofi3text">Chilling in my comfort place.</a>
+                        <a class="sillywords lofi3text lofi3fade">Chilling in my comfort place.</a>
 
-                        <a class="sillywords lofi3price price">US$5.99 - US$4.99</a>
+                        <h1 class="sillywords lofi3price price lofi3fade">US$5.99 - US$4.99</h1>
 
-                        <button class="button1" onclick="copylofi3()">Copy Link</button>
+                        <div class="button-holder">
 
-                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                            <button class="button1" onclick="copylofi3()">Copy Link</button>
 
-                        <a href="https://discord.com/shop#itemSkuId=1228251351415263242">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=true">
+                            <button class="button1">Open In New Tab</button></a>
+
+                            <a href="https://discord.com/shop#itemSkuId=1228251351415263242">
+                            <button class="button1">Open In Discord Shop</button></a>
+
+                        </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=true" id="copylofi3">
                     </div>
                     <div class="lofidecos lofi4">
                         <h1 class="sillywords">Rainy Mood</h1>
 
+                        <a class="sillywords lofi4text">SKU ID: 1228251846032756796</a>
+
                         <img class="lofidecoimage lofi4logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=false">
 
-                        <a class="sillywords lofi4text">Feel the calm.</a>
+                        <a class="sillywords lofi4text lofi4fade">Feel the calm.</a>
 
-                        <a class="sillywords lofi4price price">US$5.99 - US$4.99</a>
+                        <h1 class="sillywords lofi4price price lofi4fade">US$5.99 - US$4.99</h1>
 
-                        <button class="button1" onclick="copylofi4()">Copy Link</button>
+                        <div class="button-holder">
 
-                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                            <button class="button1" onclick="copylofi4()">Copy Link</button>
 
-                        <a href="https://discord.com/shop#itemSkuId=1228251846032756796">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true">
+                            <button class="button1">Open In New Tab</button></a>
+
+                            <a href="https://discord.com/shop#itemSkuId=1228251846032756796">
+                            <button class="button1">Open In Discord Shop</button></a>
+
+                        </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true" id="copylofi4">
                     </div>
