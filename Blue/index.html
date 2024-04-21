@@ -1611,11 +1611,54 @@
             margin-top: 0px;
         }
 
-        .lofi5logo:hover {
+        .lofi5:hover .lofi5logo {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true);
         }
-        .lofi6logo:hover {
+        .lofi5 .button1 {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .lofi5:hover .button1 {
+            opacity: 100%;
+        }
+        .lofi5 .lofi5fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .lofi5:hover .lofi5fade {
+            opacity: 0%;
+            display: none;
+        }
+        .lofi5 .button-holder  {
+            margin-top: -79px;
+        }
+        .lofi5:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        .lofi6:hover .lofi6logo {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_5873ecaa76fb549654b40095293f902e.png?size=240&passthrough=true);
+        }
+        .lofi6 .button1 {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .lofi6:hover .button1 {
+            opacity: 100%;
+        }
+        .lofi6 .lofi6fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .lofi6:hover .lofi6fade {
+            opacity: 0%;
+            display: none;
+        }
+        .lofi6 .button-holder  {
+            margin-top: -79px;
+        }
+        .lofi6:hover .button-holder  {
+            margin-top: 0px;
         }
         
 
@@ -1638,7 +1681,7 @@
             display: none;
         }
         .lofistudy .button-holder  {
-            margin-top: -78px;
+            margin-top: -79px;
         }
         .lofistudy:hover .button-holder  {
             margin-top: 0px;
@@ -2368,15 +2411,15 @@
 
                         <img class="lofidecoimage lofi5logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=false">
 
-                        <a class="sillywords lofi5text">Perfect for any tune.</a>
+                        <a class="sillywords lofi5text lofi5fade">Perfect for any tune.</a>
 
-                        <h1 class="sillywords lofi5price price">US$5.99 - US$4.99</h1>
+                        <h1 class="sillywords lofi5price price lofi5fade">US$5.99 - US$4.99</h1>
 
                         <div class="button-holder">
 
-                            <button class="button1" onclick="copylofi4()">Copy Link</button>
+                            <button class="button1" onclick="copylofi5()">Copy Link</button>
 
-                            <button class="button1" onclick="copylofi4pp()">Copy Profiles Plus Emoji</button>
+                            <button class="button1" onclick="copylofi5pp()">Copy Profiles Plus Emoji</button>
 
                             <a href="cozyheadphones">
                             <button class="button1">Open Extra Info</button></a>
@@ -2384,25 +2427,34 @@
                         </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true" id="copylofi5">
+
+                        <input class="hidden" type="text-input" value=":no_entry_sign:" id="copylofi5pp">
                     </div>
                     <div class="lofidecos lofi6">
                         <h1 class="sillywords">Doodling</h1>
 
+                        <a class="sillywords lofi5text lofi5sku">SKU ID: 1228252219502100530</a>
+
                         <img class="lofidecoimage lofi6logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_5873ecaa76fb549654b40095293f902e.png?size=240&passthrough=false">
 
-                        <a class="sillywords lofi6text">What do you mean I'm procrastinating?</a>
+                        <a class="sillywords lofi6text lofi6fade">What do you mean I'm procrastinating?</a>
 
-                        <a class="sillywords lofi6price price">US$5.99 - US$4.99</a>
+                        <h1 class="sillywords lofi6price price lofi6fade">US$5.99 - US$4.99</h1>
 
-                        <button class="button1" onclick="copylofi6()">Copy Link</button>
+                        <div class="button-holder">
 
-                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_5873ecaa76fb549654b40095293f902e.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                            <button class="button1" onclick="copylofi6()">Copy Link</button>
 
-                        <a href="https://discord.com/shop#itemSkuId=1228252219502100530">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                            <button class="button1" onclick="copylofi6pp()">Copy Profiles Plus Emoji</button>
+
+                            <a href="doodling">
+                            <button class="button1">Open Extra Info</button></a>
+
+                        </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_5873ecaa76fb549654b40095293f902e.png?size=240&passthrough=true" id="copylofi6">
+
+                        <input class="hidden" type="text-input" value=":100:" id="copylofi6pp">
                     </div>
 
                 </div>
@@ -6483,12 +6535,26 @@
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
         }
+        function copylofi5pp() {
+            var copyText = document.getElementById("copylofi5pp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
         function copylofi6() {
             var copyText = document.getElementById("copylofi6");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
         }
+        function copylofi6pp() {
+            var copyText = document.getElementById("copylofi6pp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
 
         function copylofistudy1() {
             var copyText = document.getElementById("copylofistudy1");
