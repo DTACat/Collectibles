@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Shop Archives Blue</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" type="image/x-icon"/>
+    <meta content="Shop Archives (P+ & SKU)" property="og:title" />
+    <meta content="Info About Cozy Cat Decoration (P+ & SKU)" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/Blue/cozycat/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" property="og:image" />
+    <meta content="#5e8a1d" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #333538;
+            color: white;
+        }
+        .loadtext {
+            margin-top: -20px;
+        }
+        .darkmode {
+            background-color: #333538;
+            /* or whatever */
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            backdrop-filter: blur(10px);
+        }
+        .left-sidebar {
+            position: fixed;
+            width: 4em;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        .server-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+        }
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .darkmode1 {
+            background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
+        }
+
+        .itemlist {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .element {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .lofibannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+
+        
+        .lofibannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 12em;
+            margin-top: -30px;
+        }
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .backbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .nitrobutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 26em;
+            padding: 25px;
+            border-radius: 3px;
+            border-color: rgb(180, 137, 19);
+            background-color: rgb(190, 219, 26);
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+        }
+
+        
+        .lofidecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            background-image: url(data:image/png;base64,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);
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        #elementdeco {
+            text-align: unset;
+        }
+
+        
+        .lofidecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 630px;
+            height: 1120px;
+            border: 2px solid pink;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(83, 29, 231), rgb(194, 35, 181));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+
+        
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+
+        .banner {
+            margin-top: 100px;
+        }
+        div.loading {
+            opacity: 0.9; 
+            background: #000; 
+            width: 100%;
+            height: 6em; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+        }
+        .loadtext {
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .newtext {
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            scale: 150%;
+            border-radius: 50px;
+            text-align: center;
+            margin-left: 190px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        .lofi2:hover .lofi2logo {
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <a href="https://discord.gg/Mcwh7hGcWb">
+            <button title="Discord Server" class="button server-button">Discord Server</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
+        <a href="https://www.youtube.com/@DTACat">
+            <button title="Youtube" class="button server-button">Youtube</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
+            <button title="Change Log" class="button server-button">Change Log</button>
+        </a>
+        
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
+        Items will only contain 2 links, anymore than that will not be listed here. 
+        Some Descriptions/Titles may be inaccurate due to size issues. 
+        Anime and Anime V2 will not be combined.</a>
+
+    </div>
+
+
+
+    <div class="itemlist">
+        <div class="lofi">
+            <!-- Lofi -->
+
+            <div id="lofiitems">
+                <div class="lofidecorow decorow">
+
+                    <a href="..">
+                    <button class="backbutton1">Go Back</button></a>
+
+                    <div class="lofidecos lofi2">
+                        <h1 class="sillywords">Cozy Cat</h1>
+
+                        <h1 class="sillywords lofi2text">SKU ID: 1228251144065777765</h1>
+
+                        <img class="lofidecoimage lofi2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=false">
+
+                        <h1 class="sillywords lofi2text">Vibing one catnap at a time.</h1>
+
+                        <h1 class="sillywords lofi2price price">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://discord.com/settings/premium">
+                            <button class="nitrobutton1">Buy For US$4.99 With Nitro</button></a>
+
+                            <button class="button1" onclick="copylofi2()">Copy Link</button>
+
+                            <button class="button1" onclick="copylofi2pp()">Copy Profiles Plus Emoji</button>
+
+                            <button class="button1" onclick="copylofi2id()">Copy SKU ID</button>
+
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true">
+                            <button class="button1">Open In New Tab</button></a>
+
+                            <a href="https://discord.com/shop#itemSkuId=1228251144065777765">
+                            <button class="button1">Open In Discord Shop</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true" id="copylofi2">
+
+                        <input class="hidden" type="text-input" value=":octagonal_sign:" id="copylofi2pp">
+
+                        <input class="hidden" type="text-input" value="1228251144065777765" id="copylofi2id">
+
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function copylofi2() {
+            var copyText = document.getElementById("copylofi2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofi2pp() {
+            var copyText = document.getElementById("copylofi2pp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofi2id() {
+            var copyText = document.getElementById("copylofi2id");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+
+</html>
