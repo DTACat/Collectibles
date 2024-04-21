@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Shop Archives Blue</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" type="image/x-icon"/>
+    <meta content="All Nighter, Wait, it's already morning?" property="og:title" />
+    <meta content="US$5.99 - US$4.99, SKU: 1228234634379132958" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/Blue/allnighter/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/AllNighterEmbed.png" property="og:image" />
+    <meta content="#ff00ea" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #333538;
+            color: white;
+        }
+        .loadtext {
+            margin-top: -20px;
+        }
+        .darkmode {
+            background-color: #333538;
+            /* or whatever */
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            backdrop-filter: blur(10px);
+        }
+        .left-sidebar {
+            position: fixed;
+            width: 4em;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        .server-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+        }
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .darkmode1 {
+            background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
+        }
+
+        .itemlist {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .element {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .lofibannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+
+        
+        .lofibannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 12em;
+            margin-top: -30px;
+        }
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .backbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .nitrobutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 26em;
+            padding: 25px;
+            border-radius: 3px;
+            border-color: rgb(180, 137, 19);
+            background-color: rgb(190, 219, 26);
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+        }
+        .noclick {
+            cursor: not-allowed;
+        }
+
+        
+        .lofieffectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: 600px;
+            padding: 10px;
+            border: 2px solid pink;
+            border-radius: 20px;
+        }
+
+
+        #elementdeco {
+            text-align: unset;
+        }
+
+        
+        .lofieffects {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 630px;
+            height: 1555px;
+            border: 2px solid pink;
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(83, 29, 231), rgb(194, 35, 181));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+
+        
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+
+        .banner {
+            margin-top: 100px;
+        }
+        div.loading {
+            opacity: 0.9; 
+            background: #000; 
+            width: 100%;
+            height: 6em; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+        }
+        .loadtext {
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .newtext {
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            scale: 150%;
+            border-radius: 50px;
+            text-align: center;
+            margin-left: 190px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            text-decoration: none;
+        }
+        
+
+        .lofinight:hover .lofinightlogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/intro.png)
+        }
+        .lofinightloopframe:hover .lofinightloopframelogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-frame.png)
+        }
+        .lofinightlooplights:hover .lofinightlooplightslogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-lights.png)
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <a href="https://discord.gg/Mcwh7hGcWb">
+            <button title="Discord Server" class="button server-button">Discord Server</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
+        <a href="https://www.youtube.com/@DTACat">
+            <button title="Youtube" class="button server-button">Youtube</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
+            <button title="Change Log" class="button server-button">Change Log</button>
+        </a>
+        
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
+        Items will only contain 2 links, anymore than that will not be listed here. 
+        Some Descriptions/Titles may be inaccurate due to size issues. 
+        Anime and Anime V2 will not be combined.</a>
+
+    </div>
+
+
+
+    <div class="itemlist">
+        <div class="lofi">
+            <!-- Lofi -->
+
+            <div id="lofiitems">
+                <div class="lofieffectrow decorow">
+
+                    <a href="..">
+                    <button class="backbutton1">Go Back</button></a>
+
+                    <div class="lofieffects lofinight">
+                        <h1 class="sillywords">All Nighter Intro</h1>
+
+                        <h1 class="sillywords lofinighttext">SKU ID: 1228234634379132958</h1>
+
+                        <img class="lofieffectimage lofinightlogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/thumbnail.png">
+
+                        <h1 class="sillywords lofinighttext">Time to hit the books.</h1>
+
+                        <h1 class="sillywords lofinightprice price">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://discord.com/settings/premium">
+                            <button class="nitrobutton1">Buy For US$4.99 With Nitro</button></a>
+
+                            <button class="button1" onclick="copylofinight1()">Copy Intro Link</button>
+
+                            <button class="button1 noclick" onclick="copylofinight1()">Temporarily Unavailable</button>
+
+                            <button class="button1" onclick="copylofinightid()">Copy SKU ID</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/intro.png">
+                            <button class="button1">Open Intro In New Tab</button></a>
+
+                            <a href="https://discord.com/shop#itemSkuId=1228234634379132958">
+                            <button class="button1">Open In Discord Shop</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">duration: 3000</a>
+
+                        <a class="sillywords nerdinfo">height: 880</a>
+
+                        <a class="sillywords nerdinfo">loop: false</a>
+
+                        <a class="sillywords nerdinfo">loopDelay: 0</a>
+
+                        <a class="sillywords nerdinfo">position: {x: 0, y: 0}</a>
+
+                        <a class="sillywords nerdinfo">src: "https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/intro.png"</a>
+
+                        <a class="sillywords nerdinfo">start: 0</a>
+
+                        <a class="sillywords nerdinfo">width: 450</a>
+
+                        <a class="sillywords nerdinfo">zIndex: 100</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/intro.png" id="copylofinight1">
+
+                        <input class="hidden" type="text-input" value="1228234634379132958" id="copylofinightid">
+
+                    </div>
+
+                    <div class="lofieffects lofinightloopframe">
+                        <h1 class="sillywords">All Nighter Loop Frame</h1>
+
+                        <h1 class="sillywords lofinightloopframetext">SKU ID: 1228234634379132958</h1>
+
+                        <img class="lofieffectimage lofinightloopframelogo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/allnighterframe.png">
+
+                        <h1 class="sillywords lofinightloopframetext">Time to hit the books.</h1>
+
+                        <h1 class="sillywords lofinightloopframeprice price">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://discord.com/settings/premium">
+                            <button class="nitrobutton1">Buy For US$4.99 With Nitro</button></a>
+
+                            <button class="button1" onclick="copylofinightloopframe1()">Copy Loop Frame Link</button>
+
+                            <button class="button1 noclick" onclick="copylofinightloopframe1()">Temporarily Unavailable</button>
+
+                            <button class="button1" onclick="copylofinightid()">Copy SKU ID</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-frame.png">
+                            <button class="button1">Open Intro In New Tab</button></a>
+
+                            <a href="https://discord.com/shop#itemSkuId=1228234634379132958">
+                            <button class="button1">Open In Discord Shop</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">duration: 3000</a>
+
+                        <a class="sillywords nerdinfo">height: 880</a>
+
+                        <a class="sillywords nerdinfo">loop: true</a>
+
+                        <a class="sillywords nerdinfo">loopDelay: 0</a>
+
+                        <a class="sillywords nerdinfo">position: {x: 0, y: 0}</a>
+
+                        <a class="sillywords nerdinfo">src: "https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-frame.png"</a>
+
+                        <a class="sillywords nerdinfo">start: 3000</a>
+
+                        <a class="sillywords nerdinfo">width: 450</a>
+
+                        <a class="sillywords nerdinfo">zIndex: 101</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-frame.png" id="copylofinightloopframe1">
+
+                        <input class="hidden" type="text-input" value="1228234634379132958" id="copylofinightid">
+
+                    </div>
+
+                    <div class="lofieffects lofinightlooplights">
+                        <h1 class="sillywords">All Nighter Loop Lights</h1>
+
+                        <h1 class="sillywords lofinightlooplightstext">SKU ID: 1228234634379132958</h1>
+
+                        <img class="lofieffectimage lofinightlooplightslogo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/allnighterlights.png">
+
+                        <h1 class="sillywords lofinightlooplightstext">Time to hit the books.</h1>
+
+                        <h1 class="sillywords lofinightlooplightsprice price">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://discord.com/settings/premium">
+                            <button class="nitrobutton1">Buy For US$4.99 With Nitro</button></a>
+
+                            <button class="button1" onclick="copylofinightlooplights1()">Copy Loop Lights Link</button>
+
+                            <button class="button1 noclick" onclick="copylofinightlooplights1()">Temporarily Unavailable</button>
+
+                            <button class="button1" onclick="copylofinightid()">Copy SKU ID</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-lights.png">
+                            <button class="button1">Open Intro In New Tab</button></a>
+
+                            <a href="https://discord.com/shop#itemSkuId=1228234634379132958">
+                            <button class="button1">Open In Discord Shop</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">duration: 3000</a>
+
+                        <a class="sillywords nerdinfo">height: 880</a>
+
+                        <a class="sillywords nerdinfo">loop: true</a>
+
+                        <a class="sillywords nerdinfo">loopDelay: 5000</a>
+
+                        <a class="sillywords nerdinfo">position: {x: 0, y: 0}</a>
+
+                        <a class="sillywords nerdinfo">src: "https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-lights.png"</a>
+
+                        <a class="sillywords nerdinfo">start: 4000</a>
+
+                        <a class="sillywords nerdinfo">width: 450</a>
+
+                        <a class="sillywords nerdinfo">zIndex: 102</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/idle-lights.png" id="copylofinightlooplights1">
+
+                        <input class="hidden" type="text-input" value="1228234634379132958" id="copylofinightid">
+
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function copylofinight1() {
+            var copyText = document.getElementById("copylofinight1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofinightloopframe1() {
+            var copyText = document.getElementById("copylofinightloopframe1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofinightlooplights1() {
+            var copyText = document.getElementById("copylofinightlooplights1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofinightid() {
+            var copyText = document.getElementById("copylofinightid");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+
+</html>
