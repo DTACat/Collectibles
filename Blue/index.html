@@ -2259,7 +2259,7 @@
                     <div class="lofidecos lofi1">
                         <h1 class="sillywords">Chromawave</h1>
 
-                        <a class="sillywords lofi1text">SKU ID: 1228246010116050965</a>
+                        <a class="sillywords lofi1text lofi1sku">SKU ID: 1228246010116050965</a>
 
                         <img class="lofidecoimage lofi1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_49c479e15533fb4c02eb320c9c137433.png?size=240&passthrough=false">
 
@@ -2286,7 +2286,7 @@
                     <div class="lofidecos lofi2">
                         <h1 class="sillywords">Cozy Cat</h1>
 
-                        <a class="sillywords lofi2text">SKU ID: 1228251144065777765</a>
+                        <a class="sillywords lofi2text lofi2sku">SKU ID: 1228251144065777765</a>
 
                         <img class="lofidecoimage lofi2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=false">
 
@@ -2312,7 +2312,7 @@
                     <div class="lofidecos lofi3">
                         <h1 class="sillywords">Oasis</h1>
 
-                        <a class="sillywords lofi3text">SKU ID: 1228251351415263242</a>
+                        <a class="sillywords lofi3text lofi3sku">SKU ID: 1228251351415263242</a>
 
                         <img class="lofidecoimage lofi3logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=false">
 
@@ -2350,32 +2350,38 @@
 
                             <button class="button1" onclick="copylofi4()">Copy Link</button>
 
-                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true">
-                            <button class="button1">Open In New Tab</button></a>
+                            <button class="button1" onclick="copylofi4pp()">Copy Profiles Plus Emoji</button>
 
-                            <a href="https://discord.com/shop#itemSkuId=1228251846032756796">
-                            <button class="button1">Open In Discord Shop</button></a>
+                            <a href="rainymood">
+                            <button class="button1">Open Extra Info</button></a>
 
                         </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=240&passthrough=true" id="copylofi4">
+
+                        <input class="hidden" type="text-input" value=":name_badge:" id="copylofi4pp">
                     </div>
                     <div class="lofidecos lofi5">
                         <h1 class="sillywords">Cozy Headphones</h1>
+
+                        <a class="sillywords lofi5text lofi5sku">SKU ID: 1228252042791878707</a>
 
                         <img class="lofidecoimage lofi5logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=false">
 
                         <a class="sillywords lofi5text">Perfect for any tune.</a>
 
-                        <a class="sillywords lofi5price price">US$5.99 - US$4.99</a>
+                        <h1 class="sillywords lofi5price price">US$5.99 - US$4.99</h1>
 
-                        <button class="button1" onclick="copylofi5()">Copy Link</button>
+                        <div class="button-holder">
 
-                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                            <button class="button1" onclick="copylofi4()">Copy Link</button>
 
-                        <a href="https://discord.com/shop#itemSkuId=1228252042791878707">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                            <button class="button1" onclick="copylofi4pp()">Copy Profiles Plus Emoji</button>
+
+                            <a href="cozyheadphones">
+                            <button class="button1">Open Extra Info</button></a>
+
+                        </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true" id="copylofi5">
                     </div>
@@ -6464,6 +6470,13 @@
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
         }
+        function copylofi4pp() {
+            var copyText = document.getElementById("copylofi4pp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
         function copylofi5() {
             var copyText = document.getElementById("copylofi5");
             copyText.select();
