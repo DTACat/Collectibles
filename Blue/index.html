@@ -2324,15 +2324,16 @@
 
                             <button class="button1" onclick="copylofi3()">Copy Link</button>
 
-                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=true">
-                            <button class="button1">Open In New Tab</button></a>
+                            <button class="button1" onclick="copylofi3pp()">Copy Profiles Plus Emoji</button>
 
-                            <a href="https://discord.com/shop#itemSkuId=1228251351415263242">
-                            <button class="button1">Open In Discord Shop</button></a>
+                            <a href="oasis">
+                            <button class="button1">Open Extra Info</button></a>
 
                         </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_f740031cc97d1b7eb73c0d0ac1dd09f3.png?size=240&passthrough=true" id="copylofi3">
+
+                        <input class="hidden" type="text-input" value=":no_entry:" id="copylofi3pp">
                     </div>
                     <div class="lofidecos lofi4">
                         <h1 class="sillywords">Rainy Mood</h1>
@@ -6450,6 +6451,13 @@
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
         }
+        function copylofi3pp() {
+            var copyText = document.getElementById("copylofi3pp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
         function copylofi4() {
             var copyText = document.getElementById("copylofi4");
             copyText.select();
