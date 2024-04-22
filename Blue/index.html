@@ -179,7 +179,7 @@
             margin-right: auto;
             width: 1280px;
             height: 270px;
-            border: 2px solid darkgreen;
+            border: 2px solid blue;
             border-radius: 50px;
             padding: 10px;
             background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1157410718711304315.png?size=1280);
@@ -574,6 +574,58 @@
             cursor: pointer;
             color: white;
         }
+        .redbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(48, 39, 75);
+            background-color: rgb(218, 74, 129);
+            cursor: pointer;
+            color: white;
+        }
+        .goldblackbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(148, 89, 1);
+            background-color: rgb(219, 174, 26);
+            cursor: pointer;
+            color: black;
+        }
+        .greenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(31, 95, 29);
+            background-color: rgb(24, 119, 24);
+            cursor: pointer;
+            color: white;
+        }
+        .darkgreenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(17, 56, 16);
+            background-color: rgb(12, 53, 29);
+            cursor: pointer;
+            color: white;
+        }
         .noclick {
             cursor: not-allowed;
         }
@@ -907,7 +959,7 @@
             width: 200px;
             height: 400px;
             padding: 10px;
-            border: 2px solid darkgreen;
+            border: 2px solid blue;
             border-radius: 20px;
         }
         .falleffectimage {
@@ -973,9 +1025,9 @@
             margin-right: auto;
             width: 430px;
             height: 550px;
-            border: 2px solid pink;
+            border: 2px solid rgb(160, 111, 220);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(83, 29, 231), rgb(194, 35, 181));
+            background-image: linear-gradient(rgb(97, 92, 255), rgb(223, 129, 184));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -1099,9 +1151,9 @@
             margin-right: auto;
             width: 430px;
             height: 550px;
-            border: 2px solid darkgreen;
+            border: 2px solid blue;
             border-radius: 50px;
-            background-image: linear-gradient(rgb(8, 68, 24), rgb(3, 24, 8));
+            background-image: linear-gradient(rgb(20, 76, 139), rgb(8, 22, 53));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -1367,9 +1419,9 @@
             margin-right: auto;
             width: 430px;
             height: 880px;
-            border: 2px solid darkgreen;
+            border: 2px solid blue;
             border-radius: 50px;
-            background-image: linear-gradient(rgb(8, 68, 24), rgb(3, 24, 8));
+            background-image: linear-gradient(rgb(20, 76, 139), rgb(8, 22, 53));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -1738,9 +1790,31 @@
         }
 
 
-        .shyclovelogo:hover {
+        .shyclove:hover .shyclovelogo {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=true)
         }
+        .shyclove .redbutton1 {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .shyclove:hover .redbutton1 {
+            opacity: 100%;
+        }
+        .shyclove .lofi5fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .shyclove:hover .shyclovefade {
+            opacity: 0%;
+            display: none;
+        }
+        .shyclove .button-holder  {
+            margin-top: -79px;
+        }
+        .shyclove:hover .button-holder  {
+            margin-top: 0px;
+        }
+
         .shyomenslogo:hover {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_c45abe8c7585fdb41b8d8d4d666f1588.png?size=240&passthrough=true)
         }
@@ -2303,7 +2377,7 @@
         Items will only contain 2 links, anymore than that will not be listed here. 
         Some Descriptions/Titles may be inaccurate due to size issues. 
         Anime and Anime V2 will not be combined.
-        Shop Archives is based off the old look of the Discord shop</a>
+        Shop Archives is based off the old look of the Discord shop.</a>
 
     </div>
 
@@ -2580,19 +2654,25 @@
                     <div class="shydecos shyclove">
                         <h1 class="sillywords">A Hint of Clove</h1>
 
+                        <a class="sillywords shyclovetext shyclovesku">SKU ID: 1220513977683935373</a>
+
                         <img class="shydecoimage shyclovelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=false">
 
-                        <a class="sillywords shyclovetext">Back again from the great beyond.</a>
+                        <a class="sillywords shyclovetext shyclovefade">Back again from the great beyond.</a>
 
-                        <a class="sillywords shycloveprice price">US$15.99 - US$11.99</a>
+                        <h1 class="sillywords shycloveprice price shyclovefade">US$15.99 - US$11.99</h1>
 
-                        <button class="button1" onclick="copyshyclove()">Copy Link</button>
+                        <div class="button-holder">
 
-                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                            <button class="redbutton1" onclick="copyshyclove()">Copy Link</button>
 
-                        <a href="https://discord.com/shop#itemSkuId=1220513977683935373">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=true">
+                            <button class="redbutton1">Copy Profiles Plus Emoji</button></a>
+
+                            <a href="ahintofclove">
+                            <button class="redbutton1">Open Extra Info</button></a>
+
+                        </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=true" id="copyshyclove">
                     </div>
@@ -2780,13 +2860,13 @@
 
                         <a class="sillywords springtoonshoneyprice price">US$5.99 - US$4.99</a>
 
-                        <button class="button1" onclick="copyspringtoonshoney()">Copy Link</button>
+                        <button class="goldblackbutton1" onclick="copyspringtoonshoney()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_27bbf0b53b1054cf61e9a4c0e8d4027f.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="goldblackbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1217624148080332820">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="goldblackbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_27bbf0b53b1054cf61e9a4c0e8d4027f.png?size=240&passthrough=true" id="copyspringtoonshoney">
                     </div>
@@ -3207,13 +3287,13 @@
 
                         <a class="sillywords elementfireprice price">US$5.99 - US$4.99</a>
 
-                        <button class="button1" onclick="copyelementfire()">Copy Link</button>
+                        <button class="goldblackbutton1" onclick="copyelementfire()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_a065206df7b011a5510e4e5bca7d49be.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="goldblackbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1207047014769234001">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="goldblackbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_a065206df7b011a5510e4e5bca7d49be.png?size=240&passthrough=true" id="copyelementfire">
                     </div>
@@ -3421,13 +3501,13 @@
 
                         <a class="sillywords lunarfanprice price">US$5.99 - US$4.99</a>
 
-                        <button class="button1" onclick="copylunarfan()">Copy Link</button>
+                        <button class="goldblackbutton1" onclick="copylunarfan()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="goldblackbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1202070083816661043">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="goldblackbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=true" id="copylunarfan">
                     </div>
@@ -4187,13 +4267,13 @@
 
                         <a class="sillywords halloweencatprice price">US$7.99 - US$5.49</a>
 
-                        <button class="button1" onclick="copyhalloweencat()">Copy Link</button>
+                        <button class="greenbutton1" onclick="copyhalloweencat()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_ad4e2cad924bbb3a2fddf5c527370479.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="greenbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1157411984371880118">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="greenbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_ad4e2cad924bbb3a2fddf5c527370479.png?size=240&passthrough=true" id="copyhalloweencat">
                     </div>
@@ -4363,13 +4443,13 @@
 
                         <a class="sillywords fallleaveprice price">US$7.99 - US$5.49</a>
 
-                        <button class="button1" onclick="copyfallleave()">Copy Link</button>
+                        <button class="greenbutton1" onclick="copyfallleave()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="greenbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1157409074422481023">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="greenbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true" id="copyfallleave">
                     </div>
@@ -4513,13 +4593,13 @@
 
                         <a class="sillywords fantasyswordprice price">US$9.99 - US$6.99</a>
 
-                        <button class="button1" onclick="copyfantasysword()">Copy Link</button>
+                        <button class="darkgreenbutton1" onclick="copyfantasysword()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_0f5d6c4dd8ae74662ee9c40722a56cbd.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="darkgreenbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1144003752978829455">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="darkgreenbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_0f5d6c4dd8ae74662ee9c40722a56cbd.png?size=240&passthrough=true" id="copyfantasysword">
                     </div>
@@ -5050,13 +5130,13 @@
 
                         <a class="sillywords breakfasttoastprice price">US$3.99 - US$2.99</a>
 
-                        <button class="button1" onclick="copybreakfasttoast()">Copy Link</button>
+                        <button class="goldblackbutton1" onclick="copybreakfasttoast()">Copy Link</button>
 
                         <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true">
-                        <button class="button1">Open</button></a>
+                        <button class="goldblackbutton1">Open</button></a>
 
                         <a href="https://discord.com/shop#itemSkuId=1144056139584127058">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        <button class="goldblackbutton1">Open In Shop (SKU ID)</button></a>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true" id="copybreakfasttoast">
                     </div>
