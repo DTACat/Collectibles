@@ -1712,8 +1712,29 @@
             margin-top: 0px;
         }
 
-        .lofiwaterlogo:hover {
+        .lofiwater:hover .lofiwaterlogo {
             content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/watercolors/intro.png);
+        }
+        .lofiwater .button1 {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .lofiwater:hover .button1 {
+            opacity: 100%;
+        }
+        .lofiwater .lofiwaterfade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .lofiwater:hover .lofiwaterfade {
+            opacity: 0%;
+            display: none;
+        }
+        .lofiwater .button-holder  {
+            margin-top: -78px;
+        }
+        .lofiwater:hover .button-holder  {
+            margin-top: 0px;
         }
 
 
@@ -2281,7 +2302,8 @@
         <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
         Items will only contain 2 links, anymore than that will not be listed here. 
         Some Descriptions/Titles may be inaccurate due to size issues. 
-        Anime and Anime V2 will not be combined.</a>
+        Anime and Anime V2 will not be combined.
+        Shop Archives is based off the old look of the Discord shop</a>
 
     </div>
 
@@ -2463,7 +2485,7 @@
                     <div class="lofieffects lofistudy">
                         <h1 class="sillywords">Study Spot</h1>
 
-                        <a class="sillywords lofistudytext">SKU ID: 1228233390260486164</a>
+                        <a class="sillywords lofistudytext lofistudysku">SKU ID: 1228233390260486164</a>
 
                         <img class="lofieffectimage lofistudylogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/thumbnail.png">
 
@@ -2489,7 +2511,7 @@
                     <div class="lofieffects lofinight">
                         <h1 class="sillywords">All Nighter</h1>
 
-                        <a class="sillywords lofinighttext">SKU ID: 1228237157554978817</a>
+                        <a class="sillywords lofinighttext lofinightsku">SKU ID: 1228234634379132958</a>
 
                         <img class="lofieffectimage lofinightlogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/all-nighter/thumbnail.png">
 
@@ -2515,28 +2537,28 @@
                     <div class="lofieffects lofiwater">
                         <h1 class="sillywords">Watercolors</h1>
 
+                        <a class="sillywords lofiwatertext lofiwatersku">SKU ID: 1228237157554978817</a>
+
                         <img class="lofieffectimage lofiwaterlogo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/watercolors/thumbnail.png">
 
-                        <a class="sillywords lofiwatertext">When the world feels grey, add a splash of color</a>
+                        <a class="sillywords lofiwatertext lofiwaterfade">When the world feels grey, add a splash of color</a>
 
-                        <a class="sillywords lofiwaterprice price">US$5.99 - US$4.99</a>
+                        <h1 class="sillywords lofiwaterprice price lofiwaterfade">US$5.99 - US$4.99</h1>
 
-                        <button class="button1" onclick="copylofiwater1()">Copy Intro</button>
+                        <div class="button-holder">
 
-                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/watercolors/intro.png">
-                        <button class="button1">Open Intro</button></a>
+                            <button class="button1" onclick="copylofinight1()">Copy Intro Link</button>
 
-                        <button class="button1" onclick="copylofiwater2()">Copy Idle</button>
+                            <button class="button1" onclick="copylofinight2()">Copy Intro Profiles Plus Emoji</button>
 
-                        <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/watercolors/idle.png">
-                        <button class="button1">Open Idle</button></a>
+                            <a href="watercolors">
+                            <button class="button1">Open Extra Info</button></a>
 
-                        <a href="https://discord.com/shop#itemSkuId=1228237157554978817">
-                        <button class="button1">Open In Shop (SKU ID)</button></a>
+                        </div>
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/watercolors/intro.png" id="copylofiwater1">
 
-                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/watercolors/idle.png" id="copylofiwater2">
+                        <input class="hidden" type="text-input" value=":anger:" id="copylofiwater2">
                     </div>
 
                 </div>
