@@ -4,12 +4,12 @@
 <head>
     <base target="_blank">
     <title>Shop Archives Blue</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" type="image/x-icon"/>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/StudySpotEmbedColor.png" type="image/x-icon"/>
     <meta content="Study Spot, Time to hit the books." property="og:title" />
     <meta content="US$5.99 - US$4.99, SKU: 1228233390260486164" property="og:description" />
     <meta content="https://dtacat.github.io/Collectibles/Blue/studyspot/" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/StudySpotEmbed2.png" property="og:image" />
-    <meta content="#ff00ea" data-react-helmet="true" name="theme-color" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/StudySpotEmbedColor.png" property="og:image" />
+    <meta content="#615CFF" data-react-helmet="true" name="theme-color" />
     <style>
         body {
             background-color: #333538;
@@ -144,9 +144,12 @@
             margin-right: auto;
             width: 300px;
             height: 600px;
-            padding: 10px;
-            border: 2px solid pink;
+            padding: 0px;
             border-radius: 20px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
 
@@ -160,10 +163,10 @@
             margin-left: auto;
             margin-right: auto;
             width: 630px;
-            height: 1555px;
-            border: 2px solid pink;
+            height: 1700px;
+            border: 2px solid rgb(160, 111, 220);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(83, 29, 231), rgb(194, 35, 181));
+            background-image: linear-gradient(rgb(97, 92, 255), rgb(223, 129, 184));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -291,12 +294,17 @@
 
                             <button class="button1" onclick="copylofistudy1()">Copy Intro Link</button>
 
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/intro.png">
+                            <button class="button1">Open Intro In New Tab</button></a>
+
+                            <button class="button1" onclick="copylofistudythumb1()">Copy Thumbnail Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/thumbnail.png">
+                            <button class="button1">Open Thumbnail In New Tab</button></a>
+
                             <button class="button1 noclick" onclick="copylofistudy1()">Temporarily Unavailable</button>
 
                             <button class="button1" onclick="copylofistudyid()">Copy SKU ID</button>
-
-                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/intro.png">
-                            <button class="button1">Open Intro In New Tab</button></a>
 
                             <a href="https://discord.com/shop#itemSkuId=1228233390260486164">
                             <button class="button1">Open In Discord Shop</button></a>
@@ -325,6 +333,8 @@
 
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/intro.png" id="copylofistudy1">
 
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/thumbnail.png" id="copylofistudythumb1">
+
                         <input class="hidden" type="text-input" value="1228233390260486164" id="copylofistudyid">
 
                     </div>
@@ -347,12 +357,17 @@
 
                             <button class="button1" onclick="copylofistudy2()">Copy Loop Link</button>
 
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/intro.png">
+                            <button class="button1">Open Loop In New Tab</button></a>
+
+                            <button class="button1" onclick="copylofistudythumb1()">Copy Thumbnail Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/thumbnail.png">
+                            <button class="button1">Open Thumbnail In New Tab</button></a>
+
                             <button class="button1 noclick" onclick="copylofistudy2()">Temporarily Unavailable</button>
 
                             <button class="button1" onclick="copylofistudyid()">Copy SKU ID</button>
-
-                            <a href="https://cdn.discordapp.com/assets/profile_effects/effects/2024-04-04/study-spot/intro.png">
-                            <button class="button1">Open Loop In New Tab</button></a>
 
                             <a href="https://discord.com/shop#itemSkuId=1228233390260486164">
                             <button class="button1">Open In Discord Shop</button></a>
@@ -401,6 +416,12 @@
         }
         function copylofistudy2() {
             var copyText = document.getElementById("copylofistudy2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofistudythumb1() {
+            var copyText = document.getElementById("copylofistudythumb1");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
