@@ -159,7 +159,7 @@
             margin-left: auto;
             margin-right: auto;
             width: 630px;
-            height: 1120px;
+            height: 1380px;
             border: 2px solid rgb(160, 111, 220);
             border-radius: 50px;
             background-image: linear-gradient(rgb(97, 92, 255), rgb(223, 129, 184));
@@ -287,19 +287,30 @@
 
                             <button class="button1" onclick="copylofi2()">Copy Link</button>
 
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true">
+                            <button class="button1">Open In New Tab</button></a>
+
+                            <button class="button1" onclick="copylofi2s()">Copy Static Link</button>
+
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true">
+                            <button class="button1">Open Static In New Tab</button></a>
+
                             <button class="button1" onclick="copylofi2pp()">Copy Profiles Plus Emoji</button>
 
                             <button class="button1" onclick="copylofi2id()">Copy SKU ID</button>
-
-                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true">
-                            <button class="button1">Open In New Tab</button></a>
 
                             <a href="https://discord.com/shop#itemSkuId=1228251144065777765">
                             <button class="button1">Open In Discord Shop</button></a>
 
                         </div>
 
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">asset ID: a_77b7b6a740a9451e1ef39c0252154ef8.png</a>
+
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=true" id="copylofi2">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=240&passthrough=false" id="copylofi2s">
 
                         <input class="hidden" type="text-input" value=":octagonal_sign:" id="copylofi2pp">
 
@@ -317,6 +328,12 @@
 
         function copylofi2() {
             var copyText = document.getElementById("copylofi2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofi2s() {
+            var copyText = document.getElementById("copylofi2s");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
