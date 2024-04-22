@@ -6,3 +6,21 @@
 ![Logo (40)](https://github.com/DTACat/DTACat/assets/141873540/df299036-463e-4603-9ff8-6f6958103cbf)
 
 join discord now https://discord.gg/Mcwh7hGcWb
+
+# Credits
+
+### Here is a list of people who have helped me make this site or I have found info about the Discord shop on their socials
+
+## SKU ID:
+
+# [Happy Enderman](https://github.com/happyendermangit)
+
+https://collectibles.happyenderman.com/
+
+## Shop Colors:
+
+# [No Text To Speech](https://youtube.com/@NoTextToSpeech)
+
+https://www.youtube.com/watch?v=n8jVhuyaeJg
+
+https://www.youtube.com/watch?v=GfQYj15LKCA
