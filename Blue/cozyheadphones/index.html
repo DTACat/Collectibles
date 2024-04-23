@@ -4,12 +4,12 @@
 <head>
     <base target="_blank">
     <title>Shop Archives Blue</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo%20(18).png" type="image/x-icon"/>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/CozyHeadphonesEmbedColor.png" type="image/x-icon"/>
     <meta content="Cozy Headphones, Perfect for any tune." property="og:title" />
     <meta content="US$5.99 - US$4.99, SKU: 1228252042791878707" property="og:description" />
     <meta content="https://dtacat.github.io/Collectibles/Blue/cozyheadphones/" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/CozyHeadphonesEmbed.png" property="og:image" />
-    <meta content="#ff00ea" data-react-helmet="true" name="theme-color" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/CozyHeadphonesEmbedColor.png" property="og:image" />
+    <meta content="#615CFF" data-react-helmet="true" name="theme-color" />
     <style>
         body {
             background-color: #383338;
@@ -159,10 +159,10 @@
             margin-left: auto;
             margin-right: auto;
             width: 630px;
-            height: 1120px;
-            border: 2px solid pink;
+            height: 1380px;
+            border: 2px solid rgb(160, 111, 220);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(83, 29, 231), rgb(194, 35, 181));
+            background-image: linear-gradient(rgb(97, 92, 255), rgb(223, 129, 184));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -250,9 +250,8 @@
         </a>
         
         <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
-        Items will only contain 2 links, anymore than that will not be listed here. 
-        Some Descriptions/Titles may be inaccurate due to size issues. 
-        Anime and Anime V2 will not be combined.</a>
+            Anime and Anime V2 will not be combined.
+            Shop Archives is based off the old look of the Discord shop.</a>
 
     </div>
 
@@ -286,19 +285,30 @@
 
                             <button class="button1" onclick="copylofi5()">Copy Link</button>
 
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true">
+                            <button class="button1">Open In New Tab</button></a>
+
+                            <button class="button1" onclick="copylofi5s()">Copy Static Link</button>
+
+                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=false">
+                            <button class="button1">Open Static In New Tab</button></a>
+
                             <button class="button1" onclick="copylofi5pp()">Copy Profiles Plus Emoji</button>
 
                             <button class="button1" onclick="copylofi5id()">Copy SKU ID</button>
-
-                            <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true">
-                            <button class="button1">Open In New Tab</button></a>
 
                             <a href="https://discord.com/shop#itemSkuId=1228252042791878707">
                             <button class="button1">Open In Discord Shop</button></a>
 
                         </div>
 
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">asset ID: a_bb71042ccd2ca277a69f086a4f3354d0</a>
+
                         <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=true" id="copylofi5">
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_bb71042ccd2ca277a69f086a4f3354d0.png?size=240&passthrough=false" id="copylofi5s">
 
                         <input class="hidden" type="text-input" value=":no_entry_sign:" id="copylofi5pp">
 
@@ -316,6 +326,12 @@
 
         function copylofi5() {
             var copyText = document.getElementById("copylofi5");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copylofi5s() {
+            var copyText = document.getElementById("copylofi5s");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
