@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Shop Archives Blue</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/LofiVibesEmbedColor.png" type="image/x-icon"/>
+    <meta http-equiv="refresh" content="2;url=https://dtacat.github.io/Collectibles/Blue/">
+    <meta content="Lofi Vibes" property="og:title" />
+    <meta content="Where chill meets mood." property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/Blue/LofiVibes/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/LofiVibesEmbedColor.png" property="og:image" />
+    <meta content="#615CFF" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #343338;
+            color: white;
+        }
+        .loadtext {
+            margin-top: -20px;
+        }
+        .darkmode {
+            background-color: #333538;
+            /* or whatever */
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            backdrop-filter: blur(10px);
+        }
+        .left-sidebar {
+            position: fixed;
+            width: 4em;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        .server-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+        }
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .darkmode1 {
+            background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
+        }
+
+        
+        .lofibanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid rgb(160, 111, 220);
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1228245273768230943.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+
+
+        .itemlist {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .element {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .lofibannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        
+        .lofibannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 12em;
+            margin-top: -30px;
+        }
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+        }
+        .redbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(48, 39, 75);
+            background-color: rgb(218, 74, 129);
+            cursor: pointer;
+            color: white;
+        }
+        .goldblackbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(148, 89, 1);
+            background-color: rgb(219, 174, 26);
+            cursor: pointer;
+            color: black;
+        }
+        .greenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(31, 95, 29);
+            background-color: rgb(24, 119, 24);
+            cursor: pointer;
+            color: white;
+        }
+        .darkgreenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(17, 56, 16);
+            background-color: rgb(12, 53, 29);
+            cursor: pointer;
+            color: white;
+        }
+        .noclick {
+            cursor: not-allowed;
+        }
+        
+        
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+
+        .banner {
+            margin-top: 100px;
+        }
+        div.loading {
+            opacity: 0.9; 
+            background: #000; 
+            width: 100%;
+            height: 6em; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+        }
+        .loadtext {
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .newtext {
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            scale: 150%;
+            border-radius: 50px;
+            text-align: center;
+            margin-left: 190px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        .center1 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <a href="https://discord.gg/Mcwh7hGcWb">
+            <button title="Discord Server" class="button server-button">Discord Server</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
+        <a href="https://www.youtube.com/@DTACat">
+            <button title="Youtube" class="button server-button">Youtube</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
+            <button title="Change Log" class="button server-button">Change Log</button>
+        </a>
+        
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
+        Anime and Anime V2 will not be combined.
+        Shop Archives is based off the old look of the Discord shop.</a>
+
+    </div>
+
+
+
+    <div class="itemlist">
+        <div class="lofi">
+            <!-- Lofi -->
+
+            <div class="banner lofibanner">
+               <img class="lofibannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1228245117085679668.png?size=480">
+               <a class="sillywords lofibannertext2">Where chill meets mood.</a>
+            </div>
+
+            <h1 class="sillywords center1">This page is currently under construction...</h1>
+
+            <h1 class="sillywords center1">Redirecting to home page...</h1>
+
+        </div>
+
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
