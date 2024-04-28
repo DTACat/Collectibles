@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Shop Archives Blue</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/LightningEmbedColor3.png" type="image/x-icon"/>
+    <meta content="Lightning, Zap!" property="og:title" />
+    <meta content="Profiles Plus, P+ Emoji: Temporarily Unavailable" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/Blue/lightning/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/LightningEmbedColor3.png" property="og:image" />
+    <meta content="#742565" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #333538;
+            color: white;
+        }
+        .loadtext {
+            margin-top: -20px;
+        }
+        .darkmode {
+            background-color: #333538;
+            /* or whatever */
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            backdrop-filter: blur(10px);
+        }
+        .left-sidebar {
+            position: fixed;
+            width: 4em;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        .server-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+        }
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .darkmode1 {
+            background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
+        }
+
+        .itemlist {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .element {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .lofibannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+
+        
+        .lofibannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 12em;
+            margin-top: -30px;
+        }
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .disxbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(133, 72, 199);
+            background: linear-gradient(90deg, rgb(133, 72, 199), rgb(184, 68, 193));
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .backbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(1, 28, 148);
+            background-color: rgb(26, 78, 219);
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+        }
+        .nitrobutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 26em;
+            padding: 25px;
+            border-radius: 3px;
+            border-color: rgb(180, 137, 19);
+            background-color: rgb(190, 219, 26);
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+        }
+        .noclick {
+            cursor: not-allowed;
+        }
+
+        
+        .disxeffectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: 600px;
+            padding: 0px;
+            border-radius: 20px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .disxdecoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 400px;
+            padding: 10px;
+            background-size: 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        #elementdeco {
+            text-align: unset;
+        }
+        
+
+        
+        .disxeffects {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 630px;
+            height: 1700px;
+            border: 2px solid rgb(67, 33, 84);
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(116, 37, 101), rgb(17, 29, 64));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        .disxdecos {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 630px;
+            height: 1700px;
+            border: 2px solid rgb(67, 33, 84);
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(116, 37, 101), rgb(17, 29, 64));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        
+
+        
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+
+        .banner {
+            margin-top: 100px;
+        }
+        div.loading {
+            opacity: 0.9; 
+            background: #000; 
+            width: 100%;
+            height: 6em; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+        }
+        .loadtext {
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .newtext {
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            scale: 150%;
+            border-radius: 50px;
+            text-align: center;
+            margin-left: 190px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            text-decoration: none;
+        }
+        
+
+        .disxlightning:hover .disxlightninglogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/lightning/intro.png)
+        }
+        .disxlightningloop:hover .disxlightninglooplogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/lightning/loop1.png)
+        }
+        .disxlightningloop2:hover .disxlightningloop2logo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/lightning/loop2.png)
+        }
+
+        .disxlightningcorner:hover .disxlightningcornerlogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/lightning/corner.png)
+        }
+        .disxlightningedge:hover .disxlightningedgelogo {
+            content: url(https://cdn.discordapp.com/assets/profile_effects/lightning/edge.png)
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <a href="https://discord.gg/Mcwh7hGcWb">
+            <button title="Discord Server" class="button server-button">Discord Server</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
+        <a href="https://www.youtube.com/@DTACat">
+            <button title="Youtube" class="button server-button">Youtube</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
+            <button title="Change Log" class="button server-button">Change Log</button>
+        </a>
+        
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
+            Anime and Anime V2 will not be combined.
+            Shop Archives is based off the old look of the Discord shop.</a>
+
+    </div>
+
+
+
+    <div class="itemlist">
+        <div class="lofi">
+            <!-- Lofi -->
+
+            <div id="lofiitems">
+                <div class="disxeffectrow decorow">
+
+                    <a href="..">
+                    <button class="backbutton1">Go Back</button></a>
+
+                    <div class="disxeffects disxlightning">
+                        <h1 class="sillywords">Lightning Intro</h1>
+
+                        <h1 class="sillywords disxlightningtext disxlightningsku">SKU ID: disxlightning.sku</h1>
+
+                        <img class="disxeffectimage disxlightninglogo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe05.png">
+
+                        <h1 class="sillywords disxlightningtext">Zap!</h1>
+
+                        <h1 class="sillywords disxlightningprice price">Profiles Plus</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
+                            <button class="nitrobutton1">Get with Profiles Plus</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightning1()">Copy Intro Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/lightning/intro.png">
+                            <button class="disxbutton1">Open Intro In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningthumb1()">Copy Thumbnail Link</button>
+
+                            <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe05.png">
+                            <button class="disxbutton1">Open Thumbnail In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningpp()">Temporarily Unavailable</button>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningid()">Temporarily Unavailable</button>
+
+                            <a href=" ">
+                            <button class="disxbutton1 noclick">Temporarily Unavailable</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">duration: 1400</a>
+
+                        <a class="sillywords nerdinfo">height: 880</a>
+
+                        <a class="sillywords nerdinfo">loop: false</a>
+
+                        <a class="sillywords nerdinfo">loopDelay: 0</a>
+
+                        <a class="sillywords nerdinfo">position: {x: 0, y: 0}</a>
+
+                        <a class="sillywords nerdinfo">src: "https://cdn.discordapp.com/assets/profile_effects/lightning/intro.png"</a>
+
+                        <a class="sillywords nerdinfo">start: 0</a>
+
+                        <a class="sillywords nerdinfo">width: 450</a>
+
+                        <a class="sillywords nerdinfo">zIndex: 100</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/lightning/intro.png" id="copydisxlightning1">
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe05.png" id="copydisxlightningthumb1">
+
+                        <input class="hidden" type="text-input" value="1228237157554978817" id="copydisxlightningid">
+
+                        <input class="hidden" type="text-input" value=":anger:" id="copydisxlightningpp">
+
+                    </div>
+
+                    <div class="disxeffects disxlightningloop">
+                        <h1 class="sillywords">Lightning Loop 1</h1>
+
+                        <h1 class="sillywords disxlightninglooptext disxlightningloopsku">SKU ID: disxlightning.sku</h1>
+
+                        <img class="disxeffectimage disxlightninglooplogo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe09.png">
+
+                        <h1 class="sillywords disxlightninglooptext">Zap!</h1>
+
+                        <h1 class="sillywords disxlightningloopprice price">Profiles Plus</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
+                            <button class="nitrobutton1">Get with Profiles Plus</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningloop1()">Copy Loop 1 Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/lightning/loop1.png">
+                            <button class="disxbutton1">Open Loop 1 In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningthumb2()">Copy Thumbnail Link</button>
+
+                            <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe09.png">
+                            <button class="disxbutton1">Open Thumbnail In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightninglooppp()">Temporarily Unavailable</button>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningid()">Temporarily Unavailable</button>
+
+                            <a href=" ">
+                            <button class="disxbutton1 noclick">Temporarily Unavailable</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">duration: 1400</a>
+
+                        <a class="sillywords nerdinfo">height: 880</a>
+
+                        <a class="sillywords nerdinfo">loop: true</a>
+
+                        <a class="sillywords nerdinfo">loopDelay: 2600</a>
+
+                        <a class="sillywords nerdinfo">position: {x: 0, y: 0}</a>
+
+                        <a class="sillywords nerdinfo">src: "https://cdn.discordapp.com/assets/profile_effects/lightning/loop1.png"</a>
+
+                        <a class="sillywords nerdinfo">start: 1600</a>
+
+                        <a class="sillywords nerdinfo">width: 450</a>
+
+                        <a class="sillywords nerdinfo">zIndex: 101</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/lightning/loop1.png" id="copydisxlightningloop1">
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe09.png" id="copydisxlightningthumb2">
+
+                        <input class="hidden" type="text-input" value="1228237157554978817" id="copydisxlightningid">
+
+                        <input class="hidden" type="text-input" value=":hotsprings:" id="copydisxlightninglooppp">
+
+                    </div>
+
+                    <div class="disxeffects disxlightningloop2">
+                        <h1 class="sillywords">Lightning Loop 2</h1>
+
+                        <h1 class="sillywords disxlightningloop2text disxlightningloop2sku">SKU ID: disxlightning.sku</h1>
+
+                        <img class="disxeffectimage disxlightningloop2logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe07.png">
+
+                        <h1 class="sillywords disxlightningloop2text">Zap!</h1>
+
+                        <h1 class="sillywords disxlightningloop2price price">Profiles Plus</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
+                            <button class="nitrobutton1">Get with Profiles Plus</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightninglooptwo1()">Copy Loop 2 Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/lightning/loop2.png">
+                            <button class="disxbutton1">Open Loop 2 In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningthumbtwo2()">Copy Thumbnail Link</button>
+
+                            <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe07.png">
+                            <button class="disxbutton1">Open Thumbnail In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightninglooptwopp()">Temporarily Unavailable</button>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningtwoid()">Temporarily Unavailable</button>
+
+                            <a href=" ">
+                            <button class="disxbutton1 noclick">Temporarily Unavailable</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">duration: 1400</a>
+
+                        <a class="sillywords nerdinfo">height: 880</a>
+
+                        <a class="sillywords nerdinfo">loop: true</a>
+
+                        <a class="sillywords nerdinfo">loopDelay: 2600</a>
+
+                        <a class="sillywords nerdinfo">position: {x: 0, y: 0}</a>
+
+                        <a class="sillywords nerdinfo">src: "https://cdn.discordapp.com/assets/profile_effects/lightning/loop2.png"</a>
+
+                        <a class="sillywords nerdinfo">start: 3600</a>
+
+                        <a class="sillywords nerdinfo">width: 450</a>
+
+                        <a class="sillywords nerdinfo">zIndex: 102</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/lightning/loop2.png" id="copydisxlightninglooptwo1">
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe07.png" id="copydisxlightningthumbtwo2">
+
+                        <input class="hidden" type="text-input" value="1228237157554978817" id="copydisxlightningid">
+
+                        <input class="hidden" type="text-input" value=":hotsprings:" id="copydisxlightninglooppp">
+
+                    </div>
+                    <div class="disxdecos disxlightningcorner">
+                        <h1 class="sillywords">Lightning Corner</h1>
+
+                        <h1 class="sillywords disxlightningcornertext disxlightningcornersku">SKU ID: disxlightning.sku</h1>
+
+                        <img class="disxdecoimage disxlightningcornerlogo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe13.png">
+
+                        <h1 class="sillywords disxlightningcornertext">Zap!</h1>
+
+                        <h1 class="sillywords disxssawprice price">Unavailable</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
+                            <button class="nitrobutton1 noclick">Temporarily Unavailable</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningcorner1()">Copy Loop Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/lightning/corner.png">
+                            <button class="disxbutton1">Open Loop In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningcornerthumb1()">Copy Thumbnail Link</button>
+
+                            <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe13.png">
+                            <button class="disxbutton1">Open Thumbnail In New Tab</button></a>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningcornerpp()">Temporarily Unavailable</button>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningcornerid()">Temporarily Unavailable</button>
+
+                            <a href=" ">
+                            <button class="disxbutton1 noclick">Temporarily Unavailable</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">asset ID: corner</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/lightning/corner.png" id="copydisxlightningcorner1">
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe13.png" id="copydisxlightningcornerthumb1">
+                    </div>
+                    <div class="disxdecos disxlightningedge">
+                        <h1 class="sillywords">Lightning Edge</h1>
+
+                        <h1 class="sillywords disxlightningedgetext disxlightningedgesku">SKU ID: disxlightning.sku</h1>
+
+                        <img class="disxdecoimage disxlightningedgelogo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe13-1.png">
+
+                        <h1 class="sillywords disxlightningedgetext">Zap!</h1>
+
+                        <h1 class="sillywords disxssawprice price">Unavailable</h1>
+
+                        <div class="button-holder">
+
+                            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
+                            <button class="nitrobutton1 noclick">Temporarily Unavailable</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningedge1()">Copy Loop Link</button>
+
+                            <a href="https://cdn.discordapp.com/assets/profile_effects/lightning/edge.png">
+                            <button class="disxbutton1">Open Loop In New Tab</button></a>
+
+                            <button class="disxbutton1" onclick="copydisxlightningedgethumb1()">Copy Thumbnail Link</button>
+
+                            <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe13-1.png">
+                            <button class="disxbutton1">Open Thumbnail In New Tab</button></a>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningedgepp()">Temporarily Unavailable</button>
+
+                            <button class="disxbutton1 noclick" onclick="copydisxlightningedgeid()">Temporarily Unavailable</button>
+
+                            <a href=" ">
+                            <button class="disxbutton1 noclick">Temporarily Unavailable</button></a>
+
+                        </div>
+
+                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
+
+                        <a class="sillywords nerdinfo">asset ID: edge</a>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/lightning/edge.png" id="copydisxlightningedge1">
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe13-1.png" id="copydisxlightningedgethumb1">
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function copydisxlightning1() {
+            var copyText = document.getElementById("copydisxlightning1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningthumb1() {
+            var copyText = document.getElementById("copydisxlightningthumb1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningpp() {
+            var copyText = document.getElementById("copydisxlightningpp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningloop1() {
+            var copyText = document.getElementById("copydisxlightningloop1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningthumb2() {
+            var copyText = document.getElementById("copydisxlightningthumb2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copydisxlightninglooptwo1() {
+            var copyText = document.getElementById("copydisxlightninglooptwo1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningthumbtwo2() {
+            var copyText = document.getElementById("copydisxlightningthumbtwo2");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+
+        function copydisxlightninglooppp() {
+            var copyText = document.getElementById("copydisxlightninglooppp");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningid() {
+            var copyText = document.getElementById("copydisxlightningid");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningcorner1() {
+            var copyText = document.getElementById("copydisxlightningcorner1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningcornerthumb1() {
+            var copyText = document.getElementById("copydisxlightningcornerthumb1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningedge1() {
+            var copyText = document.getElementById("copydisxlightningedge1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+        function copydisxlightningedgethumb1() {
+            var copyText = document.getElementById("copydisxlightningedgethumb1");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        }
+    </script>
+</body>
+
+</html>
