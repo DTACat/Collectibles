@@ -237,11 +237,18 @@
 </head>
 
 <body>
-    <code>webpackChunkdiscord_app.push([[Symbol()],{},r=>c=r.c]);Object.values(c).find(x=>x?.id==333867).exports.default({
-        skuId: "12345",
-        isGift: !0,
-        analyticsLocations: "nowhere"
-    })</code>
+    <code>let wreq; webpackChunkdiscord_app.push([ [Symbol()], {}, (r) => wreq = r ])
+        const openCollectiblesPaymentModal = wreq(Object.keys(wreq.m).find(chunk=> wreq.m[chunk].toString().includes("\"payment-modal\""))).default
+        
+        /** config **/
+        const skuId = "1144056139584127058" // the sku id of the product
+        const isGift = true // true if you want to give it to someone
+        
+        openCollectiblesPaymentModal({
+            skuId,
+            isGift,
+            analyticsLocations: "nowhere"
+        })</code>
 
     <script>
 
