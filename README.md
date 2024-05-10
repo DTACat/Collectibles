@@ -11,6 +11,12 @@ join discord now https://discord.gg/Mcwh7hGcWb
 
 ### Here is a list of people who have helped me make this site or I have found info about the Discord shop on their socials
 
+## Old Collectibles
+
+# [FireGlitch64](https://github.com/FireGlitch64)
+
+# [singestheos](https://discord.com/users/397700120638128151)
+
 ## SKU ID:
 
 # [Happy Enderman](https://github.com/happyendermangit)
