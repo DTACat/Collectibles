@@ -11,7 +11,7 @@ join discord now https://discord.gg/Mcwh7hGcWb
 
 ### Here is a list of people who have helped me make this site or I have found info about the Discord shop on their socials
 
-## Old Collectibles
+## Old Collectibles:
 
 # [FireGlitch64](https://github.com/FireGlitch64)
 
