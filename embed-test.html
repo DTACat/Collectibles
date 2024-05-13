@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Shop Archives</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColor2.png" type="image/x-icon"/>
+    <meta content="Shop Archives" property="og:title" />
+    <meta content="Hub for all (Good) Discord Shop Related Sites" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/" property="og:url" />
+    <meta name="twitter:image:src" content="https://cdn.discordapp.com/avatar-decoration-presets/1a6cc97ef4b64fb90b5ff6f344ab8570.png?size=240&passthrough=false">
+    <meta content="#5e8a1d" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #333538;
+            color: white;
+        }
+        .loadtext {
+            margin-top: -20px;
+        }
+        .darkmode {
+            background-color: #333538;
+            /* or whatever */
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            backdrop-filter: blur(10px);
+        }
+        .left-sidebar {
+            position: fixed;
+            width: 4em;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        .server-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+        }
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .darkmode1 {
+            background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
+        }
+        .shoparchivesblue {
+            display: block;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1480px;
+            height: 470px;
+            border-radius: 0px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BlueBannerAd.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .shoparchivesdiscarchive {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -100px;
+            width: 1480px;
+            height: 470px;
+            border-radius: 0px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/DisArchiveBannerAd.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .shoparchivesold {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -100px;
+            width: 1480px;
+            height: 470px;
+            border-radius: 0px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/OldBannerAd.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .shoparchivescolour {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -100px;
+            width: 1480px;
+            height: 470px;
+            border-radius: 0px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ColourBannerAdHiddenSoon.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .shoparchivesguides {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -100px;
+            width: 1480px;
+            height: 470px;
+            border-radius: 0px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/GuidesBannerAd.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .shoparchivesinvalid {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -100px;
+            width: 1480px;
+            height: 470px;
+            border-radius: 0px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/InvalidBannerAdHiddenSoon.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: 0px;
+            margin-top: 350px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 10px;
+            border-color: rgb(148, 89, 1);
+            background-color: rgb(219, 174, 26);
+            cursor: pointer;
+        }
+
+        
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+
+        .banner {
+            margin-top: 100px;
+        }
+        div.loading {
+            opacity: 0.9; 
+            background: #000; 
+            width: 100%;
+            height: 6em; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+        }
+        .loadtext {
+            position: relative;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .newtext {
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            scale: 150%;
+            border-radius: 50px;
+            text-align: center;
+            margin-left: 190px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        .center1 {
+            text-align: center;
+        }
+
+        .padding1 {
+            padding: 1em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <a href="https://discord.gg/Mcwh7hGcWb">
+            <button title="Discord Server" class="button server-button">Discord Server</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
+        <a href="https://www.youtube.com/@DTACat">
+            <button title="Youtube" class="button server-button">Youtube</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
+            <button title="Change Log" class="button server-button">Change Log</button>
+        </a>
+        
+        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.</a>
+
+    </div>
+
+
+
+    <div class="itemlist">
+        <div class="shoparchivesblue">
+
+            <button class="button1" onclick="location.href='Blue';">Open</button>
+
+        </div>
+        <div class="shoparchivesdiscarchive">
+
+            <a href="https://da.happyenderman.com/collectibles">
+            <button class="button1">Open In New Tab</button></a>
+
+        </div>
+        <div class="shoparchivesold">
+
+            <button class="button1" onclick="location.href='Old';">Open</button>
+
+        </div>
+        <div class="shoparchivescolour">
+
+        </div>
+        <div class="shoparchivesguides">
+
+            <button class="button1" onclick="location.href='Guides';">Open</button>
+
+        </div>
+        <div class="shoparchivesinvalid">
+
+        </div>
+    </div>
+
+    <script>
+
+        
+    </script>
+</body>
+
+</html>
