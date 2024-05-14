@@ -9,7 +9,7 @@
     <meta name="twitter:title" content="Shop Archives">
     <meta name="twitter:description" content="List of helpful tools for all your Discord Collectible needs">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesBigEmbed2.png">
+    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesBigEmbed3.png">
     <meta content="#FF007A" data-react-helmet="true" name="theme-color" />
     <style>
         body {
@@ -27,6 +27,9 @@
         .hidden {
             display: none;
         }
+        .unpub-hidden [class*="unpublished"] {
+            display: none;
+        }
         .sidebar {
             position: fixed;
             width: 25%;
@@ -34,15 +37,20 @@
         }
         .left-sidebar {
             position: fixed;
-            width: 4em;
+            width: 430px;
             height: 100%;
             left: 0px;
-            top: 0px;
+            top: 95px;
+            z-index: 10;
+            background-color: #1a1a1a;
         }
         .server-button {
             cursor: pointer;
             width: 10em;
             height: 3em;
+        }
+        .server-button-blue {
+            background-color: rgb(108, 233, 255);
         }
         .disabled {
             opacity: 0.6;
@@ -103,7 +111,7 @@
             height: 470px;
             border-radius: 0px;
             padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ColourBannerAdHiddenSoon.png);
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ColourBannerAd.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -129,7 +137,7 @@
             height: 470px;
             border-radius: 0px;
             padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/InvalidBannerAdHiddenSoon.png);
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/InvalidBannerAd.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -226,6 +234,8 @@
 <body>
 
     <div class="loading">
+        <button class="button server-button" onclick="toggleDevTools()" id="devtools-button">DevTools</button>
+
         <a href="https://discord.gg/Mcwh7hGcWb">
             <button title="Discord Server" class="button server-button">Discord Server</button>
         </a>
@@ -242,10 +252,22 @@
         <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.</a>
 
     </div>
+    <div class="left-sidebar hidden" id="dev-tools">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+
+        <h2 class="sillywords sidebarwords">Item Toggles</h2>
+
+        <button class="button server-button" onclick="toggleUnpublished()" id="unpublished-button">Soon Banners</button>
+
+        <a class="sillywords sidebarwords">shows unpublished sites</a>
+
+    </div>
 
 
 
-    <div class="itemlist">
+    <div class="itemlist unpub-hidden" id="main-thing">
         <div class="shoparchivesblue">
 
             <button class="button1" onclick="location.href='Blue';">Open</button>
@@ -257,27 +279,63 @@
             <button class="button1">Open In New Tab</button></a>
 
         </div>
-        <div class="shoparchivesold">
-
-            <button class="button1" onclick="location.href='Old';">Open</button>
-
-        </div>
-        <div class="shoparchivescolour">
-
-        </div>
         <div class="shoparchivesguides">
 
             <button class="button1" onclick="location.href='Guides';">Open</button>
 
         </div>
-        <div class="shoparchivesinvalid">
+        <div class="shoparchivesold">
+
+            <button class="button1" onclick="location.href='Old';">Open</button>
+
+        </div>
+        <div class="shoparchivescolour unpublished">
+
+            <button class="button1" onclick="location.href='Guides';">Open</button>
+
+        </div>
+        <div class="shoparchivesinvalid unpublished">
+
+            <button class="button1" onclick="location.href='Guides';">Open</button>
 
         </div>
     </div>
 
     <script>
 
-        
+        function toggleDevTools() {
+            let drawer = document.getElementById('dev-tools');
+            let drawer1 = document.getElementById('devtools-button');
+
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+
+            if (drawer1.classList.contains('server-button-blue')) {
+                drawer1.classList.remove('server-button-blue');
+            } else {
+                drawer1.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleUnpublished() {
+            let unpub = document.getElementById('main-thing');
+            let button = document.getElementById('unpublished-button');
+
+            if (unpub.classList.contains('unpub-hidden')) {
+                unpub.classList.remove('unpub-hidden');
+            } else {
+                unpub.classList.add('unpub-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
     </script>
 </body>
 
