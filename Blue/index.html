@@ -26,6 +26,21 @@
         .hidden {
             display: none;
         }
+        div.deco-hidden [class*="decos"] {
+            display: none;
+        }
+        div.effect-hidden [class*="effects"] {
+            display: none;
+        }
+        .unpub-hidden [class*="unpublished"] {
+            display: none;
+        }
+        .in-shop [class*="in-shop"] {
+            display: none;
+        }
+        .banners-hidden [class*="banner"] {
+            display: none;
+        }
         .sidebar {
             position: fixed;
             width: 25%;
@@ -33,15 +48,20 @@
         }
         .left-sidebar {
             position: fixed;
-            width: 4em;
+            width: 430px;
             height: 100%;
             left: 0px;
-            top: 0px;
+            top: 95px;
+            z-index: 10;
+            background-color: #1a1a1a;
         }
         .server-button {
             cursor: pointer;
             width: 10em;
             height: 3em;
+        }
+        .server-button-blue {
+            background-color: rgb(108, 233, 255);
         }
         .disabled {
             opacity: 0.6;
@@ -69,8 +89,33 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
-
-        
+        /* Retro */
+        .condensedleft .retrobanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/6e05aadeadd02eb63015.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .retrobanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/9015980c33a1df37bc7a.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
         .retrobanner {
             display: block;
             margin-left: auto;
@@ -84,16 +129,72 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+
+        /* Pirates */
+        .condensedleft .piratesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/b038627d621de99b130b.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .piratesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/f8e8dabace442fc5c081.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
         .piratesbanner {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 1280px;
             height: 270px;
-            border: 2px solid rgb(16, 17, 19);
+            border: 2px solid rgb(42, 28, 25);
             border-radius: 50px;
             padding: 10px;
             background-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1237653638738874408.png?size=1280);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        /* Space */
+        .condensedleft .spacebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/bf65ec2a3ca225e26050.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .spacebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/bf65ec2a3ca225e26050-1.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -110,6 +211,34 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+
+        /* Lofi */
+        .condensedleft .lofibanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/1cdb6c45547382a10d33-1.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .lofibanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/1cdb6c45547382a10d33.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
         .lofibanner {
             display: block;
             margin-left: auto;
@@ -123,6 +252,7 @@
             background-size: 100%;
             background-repeat: no-repeat;
         }
+
         .shybanner {
             display: block;
             margin-left: auto;
@@ -412,11 +542,32 @@
             margin-right: auto;
         }
         
+        .condensedleft .retrobannertext1 {
+            margin-left: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
+        .condensedright .retrobannertext1 {
+            margin-right: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
         .retrobannertext1 {
             display: block;
             margin-left: auto;
             margin-right: auto;
             padding: 4%;
+        }
+
+        .condensedleft .piratesbannertext1 {
+            margin-left: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
+        .condensedright .piratesbannertext1 {
+            margin-right: 0;
+            margin-top: -35px;
+            scale: 80%;
         }
         .piratesbannertext1 {
             display: block;
@@ -424,11 +575,33 @@
             margin-right: auto;
             padding: 3%;
         }
+
+        .condensedleft .spacebannertext1 {
+            margin-left: 0;
+            margin-top: -50px;
+            scale: 100%;
+        }
+        .condensedright .spacebannertext1 {
+            margin-right: 0;
+            margin-top: -50px;
+            scale: 100%;
+        }
         .spacebannertext1 {
             display: block;
             margin-left: auto;
             margin-right: auto;
             padding: 7%;
+        }
+
+        .condensedleft .lofibannertext1 {
+            margin-left: 0;
+            margin-top: -35px;
+            scale: 100%;
+        }
+        .condensedright .lofibannertext1 {
+            margin-right: 0;
+            margin-top: -35px;
+            scale: 100%;
         }
         .lofibannertext1 {
             display: block;
@@ -436,6 +609,7 @@
             margin-right: auto;
             padding: 5%;
         }
+
         .shybannertext1 {
             display: block;
             margin-left: auto;
@@ -527,13 +701,26 @@
             padding: 0%;
         }
 
-        
+
+        .condensedleft .retrobannertext2 {
+            display: none;
+        }
+        .condensedright .retrobannertext2 {
+            display: none;
+        }
         .retrobannertext2 {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: fit-content;
             margin-top: -30px;
+        }
+
+        .condensedleft .piratesbannertext2 {
+            display: none;
+        }
+        .condensedright .piratesbannertext2 {
+            display: none;
         }
         .piratesbannertext2 {
             display: block;
@@ -542,12 +729,26 @@
             width: fit-content;
             margin-top: -30px;
         }
+
+        .condensedleft .spacebannertext2 {
+            display: none;
+        }
+        .condensedright .spacebannertext2 {
+            display: none;
+        }
         .spacebannertext2 {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: fit-content;
             margin-top: -30px;
+        }
+
+        .condensedleft .lofibannertext2 {
+            display: none;
+        }
+        .condensedright .lofibannertext2 {
+            display: none;
         }
         .lofibannertext2 {
             display: block;
@@ -747,8 +948,8 @@
             width: 25em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            border: none;
+            background: linear-gradient(90deg, rgb(153, 23, 185), rgb(100, 4, 124));
             cursor: pointer;
             color: white;
         }
@@ -759,8 +960,8 @@
             width: 21em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            border: none;
+            background: linear-gradient(90deg, rgb(153, 23, 185), rgb(100, 4, 124));
             cursor: pointer;
             color: white;
         }
@@ -771,8 +972,8 @@
             width: 4em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            border: none;
+            background: linear-gradient(90deg, rgb(100, 4, 124), rgb(100, 4, 124));
             cursor: pointer;
             color: white;
         }
@@ -785,8 +986,8 @@
             width: 25em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            border: none;
+            background: linear-gradient(90deg, rgb(228, 66, 17), rgb(160, 36, 8));
             cursor: pointer;
             color: white;
         }
@@ -797,8 +998,8 @@
             width: 21em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            border: none;
+            background: linear-gradient(90deg, rgb(228, 66, 17), rgb(160, 36, 8));
             cursor: pointer;
             color: white;
         }
@@ -809,8 +1010,8 @@
             width: 4em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            border: none;
+            background: linear-gradient(90deg, rgb(160, 36, 8), rgb(160, 36, 8));
             cursor: pointer;
             color: white;
         }
@@ -823,7 +1024,7 @@
             width: 25em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(131, 0, 120);
+            border: none;
             background: linear-gradient(90deg, rgb(131, 0, 120), rgb(109, 0, 100));
             cursor: pointer;
             color: white;
@@ -835,7 +1036,7 @@
             width: 21em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(131, 0, 120);
+            border: none;
             background: linear-gradient(90deg, rgb(131, 0, 120), rgb(109, 0, 100));
             cursor: pointer;
             color: white;
@@ -847,7 +1048,7 @@
             width: 4em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(131, 0, 120);
+            border: none;
             background: linear-gradient(90deg, rgb(131, 0, 120), rgb(109, 0, 100));
             cursor: pointer;
             color: white;
@@ -861,8 +1062,8 @@
             width: 25em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(190, 92, 255);
-            background: linear-gradient(90deg, rgb(190, 92, 255), rgb(161, 70, 221));
+            border: none;
+            background: linear-gradient(90deg, rgb(173, 53, 253), rgb(114, 2, 189));
             cursor: pointer;
             color: white;
         }
@@ -873,8 +1074,8 @@
             width: 21em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(190, 92, 255);
-            background: linear-gradient(90deg, rgb(190, 92, 255), rgb(161, 70, 221));
+            border: none;
+            background: linear-gradient(90deg, rgb(173, 53, 253), rgb(114, 2, 189));
             cursor: pointer;
             color: white;
         }
@@ -885,8 +1086,8 @@
             width: 4em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(190, 92, 255);
-            background: linear-gradient(90deg, rgb(190, 92, 255), rgb(161, 70, 221));
+            border: none;
+            background: linear-gradient(90deg, rgb(114, 2, 189), rgb(114, 2, 189));
             cursor: pointer;
             color: white;
         }
@@ -1047,6 +1248,7 @@
             cursor: pointer;
             color: white;
         }
+
         .breakfastbutton1 {
             display: block;
             margin-left: auto;
@@ -1060,6 +1262,31 @@
             cursor: pointer;
             color: black;
         }
+        .breakfastinfobutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 21em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(255, 195, 85);
+            background: linear-gradient(90deg, rgb(255, 195, 85), rgb(255, 149, 55)); 
+            cursor: pointer;
+            color: black;
+        }
+        .breakfastgiftbutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 4em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(255, 195, 85);
+            background: linear-gradient(90deg, rgb(255, 195, 85), rgb(255, 149, 55)); 
+            cursor: pointer;
+            color: black;
+        }
+
         .disxbutton1 {
             display: block;
             margin-left: auto;
@@ -1732,9 +1959,9 @@
             margin-right: auto;
             width: 430px;
             height: 550px;
-            border: 2px solid rgb(16, 17, 19);
+            border: 2px solid rgb(223, 96, 255);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+            background-image: linear-gradient(rgb(223, 96, 255), rgb(128, 88, 253));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -1746,9 +1973,9 @@
             margin-right: auto;
             width: 430px;
             height: 550px;
-            border: 2px solid rgb(16, 17, 19);
+            border: 2px solid rgb(42, 28, 25);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+            background-image: linear-gradient(rgb(42, 28, 25), rgb(123, 50, 28));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -2098,9 +2325,9 @@
             margin-right: auto;
             width: 430px;
             height: 730px;
-            border: 2px solid rgb(16, 17, 19);
+            border: 2px solid rgb(223, 96, 255);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+            background-image: linear-gradient(rgb(223, 96, 255), rgb(128, 88, 253));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -2112,9 +2339,9 @@
             margin-right: auto;
             width: 430px;
             height: 730px;
-            border: 2px solid rgb(16, 17, 19);
+            border: 2px solid rgb(42, 28, 25);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+            background-image: linear-gradient(rgb(42, 28, 25), rgb(123, 50, 28));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -2515,7 +2742,7 @@
 
         .retroE1:hover .retroE1logo {
             margin-bottom: -1px;
-            content: url(https://github.com/DTACat/Collectibles/blob/main/Archive/feelin-70s-intro-loop.png?raw=true);
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/feelin-70s-intro-loop.png);
         }
         .retroE1 .button-holder {
             opacity: 0%;
@@ -2536,6 +2763,32 @@
             margin-top: -79px;
         }
         .retroE1:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        .retroE2:hover .retroE2logo {
+            margin-bottom: -1px;
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/feelin-mischievous-intro-loop.png);
+        }
+        .retroE2 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .retroE2:hover .button-holder {
+            opacity: 100%;
+        }
+        .retroE2 .retroE1fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .retroE2:hover .retroE2fade {
+            opacity: 0%;
+            display: none;
+        }
+        .retroE2 .button-holder  {
+            margin-top: -79px;
+        }
+        .retroE2:hover .button-holder  {
             margin-top: 0px;
         }
 
@@ -2595,7 +2848,7 @@
 
         .pirates3:hover .pirates3logo {
             margin-bottom: -1px;
-            content: url(https://i.gjcdn.net/public-data/media/avatar-frame/0/26/26/sellables_pirate_avatar_frames_pirate_hat-zprpujpy.png);
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_78f326d95c0193c317470e3e81db81e7.png?size=240&passthrough=true);
         }
         .pirates3 .button-holder {
             opacity: 0%;
@@ -2617,9 +2870,6 @@
         }
         .pirates3:hover .button-holder  {
             margin-top: 0px;
-        }
-        .pirates3 {
-            display: none;
         }
 
 
@@ -3504,7 +3754,7 @@
         }
 
 
-        .breakfasttoastlogo:hover {
+        .breakfast1logo:hover {
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true)
         }
         .breakfastcoffeelogo:hover {
@@ -4335,6 +4585,8 @@
 <body>
 
     <div class="loading">
+        <button class="button server-button" onclick="toggleDevTools()" id="devtools-button">DevTools</button>
+
         <a href="https://discord.gg/Mcwh7hGcWb">
             <button title="Discord Server" class="button server-button">Discord Server</button>
         </a>
@@ -4347,16 +4599,67 @@
         <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
             <button title="Change Log" class="button server-button">Change Log</button>
         </a>
-        
+
         <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
-        Anime and Anime V2 will not be combined.
-        Shop Archives is based off the old look of the Discord shop.</a>
+        Anime and Anime V2 will not be combined.</a>
+
+    </div>
+    <div class="left-sidebar hidden" id="dev-tools">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+        <h2 class="sillywords sidebarwords">Design Toggles</h2>
+
+        <h3 class="sillywords sidebarwords">shop_condensed_category_banners (wip)</h3>
+
+        <button class="button server-button" id="condensed-left">Condensed Left</button>
+
+        <a class="sillywords sidebarwords">sets the logo for condensed to left</a>
+
+        <button class="button server-button" id="condensed-right">Condensed Right</button>
+
+        <a class="sillywords sidebarwords">sets the logo for condensed to right</a>
+
+        <button class="button server-button" id="condensed-off">Condensed Off</button>
+
+        <a class="sillywords sidebarwords">turns off condensed category banners</a>
+
+
+        <h3 class="sillywords sidebarwords">collectibles_shop_taller_cards</h3>
+
+        <button class="button server-button" onclick="toggleTallerCards()" id="taller-cards-button">:3</button>
+
+        <a class="sillywords sidebarwords">:3</a>
+
+
+
+        <h2 class="sillywords sidebarwords">Item Toggles</h2>
+
+        <button class="button server-button" onclick="toggleDeco()" id="deco-button">Avatar Deco</button>
+
+        <a class="sillywords sidebarwords">sets avatar cards to none</a>
+
+        <button class="button server-button" onclick="toggleEffects()" id="effects-button">Profile Effects</button>
+
+        <a class="sillywords sidebarwords">sets effect cards to none</a>
+
+        <button class="button server-button" onclick="toggleUnpublished()" id="unpublished-button">Unpublished SKU</button>
+
+        <a class="sillywords sidebarwords">sets cards with invalid sku ids to none</a>
+
+        <button class="button server-button" onclick="toggleInShop()" id="in-shop-button">In Shop</button>
+
+        <a class="sillywords sidebarwords">sets cards that are in the shop to none</a>
+
+        <button class="button server-button" onclick="toggleBanners()" id="banner-button">Banners</button>
+
+        <a class="sillywords sidebarwords">sets category banners to none</a>
 
     </div>
 
 
 
-    <div class="itemlist">
+    <div class="itemlist" id="main-thing">
         <div class="bannerad1">
 
             <a class="sillywords padding1">Sponsored</a>
@@ -4374,12 +4677,12 @@
             </div>
 
             <div id="retroitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="retrodecorow decorow">
-                    <div class="retrodecos retro1">
+                    <div class="retrodecos retro1 unpublished">
                         <h1 class="sillywords">Digital Smile</h1>
 
-                        <a class="sillywords retro1text retro1sku">SKU ID: null</a>
+                        <a class="sillywords retro1text retro1sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="retrodecoimage retro1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/1a6cc97ef4b64fb90b5ff6f344ab8570.png?size=240&passthrough=false">
 
@@ -4406,10 +4709,10 @@
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyretro1pp">
 
                     </div>
-                    <div class="retrodecos retro2">
+                    <div class="retrodecos retro2 unpublished">
                         <h1 class="sillywords">Digital Scream</h1>
 
-                        <a class="sillywords retro2text retro2sku">SKU ID: null</a>
+                        <a class="sillywords retro2text retro2sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="retrodecoimage retro2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/8d04bb02600225cef9a6e2baf43d20c8.png?size=240&passthrough=false">
 
@@ -4436,10 +4739,10 @@
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyretro2pp">
 
                     </div>
-                    <div class="retrodecos retro3">
+                    <div class="retrodecos retro3 unpublished">
                         <h1 class="sillywords">Digital Lick</h1>
 
-                        <a class="sillywords retro3text retro3sku">SKU ID: null</a>
+                        <a class="sillywords retro3text retro3sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="retrodecoimage retro3logo" src="https://cdn.discordapp.com/avatar-decoration-presets/820437ac6524c486d9b9f56cb7ee75b0.png?size=240&passthrough=false">
 
@@ -4466,10 +4769,10 @@
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyretro3pp">
 
                     </div>
-                    <div class="retrodecos retro4">
+                    <div class="retrodecos retro4 unpublished">
                         <h1 class="sillywords">Digital Sweat</h1>
 
-                        <a class="sillywords retro4text retro4sku">SKU ID: null</a>
+                        <a class="sillywords retro4text retro4sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="retrodecoimage retro4logo" src="https://cdn.discordapp.com/avatar-decoration-presets/d386de717ddde5c1f25b13bdadc73fec.png?size=240&passthrough=false">
 
@@ -4498,12 +4801,12 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
-                <div class="retroeffectrow effectrow">
-                    <div class="retroeffects retroE1">
-                        <h1 class="sillywords">Feelin' 70s</h1>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
+                <div class="retroeffectrow effectrow" id="profile-effects">
+                    <div class="retroeffects retroE1 unpublished">
+                        <h1 class="sillywords">Feelin 70s</h1>
 
-                        <a class="sillywords retroE1text retroE1sku">SKU ID: null</a>
+                        <a class="sillywords retroE1text retroE1sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="retroeffectimage retroE1logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-09/feelin-70s/thumbnail.png">
 
@@ -4525,9 +4828,38 @@
 
                         </div>
 
-                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-09/feelin-70s/intro.png" id="copyretroE1_1">
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/feelin-70s-intro-loop.png" id="copyretroE1_1">
 
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyretroE1_2">
+                    </div>
+                    <div class="retroeffects retroE2 unpublished">
+                        <h1 class="sillywords">Feelin Mischievous</h1>
+
+                        <a class="sillywords retroE2text retroE2sku">(UNPUBLISHED) SKU ID: null</a>
+
+                        <img class="retroeffectimage retroE2logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-09/feelin-mischievous/thumbnail.png">
+
+                        <a class="sillywords retroE2text retroE2fade">null</a>
+
+                        <h1 class="sillywords retroE2price price retroE2fade">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <button class="retrobutton1" onclick="copyretroE2_1()">Copy Intro Link</button>
+
+                            <button class="retrobutton1 noclick" onclick="copyretroE2_2()">Temporarily Unavailable</button>
+
+                            <a href="feelin-mischievous">
+                            <button class="retroinfobutton1">Open Extra Info</button></a>
+            
+                            <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
+                            <button class="retrogiftbutton1">Gift</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/feelin-mischievous-intro-loop.png" id="copyretroE2_1">
+
+                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyretroE2_2">
                     </div>
 
                 </div>
@@ -4544,12 +4876,12 @@
             </div>
 
             <div id="piratesitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="piratesdecorow decorow">
-                    <div class="piratesdecos pirates1">
+                    <div class="piratesdecos pirates1 unpublished">
                         <h1 class="sillywords">null</h1>
 
-                        <a class="sillywords pirates1text pirates1sku">SKU ID: null</a>
+                        <a class="sillywords pirates1text pirates1sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="piratesdecoimage pirates1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_798a5bcbb11067e4d9ab339e51d2a16c.png?size=240&passthrough=false">
 
@@ -4576,10 +4908,10 @@
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copypirates1pp">
 
                     </div>
-                    <div class="piratesdecos pirates2">
+                    <div class="piratesdecos pirates2 unpublished">
                         <h1 class="sillywords">null</h1>
 
-                        <a class="sillywords pirates2text pirates2sku">SKU ID: null</a>
+                        <a class="sillywords pirates2text pirates2sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="piratesdecoimage pirates2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_9cc1c1426ea5478aac7be6cdefdbc568.png?size=240&passthrough=false">
 
@@ -4606,14 +4938,14 @@
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copypirates2pp">
 
                     </div>
-                    <div class="piratesdecos pirates3">
-                        <h1 class="sillywords">null</h1>
+                    <div class="piratesdecos pirates3 unpublished">
+                        <h1 class="sillywords">Scallywag</h1>
 
-                        <a class="sillywords pirates3text pirates3sku">SKU ID: null</a>
+                        <a class="sillywords pirates3text pirates3sku">(UNPUBLISHED) SKU ID: null</a>
 
-                        <img class="piratesdecoimage pirates3logo" src="https://i.gjcdn.net/public-data/media/avatar-frame/0/26/26/sellables_pirate_avatar_frames_pirate_hat-zprpujpy.png">
+                        <img class="piratesdecoimage pirates3logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_78f326d95c0193c317470e3e81db81e7.png?size=240&passthrough=false">
 
-                        <a class="sillywords pirates3text pirates3fade">(not the actual decoration)</a>
+                        <a class="sillywords pirates3text pirates3fade">Nay even a pirate can steal me good looks.</a>
 
                         <h1 class="sillywords pirates3price price pirates3fade">US$5.99 - US$4.99</h1>
 
@@ -4631,19 +4963,19 @@
 
                         </div>
 
-                        <input class="hidden" type="text-input" value="https://i.gjcdn.net/public-data/media/avatar-frame/0/26/26/sellables_pirate_avatar_frames_pirate_hat-zprpujpy.png" id="copypirates3">
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_78f326d95c0193c317470e3e81db81e7.png?size=240&passthrough=true" id="copypirates3">
 
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copypirates3pp">
 
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="pirateseffectrow effectrow">
                     <div class="pirateseffects piratesE1">
                         <h1 class="sillywords">null</h1>
 
-                        <a class="sillywords piratesE1text piratesE1sku">SKU ID: null</a>
+                        <a class="sillywords piratesE1text piratesE1sku">(UNPUBLISHED) SKU ID: null</a>
 
                         <img class="pirateseffectimage piratesE1logo" src=" ">
 
@@ -4683,8 +5015,8 @@
                <a class="sillywords spacebannertext2">Reach for the stars.</a>
             </div>
 
-            <div id="spaceitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="spaceitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="spacedecorow decorow">
                     <div class="spacedecos space1">
                         <h1 class="sillywords">Stardust</h1>
@@ -4868,7 +5200,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="spaceeffectrow effectrow">
                     <div class="spaceeffects spaceE1">
                         <h1 class="sillywords">Shooting Stars</h1>
@@ -4971,8 +5303,8 @@
                <a class="sillywords lofibannertext2">Where chill meets mood.</a>
             </div>
 
-            <div id="lofiitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="lofiitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="lofidecorow decorow">
                     <div class="lofidecos lofi1">
                         <h1 class="sillywords">Chromawave</h1>
@@ -5151,7 +5483,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="lofieffectrow effectrow">
                     <div class="lofieffects lofistudy">
                         <h1 class="sillywords">Study Spot</h1>
@@ -5249,7 +5581,7 @@
             </div>
 
             <div id="shyitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="shydecorow decorow">
                     <div class="shydecos shyclove">
                         <h1 class="sillywords">A Hint of Clove</h1>
@@ -5358,7 +5690,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="shyeffectrow effectrow">
                     <div class="shyeffects shyruse">
                         <h1 class="sillywords">Cloves Ruse</h1>
@@ -5452,8 +5784,8 @@
                <a class="sillywords springtoonsbannertext2">You awaken to find yourself in a springtime wonderland.</a>
             </div>
 
-            <div id="springtoonsitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="springtoonsitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="springtoonsdecorow decorow">
                     <div class="springtoonsdecos springtoonshoney">
                         <h1 class="sillywords">Honeyblossom</h1>
@@ -5571,7 +5903,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="springtoonseffectrow effectrow">
                     <div class="springtoonseffects springtoonspetal">
                         <h1 class="sillywords">Petal Serenade</h1>
@@ -5665,15 +5997,15 @@
                <a class="sillywords animev2bannertext2">V2</a>
             </div>
 
-            <div id="animev2items">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="animev2items">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="animev2decorow decorow">
                     <div class="animev2decos animev2cat">
                         <h1 class="sillywords">Cat Ears</h1>
 
                         <img class="animev2decoimage animev2catlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=240&passthrough=false">
 
-                        <a class="sillywords animev2cattext">≽ ^ • ⩊ • ^ ≼</a>
+                        <a class="sillywords animev2cattext">OwO</a>
 
                         <a class="sillywords animev2catprice price">US$5.99 - US$4.99</a>
 
@@ -5784,7 +6116,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="animev2effectrow effectrow">
                     <div class="animev2effects animev2dream">
                         <h1 class="sillywords">Dreamy</h1>
@@ -5879,8 +6211,8 @@
                <a class="sillywords elementbannertext2">Which will you unleash?</a>
             </div>
 
-            <div id="elementitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="elementitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="elementdecorow decorow">
                     <div class="elementdecos elementfire">
                         <h1 class="sillywords">Fire</h1>
@@ -5998,7 +6330,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="elementeffectrow effectrow">
                     <div class="elementeffects elementrockslide">
                         <h1 class="sillywords">Rock Slide</h1>
@@ -6094,7 +6426,7 @@
             </div>
 
             <div id="lunaritems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="lunardecorow decorow">
                     <div class="lunardecos lunarfan">
                         <h1 class="sillywords">Fan Flourish</h1>
@@ -6212,7 +6544,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="lunareffectrow effectrow">
                     <div class="lunareffects lunardragondance">
                         <h1 class="sillywords">Dragon Dance</h1>
@@ -6307,8 +6639,8 @@
                <a class="sillywords cyberbannertext2">Welcome to the neon embrace of the future.</a>
             </div>
 
-            <div id="cyberitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="cyberitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="cyberdecorow decorow">
                     <div class="cyberdecos cyberglitch">
                         <h1 class="sillywords">Glitch</h1>
@@ -6388,7 +6720,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="cybereffectrow effectrow">
                     <div class="cybereffects cybernightrunner">
                         <h1 class="sillywords">Nightrunner</h1>
@@ -6458,7 +6790,7 @@
             </div>
 
             <div id="monsteritems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="monsterdecorow decorow">
                     <div class="monsterdecos monsterbeam">
                         <h1 class="sillywords">Beamchop</h1>
@@ -6614,7 +6946,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="monstereffectrow effectrow">
                     <div class="monstereffects monstergoo">
                         <h1 class="sillywords">Goozilla</h1>
@@ -6710,7 +7042,7 @@
             </div>
 
             <div id="winteritems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="winterdecorow decorow">
                     <div class="winterdecos winter2024">
                         <h1 class="sillywords">New Year</h1>
@@ -6790,7 +7122,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="wintereffectrow effectrow">
                     <div class="wintereffects winterdeck">
                         <h1 class="sillywords">Deck the halls</h1>
@@ -6860,7 +7192,7 @@
             </div>
 
             <div id="halloweenitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="halloweendecorow decorow">
                     <div class="halloweendecos halloweencat">
                         <h1 class="sillywords">Graveyard Cat</h1>
@@ -6940,7 +7272,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="halloweeneffectrow effectrow">
                     <div class="halloweeneffects halloweengraffiti">
                         <h1 class="sillywords">Graffiti</h1>
@@ -7036,7 +7368,7 @@
             </div>
 
             <div id="fallitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="falldecorow decorow">
                     <div class="falldecos fallleave">
                         <h1 class="sillywords">Fall Leaves</h1>
@@ -7116,7 +7448,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="falleffectrow effectrow">
                     <div class="falleffects fallfoliage">
                         <h1 class="sillywords">Fall Foliage</h1>
@@ -7185,8 +7517,8 @@
                <a class="sillywords fantasybannertext2">Youre walking in the forest and notice something magical and shiny.</a>
             </div>
 
-            <div id="fantasyitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="fantasyitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="fantasydecorow decorow">
                     <div class="fantasydecos fantasysword">
                         <h1 class="sillywords">Flaming Sword</h1>
@@ -7342,7 +7674,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="fantasyeffectrow effectrow">
                     <div class="fantasyeffects fantasywater">
                         <h1 class="sillywords">Hydro Blast</h1>
@@ -7463,8 +7795,8 @@
                <a class="sillywords animebannertext2">Senpai will definitely notice you.</a>
             </div>
 
-            <div id="animeitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="animeitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="animedecorow decorow">
                     <div class="animedecos animeenergy">
                         <h1 class="sillywords">Radiating Energy</h1>
@@ -7601,7 +7933,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="animeeffectrow effectrow">
                     <div class="animeeffects animehearts">
                         <h1 class="sillywords">Magic Hearts</h1>
@@ -7723,29 +8055,39 @@
             </div>
 
             <div id="breakfastitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="breakfastdecorow decorow">
-                    <div class="breakfastdecos breakfasttoast">
+                    <div class="breakfastdecos breakfast1">
                         <h1 class="sillywords">Toast</h1>
 
-                        <img class="breakfastdecoimage breakfasttoastlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=false">
+                        <a class="sillywords breakfast1text breakfast1sku">SKU ID: 1144056139584127058</a>
 
-                        <a class="sillywords breakfasttoasttext">It is toast.</a>
+                        <img class="breakfastdecoimage breakfast1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=false">
 
-                        <a class="sillywords breakfasttoastprice price">US$3.99 - US$2.99</a>
+                        <a class="sillywords breakfast1text breakfast1fade">It is toast.</a>
 
-                        <button class="breakfastbutton1" onclick="copybreakfasttoast()">Copy Link</button>
+                        <h1 class="sillywords breakfast1price price breakfast1fade">US$3.99 - US$2.99</h1>
 
-                        <a href="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true">
-                        <button class="breakfastbutton1">Open</button></a>
+                        <div class="button-holder">
 
-                        <a href="https://discord.com/shop#itemSkuId=1144056139584127058">
-                        <button class="breakfastbutton1">Open In Shop (SKU ID)</button></a>
+                            <button class="breakfastbutton1" onclick="copybreakfast1()">Copy Link</button>
 
-                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true" id="copybreakfasttoast">
+                            <button class="breakfastbutton1" onclick="copybreakfast1pp()">Temporarily Unavailable</button>
+
+                            <a href="toast">
+                            <button class="breakfastinfobutton1">Open Extra Info</button></a>
+                
+                            <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
+                            <button class="breakfastgiftbutton1">Gift</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true" id="copybreakfast1">
                     </div>
                     <div class="breakfastdecos breakfastcoffee">
                         <h1 class="sillywords">Morning Coffee</h1>
+
+                        <a class="sillywords breakfastcoffeetext breakfastcoffeesku">SKU ID: 1144056631374647458</a>
 
                         <img class="breakfastdecoimage breakfastcoffeelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=false">
 
@@ -7766,6 +8108,8 @@
                     <div class="breakfastdecos breakfastegg">
                         <h1 class="sillywords">Fried Egg</h1>
 
+                        <a class="sillywords breakfasteggtext breakfasteggsku">SKU ID: 1144057023726628945</a>
+
                         <img class="breakfastdecoimage breakfastegglogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=false">
 
                         <a class="sillywords breakfasteggtext">I like mine sunny side-up.</a>
@@ -7784,6 +8128,8 @@
                     </div>
                     <div class="breakfastdecos breakfastjam">
                         <h1 class="sillywords">Blueberry Jam</h1>
+
+                        <a class="sillywords breakfastjamtext breakfastjamsku">SKU ID: 1144057249392771145</a>
 
                         <img class="breakfastdecoimage breakfastjamlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=false">
 
@@ -7804,6 +8150,8 @@
                     <div class="breakfastdecos breakfastnut">
                         <h1 class="sillywords">Donut</h1>
 
+                        <a class="sillywords breakfastnuttext breakfastnutsku">(UNPUBLISHED) SKU ID: 1144057486203158560</a>
+
                         <img class="breakfastdecoimage breakfastnutlogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=false">
 
                         <a class="sillywords breakfastnuttext">Never enough sprinkles.</a>
@@ -7823,6 +8171,8 @@
                     <div class="breakfastdecos breakfastcake">
                         <h1 class="sillywords">Pancakes</h1>
 
+                        <a class="sillywords breakfastcaketext breakfastcakesku">SKU ID: 1144057737475534889</a>
+
                         <img class="breakfastdecoimage breakfastcakelogo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=false">
 
                         <a class="sillywords breakfastcaketext">How high can you stack em?</a>
@@ -7841,7 +8191,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="breakfasteffectrow effectrow">
                     <div class="breakfasteffects breakfastcereal">
                         <h1 class="sillywords">Discord-Os</h1>
@@ -7910,8 +8260,8 @@
                <a class="sillywords disxbannertext2">Available to use with an active Nitro subscription.</a>
             </div>
 
-            <div id="disxitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+            <div class="in-shop" id="disxitems">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="disxdecorow decorow">
                     <div class="disxdecos disxheadsetblue">
                         <h1 class="sillywords">DISXCORE Headset</h1>
@@ -8297,7 +8647,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1">Profile Effects</a>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="disxeffectrow effectrow">
                     <div class="disxeffects disxboost">
                         <h1 class="sillywords">Boost Relic</h1>
@@ -8390,12 +8740,12 @@
             </div>
 
             <div id="miscellaneousitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="miscellaneousdecorow decorow">
                     <div class="miscellaneousdecos miscellaneous001">
-                        <h1 class="sillywords">I’m a Clown</h1>
+                        <h1 class="sillywords">Im a Clown</h1>
 
-                        <a class="sillywords miscellaneous001text miscellaneous001sku">SKU ID: 1216908559548289084</a>
+                        <a class="sillywords miscellaneous001text miscellaneous001sku">(UNPUBLISHED) SKU ID: 1216908559548289084</a>
 
                         <img class="miscellaneousdecoimage miscellaneous001logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_5e1210779d99ece1c0b4f438a5bc6e72.png?size=240&passthrough=false">
 
@@ -8419,7 +8769,7 @@
                     <div class="miscellaneousdecos miscellaneous002">
                         <h1 class="sillywords">Mokoko</h1>
 
-                        <a class="sillywords miscellaneous002text miscellaneous002sku">SKU ID: 1226939756617793606</a>
+                        <a class="sillywords miscellaneous002text miscellaneous002sku">(UNPUBLISHED) SKU ID: 1226939756617793606</a>
 
                         <img class="miscellaneousdecoimage miscellaneous002logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_89cd445201a0c6c64d46876503d0e90e.png?size=240&passthrough=false">
 
@@ -8443,7 +8793,7 @@
                     <div class="miscellaneousdecos miscellaneous003">
                         <h1 class="sillywords">Gyoiko Sakura</h1>
 
-                        <a class="sillywords miscellaneous003text miscellaneous003sku">SKU ID: 1225876188074082374</a>
+                        <a class="sillywords miscellaneous003text miscellaneous003sku">(UNPUBLISHED) SKU ID: 1225876188074082374</a>
 
                         <img class="miscellaneousdecoimage miscellaneous003logo" src="https://cdn.discordapp.com/avatar-decoration-presets/v2_a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=false">
 
@@ -8480,7 +8830,7 @@
             </div>
 
             <div id="festiveitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="festivedecorow decorow">
                     <div class="festivedecos festive001">
                         <h1 class="sillywords">Winter Blanket</h1>
@@ -8882,7 +9232,7 @@
             </div>
 
             <div id="summeritems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="summerdecorow decorow">
                     <div class="summerdecos summer001">
                         <h1 class="sillywords">Blossoms</h1>
@@ -9181,7 +9531,7 @@
             </div>
 
             <div id="monster_olditems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="monster_olddecorow decorow">
                     <div class="monster_olddecos monster_old001">
                         <h1 class="sillywords">Beamchop</h1>
@@ -9342,7 +9692,7 @@
             </div>
 
             <div id="digitalitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="digitaldecorow decorow">
                     <div class="digitaldecos digital001">
                         <h1 class="sillywords">Digital Smile</h1>
@@ -9456,7 +9806,7 @@
             </div>
 
             <div id="anime_olditems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="anime_olddecorow decorow">
                     <div class="anime_olddecos anime_old001">
                         <h1 class="sillywords">Lightning Yellow</h1>
@@ -9666,7 +10016,7 @@
             </div>
 
             <div id="breakfast_olditems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="breakfast_olddecorow decorow">
                     <div class="breakfast_olddecos breakfast_old001">
                         <h1 class="sillywords">Burt Toast</h1>
@@ -9779,8 +10129,8 @@
             </div>
 
             <div id="archiveitems">
-               <a class="sillywords itemtext1">Avatar Decorations</a>
-                <div class="archivedecorow decorow">
+               <a class="sillywords itemtext1 decos">Avatar Decorations</a>
+                <div class="archivedecorow decorow" id="archive-deco">
                     <div class="archivedecos archive001">
                         <h1 class="sillywords">Fire</h1>
 
@@ -10024,7 +10374,7 @@
 
                         <img class="archivedecoimage archive015logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/c26dc57cce69e0578623bc986b153e17.png">
 
-                        <a class="sillywords archive015text">SKU ID: 1144012281076793467</a>
+                        <a class="sillywords archive015text">(UNPUBLISHED) SKU ID: 1144012281076793467</a>
 
                         <button class="button1" onclick="copyarchive015()">Copy Link</button>
 
@@ -11307,8 +11657,8 @@
         }
 
 
-        function copybreakfasttoast() {
-           var copyText = document.getElementById("copybreakfasttoast");
+        function copybreakfast1() {
+           var copyText = document.getElementById("copybreakfast1");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
@@ -12119,6 +12469,125 @@
             copyText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(copyText.value);
         }
+        document.body.className = localStorage.theme || "null";
+
+        document.getElementById("condensed-left").addEventListener("click", e => {
+            document.body.className = "condensedleft";
+            localStorage.theme = "condensedbannersleft";
+        });
+
+        document.getElementById("condensed-right").addEventListener("click", e => {
+            document.body.className = "condensedright";
+            localStorage.theme = "condensedbannersright";
+        });
+
+        document.getElementById("condensed-off").addEventListener("click", e => {
+            document.body.className = "null";
+            localStorage.theme = "null";
+        });
+
+        function toggleDevTools() {
+            let drawer = document.getElementById('dev-tools');
+            let drawer1 = document.getElementById('devtools-button');
+
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.add('hidden');
+            }
+
+            if (drawer1.classList.contains('server-button-blue')) {
+                drawer1.classList.remove('server-button-blue');
+            } else {
+                drawer1.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDeco() {
+            let deco = document.getElementById('main-thing');
+            let button = document.getElementById('deco-button');
+
+            if (deco.classList.contains('deco-hidden')) {
+                deco.classList.remove('deco-hidden');
+            } else {
+                deco.classList.add('deco-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleEffects() {
+            let effects = document.getElementById('main-thing');
+            let button = document.getElementById('effects-button');
+
+            if (effects.classList.contains('effect-hidden')) {
+                effects.classList.remove('effect-hidden');
+            } else {
+                effects.classList.add('effect-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleUnpublished() {
+            let unpub = document.getElementById('main-thing');
+            let button = document.getElementById('unpublished-button');
+
+            if (unpub.classList.contains('unpub-hidden')) {
+                unpub.classList.remove('unpub-hidden');
+            } else {
+                unpub.classList.add('unpub-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleInShop() {
+            let inshop = document.getElementById('main-thing');
+            let button = document.getElementById('in-shop-button');
+
+            if (inshop.classList.contains('in-shop')) {
+                inshop.classList.remove('in-shop');
+            } else {
+                inshop.classList.add('in-shop');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleBanners() {
+            let banner = document.getElementById('main-thing');
+            let button = document.getElementById('banner-button');
+
+            if (banner.classList.contains('banners-hidden')) {
+                banner.classList.remove('banners-hidden');
+            } else {
+                banner.classList.add('banners-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
     </script>
 </body>
 
