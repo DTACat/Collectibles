@@ -234,7 +234,9 @@
 <body>
 
     <div class="loading">
-        <button class="button server-button" onclick="toggleDevTools()" id="devtools-button">DevTools</button>
+        <button class="button server-button" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
+
+        <button class="button server-button hidden" onclick="toggleDevTools()" id="devtools-button-real">DevTools</button>
 
         <a href="https://discord.gg/Mcwh7hGcWb">
             <button title="Discord Server" class="button server-button">Discord Server</button>
@@ -256,12 +258,25 @@
 
         <h1 class="sillywords sidebarwords">DevTools</h1>
 
+        <h3 class="sillywords sidebarwords">For dev use only</h3>
+
 
         <h2 class="sillywords sidebarwords">Item Toggles</h2>
 
         <button class="button server-button" onclick="toggleUnpublished()" id="unpublished-button">Soon Banners</button>
 
         <a class="sillywords sidebarwords">shows unpublished sites</a>
+
+    </div>
+    <div class="left-sidebar hidden" id="dev-tools-403">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+        <h3 class="sillywords sidebarwords">For dev use only</h3>
+
+        <h1 class="sillywords sidebarwords">403</h1>
+
+        <h2 class="sillywords sidebarwords">Missing permission</h2>
 
     </div>
 
@@ -304,19 +319,37 @@
     <script>
 
         function toggleDevTools() {
-            let drawer = document.getElementById('dev-tools');
-            let drawer1 = document.getElementById('devtools-button');
+            let tools = document.getElementById('dev-tools');
+            let button = document.getElementById('devtools-button');
+            let button_ = document.getElementById('devtools-button-real');
 
-            if (drawer.classList.contains('hidden')) {
-                drawer.classList.remove('hidden');
+            if (tools.classList.contains('hidden')) {
+                tools.classList.remove('hidden');
             } else {
-                drawer.classList.add('hidden');
+                tools.classList.add('hidden');
             }
 
-            if (drawer1.classList.contains('server-button-blue')) {
-                drawer1.classList.remove('server-button-blue');
+            if (button_.classList.contains('server-button-blue')) {
+                button_.classList.remove('server-button-blue');
             } else {
-                drawer1.classList.add('server-button-blue');
+                button_.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDevTools403() {
+            let tools = document.getElementById('dev-tools-403');
+            let button = document.getElementById('devtools-button');
+
+            if (tools.classList.contains('hidden')) {
+                tools.classList.remove('hidden');
+            } else {
+                tools.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
             }
         }
 
