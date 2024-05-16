@@ -4747,7 +4747,7 @@
 <body>
 
     <div class="loading">
-        <button class="button server-button" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
+        <button class="button server-button hidden" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
 
         <button class="button server-button hidden" onclick="toggleDevTools()" id="devtools-button-real">DevTools</button>
 
@@ -12895,6 +12895,8 @@
 
             if (tools.classList.contains('hidden')) {
                 tools.classList.remove('hidden');
+                setTimeout(() => {  tools.classList.add('hidden'); }, 100);
+                
             } else {
                 tools.classList.add('hidden');
             }
@@ -12903,6 +12905,8 @@
                 button.classList.remove('server-button-blue');
             } else {
                 button.classList.add('server-button-blue');
+                console.log("403 (Forbidden)");
+                setTimeout(() => {  button.classList.remove('server-button-blue'); }, 100);
             }
         }
 
