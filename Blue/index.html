@@ -16,9 +16,6 @@
             background-color: #343338;
             color: white;
         }
-        .loadtext {
-            margin-top: -20px;
-        }
         .darkmode {
             background-color: #333538;
             /* or whatever */
@@ -52,7 +49,7 @@
             width: 430px;
             height: 100%;
             left: 0px;
-            top: 95px;
+            top: 2.5em;
             z-index: 10;
             background-color: #1a1a1a;
         }
@@ -77,7 +74,7 @@
         }
         .bannerad1 {
             display: block;
-            margin-top: 100px;
+            margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
             width: 1280px;
@@ -531,10 +528,20 @@
 
 
 
+        .width-3-cards .itemlist {
+            width: 1500px;
+        }
+        .width-4-cards .itemlist {
+            width: 2000px;
+        }
+        .width-0-cards .itemlist {
+            width: 100%;
+        }
         .itemlist {
             display: block;
             margin-left: auto;
             margin-right: auto;
+            width: 2000px;
         }
         
         .element {
@@ -2599,13 +2606,13 @@
 
 
         .banner {
-            margin-top: 100px;
+            margin-top: 50px;
         }
         div.loading {
             opacity: 0.9; 
             background: #000; 
             width: 100%;
-            height: 6em; 
+            height: 2.5em; 
             z-index: 10;
             top: 0; 
             left: 0; 
@@ -2614,7 +2621,6 @@
         .loadtext {
             position: relative;
             text-align: center;
-            margin-bottom: 10px;
         }
         .newtext {
             width: 50px;
@@ -4758,7 +4764,7 @@
             <button title="Change Log" class="button server-button">Change Log</button>
         </a>
 
-        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
+        <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
         Anime and Anime V2 will not be combined.
         No products are being sold on this site, all prices are for items sold on Discord</a>
 
@@ -4769,7 +4775,7 @@
 
         <h3 class="sillywords sidebarwords">For dev use only</h3>
 
-        <h2 class="sillywords sidebarwords">Design Toggles</h2>
+        <h2 class="sillywords sidebarwords">Design Options</h2>
 
         <h3 class="sillywords sidebarwords">shop_condensed_category_banners</h3>
 
@@ -4784,6 +4790,20 @@
         <button class="button server-button" id="condensed-off">Condensed Off</button>
 
         <a class="sillywords sidebarwords">turns off condensed category banners</a>
+
+        <h3 class="sillywords sidebarwords">card_holder_width</h3>
+
+        <button class="button server-button" id="width-3-cards">Size 3</button>
+
+        <a class="sillywords sidebarwords">fits 3 cards in one row</a>
+
+        <button class="button server-button" id="width-4-cards">Size 4</button>
+
+        <a class="sillywords sidebarwords">fits 4 cards in one row</a>
+
+        <button class="button server-button" id="width-0-cards">100%</button>
+
+        <a class="sillywords sidebarwords">fits any amount of cards in one row</a>
 
 
         <h3 class="sillywords sidebarwords">collectibles_shop_taller_cards</h3>
@@ -4881,7 +4901,7 @@
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyretro1pp">
 
                     </div>
-                    <div class="retrodecos retro2 unpublished">
+                    <div class="retrodecos retro2">
                         <h1 class="sillywords">Feelin Panic</h1>
 
                         <a class="sillywords retro2text retro2sku">SKU ID: 1237650023794081823</a>
@@ -12833,6 +12853,22 @@
         document.getElementById("condensed-off").addEventListener("click", e => {
             document.body.className = "null";
             localStorage.theme = "null";
+        });
+
+
+        document.getElementById("width-3-cards").addEventListener("click", e => {
+            document.body.className = "width-3-cards";
+            localStorage.theme = "width-3-cards";
+        });
+
+        document.getElementById("width-4-cards").addEventListener("click", e => {
+            document.body.className = "width-4-cards";
+            localStorage.theme = "width-4-cards";
+        });
+
+        document.getElementById("width-0-cards").addEventListener("click", e => {
+            document.body.className = "width-0-cards";
+            localStorage.theme = "width-0-cards";
         });
 
         function toggleDevTools() {
