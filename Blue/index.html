@@ -21,9 +21,7 @@
             /* or whatever */
             color: white;
         }
-        .hidden {
-            display: none;
-        }
+        
         div.deco-hidden [class*="decos"] {
             display: none;
         }
@@ -87,6 +85,63 @@
             padding: 10px;
             background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/banner2.png);
             background-position: 0px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dynamicbanner1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-5-212e93ca86.gif?raw=true);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .dynamicbanner2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-3-37e4475adf.gif?raw=true);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .dynamicbanner3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/981c9ed7a21052f1722c.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .dynamicbanner4 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-7-624cf29077.gif?raw=true);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -587,6 +642,48 @@
             width: 2000px;
         }
 
+        .dynamicbanner1profile1 {
+            display: block;
+            margin-left: auto;
+            margin-right: -10px;
+            margin-top: -122px;
+            width: 550px;
+        }
+        .dynamicbanner3profile1 {
+            display: block;
+            margin-left: auto;
+            margin-right: -10px;
+            margin-top: -122px;
+            width: 550px;
+        }
+
+
+        .dynamicbanner1text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -380px;
+        }
+        .dynamicbanner2text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -10px;
+        }
+        .dynamicbanner3text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -380px;
+        }
+        .dynamicbanner4text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -10px;
+        }
+
+
         .condensedleft .bundlesbannertext1 {
             margin-left: 0;
             margin-top: -55px;
@@ -767,6 +864,33 @@
             margin-left: auto;
             margin-right: auto;
             padding: 0%;
+        }
+
+
+        .dynamicbanner1text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+            color: black;
+        }
+        .dynamicbanner2text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+        }
+        .dynamicbanner3text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+        }
+        .dynamicbanner4text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
         }
 
 
@@ -959,6 +1083,21 @@
             width: fit-content;
             margin-top: 200px;
             color: black;
+        }
+
+
+        .dynamicbutton1 {
+            display: block;
+            margin-left: 50px;
+            margin-top: 20px;
+            width: 10em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+            font-size: large;
         }
 
 
@@ -4884,6 +5023,9 @@
         .padding1 {
             padding: 1em;
         }
+        .hidden {
+            display: none;
+        }
 
     </style>
 </head>
@@ -4980,6 +5122,10 @@
 
         <a class="sillywords sidebarwords">sets category banners to none</a>
 
+        <button class="button server-button" onclick="toggleDynamicBanners()" id="dynamic-button">Dynamic Banners</button>
+
+        <a class="sillywords sidebarwords">sets dynamic banners to none</a>
+
 
         <h2 class="sillywords sidebarwords">Experiments</h2>
 
@@ -5011,6 +5157,32 @@
             <button class="adbutton">Join Server</button></a>
 
         </div>
+
+        <div class="dynamicbanners" id="dynamicbanners">
+            <div class="dynamicbanner1" id="dynamicbanner1">
+                <img class="dynamicbanner1profile1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/5f627582fcdc1bba2aed.png">
+                <img class="dynamicbanner1text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/b1cf42e983f50f203bc1.png">
+                <h2 class="sillywords dynamicbanner1text2">Senpai will definitely notice you.</h2>
+                <button class="dynamicbutton1" onclick="dynamicOneTwo()">Next Banner</button>
+            </div>
+            <div class="dynamicbanner2 hidden" id="dynamicbanner2">
+                <img class="dynamicbanner2text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/19ff8f561d0ab56a3e6e.png">
+                <h2 class="sillywords dynamicbanner2text2">Reach for the stars.</h2>
+                <button class="dynamicbutton1" onclick="dynamicTwoThree()">Next Banner</button>
+            </div>
+            <div class="dynamicbanner3 hidden" id="dynamicbanner3">
+                <img class="dynamicbanner3profile1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/e91a4c7f419794213d7b.png">
+                <img class="dynamicbanner3text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/51cfa8525bca57df0316.png">
+                <h2 class="sillywords dynamicbanner3text2">Available to use with an active Nitro subscription.</h2>
+                <button class="dynamicbutton1" onclick="dynamicThreeFour()">Next Banner</button>
+            </div>
+            <div class="dynamicbanner4 hidden" id="dynamicbanner4">
+                <img class="dynamicbanner4text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/204235af608193f0517f.png">
+                <h2 class="sillywords dynamicbanner4text2">Welcome to the neon embrace of the future.</h2>
+                <button class="dynamicbutton1" onclick="dynamicFourOne()">Next Banner</button>
+            </div>
+        </div>
+
         <div class="bundles">
             <!-- Bundles -->
 
@@ -13171,6 +13343,59 @@
             localStorage.theme = "width-0-cards";
         });
 
+        function dynamicOneTwo() {
+            let banner1 = document.getElementById('dynamicbanner1');
+            let banner2 = document.getElementById('dynamicbanner2');
+
+            if (banner1.classList.contains('dynamicbanner1')) {
+                banner1.classList.add('hidden');
+            }
+
+            if (banner2.classList.contains('dynamicbanner2')) {
+                banner2.classList.remove('hidden');
+            }
+        }
+
+        function dynamicTwoThree() {
+            let banner2 = document.getElementById('dynamicbanner2');
+            let banner3 = document.getElementById('dynamicbanner3');
+
+            if (banner2.classList.contains('dynamicbanner2')) {
+                banner2.classList.add('hidden');
+            }
+
+            if (banner3.classList.contains('dynamicbanner3')) {
+                banner3.classList.remove('hidden');
+            }
+        }
+
+        function dynamicThreeFour() {
+            let banner3 = document.getElementById('dynamicbanner3');
+            let banner4 = document.getElementById('dynamicbanner4');
+
+            if (banner3.classList.contains('dynamicbanner3')) {
+                banner3.classList.add('hidden');
+            }
+
+            if (banner4.classList.contains('dynamicbanner4')) {
+                banner4.classList.remove('hidden');
+            }
+        }
+
+        function dynamicFourOne() {
+            let banner4 = document.getElementById('dynamicbanner4');
+            let banner1 = document.getElementById('dynamicbanner1');
+
+            if (banner4.classList.contains('dynamicbanner4')) {
+                banner4.classList.add('hidden');
+            }
+
+            if (banner1.classList.contains('dynamicbanner1')) {
+                banner1.classList.remove('hidden');
+            }
+        }
+
+
         function toggleDevTools() {
             let tools = document.getElementById('dev-tools');
             let button = document.getElementById('devtools-button');
@@ -13286,6 +13511,23 @@
                 banner.classList.remove('banners-hidden');
             } else {
                 banner.classList.add('banners-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDynamicBanners() {
+            let banners = document.getElementById('dynamicbanners');
+            let button = document.getElementById('dynamic-button');
+
+            if (banners.classList.contains('hidden')) {
+                banners.classList.remove('hidden');
+            } else {
+                banners.classList.add('hidden');
             }
 
             if (button.classList.contains('server-button-blue')) {
