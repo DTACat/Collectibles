@@ -93,10 +93,10 @@
             margin-right: auto;
             width: 1280px;
             height: 200px;
-            border: 2px solid rgb(255, 0, 0);
+            border: none;
             border-radius: 20px;
             padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/banner2.png);
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo-2024-05-30T140921.927.png);
             background-position: 0px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -681,12 +681,6 @@
 
 
 
-        .width-3-cards .itemlist {
-            width: 1500px;
-        }
-        .width-4-cards .itemlist {
-            width: 2000px;
-        }
         .width-0-cards .itemlist {
             width: 100%;
         }
@@ -695,6 +689,13 @@
             margin-left: auto;
             margin-right: auto;
             width: 2000px;
+        }
+
+        .banneradprofile {
+            display: block;
+            margin-left: -20px;
+            margin-top: -140px;
+            width: 550px;
         }
 
         .dynamicbanner1profile1 {
@@ -1222,7 +1223,7 @@
         .adbutton {
             display: block;
             margin-left: auto;
-            margin-top: 60px;
+            margin-top: 85px;
             width: 20em;
             padding: 1em;
             border-radius: 3px;
@@ -1271,6 +1272,44 @@
         }
         
         
+        .arcadebutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(16, 12, 131), rgb(9, 6, 87));
+            cursor: pointer;
+            color: white;
+        }
+        .arcadeinfobutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 21em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(16, 12, 131), rgb(9, 6, 87));
+            cursor: pointer;
+            color: white;
+        }
+        .arcadegiftbutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 4em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(9, 6, 87), rgb(9, 6, 87));
+            cursor: pointer;
+            color: white;
+        }
+
         .retrobutton1 {
             display: block;
             margin-left: auto;
@@ -2330,6 +2369,20 @@
             background-repeat: no-repeat;
             margin-top: 10px;
         }
+        .arcadebundles {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 600px;
+            border: 2px solid rgb(3, 2, 36);
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(3, 2, 36), rgb(8, 1, 43));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
 
         .arcadedecos {
             display: inline-block;
@@ -2337,9 +2390,9 @@
             margin-right: auto;
             width: 430px;
             height: 550px;
-            border: 2px solid rgb(254, 189, 64);
+            border: 2px solid rgb(3, 2, 36);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(255, 100, 110), rgb(255, 0, 219));
+            background-image: linear-gradient(rgb(3, 2, 36), rgb(8, 1, 43));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -2717,9 +2770,9 @@
             margin-right: auto;
             width: 430px;
             height: 730px;
-            border: 2px solid rgb(254, 189, 64);
+            border: 2px solid rgb(3, 2, 36);
             border-radius: 50px;
-            background-image: linear-gradient(rgb(255, 100, 110), rgb(255, 0, 219));
+            background-image: linear-gradient(rgb(3, 2, 36), rgb(8, 1, 43));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -2994,6 +3047,11 @@
             text-align: center;
         }
 
+        .bundles-1row {
+            position: relative;
+            text-align: center;
+        }
+
 
         .price {
             display: block;
@@ -3062,7 +3120,113 @@
         }
 
 
+        .arcade1:hover .arcade1logo {
+            margin-bottom: -1px;
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=true);
+        }
+        .arcade1 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .arcade1:hover .button-holder {
+            opacity: 100%;
+        }
+        .arcade1 .arcade1fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .arcade1:hover .arcade1fade {
+            opacity: 0%;
+            display: none;
+        }
+        .arcade1 .button-holder  {
+            margin-top: -79px;
+        }
+        .arcade1:hover .button-holder  {
+            margin-top: 0px;
+        }
 
+        .arcade2:hover .arcade2logo {
+            margin-bottom: -1px;
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_46750412a18f4988de71f4cf14991b38.png?size=240&passthrough=true);
+        }
+        .arcade2 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .arcade2:hover .button-holder {
+            opacity: 100%;
+        }
+        .arcade2 .arcade2fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .arcade2:hover .arcade2fade {
+            opacity: 0%;
+            display: none;
+        }
+        .arcade2 .button-holder  {
+            margin-top: -79px;
+        }
+        .arcade2:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        .arcade3:hover .arcade3logo {
+            margin-bottom: -1px;
+            content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_492f6b54b761c0a14d9dbc9c98aaa0f5.png?size=240&passthrough=true);
+        }
+        .arcade3 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .arcade3:hover .button-holder {
+            opacity: 100%;
+        }
+        .arcade3 .arcade3fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .arcade3:hover .arcade3fade {
+            opacity: 0%;
+            display: none;
+        }
+        .arcade3 .button-holder  {
+            margin-top: -79px;
+        }
+        .arcade3:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+
+        .arcadeE1:hover .arcadeE1logo {
+            margin-bottom: -1px;
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png);
+        }
+        .arcadeE1 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .arcadeE1:hover .button-holder {
+            opacity: 100%;
+        }
+        .arcadeE1 .arcadeE1fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .arcadeE1:hover .arcadeE1fade {
+            opacity: 0%;
+            display: none;
+        }
+        .arcadeE1 .button-holder  {
+            margin-top: -79px;
+        }
+        .arcadeE1:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        
+        
         .retro1:hover .retro1logo {
             margin-bottom: -1px;
             content: url(https://cdn.discordapp.com/avatar-decoration-presets/a_89155faed81b205d59fbbefa4316952d.png?size=240&passthrough=true);
@@ -5219,26 +5383,26 @@
 
         <a class="sillywords sidebarwords">turns off condensed category banners</a>
 
-        <h3 class="sillywords sidebarwords">card_holder_width</h3>
+        <h3 class="sillywords sidebarwords">.n card_holder_width</h3>
 
         <button class="button server-button" id="width-3-cards">Size 3</button>
 
-        <a class="sillywords sidebarwords">fits 3 cards in one row</a>
+        <a class="sillywords sidebarwords">.n fits 3 cards in one row</a>
 
         <button class="button server-button" id="width-4-cards">Size 4</button>
 
-        <a class="sillywords sidebarwords">fits 4 cards in one row</a>
+        <a class="sillywords sidebarwords">.n fits 4 cards in one row</a>
 
         <button class="button server-button" id="width-0-cards">100%</button>
 
         <a class="sillywords sidebarwords">fits any amount of cards in one row</a>
 
 
-        <h3 class="sillywords sidebarwords">collectibles_shop_taller_cards</h3>
+        <h3 class="sillywords sidebarwords">.n collectibles_shop_taller_cards</h3>
 
         <button class="button server-button" onclick="toggleTallerCards()" id="taller-cards-button">:3</button>
 
-        <a class="sillywords sidebarwords">:3</a>
+        <a class="sillywords sidebarwords">.n :3</a>
 
 
 
@@ -5291,12 +5455,12 @@
 
 
     <div class="itemlist bundles-hidden" id="main-thing">
-        <div class="bannerad1 inv">
+        <div class="bannerad1">
 
-            <a class="sillywords padding1">Sponsored</a>
+            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
+            <button class="adbutton">Get Profiles Plus</button></a>
 
-            <a href="https://discord.gg/Mcwh7hGcWb">
-            <button class="adbutton">Join Server</button></a>
+            <img class="banneradprofile" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Miss%20out%20on%20these_.png">
 
         </div>
 
@@ -5381,17 +5545,17 @@
                <a class="sillywords arcadebannertext2">null</a>
             </div>
 
-            <div class="in-shop hidden" id="arcadeitems">
+            <div class="in-shop" id="arcadeitems">
                <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="arcadedecorow decorow">
                     <div class="arcadedecos arcade1">
-                        <h1 class="sillywords">Feelin Awe</h1>
+                        <h1 class="sillywords">Clyde Invaders</h1>
 
-                        <a class="sillywords arcade1text arcade1sku">SKU ID: 1237649939027333232</a>
+                        <a class="sillywords arcade1text arcade1sku">SKU ID: null</a>
 
-                        <img class="arcadedecoimage arcade1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_89155faed81b205d59fbbefa4316952d.png?size=240&passthrough=false">
+                        <img class="arcadedecoimage arcade1logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=false">
 
-                        <a class="sillywords arcade1text arcade1fade">When you touch the grass.</a>
+                        <a class="sillywords arcade1text arcade1fade">Rogue invaders have taken over the galaxy.</a>
 
                         <h1 class="sillywords arcade1price price arcade1fade">US$5.99 - US$4.99</h1>
 
@@ -5400,9 +5564,9 @@
                             <button class="arcadebutton1" onclick="copyarcade1()">Copy Link</button>
 
                             <a href="https://discord.gg/Mcwh7hGcWb">
-                            <button class="arcadebutton1">Request On Profiles Plus</button></a>
+                            <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
 
-                            <a href="feelin-awe">
+                            <a href="deco-clyde-invaders">
                             <button class="arcadeinfobutton1">Open Extra Info</button></a>
                 
                             <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
@@ -5410,9 +5574,71 @@
 
                         </div>
 
-                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_89155faed81b205d59fbbefa4316952d.png?size=240&passthrough=true" id="copyarcade1">
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=true" id="copyarcade1">
 
                         <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcade1pp">
+
+                    </div>
+                    <div class="arcadedecos arcade2">
+                        <h1 class="sillywords">Hot Shot</h1>
+
+                        <a class="sillywords arcade2text arcade2sku">SKU ID: null</a>
+
+                        <img class="arcadedecoimage arcade2logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_46750412a18f4988de71f4cf14991b38.png?size=240&passthrough=false">
+
+                        <a class="sillywords arcade2text arcade2fade">Baller status: Pro</a>
+
+                        <h1 class="sillywords arcade2price price arcade2fade">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <button class="arcadebutton1" onclick="copyarcade2()">Copy Link</button>
+
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
+
+                            <a href="deco-hot-shot">
+                            <button class="arcadeinfobutton1">Open Extra Info</button></a>
+                
+                            <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
+                            <button class="arcadegiftbutton1">Gift</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_46750412a18f4988de71f4cf14991b38.png?size=240&passthrough=true" id="copyarcade2">
+
+                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcade2pp">
+
+                    </div>
+                    <div class="arcadedecos arcade3">
+                        <h1 class="sillywords">Mallow Jump</h1>
+
+                        <a class="sillywords arcade3text arcade3sku">SKU ID: null</a>
+
+                        <img class="arcadedecoimage arcade3logo" src="https://cdn.discordapp.com/avatar-decoration-presets/a_492f6b54b761c0a14d9dbc9c98aaa0f5.png?size=240&passthrough=false">
+
+                        <a class="sillywords arcade3text arcade3fade">Hop till you drop!</a>
+
+                        <h1 class="sillywords arcade3price price arcade3fade">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <button class="arcadebutton1" onclick="copyarcade3()">Copy Link</button>
+
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
+
+                            <a href="deco-mallow-jump">
+                            <button class="arcadeinfobutton1">Open Extra Info</button></a>
+                
+                            <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
+                            <button class="arcadegiftbutton1">Gift</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/avatar-decoration-presets/a_492f6b54b761c0a14d9dbc9c98aaa0f5.png?size=240&passthrough=true" id="copyarcade3">
+
+                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcade3pp">
 
                     </div>
 
@@ -5420,13 +5646,13 @@
                 <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="arcadeeffectrow effectrow" id="profile-effects">
                     <div class="arcadeeffects arcadeE1">
-                        <h1 class="sillywords">Feelin Mischievous</h1>
+                        <h1 class="sillywords">Twinkle Trails</h1>
 
-                        <a class="sillywords arcadeE1text arcadeE1sku">SKU ID: 1237650411410685972</a>
+                        <a class="sillywords arcadeE1text arcadeE1sku">SKU ID: null</a>
 
-                        <img class="arcadeeffectimage arcadeE1logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-09/feelin-mischievous/thumbnail.png">
+                        <img class="arcadeeffectimage arcadeE1logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/thumbnail.png">
 
-                        <a class="sillywords arcadeE1text arcadeE1fade">Why you little...</a>
+                        <a class="sillywords arcadeE1text arcadeE1fade">Chase the stars to collect them all.</a>
 
                         <h1 class="sillywords arcadeE1price price arcadeE1fade">US$5.99 - US$4.99</h1>
 
@@ -5435,9 +5661,9 @@
                             <button class="arcadebutton1" onclick="copyarcadeE1_1()">Copy Intro Link</button>
 
                             <a href="https://discord.gg/Mcwh7hGcWb">
-                            <button class="arcadebutton1">Request On Profiles Plus</button></a>
+                            <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
 
-                            <a href="feelin-mischievous">
+                            <a href="twinkle-trails">
                             <button class="arcadeinfobutton1">Open Extra Info</button></a>
             
                             <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
