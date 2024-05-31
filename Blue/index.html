@@ -13,13 +13,25 @@
     <meta content="#00068F" data-react-helmet="true" name="theme-color" />
     <style>
         body {
-            background-color: #343338;
+            background-color: #313338;
             color: white;
         }
         .darkmode {
-            background-color: #333538;
+            background-color: #313338;
             /* or whatever */
             color: white;
+        }
+        .background-light {
+            background-color: #ffffff;
+        }
+        .background-darker {
+            background-color: #171718;
+        }
+        .background-black {
+            background-color: #000000;
+        }
+        .background-blue {
+            background-color: #23118a;
         }
         
         div.deco-hidden [class*="decos"] {
@@ -50,6 +62,15 @@
             width: 430px;
             height: 100%;
             left: 0px;
+            top: 2.5em;
+            z-index: 10;
+            background-color: #1a1a1a;
+        }
+        .right-sidebar {
+            position: fixed;
+            width: 430px;
+            height: 100%;
+            right: 0px;
             top: 2.5em;
             z-index: 10;
             background-color: #1a1a1a;
@@ -3201,7 +3222,7 @@
 
         .arcadeE1:hover .arcadeE1logo {
             margin-bottom: -1px;
-            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png);
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/space-evader/thumbnail.png);
         }
         .arcadeE1 .button-holder {
             opacity: 0%;
@@ -3222,6 +3243,58 @@
             margin-top: -79px;
         }
         .arcadeE1:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        .arcadeE2:hover .arcadeE2logo {
+            margin-bottom: -1px;
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/turbo-drive/intro.png);
+        }
+        .arcadeE2 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .arcadeE2:hover .button-holder {
+            opacity: 100%;
+        }
+        .arcadeE2 .arcadeE2fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .arcadeE2:hover .arcadeE2fade {
+            opacity: 0%;
+            display: none;
+        }
+        .arcadeE2 .button-holder  {
+            margin-top: -79px;
+        }
+        .arcadeE2:hover .button-holder  {
+            margin-top: 0px;
+        }
+
+        .arcadeE3:hover .arcadeE3logo {
+            margin-bottom: -1px;
+            content: url(https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png);
+        }
+        .arcadeE3 .button-holder {
+            opacity: 0%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .arcadeE3:hover .button-holder {
+            opacity: 100%;
+        }
+        .arcadeE3 .arcadeE3fade {
+            opacity: 100%;
+            transition: opacity 0.2s, display 0.2s ease-in-out;
+        }
+        .arcadeE3:hover .arcadeE3fade {
+            opacity: 0%;
+            display: none;
+        }
+        .arcadeE3 .button-holder  {
+            margin-top: -79px;
+        }
+        .arcadeE3:hover .button-holder  {
             margin-top: 0px;
         }
 
@@ -5439,6 +5512,10 @@
 
         <a class="sillywords sidebarwords">toggles bundles category preview</a>
 
+        <button class="button server-button" onclick="toggleTheming()" id="theming-button">Theming</button>
+
+        <a class="sillywords sidebarwords">toggles theming menu</a>
+
     </div>
     <div class="left-sidebar hidden" id="dev-tools-403">
 
@@ -5449,6 +5526,26 @@
         <h1 class="sillywords sidebarwords">403</h1>
 
         <h2 class="sillywords sidebarwords">Missing permission</h2>
+
+    </div>
+
+    <div class="right-sidebar hidden" id="theme-menu">
+
+        <h1 class="sillywords sidebarwords">Themes</h1>
+
+        <h3 class="sillywords sidebarwords">BETA</h3>
+
+        <button class="button server-button" id="light-theme-button">Light</button>
+
+        <button class="button server-button" id="dark-theme-button">Dark</button>
+
+        <button class="button server-button" id="darker-theme-button">Darker</button>
+
+        <button class="button server-button" id="black-theme-button">Black</button>
+
+        <h3 class="sillywords sidebarwords">Colours</h3>
+
+        <button class="button server-button" id="blue-theme-button">Blue</button>
 
     </div>
 
@@ -5646,19 +5743,79 @@
                 <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="arcadeeffectrow effectrow" id="profile-effects">
                     <div class="arcadeeffects arcadeE1">
-                        <h1 class="sillywords">Twinkle Trails</h1>
+                        <h1 class="sillywords">Space Evader</h1>
 
                         <a class="sillywords arcadeE1text arcadeE1sku">SKU ID: null</a>
 
-                        <img class="arcadeeffectimage arcadeE1logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/thumbnail.png">
+                        <img class="arcadeeffectimage arcadeE1logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/space-evader/thumbnail.png">
 
-                        <a class="sillywords arcadeE1text arcadeE1fade">Chase the stars to collect them all.</a>
+                        <a class="sillywords arcadeE1text arcadeE1fade">That was the best flying I've seen to date.</a>
 
                         <h1 class="sillywords arcadeE1price price arcadeE1fade">US$5.99 - US$4.99</h1>
 
                         <div class="button-holder">
 
                             <button class="arcadebutton1" onclick="copyarcadeE1_1()">Copy Intro Link</button>
+
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
+
+                            <a href="space-evader">
+                            <button class="arcadeinfobutton1">Open Extra Info</button></a>
+            
+                            <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
+                            <button class="arcadegiftbutton1">Gift</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/space-evader/intro.png" id="copyarcadeE1_1">
+
+                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcadeE1_2">
+                    </div>
+                    <div class="arcadeeffects arcadeE2">
+                        <h1 class="sillywords">Turbo Drive</h1>
+
+                        <a class="sillywords arcadeE2text arcadeE2sku">SKU ID: null</a>
+
+                        <img class="arcadeeffectimage arcadeE2logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/turbo-drive/thumbnail.png">
+
+                        <a class="sillywords arcadeE2text arcadeE2fade">Give your rivals a cheeky wave from the rearview.</a>
+
+                        <h1 class="sillywords arcadeE2price price arcadeE2fade">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <button class="arcadebutton1" onclick="copyarcadeE2_1()">Copy Intro Link</button>
+
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
+
+                            <a href="space-evader">
+                            <button class="arcadeinfobutton1">Open Extra Info</button></a>
+            
+                            <a href="https://dtacat.github.io/Collectibles/Guides/gifting/">
+                            <button class="arcadegiftbutton1">Gift</button></a>
+
+                        </div>
+
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/turbo-drive/intro.png" id="copyarcadeE2_1">
+
+                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcadeE2_2">
+                    </div>
+                    <div class="arcadeeffects arcadeE3">
+                        <h1 class="sillywords">Twinkle Trails</h1>
+
+                        <a class="sillywords arcadeE3text arcadeE3sku">SKU ID: null</a>
+
+                        <img class="arcadeeffectimage arcadeE3logo" src="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/thumbnail.png">
+
+                        <a class="sillywords arcadeE3text arcadeE3fade">Chase the stars to collect them all.</a>
+
+                        <h1 class="sillywords arcadeE3price price arcadeE3fade">US$5.99 - US$4.99</h1>
+
+                        <div class="button-holder">
+
+                            <button class="arcadebutton1" onclick="copyarcadeE3_1()">Copy Intro Link</button>
 
                             <a href="https://discord.gg/Mcwh7hGcWb">
                             <button class="arcadebutton1 noclick">Unavailable While Unreleased</button></a>
@@ -5671,9 +5828,9 @@
 
                         </div>
 
-                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/feelin-mischievous-intro-loop.png" id="copyarcadeE1_1">
+                        <input class="hidden" type="text-input" value="https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png" id="copyarcadeE3_1">
 
-                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcadeE1_2">
+                        <input class="hidden" type="text-input" value="Profiles Plus Emoji" id="copyarcadeE3_2">
                     </div>
 
                 </div>
@@ -6536,7 +6693,8 @@
 
                             <button class="lofibutton1" onclick="copylofi1()">Copy Link</button>
 
-                            <button class="lofibutton1" onclick="copylofi1pp()">Copy Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="chromawave">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6566,7 +6724,8 @@
 
                             <button class="lofibutton1" onclick="copylofi2()">Copy Link</button>
 
-                            <button class="lofibutton1" onclick="copylofi2pp()">Copy Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="cozycat">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6595,7 +6754,8 @@
 
                             <button class="lofibutton1" onclick="copylofi3()">Copy Link</button>
 
-                            <button class="lofibutton1" onclick="copylofi3pp()">Copy Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="oasis">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6624,7 +6784,8 @@
 
                             <button class="lofibutton1" onclick="copylofi4()">Copy Link</button>
 
-                            <button class="lofibutton1" onclick="copylofi4pp()">Copy Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="rainymood">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6653,7 +6814,8 @@
 
                             <button class="lofibutton1" onclick="copylofi5()">Copy Link</button>
 
-                            <button class="lofibutton1" onclick="copylofi5pp()">Copy Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="cozyheadphones">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6682,7 +6844,8 @@
 
                             <button class="lofibutton1" onclick="copylofi6()">Copy Link</button>
 
-                            <button class="lofibutton1" onclick="copylofi6pp()">Copy Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="doodling">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6715,7 +6878,8 @@
 
                             <button class="lofibutton1" onclick="copylofistudy1()">Copy Intro Link</button>
 
-                            <button class="lofibutton1 noclick" onclick="copylofistudy2()">Temporarily Unavailable</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="studyspot">
                             <button class="loficopybutton1">Open Extra Info</button></a>
@@ -6744,7 +6908,8 @@
 
                             <button class="lofibutton1" onclick="copylofinight1()">Copy Intro Link</button>
 
-                            <button class="lofibutton1 noclick" onclick="copylofinight2()">Temporarily Unavailable</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="allnighter">
                             <button class="lofibutton1">Open Extra Info</button></a>
@@ -6770,7 +6935,8 @@
 
                             <button class="lofibutton1" onclick="copylofinight1()">Copy Intro Link</button>
 
-                            <button class="lofibutton1" onclick="copylofinight2()">Copy Intro Profiles Plus Emoji</button>
+                            <a href="https://discord.gg/Mcwh7hGcWb">
+                            <button class="lofibutton1">Request On Profiles Plus</button></a>
 
                             <a href="watercolors">
                             <button class="lofibutton1">Open Extra Info</button></a>
@@ -14029,6 +14195,48 @@
                 button.classList.add('server-button-blue');
             }
         }
+
+        function toggleTheming() {
+            let bundles = document.getElementById('theme-menu');
+            let button = document.getElementById('theming-button');
+
+            if (bundles.classList.contains('hidden')) {
+                bundles.classList.remove('hidden');
+            } else {
+                bundles.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        document.getElementById("light-theme-button").addEventListener("click", e => {
+            document.body.className = "background-light";
+            localStorage.theme = "backgroundlight";
+        });
+
+        document.getElementById("dark-theme-button").addEventListener("click", e => {
+            document.body.className = "darkmode";
+            localStorage.theme = "backgrounddark";
+        });
+
+        document.getElementById("darker-theme-button").addEventListener("click", e => {
+            document.body.className = "background-darker";
+            localStorage.theme = "backgrounddarker";
+        });
+
+        document.getElementById("black-theme-button").addEventListener("click", e => {
+            document.body.className = "background-black";
+            localStorage.theme = "backgroundblack";
+        });
+
+        document.getElementById("blue-theme-button").addEventListener("click", e => {
+            document.body.className = "background-blue";
+            localStorage.theme = "backgroundblue";
+        });
     </script>
 </body>
 
