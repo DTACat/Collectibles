@@ -1,0 +1,16 @@
+bundle
+sku: "1243617249974288404"
+name: "Stargazing Bundle"
+summary: "A bundle of collectibles."
+prices: "1099" "899"
+bundled_products
+0
+sku: "1232071712695386162"
+name: "Constellations"
+summary: "What secrets do the stars reveal?"
+prices: "599" "499"
+1
+sku: "1232073608168472638"
+name: "Twilight"
+summary: "Is the universe winking at me?"
+prices: "599" "499"
