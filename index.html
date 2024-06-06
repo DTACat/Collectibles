@@ -4,27 +4,46 @@
 <head>
     <base target="_blank">
     <title>Shop Archives</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColor2.png" type="image/x-icon"/>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColor2.png" type="image/x-icon">
     <meta name="twitter:site" content="Shop Archives">
     <meta name="twitter:title" content="Shop Archives">
     <meta name="twitter:description" content="List of helpful tools for all your Discord Collectible needs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:src" content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesBigEmbed4.png">
-    <meta content="#FF007A" data-react-helmet="true" name="theme-color" />
+    <meta content="#FF007A" data-react-helmet="true" name="theme-color">
     <style>
         body {
-            background-color: #333538;
+            background-color: #313338;
             color: white;
         }
         .darkmode {
-            background-color: #333538;
+            background-color: #313338;
             /* or whatever */
             color: white;
         }
-        .hidden {
+        .background-light {
+            background-color: #ffffff;
+        }
+        .background-darker {
+            background-color: #171718;
+        }
+        .background-black {
+            background-color: #000000;
+        }
+        
+        div.deco-hidden [class*="decos"] {
+            display: none;
+        }
+        div.effect-hidden [class*="effects"] {
             display: none;
         }
         .unpub-hidden [class*="unpublished"] {
+            display: none;
+        }
+        .in-shop [class*="in-shop"] {
+            display: none;
+        }
+        .banners-hidden [class*="banner"] {
             display: none;
         }
         .sidebar {
@@ -37,7 +56,17 @@
             width: 430px;
             height: 100%;
             left: 0px;
-            top: 95px;
+            top: 2.5em;
+            z-index: 10;
+            background-color: #1a1a1a;
+        }
+        .right-sidebar {
+            position: fixed;
+            width: 150px;
+            height: 100%;
+            text-align: center;
+            right: 0px;
+            top: 2.5em;
             z-index: 10;
             background-color: #1a1a1a;
         }
@@ -45,10 +74,35 @@
             cursor: pointer;
             width: 10em;
             height: 3em;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(89, 102, 243);
+            transition: background-color 0.2s ease-in-out;
+            color: white;
+        }
+        .server-button:hover {
+            background-color: rgb(71, 81, 192);
         }
         .server-button-blue {
-            background-color: rgb(108, 233, 255);
+            background-color: rgb(5, 129, 75);
+            transition: background-color 0.2s ease-in-out;
         }
+        .server-button-blue:hover {
+            background-color: rgb(7, 88, 53);
+        }
+        .bundle-discount {
+            color: rgb(0, 200, 117);
+        }
+
+        .show-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
         .disabled {
             opacity: 0.6;
             cursor: not-allowed;
@@ -60,112 +114,121 @@
             right: 0em;
             position: fixed;
         }
-        .shoparchivesblue {
-            display: block;
-            margin-top: 100px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 1480px;
-            height: 470px;
-            border-radius: 0px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BlueBannerAd.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .shoparchivesdiscarchive {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -100px;
-            width: 1480px;
-            height: 470px;
-            border-radius: 0px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/DisArchiveBannerAd.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .shoparchivesold {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -100px;
-            width: 1480px;
-            height: 470px;
-            border-radius: 0px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/OldBannerAd.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .shoparchivescolour {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -100px;
-            width: 1480px;
-            height: 470px;
-            border-radius: 0px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ColourBannerAd.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .shoparchivesguides {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -100px;
-            width: 1480px;
-            height: 470px;
-            border-radius: 0px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/GuidesBannerAd.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .shoparchivesinvalid {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: -100px;
-            width: 1480px;
-            height: 470px;
-            border-radius: 0px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/InvalidBannerAd.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
+
         
 
 
-        .itemtext1 {
+        .itemlist {
+            width: 100%;
+        }
+        .itemlist {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 80em
+            width: 100%;
         }
-        .button1 {
+
+        .bundlesbutton1 {
             display: block;
             margin-left: auto;
-            margin-right: 0px;
-            margin-top: 350px;
+            margin-right: auto;
+            margin-top: 20px;
             width: 25em;
             padding: 1em;
-            border-radius: 10px;
-            border-color: rgb(148, 89, 1);
-            background-color: rgb(219, 174, 26);
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
             cursor: pointer;
+            color: white;
+        }
+        .bundlesinfobutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 21em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .bundlesgiftbutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 4em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
         }
 
+        .greenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(31, 95, 29);
+            background-color: rgb(24, 119, 24);
+            cursor: pointer;
+            color: white;
+        }
+        .darkgreenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(17, 56, 16);
+            background-color: rgb(12, 53, 29);
+            cursor: pointer;
+            color: white;
+        }
+        .noclick {
+            cursor: not-allowed;
+        }
         
-        .decorow {
+
+        
+        
+
+
+        #elementdeco {
+            text-align: unset;
+        }
+
+        .bundles_ {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 600px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+
+        .bundlerow {
             position: relative;
             text-align: center;
         }
 
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
 
         .effectrow {
             position: relative;
@@ -182,13 +245,13 @@
 
 
         .banner {
-            margin-top: 100px;
+            margin-top: 50px;
         }
         div.loading {
-            opacity: 0.9; 
             background: #000; 
             width: 100%;
-            height: 2.5em; 
+            text-align: center;
+            height: auto; 
             z-index: 10;
             top: 0; 
             left: 0; 
@@ -216,14 +279,186 @@
             text-decoration: none;
         }
 
-        .center1 {
-            text-align: center;
+        /* Arcade */
+        .condensedleft .arcadebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/6e05aadeadd02eb63015.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
+        .condensedright .arcadebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/9015980c33a1df37bc7a.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .item-banner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 10px;
+            background-image: var(--banner-image);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+
+        
+        .background-dynamic [class*="decos"]:has([class*="decoimage"]) {
+            border: 2px solid rgb(16, 17, 19);
+            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+        }
+        .background-dynamic [class*="effects"]:has([class*="effectimage"]) {
+            border: 2px solid rgb(16, 17, 19);
+            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+        }
+        .background-dynamic [class*="button-holder"] [class*="button1"] {
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            color: white;
+        }
+
+        /* Deco */
+
+        .deco-card {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 650px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background-image: linear-gradient(var(--card-color1), var(--card-color2));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+        }
+        .no-card-theme .deco-card {
+            border: 2px solid rgb(30, 31, 34);
+            background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+
+        .decoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: auto;
+            height: 300px;
+            padding: 10px;
+            content: var(--deco-icon-false);
+            background-position: center;
+	        background-size: 77%;
+	        background-repeat: no-repeat;
+        }
+        .content-holder {
+            background-color: rgba(0, 0, 0, 40%);
+            width: 520px;
+            margin-left: -10px;
+            height: 240px;
+            position: relative;
+            border-radius: 0px 0px 50px 50px;
+        }
+        .no-card-theme .content-holder {
+            background-color: rgba(30, 31, 34, 100%);
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+        .deco-card:hover .decoimage {
+            content: var(--deco-icon-true);
+        }
+
+        .deco-card .button-holder {
+            opacity: 0%;
+            margin-top: -40px;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .deco-card:hover .button-holder {
+            opacity: 100%;
+            margin-top: 0px;
+        }
+
+        .deco-card .fade {
+            opacity: 100%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .deco-card:hover .fade {
+            opacity: 0%;
+            display: none;
+        }
+
+        /* ^ Deco */
+
+        .cardbutton {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 85%;
+            padding: 1em;
+            border: none;
+            border-radius: 3px;
+            background-image: linear-gradient(90deg, var(--button-color1), var(--button-color2));
+            color: var(--button-text-color);
+            cursor: pointer;
+        }
+        .no-card-theme .cardbutton {
+            background-image: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            color: rgb(255, 255, 255);
+        }
+        
+        .cardbutton:hover {
+            background-image: linear-gradient(90deg, var(--button-color3), var(--button-color4));
+        }
+        .no-card-theme .cardbutton:hover {
+            background-image: linear-gradient(90deg, rgb(71, 81, 192), rgb(71, 81, 192));
+            color: rgb(255, 255, 255);
+        }
+
+        .cardbutton-locked {
+            background-image: linear-gradient(90deg, var(--button-color3), var(--button-color4));
+            cursor: not-allowed;
+        }
+        .no-card-theme .cardbutton-locked {
+            background-image: linear-gradient(90deg, rgb(71, 81, 192), rgb(71, 81, 192));
+            color: rgb(255, 255, 255);
+        }
+
 
         .padding1 {
             padding: 1em;
         }
-
+        .right {
+            margin-right: auto;
+        }
+        .hidden {
+            display: none;
+        }
+        .inv {
+            opacity: 0;
+        }
     </style>
 </head>
 
@@ -243,11 +478,11 @@
         <a href="https://www.youtube.com/@DTACat">
             <button title="Youtube" class="button server-button">Youtube</button>
         </a>
-        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
-            <button title="Change Log" class="button server-button">Change Log</button>
+        <a href="https://dtacat.github.io/Collectibles/disclaimer/">
+            <button title="Disclaimer" class="button server-button">Disclaimer</button>
         </a>
-        
-        <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.</a>
+
+        <button class="button right server-button" onclick="toggleTheming()" id="theming-button">Themes</button>
 
     </div>
     <div class="left-sidebar hidden" id="dev-tools">
@@ -256,12 +491,28 @@
 
         <h3 class="sillywords sidebarwords">For dev use only</h3>
 
+        <hr>
 
-        <h2 class="sillywords sidebarwords">Item Toggles</h2>
 
-        <button class="button server-button" onclick="toggleUnpublished()" id="unpublished-button">Soon Banners</button>
+        <h2 class="sillywords sidebarwords">Experiments</h2>
 
-        <a class="sillywords sidebarwords">shows unpublished sites</a>
+        <h3 class="sillywords sidebarwords">Themes</h3>
+
+        <button class="button server-button" id="dynamic-theme-button">Dynamic</button>
+
+        <hr>
+
+        <h2 class="sillywords sidebarwords">Button Playground</h2>
+
+        <button class="button show-button" style="background-color: rgb(89, 102, 243);">Blue</button>
+
+        <button class="button show-button" style="background-color: rgb(71, 81, 192);">Blue Hover</button>
+        
+        <hr class="inv">
+
+        <button class="button show-button" style="background-color: rgb(5, 129, 75);">Green</button>
+
+        <button class="button show-button" style="background-color: rgb(7, 88, 53);">Green Hover</button>
 
     </div>
     <div class="left-sidebar hidden" id="dev-tools-403">
@@ -276,43 +527,190 @@
 
     </div>
 
+    <div class="right-sidebar hidden" id="theme-menu">
+
+        <h1 class="sillywords sidebarwords">Themes</h1>
+
+        <h3 class="sillywords sidebarwords">(BETA)</h3>
+
+        <h3 class="sillywords sidebarwords">Cards</h3>
+
+        <button class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">No Card Theme</button>
+
+        <h3 class="sillywords sidebarwords">Background</h3>
+
+        <button class="button server-button" id="light-theme-button">Light</button>
+
+        <button class="button server-button" id="dark-theme-button">Dark</button>
+
+        <button class="button server-button" id="darker-theme-button">Darker</button>
+
+        <button class="button server-button" id="black-theme-button">Void</button>
+
+    </div>
 
 
-    <div class="itemlist unpub-hidden" id="main-thing">
-        <div class="shoparchivesblue">
 
-            <button class="button1" onclick="location.href='Blue';">Open</button>
+    <div class="itemlist bundles-hidden" id="main-thing">
+
+        <div class="arcade" style="
+        --card-color1: rgb(3, 2, 36);
+        --card-color2: rgb(8, 1, 43);
+        --border-color: rgb(3, 2, 36);
+        --button-color1: rgb(89, 102, 243);
+        --button-color2: rgb(89, 102, 243);
+        --button-color3: rgb(71, 81, 192);
+        --button-color4: rgb(71, 81, 192);
+        --button-text-color: rgb(255, 255, 255);
+        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1245087533205819452.png?size=1280);">
+            <!-- Arcade -->
+
+            <div class="in-shop" id="arcadeitems">
+                <a class="sillywords itemtext1 decos">Avatar Decorations</a>
+                <div class="arcadedecorow decorow">
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchives.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchives.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">By DTACat</a>
+                                <h1 class="sillywords">Shop Archives</h1>
+                                <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles</a>
+                                <div class="button-holder">
+                                    <button class="cardbutton" onclick="location.href='https://dtacat.github.io/Collectibles/Blue/';">Open</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/DiscArchive.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/DiscArchive.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">By Happy Enderman</a>
+                                <h1 class="sillywords">Disc Archives</h1>
+                                <a class="sillywords fade">An archive of discord collectibles with their SKU ids</a>
+                                <div class="button-holder">
+                                    <button class="cardbutton" onclick="location.href='https://da.happyenderman.com/';">Open</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ProfilesPlus.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ProfilesPlus.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">By DTACat</a>
+                                <h1 class="sillywords">Profiles Plus</h1>
+                                <a class="sillywords fade">Makes your Discord profile look 100 times better.</a>
+                                <div class="button-holder">
+                                    <button class="cardbutton" onclick="location.href='https://github.com/DTACat/Discord-Profiles-Plus';">Open</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/QuestionMark.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/QuestionMark.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">Coming Soon...</a>
+                                <h1 class="sillywords">Coming Soon...</h1>
+                                <a class="sillywords fade">Our team is working hard to bring you the best tools for Collectibles</a>
+                                <div class="button-holder">
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
-        <div class="shoparchivesdiscarchive">
 
-            <a href="https://da.happyenderman.com/collectibles">
-            <button class="button1">Open In New Tab</button></a>
-
-        </div>
-        <div class="shoparchivesguides">
-
-            <button class="button1" onclick="location.href='Guides';">Open</button>
-
-        </div>
-        <div class="shoparchivesold">
-
-            <button class="button1" onclick="location.href='Old';">Open</button>
-
-        </div>
-        <div class="shoparchivescolour unpublished">
-
-            <button class="button1" onclick="location.href='Guides';">Open</button>
-
-        </div>
-        <div class="shoparchivesinvalid unpublished">
-
-            <button class="button1" onclick="location.href='Guides';">Open</button>
-
-        </div>
     </div>
 
     <script>
+
+        document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+            const inputField = copyLinkParent.querySelector(".copy-pp");
+            const copyButton = copyLinkParent.querySelector(".button-pp");
+            const text = inputField.value;
+
+            inputField.addEventListener("focus", () => inputField.select());
+
+            copyButton.addEventListener("click", () => {
+                inputField.select();
+                navigator.clipboard.writeText(text);
+
+                inputField.value = "Copied!";
+                setTimeout(() => (inputField.value = text), 2000);
+            });
+        });
+
+
+        function dynamicOneTwo() {
+            let banner1 = document.getElementById('dynamicbanner1');
+            let banner2 = document.getElementById('dynamicbanner2');
+
+            if (banner1.classList.contains('dynamicbanner1')) {
+                banner1.classList.add('hidden');
+            }
+
+            if (banner2.classList.contains('dynamicbanner2')) {
+                banner2.classList.remove('hidden');
+            }
+        }
+
+        function dynamicTwoThree() {
+            let banner2 = document.getElementById('dynamicbanner2');
+            let banner3 = document.getElementById('dynamicbanner3');
+
+            if (banner2.classList.contains('dynamicbanner2')) {
+                banner2.classList.add('hidden');
+            }
+
+            if (banner3.classList.contains('dynamicbanner3')) {
+                banner3.classList.remove('hidden');
+            }
+        }
+
+        function dynamicThreeFour() {
+            let banner3 = document.getElementById('dynamicbanner3');
+            let banner4 = document.getElementById('dynamicbanner4');
+
+            if (banner3.classList.contains('dynamicbanner3')) {
+                banner3.classList.add('hidden');
+            }
+
+            if (banner4.classList.contains('dynamicbanner4')) {
+                banner4.classList.remove('hidden');
+            }
+        }
+
+        function dynamicFourOne() {
+            let banner4 = document.getElementById('dynamicbanner4');
+            let banner1 = document.getElementById('dynamicbanner1');
+
+            if (banner4.classList.contains('dynamicbanner4')) {
+                banner4.classList.add('hidden');
+            }
+
+            if (banner1.classList.contains('dynamicbanner1')) {
+                banner1.classList.remove('hidden');
+            }
+        }
+
 
         function toggleDevTools() {
             let tools = document.getElementById('dev-tools');
@@ -353,6 +751,40 @@
             }
         }
 
+        function toggleDeco() {
+            let deco = document.getElementById('main-thing');
+            let button = document.getElementById('deco-button');
+
+            if (deco.classList.contains('deco-hidden')) {
+                deco.classList.remove('deco-hidden');
+            } else {
+                deco.classList.add('deco-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleEffects() {
+            let effects = document.getElementById('main-thing');
+            let button = document.getElementById('effects-button');
+
+            if (effects.classList.contains('effect-hidden')) {
+                effects.classList.remove('effect-hidden');
+            } else {
+                effects.classList.add('effect-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
         function toggleUnpublished() {
             let unpub = document.getElementById('main-thing');
             let button = document.getElementById('unpublished-button');
@@ -369,6 +801,133 @@
                 button.classList.add('server-button-blue');
             }
         }
+
+        function toggleInShop() {
+            let inshop = document.getElementById('main-thing');
+            let button = document.getElementById('in-shop-button');
+
+            if (inshop.classList.contains('in-shop')) {
+                inshop.classList.remove('in-shop');
+            } else {
+                inshop.classList.add('in-shop');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleBanners() {
+            let banner = document.getElementById('main-thing');
+            let button = document.getElementById('banner-button');
+
+            if (banner.classList.contains('banners-hidden')) {
+                banner.classList.remove('banners-hidden');
+            } else {
+                banner.classList.add('banners-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDynamicBanners() {
+            let banners = document.getElementById('dynamicbanners');
+            let button = document.getElementById('dynamic-button');
+
+            if (banners.classList.contains('hidden')) {
+                banners.classList.remove('hidden');
+            } else {
+                banners.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleBundles() {
+            let bundles = document.getElementById('main-thing');
+            let button = document.getElementById('bundles-button');
+
+            if (bundles.classList.contains('bundles-hidden')) {
+                bundles.classList.remove('bundles-hidden');
+            } else {
+                bundles.classList.add('bundles-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleTheming() {
+            let bundles = document.getElementById('theme-menu');
+            let button = document.getElementById('theming-button');
+
+            if (bundles.classList.contains('hidden')) {
+                bundles.classList.remove('hidden');
+            } else {
+                bundles.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleCardTheme() {
+            let cards = document.getElementById('main-thing');
+            let button = document.getElementById('card-theme-button');
+
+            if (cards.classList.contains('no-card-theme')) {
+                cards.classList.remove('no-card-theme');
+            } else {
+                cards.classList.add('no-card-theme');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        document.getElementById("light-theme-button").addEventListener("click", e => {
+            document.body.className = "background-light";
+            localStorage.theme = "backgroundlight";
+        });
+
+        document.getElementById("dark-theme-button").addEventListener("click", e => {
+            document.body.className = "darkmode";
+            localStorage.theme = "backgrounddark";
+        });
+
+        document.getElementById("darker-theme-button").addEventListener("click", e => {
+            document.body.className = "background-darker";
+            localStorage.theme = "backgrounddarker";
+        });
+
+        document.getElementById("black-theme-button").addEventListener("click", e => {
+            document.body.className = "background-black";
+            localStorage.theme = "backgroundblack";
+        });
+
+        document.getElementById("dynamic-theme-button").addEventListener("click", e => {
+            document.body.className = "background-dynamic";
+            localStorage.theme = "backgrounddynamic";
+        });
     </script>
 </body>
 
