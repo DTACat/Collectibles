@@ -8,7 +8,7 @@
     <meta content="In My Feels Bundle" property="og:title" />
     <meta content="Feelin' Scrumptious Deco & Feelin' Mischievous Effect" property="og:description" />
     <meta content="https://dtacat.github.io/Collectibles/sku/1243617981435478102" property="og:url" />
-    <meta content="./preview.png" property="og:image" />
+    <meta content="https://dtacat.github.io/Collectibles/main/categories/retro/bundles/in-my-feels/preview.png" property="og:image" />
     <meta content="#DF60FF" data-react-helmet="true" name="theme-color" />
     <style>
         body {
@@ -63,7 +63,10 @@
         .background-dynamic .cyber {
             background-image: linear-gradient(-90deg, rgb(32, 20, 107), rgb(5, 1, 0));
         }
-        
+
+        div.bundles-hidden [class*="bundle"] {
+            display: none;
+        }
         div.deco-hidden [class*="decos"] {
             display: none;
         }
@@ -1363,26 +1366,12 @@
 
         <hr>
 
-        <h2 class="sillywords sidebarwords">Design Options</h2>
-
-
-        <h3 class="sillywords sidebarwords">shop_condensed_category_banners</h3>
-
-        <button class="button server-button" id="condensed-left">Condensed Left</button>
-
-        <a class="sillywords sidebarwords">sets the logo for condensed to left</a>
-
-        <button class="button server-button" id="condensed-right">Condensed Right</button>
-
-        <a class="sillywords sidebarwords">sets the logo for condensed to right</a>
-
-        <button class="button server-button" id="condensed-off">Condensed Off</button>
-
-        <a class="sillywords sidebarwords">turns off condensed category banners</a>
-
-        <hr>
 
         <h2 class="sillywords sidebarwords">Item Toggles</h2>
+
+        <button class="button server-button" onclick="toggleBundles()" id="bundles-button">Bundles</button>
+
+        <a class="sillywords sidebarwords">sets bundle cards to none</a>
 
         <button class="button server-button" onclick="toggleDeco()" id="deco-button">Avatar Deco</button>
 
@@ -1403,10 +1392,6 @@
         <button class="button server-button" onclick="toggleBanners()" id="banner-button">Banners</button>
 
         <a class="sillywords sidebarwords">sets category banners to none</a>
-
-        <button class="button server-button" onclick="toggleDynamicBanners()" id="dynamic-button">Dynamic Banners</button>
-
-        <a class="sillywords sidebarwords">sets dynamic banners to none</a>
 
         <hr>
 
@@ -1467,7 +1452,7 @@
 
 
 
-    <div class="itemlist bundles-hidden" id="main-thing">
+    <div class="itemlist" id="main-thing">
 
         <div class="retro" style="
         --card-color1: rgb(223, 96, 255);
@@ -1513,7 +1498,7 @@
                     </div>
 
                 </div>
-                <a class="sillywords itemtext1 decos">Bundle Contents</a>
+                <a class="sillywords itemtext1">Bundle Contents</a>
                 <div class="retrodecorow decorow">
                     <div class="deco-card retrodecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_9d35467f282b8c72a26f5aa40aa2a637.png?size=240&passthrough=false');
@@ -1671,6 +1656,23 @@
             }
         }
 
+        function toggleBundles() {
+            let bundles = document.getElementById('main-thing');
+            let button = document.getElementById('bundles-button');
+
+            if (bundles.classList.contains('bundles-hidden')) {
+                bundles.classList.remove('bundles-hidden');
+            } else {
+                bundles.classList.add('bundles-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
         function toggleDeco() {
             let deco = document.getElementById('main-thing');
             let button = document.getElementById('deco-button');
@@ -1764,23 +1766,6 @@
                 banners.classList.remove('hidden');
             } else {
                 banners.classList.add('hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleBundles() {
-            let bundles = document.getElementById('main-thing');
-            let button = document.getElementById('bundles-button');
-
-            if (bundles.classList.contains('bundles-hidden')) {
-                bundles.classList.remove('bundles-hidden');
-            } else {
-                bundles.classList.add('bundles-hidden');
             }
 
             if (button.classList.contains('server-button-blue')) {
