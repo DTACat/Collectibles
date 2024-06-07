@@ -64,6 +64,9 @@
             background-image: linear-gradient(-90deg, rgb(32, 20, 107), rgb(5, 1, 0));
         }
         
+        div.bundles-hidden [class*="bundle"] {
+            display: none;
+        }
         div.deco-hidden [class*="decos"] {
             display: none;
         }
@@ -1384,9 +1387,13 @@
 
         <h2 class="sillywords sidebarwords">Item Toggles</h2>
 
+        <button class="button server-button" onclick="toggleBundles()" id="bundles-button">Bundles</button>
+
+        <a class="sillywords sidebarwords">sets bundle cards to none</a>
+
         <button class="button server-button" onclick="toggleDeco()" id="deco-button">Avatar Deco</button>
 
-        <a class="sillywords sidebarwords">sets avatar cards to none</a>
+        <a class="sillywords sidebarwords">sets deco cards to none</a>
 
         <button class="button server-button" onclick="toggleEffects()" id="effects-button">Profile Effects</button>
 
@@ -1467,7 +1474,7 @@
 
 
 
-    <div class="itemlist bundles-hidden" id="main-thing">
+    <div class="itemlist" id="main-thing">
         <div class="bannerad1 inv">
 
             <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
@@ -1516,29 +1523,29 @@
 
             <div class="item-banner banner arcadebanner">
                <img class="arcadebannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1245086730785390793.png?size=480">
-               <a class="sillywords arcadebannertext2">null</a>
+               <a class="sillywords arcadebannertext2">Press START to play.</a>
             </div>
 
             <div class="in-shop" id="arcadeitems">
                 <a class="sillywords itemtext1 bundles">Bundles</a>
-                <div class="arcadebundlerow bundlerow hidden">
+                <div class="arcadebundlerow bundlerow">
                     <div class="bundle-card arcadebundles" style="
-                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=false');
-                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=true');
-                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/space-evader/thumbnail.png');
-                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/space-evader/intro.png');">
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=true');
+                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/thumbnail.png');
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png');">
                         <img class="bundle-effectimage">
                         <img class="bundle-decoimage">
                         <div class="bundle-content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
-                                <h1 class="sillywords">Test Bundle</h1>
-                                <a class="sillywords fade">Clyde Invaders Deco & Space Evader Effect</a>
+                                <a class="sillywords sku">SKU ID: 1245481938202918912</a>
+                                <h1 class="sillywords">Star Collector Bundle</h1>
+                                <a class="sillywords fade">Pipedream Deco & Twinkle Trails Effect</a>
                                 <h1 class="sillywords fade">US$10.99 - US$8.99</h1>
                                 <h1 class="sillywords bundle-discount fade">(-8%) - (-24%)</h1>
                                 <div class="button-holder">
                                     <button class="cardbutton cardbutton-locked">Unavailable For Bundles</button>
-                                    <button class="cardbutton" onclick="location.href='categories/arcade/bundles/test-bundle';">Open Extra Info</button>
+                                    <button class="cardbutton" onclick="location.href='categories/arcade/bundles/star-collector';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
                             </div>
@@ -1549,19 +1556,57 @@
                 <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="arcadedecorow decorow">
                     <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_795573a62c6d9b583f3029100f90d56b.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_795573a62c6d9b583f3029100f90d56b.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1245087661316898877</a>
+                                <h1 class="sillywords">Joystick</h1>
+                                <a class="sillywords fade">Pressing buttons harder definitely increases your chances of winning.</a>
+                                <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
+                                    <button class="cardbutton" onclick="location.href='categories/arcade/avatar-decoration-presets/joystick';">Open Extra Info</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card arcadedecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_e72e44eeea89e92dc02c9bec8b02d158.png?size=240&passthrough=true');">
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
+                                <a class="sillywords sku">SKU ID: 1245087724265013299</a>
                                 <h1 class="sillywords">Clyde Invaders</h1>
                                 <a class="sillywords fade">Rogue invaders have taken over the galaxy.</a>
                                 <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
                                 <div class="button-holder">
                                     <a href="https://discord.gg/Mcwh7hGcWb">
-                                    <button class="cardbutton cardbutton-locked">Unavailable While Unreleased</button></a>
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
                                     <button class="cardbutton" onclick="location.href='categories/arcade/avatar-decoration-presets/clyde-invaders';">Open Extra Info</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1245087850177888356</a>
+                                <h1 class="sillywords">Pipedream</h1>
+                                <a class="sillywords fade">If you stare at this for 5,461 seconds without blinking, you win.</a>
+                                <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
+                                    <button class="cardbutton" onclick="location.href='categories/arcade/avatar-decoration-presets/pipedream';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
                             </div>
@@ -1573,13 +1618,13 @@
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
+                                <a class="sillywords sku">SKU ID: 1245087912350187520</a>
                                 <h1 class="sillywords">Hot Shot</h1>
                                 <a class="sillywords fade">Baller status: Pro</a>
                                 <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
                                 <div class="button-holder">
                                     <a href="https://discord.gg/Mcwh7hGcWb">
-                                    <button class="cardbutton cardbutton-locked">Unavailable While Unreleased</button></a>
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
                                     <button class="cardbutton" onclick="location.href='categories/arcade/avatar-decoration-presets/hot-shot';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
@@ -1592,14 +1637,33 @@
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
+                                <a class="sillywords sku">SKU ID: 1245087968759382207</a>
                                 <h1 class="sillywords">Mallow Jump</h1>
                                 <a class="sillywords fade">Hop till you drop!</a>
                                 <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
                                 <div class="button-holder">
                                     <a href="https://discord.gg/Mcwh7hGcWb">
-                                    <button class="cardbutton cardbutton-locked">Unavailable While Unreleased</button></a>
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
                                     <button class="cardbutton" onclick="location.href='categories/arcade/avatar-decoration-presets/mallow-jump';">Open Extra Info</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_49ffdb1883d8c644a8eb68711ee58be9.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_49ffdb1883d8c644a8eb68711ee58be9.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1245088023452975104</a>
+                                <h1 class="sillywords">Slither &#8217;n Snack</h1>
+                                <a class="sillywords fade">Gobble and grow to become the biggest snake in the garden.</a>
+                                <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
+                                    <button class="cardbutton" onclick="location.href='categories/arcade/avatar-decoration-presets/slither-n-snack';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
                             </div>
@@ -1621,7 +1685,7 @@
                                 <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
                                 <div class="button-holder">
                                     <a href="https://discord.gg/Mcwh7hGcWb">
-                                    <button class="cardbutton cardbutton-locked">Unavailable While Unreleased</button></a>
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
                                     <button class="cardbutton" onclick="location.href='categories/arcade/profile_effects/space-evader';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
@@ -1640,7 +1704,7 @@
                                 <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
                                 <div class="button-holder">
                                     <a href="https://discord.gg/Mcwh7hGcWb">
-                                    <button class="cardbutton cardbutton-locked">Unavailable While Unreleased</button></a>
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
                                     <button class="cardbutton" onclick="location.href='categories/arcade/profile_effects/turbo-drive';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
@@ -1659,7 +1723,7 @@
                                 <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
                                 <div class="button-holder">
                                     <a href="https://discord.gg/Mcwh7hGcWb">
-                                    <button class="cardbutton cardbutton-locked">Unavailable While Unreleased</button></a>
+                                    <button class="cardbutton noclick">Request On Profiles Plus</button></a>
                                     <button class="cardbutton" onclick="location.href='categories/arcade/profile_effects/twinkle-trails';">Open Extra Info</button>
                                     <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
@@ -6191,6 +6255,23 @@
             }
         }
 
+        function toggleBundles() {
+            let bundles = document.getElementById('main-thing');
+            let button = document.getElementById('bundles-button');
+
+            if (bundles.classList.contains('bundles-hidden')) {
+                bundles.classList.remove('bundles-hidden');
+            } else {
+                bundles.classList.add('bundles-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
         function toggleDeco() {
             let deco = document.getElementById('main-thing');
             let button = document.getElementById('deco-button');
@@ -6284,23 +6365,6 @@
                 banners.classList.remove('hidden');
             } else {
                 banners.classList.add('hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleBundles() {
-            let bundles = document.getElementById('main-thing');
-            let button = document.getElementById('bundles-button');
-
-            if (bundles.classList.contains('bundles-hidden')) {
-                bundles.classList.remove('bundles-hidden');
-            } else {
-                bundles.classList.add('bundles-hidden');
             }
 
             if (button.classList.contains('server-button-blue')) {
