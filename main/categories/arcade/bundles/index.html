@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Star Collector Bundle | Shop Archives</title>
+    <link rel="icon" href="./preview.png" type="image/x-icon"/>
+    <meta content="Star Collector Bundle" property="og:title" />
+    <meta content="Pipedream Deco & Twinkle Trails Effect" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/sku/1245481938202918912" property="og:url" />
+    <meta content="https://dtacat.github.io/Collectibles/main/categories/arcade/bundles/star-collector/preview.png" property="og:image" />
+    <meta content="#030224" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            background-color: #313338;
+            color: white;
+        }
+        .darkmode {
+            background-color: #313338;
+            /* or whatever */
+            color: white;
+        }
+        .background-light {
+            background-color: #ffffff;
+        }
+        .background-darker {
+            background-color: #171718;
+        }
+        .background-black {
+            background-color: #000000;
+        }
+
+        .background-dynamic .arcade {
+            background-image: linear-gradient(-90deg, rgb(3, 2, 36), rgb(8, 1, 43));
+        }
+        .background-dynamic .retro {
+            background-image: linear-gradient(-90deg, rgb(223, 96, 255), rgb(128, 88, 253));
+        }
+        .background-dynamic .pirates {
+            background-image: linear-gradient(-90deg, rgb(42, 28, 25), rgb(123, 50, 28));
+        }
+        .background-dynamic .space {
+            background-image: linear-gradient(-90deg, rgb(6, 0, 59), rgb(49, 0, 53));
+        }
+        .background-dynamic .lofi {
+            background-image: linear-gradient(-90deg, rgb(97, 92, 255), rgb(223, 129, 184));
+        }
+        .background-dynamic .shy {
+            background-image: linear-gradient(-90deg, rgb(84, 33, 44), rgb(15, 26, 36));
+        }
+        .background-dynamic .springtoons {
+            background-image: linear-gradient(-90deg, rgb(255, 255, 255), rgb(113, 191, 254));
+        }
+        .background-dynamic .animev2 {
+            background-image: linear-gradient(-90deg, rgb(173, 255, 254), rgb(2, 61, 116));
+        }
+        .background-dynamic .element {
+            background-image: linear-gradient(-90deg, rgb(27, 27, 161), rgb(0, 22, 41));
+        }
+        .background-dynamic .lunar {
+            background-image: linear-gradient(-90deg, rgb(141, 0, 0), rgb(91, 0, 0));
+        }
+        .background-dynamic .cyber {
+            background-image: linear-gradient(-90deg, rgb(32, 20, 107), rgb(5, 1, 0));
+        }
+
+        div.bundles-hidden [class*="bundle"] {
+            display: none;
+        }
+        div.deco-hidden [class*="decos"] {
+            display: none;
+        }
+        div.effect-hidden [class*="effects"] {
+            display: none;
+        }
+        .unpub-hidden [class*="unpublished"] {
+            display: none;
+        }
+        .in-shop [class*="in-shop"] {
+            display: none;
+        }
+        .banners-hidden [class*="banner"] {
+            display: none;
+        }
+        .sidebar {
+            position: fixed;
+            width: 25%;
+            backdrop-filter: blur(10px);
+        }
+        .left-sidebar {
+            position: fixed;
+            width: 430px;
+            height: 100%;
+            left: 0px;
+            top: 2.5em;
+            z-index: 10;
+            background-color: #1a1a1a;
+        }
+        .right-sidebar {
+            position: fixed;
+            width: 150px;
+            height: 100%;
+            text-align: center;
+            right: 0px;
+            top: 2.5em;
+            z-index: 10;
+            background-color: #1a1a1a;
+        }
+        .server-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(89, 102, 243);
+            transition: background-color 0.2s ease-in-out;
+            color: white;
+        }
+        .server-button:hover {
+            background-color: rgb(71, 81, 192);
+        }
+        .server-button-blue {
+            background-color: rgb(5, 129, 75);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .server-button-blue:hover {
+            background-color: rgb(7, 88, 53);
+        }
+        .bundle-discount {
+            color: rgb(0, 200, 117);
+        }
+
+        .show-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .darkmode1 {
+            background-color: #333538;
+        }
+        .trellteam {
+            right: 0em;
+            position: fixed;
+        }
+        .bannerad1 {
+            display: block;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 200px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo-2024-05-30T140921.927.png);
+            background-position: 0px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dynamicbanner1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-5-212e93ca86.gif?raw=true);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .dynamicbanner2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-3-37e4475adf.gif?raw=true);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .dynamicbanner3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/981c9ed7a21052f1722c.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .dynamicbanner4 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-7-624cf29077.gif?raw=true);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .condensedleft .bundlesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BundlesBannerLeft.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .bundlesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BundlesBannerRight.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .bundlesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BundlesBackground.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        
+
+
+        .itemlist {
+            width: 100%;
+        }
+        .itemlist {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .banneradprofile {
+            display: block;
+            margin-left: -20px;
+            margin-top: -140px;
+            width: 550px;
+        }
+
+        .dynamicbanner1profile1 {
+            display: block;
+            margin-left: auto;
+            margin-right: -10px;
+            margin-top: -122px;
+            width: 550px;
+        }
+        .dynamicbanner3profile1 {
+            display: block;
+            margin-left: auto;
+            margin-right: -10px;
+            margin-top: -122px;
+            width: 550px;
+        }
+
+
+        .dynamicbanner1text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -380px;
+        }
+        .dynamicbanner2text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -10px;
+        }
+        .dynamicbanner3text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -380px;
+        }
+        .dynamicbanner4text1 {
+            display: block;
+            margin-right: auto;
+            padding: 2%;
+            margin-top: -10px;
+        }
+
+
+        .condensedleft .bundlesbannertext1 {
+            margin-left: 0;
+            margin-top: -55px;
+            scale: 80%;
+        }
+        .condensedright .bundlesbannertext1 {
+            margin-right: 0;
+            margin-top: -55px;
+            scale: 80%;
+        }
+        .bundlesbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5.5%;
+        }
+        
+        .element {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .condensedleft .arcadebannertext1 {
+            margin-left: 0;
+            margin-top: -60px;
+            scale: 80%;
+        }
+        .condensedright .arcadebannertext1 {
+            margin-right: 0;
+            margin-top: -60px;
+            scale: 80%;
+        }
+        .arcadebannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7%;
+        }
+        
+        .condensedleft .retrobannertext1 {
+            margin-left: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
+        .condensedright .retrobannertext1 {
+            margin-right: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
+        .retrobannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4%;
+        }
+
+        .condensedleft .piratesbannertext1 {
+            margin-left: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
+        .condensedright .piratesbannertext1 {
+            margin-right: 0;
+            margin-top: -35px;
+            scale: 80%;
+        }
+        .piratesbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3%;
+        }
+
+        .condensedleft .galaxybannertext1 {
+            margin-left: 0;
+            margin-top: -50px;
+            scale: 100%;
+        }
+        .condensedright .galaxybannertext1 {
+            margin-right: 0;
+            margin-top: -50px;
+            scale: 100%;
+        }
+        .galaxybannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7%;
+        }
+
+        .condensedleft .lofibannertext1 {
+            margin-left: 0;
+            margin-top: -35px;
+            scale: 100%;
+        }
+        .condensedright .lofibannertext1 {
+            margin-right: 0;
+            margin-top: -35px;
+            scale: 100%;
+        }
+        .lofibannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 6%;
+        }
+
+        .shybannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8%;
+        }
+        .springtoonsbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7.5%;
+        }
+        .animev2bannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3%;
+        }
+        .elementbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7%;
+        }
+        .lunarbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8%;
+        }
+        .cyberbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 7%;
+        }
+        .monsterbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        .winterbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 3%;
+        }
+        .halloweenbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        .fallbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        .fantasybannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        .animebannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        .breakfastbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5%;
+        }
+        .disxbannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8%;
+        }
+        .festivebannertext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0%;
+        }
+
+
+        .dynamicbanner1text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+            color: black;
+        }
+        .dynamicbanner2text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+        }
+        .dynamicbanner3text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+        }
+        .dynamicbanner4text2 {
+            display: block;
+            margin-left: 50px;
+            width: fit-content;
+            margin-top: -30px;
+        }
+
+
+        .condensedleft .arcadebannertext2 {
+            display: none;
+        }
+        .condensedright .arcadebannertext2 {
+            display: none;
+        }
+        .arcadebannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -50px;
+        }
+
+        .condensedleft .retrobannertext2 {
+            display: none;
+        }
+        .condensedright .retrobannertext2 {
+            display: none;
+        }
+        .retrobannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -30px;
+        }
+
+        .condensedleft .piratesbannertext2 {
+            display: none;
+        }
+        .condensedright .piratesbannertext2 {
+            display: none;
+        }
+        .piratesbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -30px;
+        }
+
+        .condensedleft .galaxybannertext2 {
+            display: none;
+        }
+        .condensedright .galaxybannertext2 {
+            display: none;
+        }
+        .galaxybannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -30px;
+        }
+
+        .condensedleft .lofibannertext2 {
+            display: none;
+        }
+        .condensedright .lofibannertext2 {
+            display: none;
+        }
+        .lofibannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .shybannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -60px;
+        }
+        .springtoonsbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -50px;
+            color: black;
+        }
+        .animev2bannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -30px;
+            color: black;
+        }
+        .elementbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -80px;
+        }
+        .lunarbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -80px;
+        }
+        .cyberbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -80px;
+        }
+        .monsterbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .winterbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .halloweenbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .fallbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .fantasybannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .animebannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .breakfastbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -40px;
+        }
+        .disxbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: -50px;
+        }
+        .miscellaneousbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: 200px;
+        }
+        .ethbirthdaybannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: 200px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+        .festivebannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: 10px;
+        }
+        .summerbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: 200px;
+        }
+        .digitalbannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: 200px;
+        }
+        .archivebannertext2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            margin-top: 200px;
+        }
+
+
+        .dynamicbutton1 {
+            display: block;
+            margin-left: 50px;
+            margin-top: 20px;
+            width: 10em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+            font-size: large;
+        }
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .goldbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(237, 213, 80);
+            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
+            cursor: pointer;
+            color: black;
+        }
+        .adbutton {
+            display: block;
+            margin-left: auto;
+            margin-top: 85px;
+            width: 20em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(237, 213, 80);
+            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
+            cursor: pointer;
+            color: black;
+        }
+
+        .bundlesbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .bundlesinfobutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 21em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .bundlesgiftbutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 4em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+
+        .greenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(31, 95, 29);
+            background-color: rgb(24, 119, 24);
+            cursor: pointer;
+            color: white;
+        }
+        .darkgreenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(17, 56, 16);
+            background-color: rgb(12, 53, 29);
+            cursor: pointer;
+            color: white;
+        }
+        .noclick {
+            cursor: not-allowed;
+        }
+        
+
+        
+        
+
+
+        #elementdeco {
+            text-align: unset;
+        }
+
+        .bundles_ {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 430px;
+            height: 600px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 50px;
+            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+
+        .bundlerow {
+            position: relative;
+            text-align: center;
+        }
+
+        .decorow {
+            position: relative;
+            text-align: center;
+        }
+
+        .effectrow {
+            position: relative;
+            text-align: center;
+        }
+
+
+        .price {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+        }
+
+
+        .banner {
+            margin-top: 50px;
+        }
+        div.loading {
+            background: #000; 
+            width: 100%;
+            text-align: center;
+            height: auto; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+        }
+        .loadtext {
+            position: relative;
+            text-align: center;
+        }
+        .newtext {
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+            scale: 150%;
+            border-radius: 50px;
+            text-align: center;
+            margin-left: 190px;
+        }
+
+        .sillywords {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            text-decoration: none;
+        }
+
+        /* Arcade */
+        .condensedleft .arcadebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/6e05aadeadd02eb63015.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .arcadebanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/9015980c33a1df37bc7a.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .item-banner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 10px;
+            background-image: var(--banner-image);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+
+        
+        .background-dynamic [class*="decos"]:has([class*="decoimage"]) {
+            border: 2px solid rgb(16, 17, 19);
+            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+        }
+        .background-dynamic [class*="effects"]:has([class*="effectimage"]) {
+            border: 2px solid rgb(16, 17, 19);
+            background-image: linear-gradient(rgb(16, 17, 19), rgb(16, 17, 19));
+        }
+        .background-dynamic [class*="button-holder"] [class*="button1"] {
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            color: white;
+        }
+
+        /* Bundles */
+
+        .bundle-card {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 700px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background-image: linear-gradient(var(--card-color1), var(--card-color2));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        .no-card-theme .bundle-card {
+            border: 2px solid rgb(30, 31, 34);
+            background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+
+        .bundle-effectimage {
+            display: block;
+            margin-left: 30px;
+            margin-top: 10px;
+            scale: 80%;
+            width: 300px;
+            height: 410px;
+            padding: 0px;
+            border-radius: 20px;
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/empty.png);
+            background-image: var(--effect-thumbnail), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+            background-size: 100%;
+            background-position: top center;
+            background-repeat: no-repeat;
+            transform: rotate(-10deg);
+        }
+        .bundle-card:hover .bundle-effectimage {
+            background-image: var(--effect-intro), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+        }
+
+        .bundle-decoimage {
+            display: block;
+            margin-left: auto;
+            margin-top: -340px;
+            margin-bottom: 70px;
+            scale: 90%;
+            width: 250px;
+            height: 250px;
+            padding: 10px;
+            content: var(--deco-icon-false);
+            background-position: center;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ff84fa219ab7e996ec26.png);
+	        background-size: 77%;
+	        background-repeat: no-repeat;
+            transform: rotate(10deg);
+        }
+        .bundle-card:hover .bundle-decoimage {
+            content: var(--deco-icon-true);
+        }
+
+        .bundle-content-holder {
+            background-color: rgba(0, 0, 0, 40%);
+            width: 520px;
+            margin-left: -10px;
+            height: 290px;
+            position: relative;
+            border-radius: 0px 0px 50px 50px;
+        }
+        .no-card-theme .bundle-content-holder {
+            background-color: rgba(30, 31, 34, 100%);
+        }
+        
+        .card-content {
+            padding: 10px;
+        }
+
+        .bundle-card .button-holder {
+            opacity: 0%;
+            margin-top: -160px;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .bundle-card:hover .button-holder {
+            opacity: 100%;
+            margin-top: 0px;
+        }
+
+        .bundle-card .fade {
+            opacity: 100%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .bundle-card:hover .fade {
+            opacity: 0%;
+            display: none;
+        }
+
+        /* ^ Bundles */
+
+        /* Deco */
+
+        .deco-card {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 700px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background-image: linear-gradient(var(--card-color1), var(--card-color2));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        .no-card-theme .deco-card {
+            border: 2px solid rgb(30, 31, 34);
+            background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+
+        .decoimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            content: var(--deco-icon-false);
+            background-position: center;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/6d8f0708e196aaad2550.png);
+	        background-size: 77%;
+	        background-repeat: no-repeat;
+        }
+        .content-holder {
+            background-color: rgba(0, 0, 0, 40%);
+            width: 520px;
+            margin-left: -10px;
+            height: 290px;
+            position: relative;
+            border-radius: 0px 0px 50px 50px;
+        }
+        .no-card-theme .content-holder {
+            background-color: rgba(30, 31, 34, 100%);
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+        .deco-card:hover .decoimage {
+            content: var(--deco-icon-true);
+        }
+
+        .deco-card .button-holder {
+            opacity: 0%;
+            margin-top: -100px;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .deco-card:hover .button-holder {
+            opacity: 100%;
+            margin-top: 0px;
+        }
+
+        .deco-card .fade {
+            opacity: 100%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .deco-card:hover .fade {
+            opacity: 0%;
+            display: none;
+        }
+
+        /* ^ Deco */
+
+        /* Effects */
+
+        .effect-card {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 700px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background-image: linear-gradient(var(--card-color1), var(--card-color2));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .no-card-theme .effect-card {
+            border: 2px solid rgb(30, 31, 34);
+            background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+
+        .effectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 300px;
+            height: 400px;
+            padding: 0px;
+            border-radius: 20px 20px 0px 0px;
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/empty.png);
+            background-image: var(--effect-thumbnail), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+            background-size: 100%;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+        .effect-card:hover .effectimage {
+            background-image: var(--effect-intro), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+        }
+
+        .effect-content-holder {
+            background-color: rgba(0, 0, 0, 40%);
+            width: 520px;
+            margin-left: -10px;
+            height: 290px;
+            position: relative;
+            border-radius: 0px 0px 50px 50px;
+        }
+        .no-card-theme .effect-content-holder {
+            background-color: rgba(30, 31, 34, 100%);
+        }
+        .card-content {
+            padding: 10px;
+        }
+
+        .effect-card .button-holder {
+            opacity: 0%;
+            margin-top: -100px;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .effect-card:hover .button-holder {
+            opacity: 100%;
+            margin-top: 0px;
+        }
+
+        .effect-card .fade {
+            opacity: 100%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .effect-card:hover .fade {
+            opacity: 0%;
+            display: none;
+        }
+
+        /* ^ Effects */
+
+        .cardbutton {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 85%;
+            padding: 1em;
+            border: none;
+            border-radius: 3px;
+            background-image: linear-gradient(90deg, var(--button-color1), var(--button-color2));
+            color: var(--button-text-color);
+            cursor: pointer;
+        }
+        .no-card-theme .cardbutton {
+            background-image: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            color: rgb(255, 255, 255);
+        }
+        
+        .cardbutton:hover {
+            background-image: linear-gradient(90deg, var(--button-color3), var(--button-color4));
+        }
+        .no-card-theme .cardbutton:hover {
+            background-image: linear-gradient(90deg, rgb(71, 81, 192), rgb(71, 81, 192));
+            color: rgb(255, 255, 255);
+        }
+
+        .cardbutton-locked {
+            background-image: linear-gradient(90deg, var(--button-color3), var(--button-color4));
+            cursor: not-allowed;
+        }
+        .no-card-theme .cardbutton-locked {
+            background-image: linear-gradient(90deg, rgb(71, 81, 192), rgb(71, 81, 192));
+            color: rgb(255, 255, 255);
+        }
+
+
+        .padding1 {
+            padding: 1em;
+        }
+        .right {
+            margin-right: auto;
+        }
+        .hidden {
+            display: none;
+        }
+        .inv {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <button class="button server-button hidden" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
+
+        <button class="button server-button hidden" onclick="toggleDevTools()" id="devtools-button-real">DevTools</button>
+
+        <a href="https://discord.gg/Mcwh7hGcWb">
+            <button title="Discord Server" class="button server-button">Discord Server</button>
+        </a>
+        <a href="https://github.com/DTACat/Collectibles/">
+            <button title="Github" class="button server-button">Github</button>
+        </a>
+        <a href="https://www.youtube.com/@DTACat">
+            <button title="Youtube" class="button server-button">Youtube</button>
+        </a>
+        <a href="https://dtacat.github.io/Collectibles/disclaimer/">
+            <button title="Disclaimer" class="button server-button">Disclaimer</button>
+        </a>
+
+        <button class="button right server-button" onclick="toggleTheming()" id="theming-button">Themes</button>
+
+    </div>
+    <div class="left-sidebar hidden" id="dev-tools">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+        <h3 class="sillywords sidebarwords">For dev use only</h3>
+
+        <hr>
+
+
+        <h2 class="sillywords sidebarwords">Item Toggles</h2>
+
+        <button class="button server-button" onclick="toggleBundles()" id="bundles-button">Bundles</button>
+
+        <a class="sillywords sidebarwords">sets bundle cards to none</a>
+
+        <button class="button server-button" onclick="toggleDeco()" id="deco-button">Avatar Deco</button>
+
+        <a class="sillywords sidebarwords">sets avatar cards to none</a>
+
+        <button class="button server-button" onclick="toggleEffects()" id="effects-button">Profile Effects</button>
+
+        <a class="sillywords sidebarwords">sets effect cards to none</a>
+
+        <button class="button server-button" onclick="toggleUnpublished()" id="unpublished-button">Unpublished SKU</button>
+
+        <a class="sillywords sidebarwords">sets cards with invalid sku ids to none</a>
+
+        <button class="button server-button" onclick="toggleInShop()" id="in-shop-button">In Shop</button>
+
+        <a class="sillywords sidebarwords">sets cards that are in the shop to none</a>
+
+        <button class="button server-button" onclick="toggleBanners()" id="banner-button">Banners</button>
+
+        <a class="sillywords sidebarwords">sets category banners to none</a>
+
+        <hr>
+
+        <h2 class="sillywords sidebarwords">Experiments</h2>
+
+        <h3 class="sillywords sidebarwords">Themes</h3>
+
+        <button class="button server-button" id="dynamic-theme-button">Dynamic</button>
+
+        <hr>
+
+        <h2 class="sillywords sidebarwords">Button Playground</h2>
+
+        <button class="button show-button" style="background-color: rgb(89, 102, 243);">Blue</button>
+
+        <button class="button show-button" style="background-color: rgb(71, 81, 192);">Blue Hover</button>
+        
+        <hr class="inv">
+
+        <button class="button show-button" style="background-color: rgb(5, 129, 75);">Green</button>
+
+        <button class="button show-button" style="background-color: rgb(7, 88, 53);">Green Hover</button>
+
+    </div>
+    <div class="left-sidebar hidden" id="dev-tools-403">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+        <h3 class="sillywords sidebarwords">For dev use only</h3>
+
+        <h1 class="sillywords sidebarwords">403</h1>
+
+        <h2 class="sillywords sidebarwords">Missing permission</h2>
+
+    </div>
+
+    <div class="right-sidebar hidden" id="theme-menu">
+
+        <h1 class="sillywords sidebarwords">Themes</h1>
+
+        <h3 class="sillywords sidebarwords">(BETA)</h3>
+
+        <h3 class="sillywords sidebarwords">Cards</h3>
+
+        <button class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">No Card Theme</button>
+
+        <h3 class="sillywords sidebarwords">Background</h3>
+
+        <button class="button server-button" id="light-theme-button">Light</button>
+
+        <button class="button server-button" id="dark-theme-button">Dark</button>
+
+        <button class="button server-button" id="darker-theme-button">Darker</button>
+
+        <button class="button server-button" id="black-theme-button">Void</button>
+
+    </div>
+
+
+
+    <div class="itemlist" id="main-thing">
+
+        <div class="arcade" style="
+        --card-color1: rgb(3, 2, 36);
+        --card-color2: rgb(8, 1, 43);
+        --border-color: rgb(3, 2, 36);
+        --button-color1: rgb(89, 102, 243);
+        --button-color2: rgb(89, 102, 243);
+        --button-color3: rgb(71, 81, 192);
+        --button-color4: rgb(71, 81, 192);
+        --button-text-color: rgb(255, 255, 255);
+        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1245087533205819452.png?size=1280);">
+            <!-- Arcade -->
+
+            <div class="item-banner banner arcadebanner">
+               <img class="arcadebannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1245086730785390793.png?size=480">
+               <a class="sillywords arcadebannertext2">Press START to play.</a>
+            </div>
+
+            <div class="in-shop" id="arcadeitems">
+                <a class="sillywords itemtext1 bundles">Bundles</a>
+                <div class="arcadebundlerow bundlerow">
+                    <div class="bundle-card arcadebundles" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=true');
+                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/thumbnail.png');
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png');">
+                        <img class="bundle-effectimage">
+                        <img class="bundle-decoimage">
+                        <div class="bundle-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1245481938202918912</a>
+                                <h1 class="sillywords">Star Collector Bundle</h1>
+                                <a class="sillywords fade">Pipedream Deco & Twinkle Trails Effect</a>
+                                <h1 class="sillywords fade">US$10.99 - US$8.99</h1>
+                                <h1 class="sillywords bundle-discount fade">(-8%) - (-24%)</h1>
+                                <div class="button-holder">
+                                    <button class="cardbutton cardbutton-locked">Unavailable For Bundles</button>
+                                    <button class="cardbutton cardbutton-locked">You&#8217;re Already Here</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1">Bundle Contents</a>
+                <div class="arcadedecorow decorow">
+                    <div class="deco-card arcadedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8c17e799bfeffa797042569a1ebcafc0.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1245087850177888356</a>
+                                <h1 class="sillywords">Pipedream</h1>
+                                <a class="sillywords fade">If you stare at this for 5,461 seconds without blinking, you win.</a>
+                                <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
+                                <div class="button-holder">
+                                    <button class="cardbutton cardbutton-locked">Unavailable Here</button>
+                                    <button class="cardbutton" onclick="location.href='https://dtacat.github.io/Collectibles/main/categories/arcade/avatar-decoration-presets/pipedream';">Open Extra Info</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="effect-card arcadeeffects" style="
+                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/thumbnail.png');
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-05-29/twinkle-trails/intro.png');">
+                        <img class="effectimage">
+                        <div class="effect-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1245088254647205991</a>
+                                <h1 class="sillywords">Twinkle Trails</h1>
+                                <a class="sillywords fade">Chase the stars to collect them all.</a>
+                                <h1 class="sillywords fade">US$5.99 - US$4.99</h1>
+                                <div class="button-holder">
+                                    <button class="cardbutton cardbutton-locked">Unavailable Here</button>
+                                    <button class="cardbutton" onclick="location.href='https://dtacat.github.io/Collectibles/main/categories/arcade/profile_effects/twinkle-trails';">Open Extra Info</button>
+                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+            const inputField = copyLinkParent.querySelector(".copy-pp");
+            const copyButton = copyLinkParent.querySelector(".button-pp");
+            const text = inputField.value;
+
+            inputField.addEventListener("focus", () => inputField.select());
+
+            copyButton.addEventListener("click", () => {
+                inputField.select();
+                navigator.clipboard.writeText(text);
+
+                inputField.value = "Copied!";
+                setTimeout(() => (inputField.value = text), 2000);
+            });
+        });
+
+
+        function dynamicOneTwo() {
+            let banner1 = document.getElementById('dynamicbanner1');
+            let banner2 = document.getElementById('dynamicbanner2');
+
+            if (banner1.classList.contains('dynamicbanner1')) {
+                banner1.classList.add('hidden');
+            }
+
+            if (banner2.classList.contains('dynamicbanner2')) {
+                banner2.classList.remove('hidden');
+            }
+        }
+
+        function dynamicTwoThree() {
+            let banner2 = document.getElementById('dynamicbanner2');
+            let banner3 = document.getElementById('dynamicbanner3');
+
+            if (banner2.classList.contains('dynamicbanner2')) {
+                banner2.classList.add('hidden');
+            }
+
+            if (banner3.classList.contains('dynamicbanner3')) {
+                banner3.classList.remove('hidden');
+            }
+        }
+
+        function dynamicThreeFour() {
+            let banner3 = document.getElementById('dynamicbanner3');
+            let banner4 = document.getElementById('dynamicbanner4');
+
+            if (banner3.classList.contains('dynamicbanner3')) {
+                banner3.classList.add('hidden');
+            }
+
+            if (banner4.classList.contains('dynamicbanner4')) {
+                banner4.classList.remove('hidden');
+            }
+        }
+
+        function dynamicFourOne() {
+            let banner4 = document.getElementById('dynamicbanner4');
+            let banner1 = document.getElementById('dynamicbanner1');
+
+            if (banner4.classList.contains('dynamicbanner4')) {
+                banner4.classList.add('hidden');
+            }
+
+            if (banner1.classList.contains('dynamicbanner1')) {
+                banner1.classList.remove('hidden');
+            }
+        }
+
+
+        function toggleDevTools() {
+            let tools = document.getElementById('dev-tools');
+            let button = document.getElementById('devtools-button');
+            let button_ = document.getElementById('devtools-button-real');
+
+            if (tools.classList.contains('hidden')) {
+                tools.classList.remove('hidden');
+            } else {
+                tools.classList.add('hidden');
+            }
+
+            if (button_.classList.contains('server-button-blue')) {
+                button_.classList.remove('server-button-blue');
+            } else {
+                button_.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDevTools403() {
+            let tools = document.getElementById('dev-tools-403');
+            let button = document.getElementById('devtools-button');
+
+            if (tools.classList.contains('hidden')) {
+                tools.classList.remove('hidden');
+                setTimeout(() => {  tools.classList.add('hidden'); }, 100);
+                
+            } else {
+                tools.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+                console.log("403 (Forbidden)");
+                setTimeout(() => {  button.classList.remove('server-button-blue'); }, 100);
+            }
+        }
+
+        function toggleBundles() {
+            let bundles = document.getElementById('main-thing');
+            let button = document.getElementById('bundles-button');
+
+            if (bundles.classList.contains('bundles-hidden')) {
+                bundles.classList.remove('bundles-hidden');
+            } else {
+                bundles.classList.add('bundles-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDeco() {
+            let deco = document.getElementById('main-thing');
+            let button = document.getElementById('deco-button');
+
+            if (deco.classList.contains('deco-hidden')) {
+                deco.classList.remove('deco-hidden');
+            } else {
+                deco.classList.add('deco-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleEffects() {
+            let effects = document.getElementById('main-thing');
+            let button = document.getElementById('effects-button');
+
+            if (effects.classList.contains('effect-hidden')) {
+                effects.classList.remove('effect-hidden');
+            } else {
+                effects.classList.add('effect-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleUnpublished() {
+            let unpub = document.getElementById('main-thing');
+            let button = document.getElementById('unpublished-button');
+
+            if (unpub.classList.contains('unpub-hidden')) {
+                unpub.classList.remove('unpub-hidden');
+            } else {
+                unpub.classList.add('unpub-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleInShop() {
+            let inshop = document.getElementById('main-thing');
+            let button = document.getElementById('in-shop-button');
+
+            if (inshop.classList.contains('in-shop')) {
+                inshop.classList.remove('in-shop');
+            } else {
+                inshop.classList.add('in-shop');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleBanners() {
+            let banner = document.getElementById('main-thing');
+            let button = document.getElementById('banner-button');
+
+            if (banner.classList.contains('banners-hidden')) {
+                banner.classList.remove('banners-hidden');
+            } else {
+                banner.classList.add('banners-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleDynamicBanners() {
+            let banners = document.getElementById('dynamicbanners');
+            let button = document.getElementById('dynamic-button');
+
+            if (banners.classList.contains('hidden')) {
+                banners.classList.remove('hidden');
+            } else {
+                banners.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleTheming() {
+            let bundles = document.getElementById('theme-menu');
+            let button = document.getElementById('theming-button');
+
+            if (bundles.classList.contains('hidden')) {
+                bundles.classList.remove('hidden');
+            } else {
+                bundles.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleCardTheme() {
+            let cards = document.getElementById('main-thing');
+            let button = document.getElementById('card-theme-button');
+
+            if (cards.classList.contains('no-card-theme')) {
+                cards.classList.remove('no-card-theme');
+            } else {
+                cards.classList.add('no-card-theme');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        document.getElementById("light-theme-button").addEventListener("click", e => {
+            document.body.className = "background-light";
+            localStorage.theme = "backgroundlight";
+        });
+
+        document.getElementById("dark-theme-button").addEventListener("click", e => {
+            document.body.className = "darkmode";
+            localStorage.theme = "backgrounddark";
+        });
+
+        document.getElementById("darker-theme-button").addEventListener("click", e => {
+            document.body.className = "background-darker";
+            localStorage.theme = "backgrounddarker";
+        });
+
+        document.getElementById("black-theme-button").addEventListener("click", e => {
+            document.body.className = "background-black";
+            localStorage.theme = "backgroundblack";
+        });
+
+        document.getElementById("dynamic-theme-button").addEventListener("click", e => {
+            document.body.className = "background-dynamic";
+            localStorage.theme = "backgrounddynamic";
+        });
+    </script>
+</body>
+
+</html>
