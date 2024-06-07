@@ -1,0 +1,16 @@
+bundle
+sku: "1245481938202918912"
+name: "Star Collector Bundle"
+summary: "A bundle of collectibles."
+prices: "1099" "899"
+bundled_products
+0
+sku: "1245087850177888356"
+name: "Pipedream"
+summary: "If you stare at this for 5,461 seconds without blinking, you win."
+prices: "599" "499"
+1
+sku: "1245088254647205991"
+name: "Twinkle Trails"
+summary: "Chase the stars to collect them all."
+prices: "599" "499"
