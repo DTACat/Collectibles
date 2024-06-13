@@ -3,27 +3,69 @@
 
 <head>
     <base target="_blank">
-    <title>Shop Archives Blue</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404EmbedColor2.png" type="image/x-icon"/>
-    <meta content="Error 404 Page not found, This page doesn't exist, but this Deco does." property="og:title" />
-    <meta content="Profiles Plus, P+ Emoji: :sos:" property="og:description" />
-    <meta content="https://dtacat.github.io/Collectibles/Blue/404.html" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404EmbedColor2.png" property="og:image" />
-    <meta content="#FF5C5C" data-react-helmet="true" name="theme-color" />
+    <title>Page Not Found | Shop Archives</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColorPride.png" type="image/x-icon"/>
+    <meta content="Shop Archives" property="og:title" />
+    <meta content="Your one stop place for all Discord Collectibles" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/main/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColorPride.png" property="og:image" />
+    <meta content="#FF007A" data-react-helmet="true" name="theme-color" />
     <style>
         body {
-            background-color: #383338;
+            background-color: #313338;
             color: white;
         }
-        .loadtext {
-            margin-top: -20px;
-        }
         .darkmode {
-            background-color: #333538;
+            background-color: #313338;
             /* or whatever */
             color: white;
         }
-        .hidden {
+        .background-light {
+            background-color: #ffffff;
+        }
+        .background-darker {
+            background-color: #171718;
+        }
+        .background-black {
+            background-color: #000000;
+        }
+        .background-cat {
+            background-color: #120a30;
+        }
+
+        .staff-popup {
+            width: 600px;
+            height: 200px;
+            margin-top: -250px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 80%);
+            position: fixed;
+            z-index: 100;
+            animation: popout-close-animation 10s forwards;
+        }
+
+        @keyframes popout-close-animation {
+	        0% {opacity: 100;}
+            90% {opacity: 100;}
+	        100% {opacity: 0;}
+        }
+        
+        div.bundles-hidden [class*="bundle"] {
+            display: none;
+        }
+        div.deco-hidden [class*="decos"] {
+            display: none;
+        }
+        div.effect-hidden [class*="effects"] {
+            display: none;
+        }
+        .unpub-hidden [class*="unpublished"] {
+            display: none;
+        }
+        .in-shop [class*="in-shop"] {
+            display: none;
+        }
+        .banners-hidden [class*="banner"] {
             display: none;
         }
         .sidebar {
@@ -33,16 +75,58 @@
         }
         .left-sidebar {
             position: fixed;
-            width: 4em;
+            width: 430px;
             height: 100%;
             left: 0px;
-            top: 0px;
+            top: 2.5em;
+            z-index: 10;
+            background-color: #1a1a1a;
+        }
+        .right-sidebar {
+            position: fixed;
+            width: 150px;
+            height: 100%;
+            text-align: center;
+            right: 0px;
+            top: 2.5em;
+            z-index: 10;
+            background-color: #1a1a1a;
         }
         .server-button {
             cursor: pointer;
+            margin-top: 2px;
+            margin-bottom: 2px;
             width: 10em;
             height: 3em;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(89, 102, 243);
+            transition: background-color 0.2s ease-in-out;
+            color: white;
         }
+        .server-button:hover {
+            background-color: rgb(71, 81, 192);
+        }
+        .server-button-blue {
+            background-color: rgb(5, 129, 75);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .server-button-blue:hover {
+            background-color: rgb(7, 88, 53);
+        }
+        .bundle-discount {
+            color: rgb(0, 200, 117);
+        }
+
+        .show-button {
+            cursor: pointer;
+            width: 10em;
+            height: 3em;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
         .disabled {
             opacity: 0.6;
             cursor: not-allowed;
@@ -55,33 +139,30 @@
             position: fixed;
         }
 
+        
+
+
         .itemlist {
             display: block;
             margin-left: auto;
             margin-right: auto;
-        }
-        
-        .element {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin-top: 300px;
+            width: 50%;
         }
 
-        
-        .lofibannertext1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 5%;
-        }
 
-        
-        .lofibannertext2 {
+        .dynamicbutton1 {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 12em;
-            margin-top: -30px;
+            margin-left: 50px;
+            margin-top: 20px;
+            width: 10em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+            font-size: large;
         }
 
 
@@ -99,108 +180,121 @@
             width: 25em;
             padding: 1em;
             border-radius: 3px;
-            border-color: rgb(1, 28, 148);
-            background-color: rgb(26, 78, 219);
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
             cursor: pointer;
             color: white;
-            font-size: 20px;
         }
-        .backbutton1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 100px;
-            width: 25em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(1, 28, 148);
-            background-color: rgb(26, 78, 219);
-            cursor: pointer;
-            color: white;
-            font-size: 20px;
-        }
-        .nitrobutton1 {
+        .goldbutton1 {
             display: block;
             margin-left: auto;
             margin-right: auto;
             margin-top: 20px;
-            width: 26em;
-            padding: 25px;
+            width: 25em;
+            padding: 1em;
             border-radius: 3px;
-            border-color: rgb(180, 137, 19);
-            background-color: rgb(190, 219, 26);
+            border-color: rgb(237, 213, 80);
+            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
             cursor: pointer;
             color: black;
-            font-size: 20px;
+        }
+        .adbutton {
+            display: block;
+            margin-left: auto;
+            margin-top: 85px;
+            width: 20em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(237, 213, 80);
+            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
+            cursor: pointer;
+            color: black;
+        }
+
+        .bundlesbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .bundlesinfobutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 21em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .bundlesgiftbutton1 {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 4em;
+            padding: 1em;
+            border-radius: 3px;
+            border: none;
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+
+        .greenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(31, 95, 29);
+            background-color: rgb(24, 119, 24);
+            cursor: pointer;
+            color: white;
+        }
+        .darkgreenbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(17, 56, 16);
+            background-color: rgb(12, 53, 29);
+            cursor: pointer;
+            color: white;
         }
         .noclick {
             cursor: not-allowed;
         }
+        
 
         
-        .lofidecoimage {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 300px;
-            height: 300px;
-            padding: 10px;
-            background-image: url(data:image/png;base64,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);
-            background-size: 75%;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+        
 
 
         #elementdeco {
             text-align: unset;
         }
 
-        
-        .lofidecos {
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 630px;
-            height: 1420px;
-            border: 2px solid rgb(220, 111, 111);
-            border-radius: 50px;
-            background-image: linear-gradient(rgb(255, 92, 92), rgb(170, 19, 128));
-            padding: 10px;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            margin-top: 10px;
-        }
-
-        
-        .decorow {
-            position: relative;
-            text-align: center;
-        }
 
 
-        .effectrow {
-            position: relative;
-            text-align: center;
-        }
-
-
-        .price {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 10em;
-        }
-
-
-        .banner {
-            margin-top: 100px;
-        }
         div.loading {
-            opacity: 0.9; 
             background: #000; 
             width: 100%;
-            height: 6em; 
+            text-align: center;
+            height: auto; 
             z-index: 10;
             top: 0; 
             left: 0; 
@@ -209,7 +303,6 @@
         .loadtext {
             position: relative;
             text-align: center;
-            margin-bottom: 10px;
         }
         .newtext {
             width: 50px;
@@ -229,126 +322,240 @@
             text-decoration: none;
         }
 
-        .error404:hover .error404logo {
-            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404notfounddeco.png);
-        }
 
+        .padding1 {
+            padding: 1em;
+        }
+        .right {
+            margin-right: auto;
+        }
+        .hidden {
+            display: none;
+        }
+        .inv {
+            opacity: 0;
+        }
     </style>
 </head>
 
 <body>
-
     <div class="loading">
+        <button class="button server-button hidden" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
+
+        <button class="button server-button hidden" onclick="toggleDevTools()" id="devtools-button-real">DevTools</button>
+        
+        <button title="Home" class="button server-button" onclick="location.href='https://dtacat.github.io/Collectibles/';">Home</button>
+    
         <a href="https://discord.gg/Mcwh7hGcWb">
             <button title="Discord Server" class="button server-button">Discord Server</button>
         </a>
-        <a href="https://github.com/DTACat/Collectibles/">
-            <button title="Github" class="button server-button">Github</button>
+        <a href="https://dtacat.github.io/Collectibles/disclaimer/">
+            <button title="Disclaimer" class="button server-button">Disclaimer</button>
         </a>
-        <a href="https://www.youtube.com/@DTACat">
-            <button title="Youtube" class="button server-button">Youtube</button>
-        </a>
-        <a href="https://github.com/DTACat/Collectibles/tree/page/Change-Log">
-            <button title="Change Log" class="button server-button">Change Log</button>
-        </a>
+
+        <button title="Settings" class="button right server-button" onclick="toggleSettings()" id="settings-button">Settings</button>
+
+    </div>
+    <div class="left-sidebar hidden" id="dev-tools">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+        <h3 class="sillywords sidebarwords">For dev use only</h3>
+
+        <hr>
+
+
+        <h2 class="sillywords sidebarwords">Button Playground</h2>
+
+        <button class="button show-button" style="background-color: rgb(89, 102, 243);">Blue</button>
+
+        <button class="button show-button" style="background-color: rgb(71, 81, 192);">Blue Hover</button>
         
-        <h1 class="loadtext sillywords">Disclaimer</h1> <a class="sillywords">Shop Archives is not affiliated with Discord, Inc.
-            Anime and Anime V2 will not be combined.
-            Shop Archives is based off the old look of the Discord shop.</a>
+        <hr class="inv">
+
+        <button class="button show-button" style="background-color: rgb(5, 129, 75);">Green</button>
+
+        <button class="button show-button" style="background-color: rgb(7, 88, 53);">Green Hover</button>
+
+    </div>
+    <div class="left-sidebar hidden" id="dev-tools-403">
+
+        <h1 class="sillywords sidebarwords">DevTools</h1>
+
+        <h3 class="sillywords sidebarwords">For dev use only</h3>
+
+        <h1 class="sillywords sidebarwords">403</h1>
+
+        <h2 class="sillywords sidebarwords">Missing permission</h2>
 
     </div>
 
+    <div class="right-sidebar hidden" id="settings-menu">
 
+        <h1 class="sillywords sidebarwords">Settings</h1>
 
-    <div class="itemlist">
-        <div class="lofi">
-            <!-- Lofi -->
+        <hr>
 
-            <div id="lofiitems">
-                <div class="lofidecorow decorow">
+        <h2 class="sillywords sidebarwords">Appearance</h2>
 
-                    <a href="https://dtacat.github.io/Collectibles/Blue/">
-                    <button class="backbutton1">Go Back</button></a>
+        <h3 class="sillywords sidebarwords">Themes</h3>
 
-                    <div class="lofidecos error404">
-                        <h1 class="sillywords">Error 404 Page not found</h1>
+        <button title="Light Mode" class="button server-button" id="light-theme-button">Light</button>
 
-                        <h1 class="sillywords error404text">P+ Emoji: :sos:</h1>
+        <button title="Dark Mode" class="button server-button" id="dark-theme-button">Dark</button>
 
-                        <img class="lofidecoimage error404logo" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404notfounddeco.png">
+        <button title="Darker Mode" class="button server-button" id="darker-theme-button">Darker</button>
 
-                        <h1 class="sillywords error404text">The page you're looking for doesn't exist, but this Deco does.</h1>
+        <button title="Void Mode" class="button server-button" id="black-theme-button">Void</button>
 
-                        <h1 class="sillywords error404price price">Profiles Plus</h1>
-
-                        <div class="button-holder">
-
-                            <a href="https://dtacat.github.io/Discord-Profiles-Plus/">
-                            <button class="nitrobutton1">Get with Profiles Plus</button></a>
-
-                            <button class="button1 noclick">Temporarily Unavailable</button>
-
-                            <button class="button1 noclick">Temporarily Unavailable</button>
-
-                            <button class="button1" onclick="copyerror404s()">Copy Static Link</button>
-
-                            <a href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404notfounddeco.png">
-                            <button class="button1">Open Static In New Tab</button></a>
-
-                            <button class="button1" onclick="copyerror404pp()">Copy Profiles Plus Emoji</button>
-
-                            <button class="button1 noclick">Temporarily Unavailable</button>
-
-                            <button class="button1 noclick">Temporarily Unavailable</button>
-
-                        </div>
-
-                        <h1 class="sillywords nerdinfo">Nerd info:</h1>
-
-                        <a class="sillywords nerdinfo">asset ID: 404notfounddeco</a>
-
-                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404notfounddeco.png" id="copyerror404">
-
-                        <input class="hidden" type="text-input" value="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404notfounddeco.png" id="copyerror404s">
-
-                        <input class="hidden" type="text-input" value=":sos:" id="copyerror404pp">
-
-                        <input class="hidden" type="text-input" value="1228252219502100530" id="copyerror404id">
-
-                    </div>
-
-            </div>
-
+        <div class="hidden" id="theme-exp">
+            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button">Dynamic</button>
         </div>
+
+        <div class="hidden" id="experiments">
+            <hr>
+        
+            <h2 class="sillywords sidebarwords">Experiments</h2>
+
+        </div>        
+
+        <hr>
+
+        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button">Youtube</button></a>
+
+        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
+
+        <button style="background-color: #1b1b1b; border: none; cursor: pointer; background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404deco1.png); background-size: 140px; width: 140px; height: 140px;"></button>
+
+    </div>
+
+    <div class="staff-popup hidden" id="staff-popup">
+        <h1 class="sillywords" style="margin-left: 10px;">Dev Mode Enabled</h1>
+        <h3 class="sillywords" style="margin-left: 10px;">Looks like you enabled Dev Mode, please note that Dev Mode is unstable and is for TESTING PURPOSES ONLY. To exit Dev Mode, refresh the page.</h3>
+    </div>
+    
+
+    <div class="itemlist" id="main-thing">
+        <h1 class="sillywords">404 Page Not Found</h1>
+        <h2 class="sillywords">The page you&#8217;re looking for doesn&#8217;t exist.</h2>
 
     </div>
 
     <script>
 
-        function copyerror404() {
-            var copyText = document.getElementById("copyerror404");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
+        document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+            const inputField = copyLinkParent.querySelector(".copy-pp");
+            const copyButton = copyLinkParent.querySelector(".button-pp");
+            const text = inputField.value;
+
+            inputField.addEventListener("focus", () => inputField.select());
+
+            copyButton.addEventListener("click", () => {
+                inputField.select();
+                navigator.clipboard.writeText(text);
+
+                inputField.value = "Copied!";
+                setTimeout(() => (inputField.value = text), 2000);
+            });
+        });
+
+
+
+        function toggleDevTools() {
+            let tools = document.getElementById('dev-tools');
+            let button = document.getElementById('devtools-button');
+            let button_ = document.getElementById('devtools-button-real');
+
+            if (tools.classList.contains('hidden')) {
+                tools.classList.remove('hidden');
+            } else {
+                tools.classList.add('hidden');
+            }
+
+            if (button_.classList.contains('server-button-blue')) {
+                button_.classList.remove('server-button-blue');
+            } else {
+                button_.classList.add('server-button-blue');
+            }
         }
-        function copyerror404s() {
-            var copyText = document.getElementById("copyerror404s");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
+
+        function dev() {
+            let devbutton = document.getElementById('devtools-button-real');
+            let exp = document.getElementById('experiments');
+            let exp1 = document.getElementById('theme-exp');
+            let staf = document.getElementById('staff-popup');
+
+            devbutton.classList.remove('hidden');
+            exp.classList.remove('hidden');
+            exp1.classList.remove('hidden');
+            staf.classList.remove('hidden');
+            setTimeout(() => {  staf.classList.add('hidden'); }, 10000);
         }
-        function copyerror404pp() {
-            var copyText = document.getElementById("copyerror404pp");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
+
+        function toggleDevTools403() {
+            let tools = document.getElementById('dev-tools-403');
+            let button = document.getElementById('devtools-button');
+
+            if (tools.classList.contains('hidden')) {
+                tools.classList.remove('hidden');
+                setTimeout(() => {  tools.classList.add('hidden'); }, 100);
+                
+            } else {
+                tools.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+                console.log("403 (Forbidden)");
+                setTimeout(() => {  button.classList.remove('server-button-blue'); }, 100);
+            }
         }
-        function copyerror404id() {
-            var copyText = document.getElementById("copyerror404id");
-            copyText.select();
-            copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
+
+        function toggleSettings() {
+            let bundles = document.getElementById('settings-menu');
+            let button = document.getElementById('settings-button');
+
+            if (bundles.classList.contains('hidden')) {
+                bundles.classList.remove('hidden');
+            } else {
+                bundles.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
         }
+
+        document.body.className = localStorage.theme || "darkmode";
+
+        document.getElementById("light-theme-button").addEventListener("click", e => {
+            document.body.className = "background-light";
+            localStorage.theme = "background-light";
+        });
+
+        document.getElementById("dark-theme-button").addEventListener("click", e => {
+            document.body.className = "darkmode";
+            localStorage.theme = "darkmode";
+        });
+
+        document.getElementById("darker-theme-button").addEventListener("click", e => {
+            document.body.className = "background-darker";
+            localStorage.theme = "background-darker";
+        });
+
+        document.getElementById("black-theme-button").addEventListener("click", e => {
+            document.body.className = "background-black";
+            localStorage.theme = "background-black";
+        });
+
+        document.getElementById("dynamic-theme-button").addEventListener("click", e => {
+            document.body.className = "background-dynamic";
+            localStorage.theme = "background-dynamic";
+        });
     </script>
 </body>
 
