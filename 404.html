@@ -4,331 +4,63 @@
 <head>
     <base target="_blank">
     <title>Page Not Found | Shop Archives</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColorPride.png" type="image/x-icon"/>
-    <meta content="Shop Archives" property="og:title" />
-    <meta content="Your one stop place for all Discord Collectibles" property="og:description" />
-    <meta content="https://dtacat.github.io/Collectibles/main/" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColorPride.png" property="og:image" />
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColor2.png" type="image/x-icon"/>
+    <meta name="twitter:site" content="Shop Archives">
+    <meta name="twitter:title" content="Shop Archives">
+    <meta name="twitter:description" content="Full list of Shop Archives disclaimers">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesDisBigEmbed.png">
     <meta content="#FF007A" data-react-helmet="true" name="theme-color" />
     <style>
+
         body {
             background-color: #313338;
             color: white;
-        }
-        .darkmode {
-            background-color: #313338;
-            /* or whatever */
-            color: white;
-        }
-        .background-light {
-            background-color: #ffffff;
-        }
-        .background-darker {
-            background-color: #171718;
-        }
-        .background-black {
-            background-color: #000000;
-        }
-        .background-cat {
-            background-color: #120a30;
-        }
-
-        .staff-popup {
-            width: 600px;
-            height: 200px;
-            margin-top: -250px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 80%);
-            position: fixed;
-            z-index: 100;
-            animation: popout-close-animation 10s forwards;
-        }
-
-        @keyframes popout-close-animation {
-	        0% {opacity: 100;}
-            90% {opacity: 100;}
-	        100% {opacity: 0;}
-        }
-        
-        div.bundles-hidden [class*="bundle"] {
-            display: none;
-        }
-        div.deco-hidden [class*="decos"] {
-            display: none;
-        }
-        div.effect-hidden [class*="effects"] {
-            display: none;
-        }
-        .unpub-hidden [class*="unpublished"] {
-            display: none;
-        }
-        .in-shop [class*="in-shop"] {
-            display: none;
-        }
-        .banners-hidden [class*="banner"] {
-            display: none;
-        }
-        .sidebar {
-            position: fixed;
-            width: 25%;
-            backdrop-filter: blur(10px);
-        }
-        .left-sidebar {
-            position: fixed;
-            width: 430px;
-            height: 100%;
-            left: 0px;
-            top: 2.5em;
-            z-index: 10;
-            background-color: #1a1a1a;
-        }
-        .right-sidebar {
-            position: fixed;
-            width: 150px;
-            height: 100%;
-            text-align: center;
-            right: 0px;
-            top: 2.5em;
-            z-index: 10;
-            background-color: #1a1a1a;
-        }
-        .server-button {
-            cursor: pointer;
-            margin-top: 2px;
-            margin-bottom: 2px;
-            width: 10em;
-            height: 3em;
-            border: none;
-            border-radius: 5px;
-            background-color: rgb(89, 102, 243);
-            transition: background-color 0.2s ease-in-out;
-            color: white;
-        }
-        .server-button:hover {
-            background-color: rgb(71, 81, 192);
-        }
-        .server-button-blue {
-            background-color: rgb(5, 129, 75);
-            transition: background-color 0.2s ease-in-out;
-        }
-        .server-button-blue:hover {
-            background-color: rgb(7, 88, 53);
-        }
-        .bundle-discount {
-            color: rgb(0, 200, 117);
-        }
-
-        .show-button {
-            cursor: pointer;
-            width: 10em;
-            height: 3em;
-            border: none;
-            border-radius: 5px;
-            color: white;
-        }
-
-        .disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        .darkmode1 {
-            background-color: #333538;
-        }
-        .trellteam {
-            right: 0em;
-            position: fixed;
-        }
-
-        
-
-
-        .itemlist {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 300px;
-            width: 50%;
-        }
-
-
-        .dynamicbutton1 {
-            display: block;
-            margin-left: 50px;
-            margin-top: 20px;
-            width: 10em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
-            cursor: pointer;
-            color: white;
-            font-size: large;
-        }
-
-
-        .itemtext1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80em
-        }
-        .button1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 25em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(89, 102, 243);
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
-            cursor: pointer;
-            color: white;
-        }
-        .goldbutton1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 25em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(237, 213, 80);
-            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
-            cursor: pointer;
-            color: black;
-        }
-        .adbutton {
-            display: block;
-            margin-left: auto;
-            margin-top: 85px;
-            width: 20em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(237, 213, 80);
-            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
-            cursor: pointer;
-            color: black;
-        }
-
-        .bundlesbutton1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 25em;
-            padding: 1em;
-            border-radius: 3px;
-            border: none;
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
-            cursor: pointer;
-            color: white;
-        }
-        .bundlesinfobutton1 {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 21em;
-            padding: 1em;
-            border-radius: 3px;
-            border: none;
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
-            cursor: pointer;
-            color: white;
-        }
-        .bundlesgiftbutton1 {
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 4em;
-            padding: 1em;
-            border-radius: 3px;
-            border: none;
-            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
-            cursor: pointer;
-            color: white;
-        }
-
-        .greenbutton1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 25em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(31, 95, 29);
-            background-color: rgb(24, 119, 24);
-            cursor: pointer;
-            color: white;
-        }
-        .darkgreenbutton1 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 20px;
-            width: 25em;
-            padding: 1em;
-            border-radius: 3px;
-            border-color: rgb(17, 56, 16);
-            background-color: rgb(12, 53, 29);
-            cursor: pointer;
-            color: white;
-        }
-        .noclick {
-            cursor: not-allowed;
-        }
-        
-
-        
-        
-
-
-        #elementdeco {
-            text-align: unset;
-        }
-
-
-
-        div.loading {
-            background: #000; 
-            width: 100%;
-            text-align: center;
-            height: auto; 
-            z-index: 10;
-            top: 0; 
-            left: 0; 
-            position: fixed; 
-        }
-        .loadtext {
-            position: relative;
-            text-align: center;
-        }
-        .newtext {
-            width: 50px;
-            height: 20px;
-            background-color: blue;
-            scale: 150%;
-            border-radius: 50px;
-            text-align: center;
-            margin-left: 190px;
-        }
-
-        .sillywords {
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         * {
             text-decoration: none;
         }
 
-
-        .padding1 {
-            padding: 1em;
+        .warning-note {
+            background: #ac1111; 
+            text-align: center;
+            width: 100%;
+            height: auto; 
+            z-index: 10;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
         }
-        .right {
+        .catagory {
+            display: block;
+            text-align: center;
+            position: relative;
+            margin-left: auto;
             margin-right: auto;
+            width: 90%;
         }
+        .arial {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        hr {
+            opacity: 0;
+        }
+        .hr-big {
+            opacity: 0;
+            height: 500px;
+        }
+        .link {
+            color: #559eff;
+            text-decoration: underline;
+            transition: color 0.1s ease-in-out;
+        }
+        .link:hover {
+            color: #8abdff;
+            text-decoration: none;
+        }
+
+
         .hidden {
             display: none;
         }
@@ -339,223 +71,27 @@
 </head>
 
 <body>
-    <div class="loading">
-        <button class="button server-button hidden" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
-
-        <button class="button server-button hidden" onclick="toggleDevTools()" id="devtools-button-real">DevTools</button>
-        
-        <button title="Home" class="button server-button" onclick="location.href='https://dtacat.github.io/Collectibles/';">Home</button>
+    <hr>
+    <hr>
+    <hr>
     
-        <a href="https://discord.gg/Mcwh7hGcWb">
-            <button title="Discord Server" class="button server-button">Discord Server</button>
-        </a>
-        <a href="https://dtacat.github.io/Collectibles/disclaimer/">
-            <button title="Disclaimer" class="button server-button">Disclaimer</button>
-        </a>
+    <div class="catagory arial">
 
-        <button title="Settings" class="button right server-button" onclick="toggleSettings()" id="settings-button">Settings</button>
-
-    </div>
-    <div class="left-sidebar hidden" id="dev-tools">
-
-        <h1 class="sillywords sidebarwords">DevTools</h1>
-
-        <h3 class="sillywords sidebarwords">For dev use only</h3>
-
-        <hr>
-
-
-        <h2 class="sillywords sidebarwords">Button Playground</h2>
-
-        <button class="button show-button" style="background-color: rgb(89, 102, 243);">Blue</button>
-
-        <button class="button show-button" style="background-color: rgb(71, 81, 192);">Blue Hover</button>
+        <h1>Error 404</h1>
         
-        <hr class="inv">
+        <h1>Page Not Found</h1>
 
-        <button class="button show-button" style="background-color: rgb(5, 129, 75);">Green</button>
-
-        <button class="button show-button" style="background-color: rgb(7, 88, 53);">Green Hover</button>
-
-    </div>
-    <div class="left-sidebar hidden" id="dev-tools-403">
-
-        <h1 class="sillywords sidebarwords">DevTools</h1>
-
-        <h3 class="sillywords sidebarwords">For dev use only</h3>
-
-        <h1 class="sillywords sidebarwords">403</h1>
-
-        <h2 class="sillywords sidebarwords">Missing permission</h2>
-
-    </div>
-
-    <div class="right-sidebar hidden" id="settings-menu">
-
-        <h1 class="sillywords sidebarwords">Settings</h1>
-
-        <hr>
-
-        <h2 class="sillywords sidebarwords">Appearance</h2>
-
-        <h3 class="sillywords sidebarwords">Themes</h3>
-
-        <button title="Light Mode" class="button server-button" id="light-theme-button">Light</button>
-
-        <button title="Dark Mode" class="button server-button" id="dark-theme-button">Dark</button>
-
-        <button title="Darker Mode" class="button server-button" id="darker-theme-button">Darker</button>
-
-        <button title="Void Mode" class="button server-button" id="black-theme-button">Void</button>
-
-        <div class="hidden" id="theme-exp">
-            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button">Dynamic</button>
-        </div>
-
-        <div class="hidden" id="experiments">
-            <hr>
+        <h2>The page you&#8217;re looking for doesn&#8217;t exist.</h2>
         
-            <h2 class="sillywords sidebarwords">Experiments</h2>
-
-        </div>        
-
         <hr>
 
-        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button">Youtube</button></a>
-
-        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
-
-        <button style="background-color: #1b1b1b; border: none; cursor: pointer; background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/404deco1.png); background-size: 140px; width: 140px; height: 140px;"></button>
-
-    </div>
-
-    <div class="staff-popup hidden" id="staff-popup">
-        <h1 class="sillywords" style="margin-left: 10px;">Dev Mode Enabled</h1>
-        <h3 class="sillywords" style="margin-left: 10px;">Looks like you enabled Dev Mode, please note that Dev Mode is unstable and is for TESTING PURPOSES ONLY. To exit Dev Mode, refresh the page.</h3>
-    </div>
-    
-
-    <div class="itemlist" id="main-thing">
-        <h1 class="sillywords">404 Page Not Found</h1>
-        <h2 class="sillywords">The page you&#8217;re looking for doesn&#8217;t exist.</h2>
-
+        <hr class="hr-big">
+        <a>Catgirl not included :3</a>
+        
     </div>
 
     <script>
-
-        document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
-            const inputField = copyLinkParent.querySelector(".copy-pp");
-            const copyButton = copyLinkParent.querySelector(".button-pp");
-            const text = inputField.value;
-
-            inputField.addEventListener("focus", () => inputField.select());
-
-            copyButton.addEventListener("click", () => {
-                inputField.select();
-                navigator.clipboard.writeText(text);
-
-                inputField.value = "Copied!";
-                setTimeout(() => (inputField.value = text), 2000);
-            });
-        });
-
-
-
-        function toggleDevTools() {
-            let tools = document.getElementById('dev-tools');
-            let button = document.getElementById('devtools-button');
-            let button_ = document.getElementById('devtools-button-real');
-
-            if (tools.classList.contains('hidden')) {
-                tools.classList.remove('hidden');
-            } else {
-                tools.classList.add('hidden');
-            }
-
-            if (button_.classList.contains('server-button-blue')) {
-                button_.classList.remove('server-button-blue');
-            } else {
-                button_.classList.add('server-button-blue');
-            }
-        }
-
-        function dev() {
-            let devbutton = document.getElementById('devtools-button-real');
-            let exp = document.getElementById('experiments');
-            let exp1 = document.getElementById('theme-exp');
-            let staf = document.getElementById('staff-popup');
-
-            devbutton.classList.remove('hidden');
-            exp.classList.remove('hidden');
-            exp1.classList.remove('hidden');
-            staf.classList.remove('hidden');
-            setTimeout(() => {  staf.classList.add('hidden'); }, 10000);
-        }
-
-        function toggleDevTools403() {
-            let tools = document.getElementById('dev-tools-403');
-            let button = document.getElementById('devtools-button');
-
-            if (tools.classList.contains('hidden')) {
-                tools.classList.remove('hidden');
-                setTimeout(() => {  tools.classList.add('hidden'); }, 100);
-                
-            } else {
-                tools.classList.add('hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-                console.log("403 (Forbidden)");
-                setTimeout(() => {  button.classList.remove('server-button-blue'); }, 100);
-            }
-        }
-
-        function toggleSettings() {
-            let bundles = document.getElementById('settings-menu');
-            let button = document.getElementById('settings-button');
-
-            if (bundles.classList.contains('hidden')) {
-                bundles.classList.remove('hidden');
-            } else {
-                bundles.classList.add('hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        document.body.className = localStorage.theme || "darkmode";
-
-        document.getElementById("light-theme-button").addEventListener("click", e => {
-            document.body.className = "background-light";
-            localStorage.theme = "background-light";
-        });
-
-        document.getElementById("dark-theme-button").addEventListener("click", e => {
-            document.body.className = "darkmode";
-            localStorage.theme = "darkmode";
-        });
-
-        document.getElementById("darker-theme-button").addEventListener("click", e => {
-            document.body.className = "background-darker";
-            localStorage.theme = "background-darker";
-        });
-
-        document.getElementById("black-theme-button").addEventListener("click", e => {
-            document.body.className = "background-black";
-            localStorage.theme = "background-black";
-        });
-
-        document.getElementById("dynamic-theme-button").addEventListener("click", e => {
-            document.body.className = "background-dynamic";
-            localStorage.theme = "background-dynamic";
-        });
+        
     </script>
 </body>
 
