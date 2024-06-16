@@ -3,7 +3,7 @@
 
 <head>
     <base target="_blank">
-    <title>Shop Archives</title>
+    <title>Hub | Shop Archives</title>
     <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColor2.png" type="image/x-icon">
     <meta name="twitter:site" content="Shop Archives">
     <meta name="twitter:title" content="Shop Archives">
@@ -29,6 +29,26 @@
         }
         .background-black {
             background-color: #000000;
+        }
+        .background-cat {
+            background-color: #120a30;
+        }
+
+        .staff-popup {
+            width: 600px;
+            height: 200px;
+            border-radius: 10px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 80%);
+            position: fixed;
+            z-index: 100;
+            animation: popout-close-animation 10s forwards;
+        }
+
+        @keyframes popout-close-animation {
+	        0% {opacity: 100;}
+            90% {opacity: 100;}
+	        100% {opacity: 0;}
         }
         
         div.deco-hidden [class*="decos"] {
@@ -472,17 +492,11 @@
         <a href="https://discord.gg/Mcwh7hGcWb">
             <button title="Discord Server" class="button server-button">Discord Server</button>
         </a>
-        <a href="https://github.com/DTACat/Collectibles/">
-            <button title="Github" class="button server-button">Github</button>
-        </a>
-        <a href="https://www.youtube.com/@DTACat">
-            <button title="Youtube" class="button server-button">Youtube</button>
-        </a>
         <a href="https://dtacat.github.io/Collectibles/disclaimer/">
             <button title="Disclaimer" class="button server-button">Disclaimer</button>
         </a>
 
-        <button class="button right server-button" onclick="toggleTheming()" id="theming-button">Themes</button>
+        <button title="Settings" class="button right server-button" onclick="toggleSettings()" id="settings-button">Settings</button>
 
     </div>
     <div class="left-sidebar hidden" id="dev-tools">
@@ -493,14 +507,6 @@
 
         <hr>
 
-
-        <h2 class="sillywords sidebarwords">Experiments</h2>
-
-        <h3 class="sillywords sidebarwords">Themes</h3>
-
-        <button class="button server-button" id="dynamic-theme-button">Dynamic</button>
-
-        <hr>
 
         <h2 class="sillywords sidebarwords">Button Playground</h2>
 
@@ -527,29 +533,52 @@
 
     </div>
 
-    <div class="right-sidebar hidden" id="theme-menu">
+    <div class="right-sidebar hidden" id="settings-menu">
 
-        <h1 class="sillywords sidebarwords">Themes</h1>
+        <h1 class="sillywords sidebarwords">Settings</h1>
 
-        <h3 class="sillywords sidebarwords">(BETA)</h3>
+        <hr>
+
+        <h2 class="sillywords sidebarwords">Appearance</h2>
+
+        <h3 class="sillywords sidebarwords">Themes</h3>
+
+        <button title="Light Mode" class="button server-button" id="light-theme-button">Light</button>
+
+        <button title="Dark Mode" class="button server-button" id="dark-theme-button">Dark</button>
+
+        <button title="Darker Mode" class="button server-button" id="darker-theme-button">Darker</button>
+
+        <button title="Void Mode" class="button server-button" id="black-theme-button">Void</button>
+
+        <div class="hidden" id="theme-exp">
+            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button">Dynamic</button>
+        </div>
 
         <h3 class="sillywords sidebarwords">Cards</h3>
 
-        <button class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">No Card Theme</button>
+        <button title="As fireglitch64 Wanted" class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">Card Theme</button>
 
-        <h3 class="sillywords sidebarwords">Background</h3>
+        <div class="hidden" id="experiments">
+            <hr>
+        
+            <h2 class="sillywords sidebarwords">Experiments</h2>
 
-        <button class="button server-button" id="light-theme-button">Light</button>
+            <a class="sillywords sidebarwords">No experiments yet</a>
+        </div>
 
-        <button class="button server-button" id="dark-theme-button">Dark</button>
+        <hr>
 
-        <button class="button server-button" id="darker-theme-button">Darker</button>
+        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button">Youtube</button></a>
 
-        <button class="button server-button" id="black-theme-button">Void</button>
+        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
 
     </div>
 
-
+    <div class="staff-popup hidden" id="staff-popup">
+        <h1 class="sillywords" style="margin-left: 10px;">Dev Mode Enabled</h1>
+        <h3 class="sillywords" style="margin-left: 10px;">Looks like you enabled Dev Mode, please note that Dev Mode is unstable and is for TESTING PURPOSES ONLY. To exit Dev Mode, refresh the page.</h3>
+    </div>
 
     <div class="itemlist bundles-hidden" id="main-thing">
 
@@ -566,7 +595,6 @@
             <!-- Arcade -->
 
             <div class="in-shop" id="arcadeitems">
-                <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="arcadedecorow decorow">
                     <div class="deco-card arcadedecos" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchives.png');
@@ -642,7 +670,7 @@
 
     <script>
 
-        document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
             const inputField = copyLinkParent.querySelector(".copy-pp");
             const copyButton = copyLinkParent.querySelector(".button-pp");
             const text = inputField.value;
@@ -730,6 +758,19 @@
             }
         }
 
+        function dev() {
+            let devbutton = document.getElementById('devtools-button-real');
+            let exp = document.getElementById('experiments');
+            let exp1 = document.getElementById('theme-exp');
+            let staf = document.getElementById('staff-popup');
+
+            devbutton.classList.remove('hidden');
+            exp.classList.remove('hidden');
+            exp1.classList.remove('hidden');
+            staf.classList.remove('hidden');
+            setTimeout(() => {  staf.classList.add('hidden'); }, 10000);
+        }
+
         function toggleDevTools403() {
             let tools = document.getElementById('dev-tools-403');
             let button = document.getElementById('devtools-button');
@@ -748,6 +789,23 @@
                 button.classList.add('server-button-blue');
                 console.log("403 (Forbidden)");
                 setTimeout(() => {  button.classList.remove('server-button-blue'); }, 100);
+            }
+        }
+
+        function toggleBundles() {
+            let bundles = document.getElementById('main-thing');
+            let button = document.getElementById('bundles-button');
+
+            if (bundles.classList.contains('bundles-hidden')) {
+                bundles.classList.remove('bundles-hidden');
+            } else {
+                bundles.classList.add('bundles-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
             }
         }
 
@@ -853,26 +911,9 @@
             }
         }
 
-        function toggleBundles() {
-            let bundles = document.getElementById('main-thing');
-            let button = document.getElementById('bundles-button');
-
-            if (bundles.classList.contains('bundles-hidden')) {
-                bundles.classList.remove('bundles-hidden');
-            } else {
-                bundles.classList.add('bundles-hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleTheming() {
-            let bundles = document.getElementById('theme-menu');
-            let button = document.getElementById('theming-button');
+        function toggleSettings() {
+            let bundles = document.getElementById('settings-menu');
+            let button = document.getElementById('settings-button');
 
             if (bundles.classList.contains('hidden')) {
                 bundles.classList.remove('hidden');
@@ -904,29 +945,49 @@
             }
         }
 
+
+        function toggleExtraInfo() {
+            let open = document.getElementById('main-thing');
+            let button = document.getElementById('extra-info-button');
+
+            if (open.classList.contains('open')) {
+                open.classList.remove('open');
+            } else {
+                open.classList.add('open');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        document.body.className = localStorage.theme || "darkmode";
+
         document.getElementById("light-theme-button").addEventListener("click", e => {
             document.body.className = "background-light";
-            localStorage.theme = "backgroundlight";
+            localStorage.theme = "background-light";
         });
 
         document.getElementById("dark-theme-button").addEventListener("click", e => {
             document.body.className = "darkmode";
-            localStorage.theme = "backgrounddark";
+            localStorage.theme = "darkmode";
         });
 
         document.getElementById("darker-theme-button").addEventListener("click", e => {
             document.body.className = "background-darker";
-            localStorage.theme = "backgrounddarker";
+            localStorage.theme = "background-darker";
         });
 
         document.getElementById("black-theme-button").addEventListener("click", e => {
             document.body.className = "background-black";
-            localStorage.theme = "backgroundblack";
+            localStorage.theme = "background-black";
         });
 
         document.getElementById("dynamic-theme-button").addEventListener("click", e => {
             document.body.className = "background-dynamic";
-            localStorage.theme = "backgrounddynamic";
+            localStorage.theme = "background-dynamic";
         });
     </script>
 </body>
