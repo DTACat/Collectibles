@@ -33,6 +33,20 @@
             background-color: #120a30;
         }
 
+        .unobtainable-tag {
+            display: block;
+            margin-bottom: -15px;
+            margin-top: -5px;
+            height: 20px;
+            margin-left: auto;
+            margin-right: 50px;
+            width: 120px;
+            background-color: white;
+            color: black;
+            border-radius: 100px;
+            scale: 1.5;
+        }
+
         .staff-popup {
             width: 600px;
             height: 200px;
@@ -104,6 +118,15 @@
             display: none;
         }
         .banners-hidden [class*="banner"] {
+            display: none;
+        }
+        .pphidden2 [class*="pphidden"] {
+            display: none;
+        }
+        .unobtainable-tag-hidden .unobtainable-tag {
+            display: none;
+        }
+        .unobtainable-tag-hidden .unobtainable-warning {
             display: none;
         }
         .sidebar {
@@ -203,49 +226,7 @@
             border: 2px solid rgb(16, 17, 19);
             border-radius: 20px;
             padding: 10px;
-            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-5-212e93ca86.gif?raw=true);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .dynamicbanner2 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 50px;
-            width: 1480px;
-            height: 360px;
-            border: 2px solid rgb(16, 17, 19);
-            border-radius: 20px;
-            padding: 10px;
-            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-3-37e4475adf.gif?raw=true);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .dynamicbanner3 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 50px;
-            width: 1480px;
-            height: 360px;
-            border: 2px solid rgb(16, 17, 19);
-            border-radius: 20px;
-            padding: 10px;
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/981c9ed7a21052f1722c.jpg);
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-        .dynamicbanner4 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 50px;
-            width: 1480px;
-            height: 360px;
-            border: 2px solid rgb(16, 17, 19);
-            border-radius: 20px;
-            padding: 10px;
-            background-image: url(https://github.com/DTACat/Collectibles/blob/main/Images/ezgif-7-624cf29077.gif?raw=true);
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/1cf2660341dc3fb15836.jpg);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -1459,6 +1440,17 @@
             scale: 80%;
         }
 
+        .link {
+            color: #559eff;
+            text-decoration: underline;
+            transition: color 0.1s ease-in-out;
+        }
+        .link:hover {
+            color: #8abdff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
 
         .padding1 {
             padding: 1em;
@@ -1602,12 +1594,24 @@
 
         <button title="As fireglitch64 Wanted" class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">Card Theme</button>
 
+        <hr>
+
+        <h2 class="sillywords sidebarwords">Accessibility</h2>
+
+        <h3 class="sillywords sidebarwords">Profiles Plus</h3>
+
+        <button title="Profiles Plus" class="button server-button" onclick="togglePPlus()" id="pplus-button">Show Category</button>
+
         <div class="hidden" id="experiments">
             <hr>
         
             <h2 class="sillywords sidebarwords">Experiments</h2>
 
             <button title="Nerd Info" class="button server-button" onclick="toggleExtraInfo()" id="extra-info-button">Nerd Info</button>
+
+            <button title="Show Unreleased P+ Items" class="button server-button" onclick="toggleUnreleasedPPlus()" id="unrepp-button">Show Unreleased P+ Items</button>
+
+            <button title="Show Unobtainable Tag on Unobtainable Items" class="button server-button" onclick="toggleUnobtainableTag()" id="unobtainable-tag-button">Unobtainable Tag</button>
         </div>
 
         <hr>
@@ -1616,7 +1620,7 @@
 
         <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
 
-        <a class="sillywords sidebarwords">shop14.3</a>
+        <a class="sillywords sidebarwords">shop14.4</a>
 
     </div>
 
@@ -1627,51 +1631,35 @@
 
     <div class="dynamicbanners" id="dynamicbanners">
         <div class="dynamicbanner1" id="dynamicbanner1">
-            <img class="dynamicbanner1profile1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/5f627582fcdc1bba2aed.png">
+            <img class="dynamicbanner1profile1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/e91a4c7f419794213d7b.png">
             <img class="dynamicbanner1text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/b1cf42e983f50f203bc1.png">
-            <h2 class="sillywords dynamicbanner1text2">Senpai will definitely notice you.</h2>
-            <button class="dynamicbutton1" onclick="dynamicOneTwo()">Next Banner</button>
-        </div>
-        <div class="dynamicbanner2 hidden" id="dynamicbanner2">
-            <img class="dynamicbanner2text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/19ff8f561d0ab56a3e6e.png">
-            <h2 class="sillywords dynamicbanner2text2">Reach for the stars.</h2>
-            <button class="dynamicbutton1" onclick="dynamicTwoThree()">Next Banner</button>
-        </div>
-        <div class="dynamicbanner3 hidden" id="dynamicbanner3">
-            <img class="dynamicbanner3profile1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/e91a4c7f419794213d7b.png">
-            <img class="dynamicbanner3text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/51cfa8525bca57df0316.png">
-            <h2 class="sillywords dynamicbanner3text2">Available to use with an active Nitro subscription.</h2>
-            <button class="dynamicbutton1" onclick="dynamicThreeFour()">Next Banner</button>
-        </div>
-        <div class="dynamicbanner4 hidden" id="dynamicbanner4">
-            <img class="dynamicbanner4text1" src="https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/204235af608193f0517f.png">
-            <h2 class="sillywords dynamicbanner4text2">Welcome to the neon embrace of the future.</h2>
-            <button class="dynamicbutton1" onclick="dynamicFourOne()">Next Banner</button>
+            <h2 class="sillywords dynamicbanner2text2">List of dynamic banners from the Shop</h2>
+            <a href="https://dtacat.github.io/Collectibles/Dynamic-Banners"><button title="Dynamic Banners" class="dynamicbutton1">Coming Soon</button></a>
         </div>
     </div>
     
-    <div class="itemlist" id="main-thing">
+    <div class="itemlist unobtainable-tag-hidden" id="main-thing">
 
-        <div class="tide" style="
-        --card-color1: rgb(17, 18, 20);
-        --card-color2: rgb(30, 31, 34);
-        --border-color: rgb(30, 31, 34);
-        --button-color1: rgb(89, 102, 243);
-        --button-color2: rgb(89, 102, 243);
-        --button-color3: rgb(71, 81, 192);
-        --button-color4: rgb(71, 81, 192);
+        <div class="profilesplus hidden" id="profilesplus" style="
+        --card-color1: rgb(135, 70, 255);
+        --card-color2: rgb(95, 36, 206);
+        --border-color: rgb(89, 0, 255);
+        --button-color1: rgb(255, 70, 240);
+        --button-color2: rgb(255, 70, 240);
+        --button-color3: rgb(150, 40, 122);
+        --button-color4: rgb(150, 40, 122);
         --button-text-color: rgb(255, 255, 255);
-        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1252404118509719682.png?size=1280);">
-            <!-- Tide -->
+        --banner-image: url( );">
+            <!-- Profiles Plus -->
 
-            <div class="item-banner banner tidebanner">
-               <img class="tidebannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1252404115686948925.png?size=480">
-               <a class="sillywords tidebannertext2">New island, new Pals, new adventures!</a>
+            <div class="item-banner banner profilesplusbanner">
+                <img class="profilesplusbannertext1" src="https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/main/Assets/ProfilesPlusBannerLogo.png">
+               <a class="sillywords profilesplusbannertext2">Items that have been made exclusively for Profiles Plus. (Not made by Discord)</a>
             </div>
 
-            <div class="in-shop" id="tideitems">
-                <a class="sillywords itemtext1 bundles">Bundles</a>
-                <div class="tidebundlerow bundlerow hidden">
+            <div class="in-shop pphidden2" id="profilesplusitems">
+                <a class="sillywords itemtext1 bundles pphidden">Bundles</a>
+                <div class="tidebundlerow bundlerow pphidden">
                     <div class="bundle-card tidebundles" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe116.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/a_6c3ac6dbc9a8d7fe0564fd019f153b38.png');
@@ -1699,6 +1687,245 @@
 
                 </div>
                 <a class="sillywords itemtext1 decos">Avatar Decorations</a>
+                <div class="profilesplusdecorow decorow">
+                    <div class="deco-card profilesplusdecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/Smiley_WindowKill.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/Smiley_WindowKill.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Smiley</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Watch those hands.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe116.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/a_6c3ac6dbc9a8d7fe0564fd019f153b38.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Orb Array</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">The pointer clicks and drags then screenshots an area to deal damage.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/c908bec2140ce3c39f0cd75159a209f1.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/c908bec2140ce3c39f0cd75159a209f1.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Cat Nap</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">One of the Smiling Critters.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/b1a232685c7dea5ec2d00ab165c93593.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/b1a232685c7dea5ec2d00ab165c93593.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Easy</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Water on the hill.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos pphidden" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(52).png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(52).png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Epic</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Epic.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos pphidden" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(51).png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(51).png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Legendary</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Are you wothy of this rating?</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos pphidden" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(50).png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(50).png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Mythic</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Are you wothy of this rating?</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1 effects">Profile Effects</a>
+                <div class="profilespluseffectrow effectrow" id="profile-effects">
+                    <div class="effect-card profilespluseffects" style="
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%2052.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Just-Effects-And-Decorations/main/secrets/ezgif-6-caaa9a147f.gif');">
+                        <img class="effectimage">
+                        <div class="effect-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Smiley</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Hes got my Avatar!</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="effect-card profilespluseffects pphidden" style="
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe12.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe12.png');">
+                        <img class="effectimage">
+                        <div class="effect-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Guiding Lights</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Here to guide you on your journey.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="tide" style="
+        --card-color1: rgb(3, 2, 34);
+        --card-color2: rgb(8, 1, 45);
+        --border-color: rgb(6, 2, 39);
+        --button-color1: rgb(89, 102, 243);
+        --button-color2: rgb(89, 102, 243);
+        --button-color3: rgb(71, 81, 192);
+        --button-color4: rgb(71, 81, 192);
+        --button-text-color: rgb(255, 255, 255);
+        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1252404118509719682.png?size=1280);">
+            <!-- Tide -->
+
+            <div class="item-banner banner tidebanner">
+               <img class="tidebannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1252404115686948925.png?size=480">
+               <a class="sillywords tidebannertext2">New island, new Pals, new adventures!</a>
+            </div>
+
+            <div class="in-shop" id="tideitems">
+                <a class="sillywords itemtext1 bundles">Bundles</a>
+                <div class="tidebundlerow bundlerow">
+                    <div class="bundle-card tidebundles" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48b8411feb1e80a69048fc65b3275b75.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48b8411feb1e80a69048fc65b3275b75.png?size=240&passthrough=true');
+                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/wake-up/thumbnail.png');
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/wake-up/intro.png');">
+                        <img class="bundle-effectimage">
+                        <img class="bundle-decoimage">
+                        <div class="bundle-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1252404132074225775</a>
+                                <h1 class="sillywords">Best Pals Forever Bundle</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Bundle Includes: Chillet Decoration & Wake Up! Profile Effect</a>
+                                </div>
+                                <h1 class="sillywords fade">US$13.99 - US$17.99</h1>
+                                <h1 class="sillywords bundle-discount fade">(-26%) - (-9%)</h1>
+                                <div class="button-holder">
+                                    <button title="You cannot request bundles on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Bundles</button>
+                                    <a href="https://discord.com/shop#itemSkuId=1252404132074225775">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="tidedecorow decorow">
                     <div class="deco-card tidedecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48b8411feb1e80a69048fc65b3275b75.png?size=240&passthrough=false');
@@ -1706,15 +1933,61 @@
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
-                                <h1 class="sillywords">1</h1>
+                                <a class="sillywords sku">SKU ID: 1252404745977462836</a>
+                                <h1 class="sillywords">Chillet</h1>
                                 <div class="description-holder">
-                                    <a class="sillywords fade">1</a>
+                                    <a class="sillywords fade">Who doesn&#8217;t love to cuddle?</a>
                                 </div>
                                 <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
                                 <div class="button-holder">
-                                    <button title="Placeholder Text" class="cardbutton cardbutton-locked closed">Placeholder Text</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252404745977462836">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card tidedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_59ad6c57089d2291611d9f59904f38e9.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_59ad6c57089d2291611d9f59904f38e9.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1252404753321689119</a>
+                                <h1 class="sillywords">Pal Sphere</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Fingers crossed!</a>
+                                </div>
+                                <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252404753321689119">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card tidedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_d260c70fa8f38c499fa452c3cbdc5a0c.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_d260c70fa8f38c499fa452c3cbdc5a0c.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1252404760448077864</a>
+                                <h1 class="sillywords">Cattiva</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Cute... from a distance.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252404760448077864">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
                             </div>
@@ -1726,15 +1999,39 @@
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
-                                <h1 class="sillywords">2</h1>
+                                <a class="sillywords sku">SKU ID: 1252404767737778217</a>
+                                <h1 class="sillywords">Lamball</h1>
                                 <div class="description-holder">
-                                    <a class="sillywords fade">2</a>
+                                    <a class="sillywords fade">Cozy, fluffy, and clumsy!</a>
                                 </div>
                                 <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
                                 <div class="button-holder">
-                                    <button title="Placeholder Text" class="cardbutton cardbutton-locked closed">Placeholder Text</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252404767737778217">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card tidedecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_b7e2813fb97fe05b0f9f29a1bb7fde41.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_b7e2813fb97fe05b0f9f29a1bb7fde41.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1252405004925669396</a>
+                                <h1 class="sillywords">Depresso</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">As enthusiastic as ever.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252405004925669396">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
                             </div>
@@ -1746,15 +2043,17 @@
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: null</a>
-                                <h1 class="sillywords">3</h1>
+                                <a class="sillywords sku">SKU ID: 1252405010608951358</a>
+                                <h1 class="sillywords">Selyne</h1>
                                 <div class="description-holder">
-                                    <a class="sillywords fade">3</a>
+                                    <a class="sillywords fade">A mysterious moonlight encounter.</a>
                                 </div>
                                 <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
                                 <div class="button-holder">
-                                    <button title="Placeholder Text" class="cardbutton cardbutton-locked closed">Placeholder Text</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252405010608951358">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
                             </div>
@@ -1777,8 +2076,10 @@
                                 </div>
                                 <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
                                 <div class="button-holder">
-                                    <button title="Placeholder Text" class="cardbutton cardbutton-locked closed">Placeholder Text</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252405017688936508">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
                             </div>
@@ -1797,8 +2098,10 @@
                                 </div>
                                 <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
                                 <div class="button-holder">
-                                    <button title="Placeholder Text" class="cardbutton cardbutton-locked closed">Placeholder Text</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252405239693447208">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
                             </div>
@@ -1806,7 +2109,7 @@
                     </div>
                     <div class="effect-card tideeffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/tocotoco/thumbnail.png');
-                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-20/tocotoco/intro.png');">
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/tocotoco/intro.png');">
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -1817,8 +2120,10 @@
                                 </div>
                                 <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
                                 <div class="button-holder">
-                                    <button title="Placeholder Text" class="cardbutton cardbutton-locked closed">Placeholder Text</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252405251949203497">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
                             </div>
@@ -3508,6 +3813,9 @@
                     <div class="deco-card shydecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_98555e40cc6802bd3a4fed906af1d992.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -3530,6 +3838,9 @@
                     <div class="deco-card shydecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_c45abe8c7585fdb41b8d8d4d666f1588.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_c45abe8c7585fdb41b8d8d4d666f1588.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -3552,6 +3863,9 @@
                     <div class="deco-card shydecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_a87e3efa4de2956331831681231ce63b.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_a87e3efa4de2956331831681231ce63b.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -3574,6 +3888,9 @@
                     <div class="deco-card shydecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_09de63526a45be1ddac70e84718ee04a.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_09de63526a45be1ddac70e84718ee04a.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -3596,6 +3913,9 @@
                     <div class="deco-card shydecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_904b1989077c91fca1168d39bfcaa0a4.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_904b1989077c91fca1168d39bfcaa0a4.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -3622,6 +3942,9 @@
                     <div class="effect-card shyeffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-21/cloves-ruse/thumbnail_a5917b67.png');
                     --effect-intro: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/ezgif-7-2df87a0dec.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -3644,6 +3967,9 @@
                     <div class="effect-card shyeffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-21/ace/thumbnail_7c4f8929.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-21/ace/intro_fa545ec0.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -3666,6 +3992,9 @@
                     <div class="effect-card shyeffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-21/the-immortal-clove/thumbnail_20409a9b.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-03-21/the-immortal-clove/intro_310a69a3.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -4476,6 +4805,9 @@
                     <div class="deco-card lunardecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_9d2ff9685be0c668ef6990b0035fac17.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4498,6 +4830,9 @@
                     <div class="deco-card lunardecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_63b29ec5b1ea6bb01c2251049838d822.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_63b29ec5b1ea6bb01c2251049838d822.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4520,6 +4855,9 @@
                     <div class="deco-card lunardecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_0f4f1b40921ce680b60007e94427d1f2.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_0f4f1b40921ce680b60007e94427d1f2.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4542,6 +4880,9 @@
                     <div class="deco-card lunardecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_445566ed965b2c1632a5b45c92f32d11.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_445566ed965b2c1632a5b45c92f32d11.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4564,6 +4905,9 @@
                     <div class="deco-card lunardecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_1b1df0ae8c2d34afd85da5c22a0d761a.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_1b1df0ae8c2d34afd85da5c22a0d761a.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4586,6 +4930,9 @@
                     <div class="deco-card lunardecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_50b440810b1bbd89f6284f36d40ad0af.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_50b440810b1bbd89f6284f36d40ad0af.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4612,6 +4959,9 @@
                     <div class="effect-card lunareffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-01-31/dragon-dance/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-02-06/dragon-dance/intro_02c49bbfe7.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -4634,6 +4984,9 @@
                     <div class="effect-card lunareffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-01-31/fortune-flurry/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-01-31/fortune-flurry/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -4656,6 +5009,9 @@
                     <div class="effect-card lunareffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-01-31/midnight-celebration/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-01-31/midnight-celebration/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -4895,6 +5251,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_e11ac0d3f2b1301173847b84a1a3268f.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_e11ac0d3f2b1301173847b84a1a3268f.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4917,6 +5276,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_ea8e2e628bacdddb1ef18cb382aa454c.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_ea8e2e628bacdddb1ef18cb382aa454c.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4939,6 +5301,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_68b9ced89df522993b81a33f43490ef1.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_68b9ced89df522993b81a33f43490ef1.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4961,6 +5326,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8b7ad8479ad8cc9996b508b75410e2f9.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8b7ad8479ad8cc9996b508b75410e2f9.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -4983,6 +5351,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_129e3e818c8319e031d34d4194cf8ecd.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_129e3e818c8319e031d34d4194cf8ecd.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5005,6 +5376,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48ca99fcfa4ecc11acdc323534a0ecbb.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48ca99fcfa4ecc11acdc323534a0ecbb.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5027,6 +5401,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_42f43a32539de2f3f30a348dc8a880e1.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_42f43a32539de2f3f30a348dc8a880e1.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5049,6 +5426,9 @@
                     <div class="deco-card monsterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_be797b0a0efafd45a9ee49aaedbde4d2.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_be797b0a0efafd45a9ee49aaedbde4d2.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5075,6 +5455,9 @@
                     <div class="effect-card monstereffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-29/goozilla/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-29/goozilla/intro-claw.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5097,6 +5480,9 @@
                     <div class="effect-card monstereffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-29/heartzilla/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-29/heartzilla/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5119,6 +5505,9 @@
                     <div class="effect-card monstereffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-29/monster-pop/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-29/monster-pop/intro-monster.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5167,6 +5556,9 @@
                     <div class="deco-card winterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_a46f14932ac02de32f64139d3b9057b8.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_a46f14932ac02de32f64139d3b9057b8.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5189,6 +5581,9 @@
                     <div class="deco-card winterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_a0fafb7c7ee7f1e5b1442f44f3aa14b7.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_a0fafb7c7ee7f1e5b1442f44f3aa14b7.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5211,6 +5606,9 @@
                     <div class="deco-card winterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_85a8f9ca60cb4328378270a7f13ed7fd.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_85a8f9ca60cb4328378270a7f13ed7fd.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5233,6 +5631,9 @@
                     <div class="deco-card winterdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_88f42fb7360d8224a670a50c3496f315.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_88f42fb7360d8224a670a50c3496f315.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5259,6 +5660,9 @@
                     <div class="effect-card wintereffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-22/deck-the-halls/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-28/deck-the-halls/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5281,6 +5685,9 @@
                     <div class="effect-card wintereffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-28/snowy-shenanigans/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-11-28/snowy-shenanigans/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5329,6 +5736,9 @@
                     <div class="deco-card halloweendecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_ad4e2cad924bbb3a2fddf5c527370479.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_ad4e2cad924bbb3a2fddf5c527370479.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5351,6 +5761,9 @@
                     <div class="deco-card halloweendecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_b9a64088e30fd3a6f2456c2e0f44f173.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_b9a64088e30fd3a6f2456c2e0f44f173.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5373,6 +5786,9 @@
                     <div class="deco-card halloweendecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_f979ba5f9c2ba83db3149cc02f489f7c.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_f979ba5f9c2ba83db3149cc02f489f7c.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5395,6 +5811,9 @@
                     <div class="deco-card halloweendecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_50939e8f95b0ddfa596809480b0eb3e1.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_50939e8f95b0ddfa596809480b0eb3e1.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5421,6 +5840,9 @@
                     <div class="effect-card halloweeneffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/punk-girl/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/punk-girl/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5443,6 +5865,9 @@
                     <div class="effect-card halloweeneffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/zombie-slime/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/zombie-slime/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5465,6 +5890,9 @@
                     <div class="effect-card halloweeneffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/ghost-skull/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/b17d139f2e9/ghost-skull/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5513,6 +5941,9 @@
                     <div class="deco-card falldecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_5087f7f988bd1b2819cac3e33d0150f5.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5535,6 +5966,9 @@
                     <div class="deco-card falldecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_145dffeb81bcfff96be683fd9f6db20a.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5557,6 +5991,9 @@
                     <div class="deco-card falldecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_4936aa6c33a101b593f9607d48d686ec.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5579,6 +6016,9 @@
                     <div class="deco-card falldecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_7d305bca6cf371df98c059f9d2ef05e4.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -5605,6 +6045,9 @@
                     <div class="effect-card falleffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/leaves/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-10-11/leaves/intro-branch.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -5627,6 +6070,9 @@
                     <div class="effect-card falleffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/rain/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -6270,6 +6716,9 @@
                     <div class="deco-card breakfastdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_911e48f3a695c7f6c267843ab6a96f2f.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6292,6 +6741,9 @@
                     <div class="deco-card breakfastdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_aa2e1c2b3cf05b24f6ec7b8b4141f5fc.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6314,6 +6766,9 @@
                     <div class="deco-card breakfastdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_9b7b74e72efe1bc5a6beddced3da3c0f.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6336,6 +6791,9 @@
                     <div class="deco-card breakfastdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_faaa56d945e2d0f6c41cf940d122cb9e.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6358,6 +6816,9 @@
                     <div class="deco-card breakfastdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_8b0d858b65a81ea0c537091a4650a6d4.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6380,6 +6841,9 @@
                     <div class="deco-card breakfastdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_950aea7686c5674b4e2f5df0830d153b.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6406,6 +6870,9 @@
                     <div class="effect-card breakfasteffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/cereal/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -6428,6 +6895,9 @@
                     <div class="effect-card breakfasteffects" style="
                     --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/thumbnail.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2023-9-25/plate/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -6610,6 +7080,9 @@
                     <div class="deco-card miscellaneousdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_5e1210779d99ece1c0b4f438a5bc6e72.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_5e1210779d99ece1c0b4f438a5bc6e72.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6631,6 +7104,9 @@
                     <div class="deco-card miscellaneousdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_89cd445201a0c6c64d46876503d0e90e.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_89cd445201a0c6c64d46876503d0e90e.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6652,6 +7128,9 @@
                     <div class="deco-card miscellaneousdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_d6760c807d460b45e06427c09ab61390.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -6668,7 +7147,26 @@
                                 </div>
                             </div>
                         </div>
-                        
+                    </div>
+                    <div class="deco-card miscellaneousdecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_bb31faaec1be1ef5ff32dcdc5f37efbf.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_bb31faaec1be1ef5ff32dcdc5f37efbf.png?size=240&passthrough=true');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1251324401459265537</a>
+                                <h1 class="sillywords">Warp Helmet</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Travelling at the speed of light. Available to use until 9 September 2024.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="You cannot request this item on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -6677,6 +7175,9 @@
                     <div class="effect-card miscellaneouseffects" style="
                     --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/frame_apngframe05.png');
                     --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/lightning/intro.png');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -6697,6 +7198,23 @@
 
                 </div>
 
+            </div>
+
+        </div>
+        <div class="unobtainable-warning" style="
+        --card-color1: rgb(0, 0, 0);
+        --card-color2: rgb(0, 0, 0);
+        --border-color: rgb(255, 0, 0);
+        --button-color1: rgb(0, 0, 0);
+        --button-color2: rgb(0, 0, 0);
+        --button-color3: rgb(0, 0, 0);
+        --button-color4: rgb(0, 0, 0);
+        --button-text-color: rgb(0, 0, 0);
+        --banner-image: url( );">
+            <!-- Unobtainable-Warning -->
+
+            <div class="item-banner banner miscellaneousbanner">
+               <h1 class="sillywords miscellaneousbannertext2">ALL ITEMS BELOW THIS POINT ARE UNOBTAINABLE</h1>
             </div>
 
         </div>
@@ -8275,7 +8793,7 @@
         --button-color3: rgb(71, 81, 192);
         --button-color4: rgb(71, 81, 192);
         --button-text-color: rgb(255, 255, 255);
-        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1237649691953336363.png?size=1280);">
+        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1120837665709883494.png?size=1280);">
             <!-- Monster Old -->
 
             <div class="item-banner banner digitalbanner">
@@ -8683,177 +9201,19 @@
                 <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="archivedecorow decorow">
                     <div class="deco-card archivedecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/0123fbcf1358c97c1f8b851e6563a9f0.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/0123fbcf1358c97c1f8b851e6563a9f0.png');">
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/84508a07ebb0533ea77ac03e71d9d38c.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Archive/84508a07ebb0533ea77ac03e71d9d38c.png');">
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
                                 <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">Fire</h1>
-                                <a class="sillywords fade">This Decoration is NOT fire.</a>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <div class="button-holder">
-                                    <div class="copy-link">
-                                        <input type="text" class="copy-pp hidden" value="Profiles Plus Emoji" id="copyarchive1pp">
-                                        <button type="button" class="cardbutton noclick button-pp">Request On Profiles Plus</button>
-                                    </div>
-                                    <button class="cardbutton" onclick="location.href='categories/archive/avatar-decoration-presets/burnt-toast';">Open Extra Info</button>
-                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="profilesplus" style="
-        --card-color1: rgb(135, 70, 255);
-        --card-color2: rgb(95, 36, 206);
-        --border-color: rgb(89, 0, 255);
-        --button-color1: rgb(255, 70, 240);
-        --button-color2: rgb(255, 70, 240);
-        --button-color3: rgb(150, 40, 122);
-        --button-color4: rgb(150, 40, 122);
-        --button-text-color: rgb(255, 255, 255);
-        --banner-image: url( );">
-            <!-- Profiles Plus -->
-
-            <div class="item-banner banner profilesplusbanner">
-                <img class="profilesplusbannertext1" src="https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/main/Assets/ProfilesPlusBannerLogo.png">
-               <a class="sillywords profilesplusbannertext2">Items that have been made exclusively for Profiles Plus. (Not made by Discord)</a>
-            </div>
-
-            <div class="in-shop" id="profilesplusitems">
-                <a class="sillywords itemtext1 bundles">Bundles</a>
-                <div class="piratesbundlerow bundlerow">
-                    <div class="bundle-card piratesbundles" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe116.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/a_6c3ac6dbc9a8d7fe0564fd019f153b38.png');
-                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%2052.png');
-                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Just-Effects-And-Decorations/main/secrets/ezgif-6-caaa9a147f.gif');">
-                        <img class="bundle-effectimage">
-                        <img class="bundle-decoimage">
-                        <div class="bundle-content-holder">
-                            <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">WindowKill Bundle</h1>
+                                <h1 class="sillywords">Bear Hood</h1>
                                 <div class="description-holder">
-                                    <a class="sillywords fade">tbh i just wanted to see how a bundle would look here</a>
-                                </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <h1 class="sillywords bundle-discount fade">(-%) - (-%)</h1>
-                                <div class="button-holder">
-                                    <button title="You cannot request bundles on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Bundles</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
-                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <a class="sillywords itemtext1 decos">Avatar Decorations</a>
-                <div class="profilesplusdecorow decorow">
-                    <div class="deco-card profilesplusdecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/Smiley_WindowKill.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/Smiley_WindowKill.png');">
-                        <img class="decoimage">
-                        <div class="content-holder">
-                            <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">Smiley</h1>
-                                <div class="description-holder">
-                                    <a class="sillywords fade">Watch those hands.</a>
+                                    <a class="sillywords fade">Freddy Faz Bear Har Har Har Har.</a>
                                 </div>
                                 <h1 class="sillywords fade">US$ - US$</h1>
                                 <div class="button-holder">
-                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
-                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deco-card profilesplusdecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe116.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/a_6c3ac6dbc9a8d7fe0564fd019f153b38.png');">
-                        <img class="decoimage">
-                        <div class="content-holder">
-                            <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">Orb Array</h1>
-                                <div class="description-holder">
-                                    <a class="sillywords fade">The pointer clicks and drags then screenshots an area to deal damage.</a>
-                                </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <div class="button-holder">
-                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
-                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deco-card profilesplusdecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/c908bec2140ce3c39f0cd75159a209f1.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/c908bec2140ce3c39f0cd75159a209f1.png');">
-                        <img class="decoimage">
-                        <div class="content-holder">
-                            <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">Cat Nap</h1>
-                                <div class="description-holder">
-                                    <a class="sillywords fade">One of the Smiling Critters.</a>
-                                </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <div class="button-holder">
-                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
-                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="deco-card profilesplusdecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/b1a232685c7dea5ec2d00ab165c93593.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/b1a232685c7dea5ec2d00ab165c93593.png');">
-                        <img class="decoimage">
-                        <div class="content-holder">
-                            <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">Easy</h1>
-                                <div class="description-holder">
-                                    <a class="sillywords fade">Water on the hill.</a>
-                                </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <div class="button-holder">
-                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
-                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
-                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <a class="sillywords itemtext1 effects">Profile Effects</a>
-                <div class="profilespluseffectrow effectrow" id="profile-effects">
-                    <div class="effect-card profilespluseffects" style="
-                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%2052.png');
-                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Just-Effects-And-Decorations/main/secrets/ezgif-6-caaa9a147f.gif');">
-                        <img class="effectimage">
-                        <div class="effect-content-holder">
-                            <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
-                                <h1 class="sillywords">Smiley</h1>
-                                <div class="description-holder">
-                                    <a class="sillywords fade">Hes got my Avatar!</a>
-                                </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <div class="button-holder">
-                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="You cannot request this item on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
                                     <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
                                 </div>
@@ -9157,6 +9517,57 @@
                 open.classList.remove('open');
             } else {
                 open.classList.add('open');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function togglePPlus() {
+            let profilesplus = document.getElementById('profilesplus');
+            let button = document.getElementById('pplus-button');
+
+            if (profilesplus.classList.contains('hidden')) {
+                profilesplus.classList.remove('hidden');
+            } else {
+                profilesplus.classList.add('hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleUnreleasedPPlus() {
+            let profilesplus = document.getElementById('profilesplusitems');
+            let button = document.getElementById('unrepp-button');
+
+            if (profilesplus.classList.contains('pphidden2')) {
+                profilesplus.classList.remove('pphidden2');
+            } else {
+                profilesplus.classList.add('pphidden2');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function toggleUnobtainableTag() {
+            let unobtainable = document.getElementById('main-thing');
+            let button = document.getElementById('unobtainable-tag-button');
+
+            if (unobtainable.classList.contains('unobtainable-tag-hidden')) {
+                unobtainable.classList.remove('unobtainable-tag-hidden');
+            } else {
+                unobtainable.classList.add('unobtainable-tag-hidden');
             }
 
             if (button.classList.contains('server-button-blue')) {
