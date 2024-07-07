@@ -29,11 +29,31 @@
         .background-black {
             background-color: #000000;
         }
+        .background-image {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/2023-07-31_14.29.07.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            backdrop-filter: blur(10px);
+        }
         .background-cat {
             background-color: #120a30;
         }
 
         .unobtainable-tag {
+            display: block;
+            margin-bottom: -15px;
+            margin-top: -5px;
+            height: 20px;
+            margin-left: auto;
+            margin-right: 50px;
+            width: 120px;
+            background-color: white;
+            color: black;
+            border-radius: 100px;
+            scale: 1.5;
+        }
+        .exclusive-tag {
             display: block;
             margin-bottom: -15px;
             margin-top: -5px;
@@ -130,6 +150,9 @@
             display: none;
         }
         .unobtainable-tag-hidden .unobtainable-warning {
+            display: none;
+        }
+        .pending-hidden .pp-pending-card {
             display: none;
         }
         .sidebar {
@@ -1213,6 +1236,13 @@
             height: 1530px;
         }
 
+        .pplusquickcoloursshown .pp-pending-card {
+            box-shadow: 0 0 5px 5px yellow;
+        }
+        .pplusquickcoloursshown .pp-available-card {
+            box-shadow: 0 0 5px 5px lime;
+        }
+
         .decoimage {
             display: block;
             margin-left: auto;
@@ -1591,11 +1621,13 @@
 
         <div class="hidden" id="theme-exp">
             <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button">Dynamic</button>
+
+            <button title="Test Images" class="button server-button" id="image-theme-button">image</button>
         </div>
 
         <h3 class="sillywords sidebarwords">Cards</h3>
 
-        <button title="As fireglitch64 Wanted" class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">Card Theme</button>
+        <button title="As fireglitch64 Wanted" class="button server-button server-button-blue" onclick="toggleCardTheme()" id="card-theme-button">Card Theme</button>
 
         <hr>
 
@@ -1605,7 +1637,9 @@
 
         <button title="Profiles Plus" class="button server-button" onclick="togglePPlus()" id="pplus-button">Show Category</button>
 
-        <button title="Profiles Plus" class="button server-button" onclick="togglePPlusRecent()" id="pplus-recent-button">Show All Recently Added</button>
+        <button title="Show All Items Recently Added TO Profiles Plus" class="button server-button" onclick="togglePPlusRecent()" id="pplus-recent-button">Show All Recently Added</button>
+
+        <button title="Hide Pending" class="button server-button" onclick="togglePPlusPending()" id="pplus-hide-pending-button">Hide Pending</button>
 
         <div class="hidden" id="experiments">
             <hr>
@@ -1617,6 +1651,8 @@
             <button title="Show Unreleased P+ Items" class="button server-button" onclick="toggleUnreleasedPPlus()" id="unrepp-button">Show Unreleased P+ Items</button>
 
             <button title="Show Unobtainable Tag on Unobtainable Items" class="button server-button" onclick="toggleUnobtainableTag()" id="unobtainable-tag-button">Unobtainable Tag</button>
+
+            <button title="Show Quick Colours on P+ Items" class="button server-button" onclick="togglePPlusQuickColours()" id="quickcolours-button">P+ Quick Colours</button>
         </div>
 
         <hr>
@@ -1625,7 +1661,7 @@
 
         <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
 
-        <a class="sillywords sidebarwords">shop14.9</a>
+        <a class="sillywords sidebarwords">shop14.10</a>
 
     </div>
 
@@ -1649,10 +1685,10 @@
         --card-color1: rgb(135, 70, 255);
         --card-color2: rgb(95, 36, 206);
         --border-color: rgb(89, 0, 255);
-        --button-color1: rgb(255, 70, 240);
-        --button-color2: rgb(255, 70, 240);
-        --button-color3: rgb(150, 40, 122);
-        --button-color4: rgb(150, 40, 122);
+        --button-color1: rgb(89, 102, 243);
+        --button-color2: rgb(89, 102, 243);
+        --button-color3: rgb(71, 81, 192);
+        --button-color4: rgb(71, 81, 192);
         --button-text-color: rgb(255, 255, 255);
         --banner-image: url( );">
             <!-- Profiles Plus -->
@@ -1679,8 +1715,8 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Bundle Includes: Saw Decoration & Lightning Profile Effect</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <h1 class="sillywords bundle-discount fade">(-%) - (-%)</h1>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":light_blue_heart:" readonly>
@@ -1706,8 +1742,8 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Bundle Includes: Balance Decoration & Mastery Profile Effect</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <h1 class="sillywords bundle-discount fade">(-%) - (-%)</h1>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":octagonal_sign:" readonly>
@@ -1731,7 +1767,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Feel the calm.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":x:" readonly>
@@ -1753,6 +1789,9 @@
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/a_6c3ac6dbc9a8d7fe0564fd019f153b38.png');
                     --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%2052.png');
                     --effect-intro: url('https://raw.githubusercontent.com/DTACat/Just-Effects-And-Decorations/main/secrets/ezgif-6-caaa9a147f.gif');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="bundle-effectimage">
                         <img class="bundle-decoimage">
                         <div class="bundle-content-holder">
@@ -1762,8 +1801,8 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Bundle Includes: Orb Array Decoration & Smiley Profile Effect</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <h1 class="sillywords bundle-discount fade">(-%) - (-%)</h1>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":purple_heart:" readonly>
@@ -1789,11 +1828,71 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Bundle Includes: Saw Decoration & Lightning Profile Effect</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <h1 class="sillywords bundle-discount fade">(-%) - (-%)</h1>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":light_blue_heart:" readonly>
+                                        <button type="button" class="button-pp cardbutton">Copy Profiles Plus Emoji</button>
+                                    </div>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bundle-card profilesplusbundles" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/arrows/thumbnail.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/arrows/loop.png');
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/arrow-rain/1/thumbnail.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/arrow-rain/2/intro.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="bundle-effectimage">
+                        <img class="bundle-decoimage">
+                        <div class="bundle-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Arrow Storm Bundle</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Bundle Includes: Arrows Decoration & Arrow Rain Profile Effect</a>
+                                </div>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
+                                <div class="button-holder">
+                                    <div class="copy-link">
+                                        <input type="text" class="copy-pp hidden" value=":bow_and_arrow:" readonly>
+                                        <button type="button" class="button-pp cardbutton">Copy Profiles Plus Emoji</button>
+                                    </div>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bundle-card profilesplusbundles" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/chaos/thumbnail.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/chaos/loop2.png');
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/engine-madness/2/thumbnail.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/engine-madness/3/intro.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="bundle-effectimage">
+                        <img class="bundle-decoimage">
+                        <div class="bundle-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: none</a>
+                                <h1 class="sillywords">Chaotic Bundle</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Bundle Includes: Chaos Decoration & Engine Madness Profile Effect</a>
+                                </div>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
+                                <div class="button-holder">
+                                    <div class="copy-link">
+                                        <input type="text" class="copy-pp hidden" value=":rocket:" readonly>
                                         <button type="button" class="button-pp cardbutton">Copy Profiles Plus Emoji</button>
                                     </div>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1806,18 +1905,21 @@
                 </div>
                 <a class="sillywords itemtext1 decos">Avatar Decorations</a>
                 <div class="profilesplusdecorow decorow">
-                    <div class="deco-card profilesplusdecos" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/Smiley_WindowKill.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/Smiley_WindowKill.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
+                                <a class="sillywords sku">Made By: DTACat</a>
                                 <h1 class="sillywords">Smiley</h1>
                                 <div class="description-holder">
                                     <a class="sillywords fade">Watch those hands.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1826,18 +1928,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos" style="
+                    <div class="deco-card profilesplusdecos pp-available-card" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe116.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/a_6c3ac6dbc9a8d7fe0564fd019f153b38.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
+                                <a class="sillywords sku">Made By: DTACat</a>
                                 <h1 class="sillywords">Orb Array</h1>
                                 <div class="description-holder">
                                     <a class="sillywords fade">The pointer clicks and drags then screenshots an area to deal damage.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":purple_circle:" readonly>
@@ -1849,18 +1954,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/c908bec2140ce3c39f0cd75159a209f1.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/c908bec2140ce3c39f0cd75159a209f1.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
+                                <a class="sillywords sku">Made By: DTACat</a>
                                 <h1 class="sillywords">Cat Nap</h1>
                                 <div class="description-holder">
                                     <a class="sillywords fade">One of the Smiling Critters.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1869,18 +1977,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/b1a232685c7dea5ec2d00ab165c93593.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/b1a232685c7dea5ec2d00ab165c93593.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
+                                <a class="sillywords sku">Made By: DTACat</a>
                                 <h1 class="sillywords">Easy</h1>
                                 <div class="description-holder">
                                     <a class="sillywords fade">Water on the hill.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1889,18 +2000,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/main/secrets/Cyan-Deco.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/main/secrets/Cyan-Deco.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
+                                <a class="sillywords sku">Made By: DTACat</a>
                                 <h1 class="sillywords">Cyan</h1>
                                 <div class="description-holder">
                                     <a class="sillywords fade">Hot.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1909,9 +2023,81 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos pphidden" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/platforms/thumbnail.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/platforms/loop.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">Made By: TrellTrell</a>
+                                <h1 class="sillywords">Platforms</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Ready for the chaos that is about to begin.</a>
+                                </div>
+                                <h1 class="sillywords fade">Pending...</h1>
+                                <div class="button-holder">
+                                    <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos pp-available-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/arrows/thumbnail.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/arrows/loop.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">Made By: TrellTrell</a>
+                                <h1 class="sillywords">Arrows</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Steady aim.</a>
+                                </div>
+                                <h1 class="sillywords fade">Bundle Only</h1>
+                                <div class="button-holder">
+                                    <button title="This item is a 'Bundle Only' item and cannot be used by itself" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos pp-available-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/chaos/thumbnail.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/decorations/chaos/loop2.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">Made By: TrellTrell</a>
+                                <h1 class="sillywords">Chaos</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">What&#8217;s even happening?!</a>
+                                </div>
+                                <h1 class="sillywords fade">Bundle Only</h1>
+                                <div class="button-holder">
+                                    <button title="This item is a 'Bundle Only' item and cannot be used by itself" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card profilesplusdecos pp-pending-card pphidden" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(52).png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(52).png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -1920,7 +2106,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Epic.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1929,9 +2115,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos pphidden" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card pphidden" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(51).png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(51).png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -1940,7 +2129,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Are you wothy of this rating?</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1949,9 +2138,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card profilesplusdecos pphidden" style="
+                    <div class="deco-card profilesplusdecos pp-pending-card pphidden" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(50).png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%20(50).png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -1960,7 +2152,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Are you wothy of this rating?</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Pending...</h1>
                                 <div class="button-holder">
                                     <button title="This item is being added to Profiles Plus, just wait." class="cardbutton cardbutton-locked">Pending...</button>
                                     <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
@@ -1973,18 +2165,21 @@
                 </div>
                 <a class="sillywords itemtext1 effects">Profile Effects</a>
                 <div class="profilespluseffectrow effectrow" id="profile-effects">
-                    <div class="effect-card profilespluseffects" style="
+                    <div class="effect-card profilespluseffects pp-available-card" style="
                     --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/image%2052.png');
                     --effect-intro: url('https://raw.githubusercontent.com/DTACat/Just-Effects-And-Decorations/main/secrets/ezgif-6-caaa9a147f.gif');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">SKU ID: none</a>
+                                <a class="sillywords sku">Made By: DTACat</a>
                                 <h1 class="sillywords">Smiley</h1>
                                 <div class="description-holder">
                                     <a class="sillywords fade">Hes got my Avatar!</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":slight_smile:" readonly>
@@ -1996,9 +2191,58 @@
                             </div>
                         </div>
                     </div>
-                    <div class="effect-card profilespluseffects pphidden" style="
+                    <div class="effect-card profilespluseffects pp-available-card" style="
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/engine-madness/2/thumbnail.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/engine-madness/3/intro.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="effectimage">
+                        <div class="effect-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">Made By: TrellTrell</a>
+                                <h1 class="sillywords">Engine Madness</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Don&#8217;t get squished!</a>
+                                </div>
+                                <h1 class="sillywords fade">Bundle Only</h1>
+                                <div class="button-holder">
+                                    <button title="This item is a 'Bundle Only' item and cannot be used by itself" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="effect-card profilespluseffects pp-available-card" style="
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/arrow-rain/1/thumbnail.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/arrow-rain/2/intro.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
+                        <img class="effectimage">
+                        <div class="effect-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">Made By: TrellTrell</a>
+                                <h1 class="sillywords">Arrow Rain</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Dodge and weave.</a>
+                                </div>
+                                <h1 class="sillywords fade">Bundle Only</h1>
+                                <div class="button-holder">
+                                    <button title="This item is a 'Bundle Only' item and cannot be used by itself" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="effect-card profilespluseffects pp-pending-card pphidden" style="
                     --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe12.png');
                     --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Wouldnt...Right/main/Assets/frame_apngframe12.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -2016,9 +2260,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="effect-card profilespluseffects pphidden" style="
+                    <div class="effect-card profilespluseffects pp-pending-card pphidden" style="
                     --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/main/secrets/ezgif-5-7575667b07.png');
                     --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/main/secrets/ezgif-5-7575667b07.png');">
+                        <div class="exclusive-tag" title="This item was made exclusively for Profiles Plus">
+                            <a class="sillywords">Exclusive</a>
+                        </div>
                         <img class="effectimage">
                         <div class="effect-content-holder">
                             <div class="card-content">
@@ -2054,8 +2301,8 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Bundle Includes: Balance Decoration & Mastery Profile Effect</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
-                                <h1 class="sillywords bundle-discount fade">(-%) - (-%)</h1>
+                                <h1 class="sillywords fade">Available</h1>
+                                <h1 class="sillywords bundle-discount fade" style="opacity: 0">(-%) - (-%)</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":octagonal_sign:" readonly>
@@ -2079,7 +2326,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">The last thing they&#8217;ll ever see. Lucky them.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":o:" readonly>
@@ -2103,7 +2350,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Feel the calm.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":x:" readonly>
@@ -2127,7 +2374,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">How much electricity does one profile hold?</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":cloud_lightning:" readonly>
@@ -2150,7 +2397,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">A rare blossom only seen by a fortunate few.</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":sunflower:" readonly>
@@ -2173,7 +2420,7 @@
                                 <div class="description-holder">
                                     <a class="sillywords fade">Here to make your avatar more stylish... and dangerous!</a>
                                 </div>
-                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <h1 class="sillywords fade">Available</h1>
                                 <div class="button-holder">
                                     <div class="copy-link">
                                         <input type="text" class="copy-pp hidden" value=":carpentry_saw:" readonly>
@@ -10521,6 +10768,40 @@
             }
         }
 
+        function togglePPlusQuickColours() {
+            let quickcolours = document.getElementById('main-thing');
+            let button = document.getElementById('quickcolours-button');
+
+            if (quickcolours.classList.contains('pplusquickcoloursshown')) {
+                quickcolours.classList.remove('pplusquickcoloursshown');
+            } else {
+                quickcolours.classList.add('pplusquickcoloursshown');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
+        function togglePPlusPending() {
+            let pending = document.getElementById('main-thing');
+            let button = document.getElementById('pplus-hide-pending-button');
+
+            if (pending.classList.contains('pending-hidden')) {
+                pending.classList.remove('pending-hidden');
+            } else {
+                pending.classList.add('pending-hidden');
+            }
+
+            if (button.classList.contains('server-button-blue')) {
+                button.classList.remove('server-button-blue');
+            } else {
+                button.classList.add('server-button-blue');
+            }
+        }
+
         document.body.className = localStorage.theme || "darkmode";
 
         document.getElementById("light-theme-button").addEventListener("click", e => {
@@ -10541,6 +10822,10 @@
         document.getElementById("black-theme-button").addEventListener("click", e => {
             document.body.className = "background-black";
             localStorage.theme = "background-black";
+        });
+        document.getElementById("image-theme-button").addEventListener("click", e => {
+            document.body.className = "background-image";
+            localStorage.theme = "background-image";
         });
 
         document.getElementById("dynamic-theme-button").addEventListener("click", e => {
