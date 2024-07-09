@@ -14,6 +14,7 @@
         body {
             background-color: #313338;
             color: white;
+            transition: background-color 0.4s ease-in-out;
         }
         .darkmode {
             background-color: #313338;
@@ -29,15 +30,19 @@
         .background-black {
             background-color: #000000;
         }
-        .background-image {
-            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/2023-07-31_14.29.07.png);
+        .background-theme-image {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/bg_v4-85.jpg);
             background-size: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            backdrop-filter: blur(10px);
+            background-blend-mode: multiply;
         }
         .background-cat {
             background-color: #120a30;
+        }
+        .background-theme-red {
+            background-color: rgb(29, 0, 0);
+        }
+        .background-theme-blue {
+            background-color: rgb(0, 0, 29);
         }
 
         .unobtainable-tag {
@@ -1014,7 +1019,7 @@
             width: 100%;
             text-align: center;
             height: auto; 
-            z-index: 10;
+            z-index: 100;
             top: 0; 
             left: 0; 
             position: fixed; 
@@ -1485,6 +1490,147 @@
         }
 
 
+        [id*="theme-button"]:not([id*="card"]) {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            transition: border 0.2s ease-in-out;
+        }
+
+        [id="light-theme-button"] {
+            background-color: white;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="light-theme-button"]:hover {
+            background-color: white;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-light [id="light-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-light [id="light-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="dark-theme-button"] {
+            background-color: #313338;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="dark-theme-button"]:hover {
+            background-color: #313338;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .darkmode [id="dark-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .darkmode [id="dark-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="darker-theme-button"] {
+            background-color: #171718;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="darker-theme-button"]:hover {
+            background-color: #171718;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-darker [id="darker-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-darker [id="darker-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="black-theme-button"] {
+            background-color: #000000;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="black-theme-button"]:hover {
+            background-color: #000000;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-black [id="black-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-black [id="black-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="red-theme-button"] {
+            background-color: #410000;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="red-theme-button"]:hover {
+            background-color: #410000;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-theme-red [id="red-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-theme-red [id="red-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="blue-theme-button"] {
+            background-color: #010041;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="blue-theme-button"]:hover {
+            background-color: #010041;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-theme-blue [id="blue-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-theme-blue [id="blue-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="dynamic-theme-button"] {
+            background-image: linear-gradient(90deg, rgb(81, 192, 71), rgb(71, 81, 192));
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="dynamic-theme-button"]:hover {
+            background-image: linear-gradient(90deg, rgb(81, 192, 71), rgb(71, 81, 192));
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-dynamic [id="dynamic-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-dynamic [id="dynamic-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="image-theme-button"] {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/image-theme-preview.png);
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="image-theme-button"]:hover {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/image-theme-preview.png);
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-theme-image [id="image-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-theme-image [id="image-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        .theme-button-selected {
+            border: 5px solid rgb(5, 129, 75);
+        }
+
+        [id="youtube-button"] {
+            width: 65px;
+            height: 50px;
+        }
+        [id="github-button"] {
+            width: 65px;
+            height: 50px;
+        }
+
+
         .padding1 {
             padding: 1em;
         }
@@ -1611,19 +1757,25 @@
 
         <h3 class="sillywords sidebarwords">Themes</h3>
 
-        <button title="Light Mode" class="button server-button" id="light-theme-button">Light</button>
+        <button title="Light Mode" class="button server-button" id="light-theme-button"></button>
 
-        <button title="Dark Mode" class="button server-button" id="dark-theme-button">Dark</button>
+        <button title="Dark Mode" class="button server-button" id="dark-theme-button"></button>
 
-        <button title="Darker Mode" class="button server-button" id="darker-theme-button">Darker</button>
+        <button title="Darker Mode" class="button server-button" id="darker-theme-button"></button>
 
-        <button title="Void Mode" class="button server-button" id="black-theme-button">Void</button>
+        <button title="Void Mode" class="button server-button" id="black-theme-button"></button>
+
+        <button title="Red" class="button server-button" id="red-theme-button"></button>
+
+        <button title="Blue" class="button server-button" id="blue-theme-button"></button>
 
         <div class="hidden" id="theme-exp">
-            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button">Dynamic</button>
+            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button"></button>
 
-            <button title="Test Images" class="button server-button" id="image-theme-button">image</button>
+            <button title="Test Images" class="button server-button" id="image-theme-button"></button>
         </div>
+
+        <button title="Reset Theme" class="button server-button" id="theme-reset-button">Reset Theme</button>
 
         <h3 class="sillywords sidebarwords">Cards</h3>
 
@@ -1657,11 +1809,11 @@
 
         <hr>
 
-        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button">Youtube</button></a>
+        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button" id="youtube-button">Youtube</button></a>
 
-        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
+        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button" id="github-button">Github</button></a>
 
-        <a class="sillywords sidebarwords">shop14.10</a>
+        <a class="sillywords sidebarwords">shop14.11</a>
 
     </div>
 
@@ -2435,6 +2587,155 @@
 
                 </div>
 
+            </div>
+
+        </div>
+        <div class="darkfantasy" style="
+        --card-color1: rgb(8, 41, 28);
+        --card-color2: rgb(1, 15, 8);
+        --border-color: rgb(11, 61, 40);
+        --button-color1: rgb(2, 136, 55);
+        --button-color2: rgb(0, 107, 75);
+        --button-color3: rgb(1, 104, 42);
+        --button-color4: rgb(1, 63, 44);
+        --button-text-color: rgb(255, 255, 255);
+        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1149562682983321630.png?size=1280);">
+            <!-- Dark Fantasy -->
+
+            <div class="item-banner banner fantasybanner">
+                <img class="fantasybannertext1" src="https://cdn.discordapp.com/app-assets/1096190356233670716/1149562562103484467.png?size=480">
+                <a class="sillywords fantasybannertext2">You&#8217;re walking in the forest and notice something magical and shiny.</a>
+             </div>
+
+            <div class="in-shop" id="darkfantasyitems">
+                <a class="sillywords itemtext1 bundles hidden">Bundles</a>
+                <div class="darkfantasybundlerow bundlerow hidden">
+                    <div class="bundle-card darkfantasybundles" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48b8411feb1e80a69048fc65b3275b75.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_48b8411feb1e80a69048fc65b3275b75.png?size=240&passthrough=true');
+                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/wake-up/thumbnail.png');
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/wake-up/intro.png');">
+                        <img class="bundle-effectimage">
+                        <img class="bundle-decoimage">
+                        <div class="bundle-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1252404132074225775</a>
+                                <h1 class="sillywords">Best Pals Forever Bundle</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Bundle Includes: Chillet Decoration & Wake Up! Profile Effect</a>
+                                </div>
+                                <h1 class="sillywords fade">US$13.99 - US$17.99</h1>
+                                <h1 class="sillywords bundle-discount fade">(-26%) - (-9%)</h1>
+                                <div class="button-holder">
+                                    <button title="You cannot request bundles on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Bundles</button>
+                                    <a href="https://discord.com/shop#itemSkuId=1252404132074225775">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1 decos">Avatar Decorations</a>
+                <div class="darkfantasydecorow decorow">
+                    <div class="deco-card darkfantasydecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_4430a4ee89b7fba456e765db21f38485.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_4430a4ee89b7fba456e765db21f38485.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: </a>
+                                <h1 class="sillywords">1</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">null</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="You cannot request this item on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card darkfantasydecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: </a>
+                                <h1 class="sillywords">2</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">null</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="You cannot request this item on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card darkfantasydecos" style="
+                    --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_ef8d97374ffdbf140df1164be6c69e46.png?size=240&passthrough=false');
+                    --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_ef8d97374ffdbf140df1164be6c69e46.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: </a>
+                                <h1 class="sillywords">3</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">null</a>
+                                </div>
+                                <h1 class="sillywords fade">US$ - US$</h1>
+                                <div class="button-holder">
+                                    <button title="You cannot request this item on Profiles Plus" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="This item cannot be opened in the Shop" class="cardbutton cardbutton-locked closed">Unavailable For Item Type</button>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="sillywords itemtext1 effects hidden">Profile Effects</a>
+                <div class="darkfantasyeffectrow effectrow hidden" id="profile-effects">
+                    <div class="effect-card darkfantasyeffects" style="
+                    --effect-thumbnail: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-18/saya/thumbnail.png');
+                    --effect-intro: url('https://cdn.discordapp.com/assets/profile_effects/effects/2024-06-21/saya/intro.png');">
+                        <img class="effectimage">
+                        <div class="effect-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">SKU ID: 1252405017688936508</a>
+                                <h1 class="sillywords">Saya</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">A mysterious beauty blossoms under the moonlight.</a>
+                                </div>
+                                <h1 class="sillywords fade">US$9.99 - US$7.99</h1>
+                                <div class="button-holder">
+                                    <a href="https://discord.gg/Mcwh7hGcWb">
+                                    <button class="cardbutton closed">Request On Profiles Plus</button></a>
+                                    <a href="https://discord.com/shop#itemSkuId=1252405017688936508">
+                                    <button class="cardbutton closed">Open In Shop</button></a>
+                                    <button title="Coming Soon" class="cardbutton cardbutton-locked closed">Locked</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
         </div>
@@ -7741,6 +8042,9 @@
                     <div class="deco-card miscellaneousdecos" style="
                     --deco-icon-false: url('https://cdn.discordapp.com/avatar-decoration-presets/a_65db91cee351e36150a2b506b26eba71.png?size=240&passthrough=false');
                     --deco-icon-true: url('https://cdn.discordapp.com/avatar-decoration-presets/a_65db91cee351e36150a2b506b26eba71.png?size=240&passthrough=true');">
+                        <div class="unobtainable-tag">
+                            <a class="sillywords">Unobtainable</a>
+                        </div>
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
@@ -10809,6 +11113,11 @@
             localStorage.theme = "background-light";
         });
 
+        document.getElementById("theme-reset-button").addEventListener("click", e => {
+            document.body.className = "darkmode";
+            localStorage.theme = "darkmode";
+        });
+
         document.getElementById("dark-theme-button").addEventListener("click", e => {
             document.body.className = "darkmode";
             localStorage.theme = "darkmode";
@@ -10823,9 +11132,20 @@
             document.body.className = "background-black";
             localStorage.theme = "background-black";
         });
+
+        document.getElementById("red-theme-button").addEventListener("click", e => {
+            document.body.className = "background-theme-red";
+            localStorage.theme = "background-theme-red";
+        });
+
+        document.getElementById("blue-theme-button").addEventListener("click", e => {
+            document.body.className = "background-theme-blue";
+            localStorage.theme = "background-theme-blue";
+        });
+
         document.getElementById("image-theme-button").addEventListener("click", e => {
-            document.body.className = "background-image";
-            localStorage.theme = "background-image";
+            document.body.className = "background-theme-image";
+            localStorage.theme = "background-theme-image";
         });
 
         document.getElementById("dynamic-theme-button").addEventListener("click", e => {
