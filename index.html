@@ -3,18 +3,18 @@
 
 <head>
     <base target="_blank">
-    <title>Hub | Shop Archives</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesEmbedColor2.png" type="image/x-icon">
-    <meta name="twitter:site" content="Shop Archives">
-    <meta name="twitter:title" content="Shop Archives">
-    <meta name="twitter:description" content="List of helpful tools for all your Discord Collectible needs">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchivesBigEmbed4.png">
-    <meta content="#FF007A" data-react-helmet="true" name="theme-color">
+    <title>Home | Shop Archives</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/tabicon.png" type="image/x-icon"/>
+    <meta content="Shop Archives" property="og:title" />
+    <meta content="Your one stop place for all Discord Collectibles" property="og:description" />
+    <meta content="https://dtacat.github.io/Collectibles/" property="og:url" />
+    <meta content="https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/EmbedImage.png" property="og:image" />
+    <meta content="#FF007A" data-react-helmet="true" name="theme-color" />
     <style>
         body {
             background-color: #313338;
             color: white;
+            transition: background-color 0.4s ease-in-out;
         }
         .darkmode {
             background-color: #313338;
@@ -30,15 +30,52 @@
         .background-black {
             background-color: #000000;
         }
+        .background-theme-image {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/bg_v4-85.jpg);
+            background-size: 100%;
+            background-blend-mode: multiply;
+        }
         .background-cat {
             background-color: #120a30;
+        }
+        .background-theme-red {
+            background-color: rgb(29, 0, 0);
+        }
+        .background-theme-blue {
+            background-color: rgb(0, 0, 29);
+        }
+
+        .unobtainable-tag {
+            display: block;
+            margin-bottom: -15px;
+            margin-top: -5px;
+            height: 20px;
+            margin-left: auto;
+            margin-right: 50px;
+            width: 120px;
+            background-color: white;
+            color: black;
+            border-radius: 100px;
+            scale: 1.5;
+        }
+        .exclusive-tag {
+            display: block;
+            margin-bottom: -15px;
+            margin-top: -5px;
+            height: 20px;
+            margin-left: auto;
+            margin-right: 50px;
+            width: 120px;
+            background-color: white;
+            color: black;
+            border-radius: 100px;
+            scale: 1.5;
         }
 
         .staff-popup {
             width: 600px;
             height: 200px;
             border-radius: 10px;
-            margin-top: 50px;
             background-color: rgba(0, 0, 0, 80%);
             position: fixed;
             z-index: 100;
@@ -50,7 +87,49 @@
             90% {opacity: 100;}
 	        100% {opacity: 0;}
         }
+
+        .dynamicbanners {
+            padding-top: 100px;
+        }
         
+
+        .background-dynamic .arcade {
+            background-image: linear-gradient(-90deg, rgb(3, 2, 36), rgb(8, 1, 43));
+        }
+        .background-dynamic .retro {
+            background-image: linear-gradient(-90deg, rgb(223, 96, 255), rgb(128, 88, 253));
+        }
+        .background-dynamic .pirates {
+            background-image: linear-gradient(-90deg, rgb(42, 28, 25), rgb(123, 50, 28));
+        }
+        .background-dynamic .space {
+            background-image: linear-gradient(-90deg, rgb(6, 0, 59), rgb(49, 0, 53));
+        }
+        .background-dynamic .lofi {
+            background-image: linear-gradient(-90deg, rgb(97, 92, 255), rgb(223, 129, 184));
+        }
+        .background-dynamic .shy {
+            background-image: linear-gradient(-90deg, rgb(84, 33, 44), rgb(15, 26, 36));
+        }
+        .background-dynamic .springtoons {
+            background-image: linear-gradient(-90deg, rgb(255, 255, 255), rgb(113, 191, 254));
+        }
+        .background-dynamic .animev2 {
+            background-image: linear-gradient(-90deg, rgb(173, 255, 254), rgb(2, 61, 116));
+        }
+        .background-dynamic .element {
+            background-image: linear-gradient(-90deg, rgb(27, 27, 161), rgb(0, 22, 41));
+        }
+        .background-dynamic .lunar {
+            background-image: linear-gradient(-90deg, rgb(141, 0, 0), rgb(91, 0, 0));
+        }
+        .background-dynamic .cyber {
+            background-image: linear-gradient(-90deg, rgb(32, 20, 107), rgb(5, 1, 0));
+        }
+        
+        div.bundles-hidden [class*="bundle"] {
+            display: none;
+        }
         div.deco-hidden [class*="decos"] {
             display: none;
         }
@@ -64,6 +143,24 @@
             display: none;
         }
         .banners-hidden [class*="banner"] {
+            display: none;
+        }
+        .pphidden2 [class*="pphidden"] {
+            display: none;
+        }
+        .pprecenthidden2 [class*="pprecenthidden"] {
+            display: none;
+        }
+        .unobtainable-tag-hidden .unobtainable-tag {
+            display: none;
+        }
+        .unobtainable-tag-hidden .unobtainable-warning {
+            display: none;
+        }
+        .pending-hidden .pp-pending-card {
+            display: none;
+        }
+        .unreleased-tabs-hidden .unreleased-card {
             display: none;
         }
         .sidebar {
@@ -90,8 +187,11 @@
             z-index: 10;
             background-color: #1a1a1a;
         }
+
         .server-button {
             cursor: pointer;
+            margin-top: 2px;
+            margin-bottom: 2px;
             width: 10em;
             height: 3em;
             border: none;
@@ -134,6 +234,76 @@
             right: 0em;
             position: fixed;
         }
+        .bannerad1 {
+            display: block;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 200px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/Logo-2024-05-30T140921.927.png);
+            background-position: 0px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .dynamicbanner1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 1480px;
+            height: 360px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 20px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Backup-Assets/Dynamic-Banner/1cf2660341dc3fb15836.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .condensedleft .bundlesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BundlesBannerLeft.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .condensedright .bundlesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1700px;
+            height: 205px;
+            border: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BundlesBannerRight.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .bundlesbanner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1280px;
+            height: 270px;
+            border: 2px solid rgb(16, 17, 19);
+            border-radius: 50px;
+            padding: 10px;
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/BundlesBackground.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
 
         
 
@@ -146,6 +316,68 @@
             margin-left: auto;
             margin-right: auto;
             width: 100%;
+            margin-top: 50px;
+        }
+
+
+        .dynamicbutton1 {
+            display: block;
+            margin-left: 50px;
+            margin-top: 20px;
+            width: 10em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+            font-size: large;
+        }
+
+
+        .itemtext1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80em
+        }
+        .button1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(89, 102, 243);
+            background: linear-gradient(90deg, rgb(89, 102, 243), rgb(89, 102, 243));
+            cursor: pointer;
+            color: white;
+        }
+        .goldbutton1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 25em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(237, 213, 80);
+            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
+            cursor: pointer;
+            color: black;
+        }
+        .adbutton {
+            display: block;
+            margin-left: auto;
+            margin-top: 85px;
+            width: 20em;
+            padding: 1em;
+            border-radius: 3px;
+            border-color: rgb(237, 213, 80);
+            background: linear-gradient(90deg, rgb(237, 213, 80), rgb(251, 127, 50)); 
+            cursor: pointer;
+            color: black;
         }
 
         .bundlesbutton1 {
@@ -272,7 +504,7 @@
             width: 100%;
             text-align: center;
             height: auto; 
-            z-index: 10;
+            z-index: 100;
             top: 0; 
             left: 0; 
             position: fixed; 
@@ -356,6 +588,117 @@
             color: white;
         }
 
+        /* Bundles */
+
+        .bundle-card {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 740px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background-image: linear-gradient(var(--card-color1), var(--card-color2));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        .no-card-theme .bundle-card {
+            border: 2px solid rgb(30, 31, 34);
+            background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+        .open .bundle-card {
+            width: 600px;
+            height: 1530px;
+        }
+
+        .bundle-effectimage {
+            display: block;
+            margin-left: 30px;
+            margin-top: 10px;
+            scale: 80%;
+            width: 300px;
+            height: 410px;
+            padding: 0px;
+            border-radius: 20px;
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/empty.png);
+            background-image: var(--effect-thumbnail), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+            background-size: 100%;
+            background-position: top center;
+            background-repeat: no-repeat;
+            transform: rotate(-10deg);
+        }
+        .bundle-card:hover .bundle-effectimage {
+            background-image: var(--effect-intro), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+        }
+        .open .bundle-effectimage {
+            background-image: var(--effect-intro), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+        }
+
+        .bundle-decoimage {
+            display: block;
+            margin-left: auto;
+            margin-top: -340px;
+            margin-bottom: 70px;
+            scale: 90%;
+            width: 250px;
+            height: 250px;
+            padding: 10px;
+            content: var(--deco-icon-false);
+            background-position: center;
+	        background-size: 77%;
+	        background-repeat: no-repeat;
+        }
+        .bundle-card:hover .bundle-decoimage {
+            content: var(--deco-icon-true);
+        }
+        .open .bundle-decoimage {
+            content: var(--deco-icon-true);
+        }
+        
+
+        .bundle-content-holder {
+            background-color: rgba(0, 0, 0, 60%);
+            width: 520px;
+            margin-left: -10px;
+            height: 330px;
+            position: relative;
+            border-radius: 0px 0px 50px 50px;
+        }
+        .no-card-theme .bundle-content-holder {
+            background-color: rgba(30, 31, 34, 100%);
+        }
+        .open .bundle-content-holder {
+            width: 620px;
+            height: 1120px;
+        }
+        
+        .card-content {
+            padding: 10px;
+        }
+
+        .bundle-card .button-holder {
+            opacity: 0%;
+            margin-top: -160px;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .bundle-card:hover .button-holder {
+            opacity: 100%;
+            margin-top: -40px;
+        }
+
+        .bundle-card .fade {
+            opacity: 100%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .bundle-card:hover .fade {
+            opacity: 0%;
+            display: none;
+        }
+
+        /* ^ Bundles */
+
         /* Deco */
 
         .deco-card {
@@ -363,18 +706,29 @@
             margin-left: auto;
             margin-right: auto;
             width: 500px;
-            height: 650px;
+            height: 740px;
             border: 2px solid var(--border-color);
             border-radius: 50px;
             background-image: linear-gradient(var(--card-color1), var(--card-color2));
             padding: 10px;
             background-size: 100%;
             background-repeat: no-repeat;
-            margin-top: 100px;
+            margin-top: 10px;
         }
         .no-card-theme .deco-card {
             border: 2px solid rgb(30, 31, 34);
             background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+        .open .deco-card {
+            width: 600px;
+            height: 1530px;
+        }
+
+        .pplusquickcoloursshown .pp-pending-card {
+            box-shadow: 0 0 5px 5px yellow;
+        }
+        .pplusquickcoloursshown .pp-available-card {
+            box-shadow: 0 0 5px 5px lime;
         }
 
         .decoimage {
@@ -391,16 +745,30 @@
 	        background-size: 77%;
 	        background-repeat: no-repeat;
         }
+        .open .decoimage {
+            content: var(--deco-icon-true);
+        }
         .content-holder {
-            background-color: rgba(0, 0, 0, 40%);
+            background-color: rgba(0, 0, 0, 60%);
             width: 520px;
             margin-left: -10px;
-            height: 240px;
+            height: 330px;
             position: relative;
             border-radius: 0px 0px 50px 50px;
         }
         .no-card-theme .content-holder {
             background-color: rgba(30, 31, 34, 100%);
+        }
+        .open .content-holder {
+            width: 620px;
+            height: 1120px;
+        }
+
+        .description-holder {
+            height: 50px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .card-content {
@@ -412,12 +780,12 @@
 
         .deco-card .button-holder {
             opacity: 0%;
-            margin-top: -40px;
+            margin-top: -100px;
             transition: opacity 0.2s ease-in-out;
         }
         .deco-card:hover .button-holder {
             opacity: 100%;
-            margin-top: 0px;
+            margin-top: -40px;
         }
 
         .deco-card .fade {
@@ -430,6 +798,123 @@
         }
 
         /* ^ Deco */
+
+        /* Effects */
+
+        .effect-card {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 740px;
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            background-image: linear-gradient(var(--card-color1), var(--card-color2));
+            padding: 10px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        .no-card-theme .effect-card {
+            border: 2px solid rgb(30, 31, 34);
+            background-image: linear-gradient(rgb(17, 18, 20), rgb(17, 18, 20));
+        }
+        .open .effect-card {
+            width: 600px;
+            height: 1530px;
+        }
+
+        .effectimage {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 70px;
+            scale: 120%;
+            width: 300px;
+            height: 470px;
+            padding: 0px;
+            border-radius: 20px 20px 20px 20px;
+            content: url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/empty.png);
+            background-image: var(--effect-thumbnail), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+            background-size: 100%;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+        .effect-card:hover .effectimage {
+            background-image: var(--effect-intro), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+        }
+        .open .effectimage {
+            background-image: var(--effect-intro), url(https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/352db5d6852138aabc88.png);
+        }
+
+        .effect-content-holder {
+            background-color: rgba(0, 0, 0, 60%);
+            width: 520px;
+            margin-left: -10px;
+            margin-top: -120px;
+            height: 330px;
+            position: relative;
+            border-radius: 0px 0px 50px 50px;
+            backdrop-filter: blur(10px);
+        }
+        .no-card-theme .effect-content-holder {
+            background-color: rgba(30, 31, 34, 60%);
+            backdrop-filter: blur(10px);
+        }
+        .card-content {
+            padding: 10px;
+        }
+        .open .effect-content-holder {
+            width: 620px;
+            height: 1120px;
+        }
+
+        .effect-card .button-holder {
+            opacity: 0%;
+            margin-top: -100px;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .effect-card:hover .button-holder {
+            opacity: 100%;
+            margin-top: -40px;
+        }
+
+        .effect-card .fade {
+            opacity: 100%;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .effect-card:hover .fade {
+            opacity: 0%;
+            display: none;
+        }
+
+        /* ^ Effects */
+
+        .open [class*="card"] .fade {
+            opacity: 100%;
+            display: block;
+        }
+        .open .button-holder {
+            opacity: 100%;
+            margin-top: 0px;
+        }
+        .open [class*="card"] .closed {
+            display: none;
+        }
+
+        .open-text {
+            display: none;
+        }
+        .open .open-text {
+            display: block;
+        }
+
+        .closed-text {
+            display: block;
+        }
+        .open .closed-text {
+            display: none;
+        }
 
         .cardbutton {
             display: block;
@@ -466,6 +951,167 @@
             color: rgb(255, 255, 255);
         }
 
+        .loading-dots .dots {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            height: auto;
+            scale: 80%;
+        }
+
+        .link {
+            color: #559eff;
+            text-decoration: underline;
+            transition: color 0.1s ease-in-out;
+        }
+        .link:hover {
+            color: #8abdff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        [id*="theme-button"]:not([id*="card"]) {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            transition: border 0.2s ease-in-out;
+        }
+
+        [id="light-theme-button"] {
+            background-color: white;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="light-theme-button"]:hover {
+            background-color: white;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-light [id="light-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-light [id="light-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="dark-theme-button"] {
+            background-color: #313338;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="dark-theme-button"]:hover {
+            background-color: #313338;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .darkmode [id="dark-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .darkmode [id="dark-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="darker-theme-button"] {
+            background-color: #171718;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="darker-theme-button"]:hover {
+            background-color: #171718;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-darker [id="darker-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-darker [id="darker-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="black-theme-button"] {
+            background-color: #000000;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="black-theme-button"]:hover {
+            background-color: #000000;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-black [id="black-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-black [id="black-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="red-theme-button"] {
+            background-color: #410000;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="red-theme-button"]:hover {
+            background-color: #410000;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-theme-red [id="red-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-theme-red [id="red-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="blue-theme-button"] {
+            background-color: #010041;
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="blue-theme-button"]:hover {
+            background-color: #010041;
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-theme-blue [id="blue-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-theme-blue [id="blue-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="dynamic-theme-button"] {
+            background-image: linear-gradient(90deg, rgb(81, 192, 71), rgb(71, 81, 192));
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="dynamic-theme-button"]:hover {
+            background-image: linear-gradient(90deg, rgb(81, 192, 71), rgb(71, 81, 192));
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-dynamic [id="dynamic-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-dynamic [id="dynamic-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        [id="image-theme-button"] {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/image-theme-preview.png);
+            border: 5px solid rgb(89, 102, 243);
+        }
+        [id="image-theme-button"]:hover {
+            background-image: url(https://raw.githubusercontent.com/DTACat/Collectibles/page/main/assets/image-theme-preview.png);
+            border: 5px solid rgb(71, 81, 192);
+        }
+        .background-theme-image [id="image-theme-button"] {
+            border: 5px solid rgb(5, 129, 75);
+        }
+        .background-theme-image [id="image-theme-button"]:hover {
+            border: 5px solid rgb(7, 88, 53);
+        }
+
+        .theme-button-selected {
+            border: 5px solid rgb(5, 129, 75);
+        }
+
+        [id="youtube-button"] {
+            width: 65px;
+            height: 50px;
+        }
+        [id="github-button"] {
+            width: 65px;
+            height: 50px;
+        }
+
 
         .padding1 {
             padding: 1em;
@@ -483,7 +1129,6 @@
 </head>
 
 <body>
-
     <div class="loading">
         <button class="button server-button hidden" onclick="toggleDevTools403()" id="devtools-button">DevTools</button>
 
@@ -543,35 +1188,45 @@
 
         <h3 class="sillywords sidebarwords">Themes</h3>
 
-        <button title="Light Mode" class="button server-button" id="light-theme-button">Light</button>
+        <button title="Light Mode" class="button server-button" id="light-theme-button"></button>
 
-        <button title="Dark Mode" class="button server-button" id="dark-theme-button">Dark</button>
+        <button title="Dark Mode" class="button server-button" id="dark-theme-button"></button>
 
-        <button title="Darker Mode" class="button server-button" id="darker-theme-button">Darker</button>
+        <button title="Darker Mode" class="button server-button" id="darker-theme-button"></button>
 
-        <button title="Void Mode" class="button server-button" id="black-theme-button">Void</button>
+        <button title="Void Mode" class="button server-button" id="black-theme-button"></button>
+
+        <button title="Red" class="button server-button" id="red-theme-button"></button>
+
+        <button title="Blue" class="button server-button" id="blue-theme-button"></button>
 
         <div class="hidden" id="theme-exp">
-            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button">Dynamic</button>
+            <button title="Dynamic Mode" class="button server-button" id="dynamic-theme-button"></button>
+
+            <button title="Test Images" class="button server-button" id="image-theme-button"></button>
         </div>
+
+        <button title="Reset Theme" class="button server-button" id="theme-reset-button">Reset Theme</button>
 
         <h3 class="sillywords sidebarwords">Cards</h3>
 
-        <button title="As fireglitch64 Wanted" class="button server-button" onclick="toggleCardTheme()" id="card-theme-button">Card Theme</button>
+        <button title="As fireglitch64 Wanted" class="button server-button server-button-blue" onclick="toggleCardTheme()" id="card-theme-button">Card Theme</button>
 
         <div class="hidden" id="experiments">
             <hr>
         
             <h2 class="sillywords sidebarwords">Experiments</h2>
 
-            <a class="sillywords sidebarwords">No experiments yet</a>
+            <button title="Unreleased Tabs" class="button server-button" onclick="toggleUnreleasedTabs()" id="unreleased-tabs-button">Unreleased Tabs</button>
         </div>
 
         <hr>
 
-        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button">Youtube</button></a>
+        <a href="https://www.youtube.com/@DTACat"><button title="Youtube" class="button server-button" id="youtube-button">Youtube</button></a>
 
-        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button">Source Code</button></a>
+        <a href="https://github.com/DTACat/Collectibles/"><button title="Github" class="button server-button" id="github-button">Github</button></a>
+
+        <a class="sillywords sidebarwords">shop14.19</a>
 
     </div>
 
@@ -579,72 +1234,135 @@
         <h1 class="sillywords" style="margin-left: 10px;">Dev Mode Enabled</h1>
         <h3 class="sillywords" style="margin-left: 10px;">Looks like you enabled Dev Mode, please note that Dev Mode is unstable and is for TESTING PURPOSES ONLY. To exit Dev Mode, refresh the page.</h3>
     </div>
-
-    <div class="itemlist bundles-hidden" id="main-thing">
-
-        <div class="arcade" style="
-        --card-color1: rgb(3, 2, 36);
-        --card-color2: rgb(8, 1, 43);
-        --border-color: rgb(3, 2, 36);
+    
+    <div class="itemlist unreleased-tabs-hidden" id="main-thing">
+        <div class="items1" style="
+        --card-color1: rgb(17, 18, 20);
+        --card-color2: rgb(17, 18, 20);
+        --border-color: rgb(17, 18, 20);
         --button-color1: rgb(89, 102, 243);
         --button-color2: rgb(89, 102, 243);
         --button-color3: rgb(71, 81, 192);
         --button-color4: rgb(71, 81, 192);
         --button-text-color: rgb(255, 255, 255);
-        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1245087533205819452.png?size=1280);">
-            <!-- Arcade -->
+        --banner-image: url(https://cdn.discordapp.com/app-assets/1096190356233670716/1262491137386614807.png?size=1280);">
+            <!--  -->
 
-            <div class="in-shop" id="arcadeitems">
-                <div class="arcadedecorow decorow">
-                    <div class="deco-card arcadedecos" style="
+            <div class="in-shop" id="items">
+                <div class="decorow decorow">
+                    <div class="deco-card decos" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchives.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ShopArchives.png');">
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">By DTACat</a>
+                                <a class="sillywords sku">By DTACat & Trell</a>
                                 <h1 class="sillywords">Shop Archives</h1>
-                                <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles</a>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles.</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$12.99 - US$9.99</h1>
                                 <div class="button-holder">
                                     <button class="cardbutton" onclick="location.href='main';">Open</button>
-                                    <button class="cardbutton cardbutton-locked">Locked</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card arcadedecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/DiscArchive.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/DiscArchive.png');">
+                    <div class="bundle-card bundle" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ProfilesPlus.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ProfilesPlus.png');
+                    --effect-thumbnail: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/arrow-rain/1/thumbnail.png');
+                    --effect-intro: url('https://raw.githubusercontent.com/DTACat/Discord-Profiles-Plus/version2/custom-collectibles/bopl-battle/effects/arrow-rain/2/intro.png');">
+                        <img class="bundle-effectimage">
+                        <img class="bundle-decoimage">
+                        <div class="bundle-content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">By DTACat & Trell</a>
+                                <h1 class="sillywords">Profiles Plus</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Makes your Discord profile look 100 times better.</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$10.99 - US$8.99</h1>
+                                <h1 class="sillywords bundle-discount fade closed" style="opacity: 0;">(-8%) - (-24%)</h1>
+                                <div class="button-holder">
+                                    <button class="cardbutton" onclick="location.href='https://github.com/DTACat/Discord-Profiles-Plus';">Open</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card decos unreleased-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');">
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
-                                <a class="sillywords sku">By Happy Enderman</a>
-                                <h1 class="sillywords">Disc Archives</h1>
-                                <a class="sillywords fade">An archive of discord collectibles with their SKU ids</a>
+                                <a class="sillywords sku">By DTACat & Trell</a>
+                                <h1 class="sillywords">Blog</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$12.99 - US$9.99</h1>
                                 <div class="button-holder">
-                                    <button class="cardbutton" onclick="location.href='https://da.happyenderman.com/';">Open</button>
-                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                    <button class="cardbutton" onclick="location.href='blog';">Open</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card arcadedecos" style="
-                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ProfilesPlus.png');
-                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/ProfilesPlus.png');">
+                    <div class="deco-card decos unreleased-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');">
                         <img class="decoimage">
                         <div class="content-holder">
                             <div class="card-content">
                                 <a class="sillywords sku">By DTACat</a>
-                                <h1 class="sillywords">Profiles Plus</h1>
-                                <a class="sillywords fade">Makes your Discord profile look 100 times better.</a>
+                                <h1 class="sillywords">Color Logs</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$12.99 - US$9.99</h1>
                                 <div class="button-holder">
-                                    <button class="cardbutton" onclick="location.href='https://github.com/DTACat/Discord-Profiles-Plus';">Open</button>
-                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                    <button class="cardbutton" onclick="location.href='colours';">Open</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="deco-card arcadedecos" style="
+                    <div class="deco-card decos unreleased-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">By DTACat</a>
+                                <h1 class="sillywords">Dynamic Banners</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$12.99 - US$9.99</h1>
+                                <div class="button-holder">
+                                    <button class="cardbutton" onclick="location.href='dynamic-banners';">Open</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card decos unreleased-card" style="
+                    --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');
+                    --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/shopuhoh.png');">
+                        <img class="decoimage">
+                        <div class="content-holder">
+                            <div class="card-content">
+                                <a class="sillywords sku">By Trell</a>
+                                <h1 class="sillywords">Guides</h1>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Your one stop place for all old and new Discord Collectibles</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$12.99 - US$9.99</h1>
+                                <div class="button-holder">
+                                    <button class="cardbutton" onclick="location.href='guides';">Open</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deco-card decos" style="
                     --deco-icon-false: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/QuestionMark.png');
                     --deco-icon-true: url('https://raw.githubusercontent.com/DTACat/Collectibles/main/Images/QuestionMark.png');">
                         <img class="decoimage">
@@ -652,16 +1370,19 @@
                             <div class="card-content">
                                 <a class="sillywords sku">Coming Soon...</a>
                                 <h1 class="sillywords">Coming Soon...</h1>
-                                <a class="sillywords fade">Our team is working hard to bring you the best tools for Collectibles</a>
+                                <div class="description-holder">
+                                    <a class="sillywords fade">Our team is working hard to bring you the best tools for Collectibles.</a>
+                                </div>
+                                <h1 class="sillywords fade" style="opacity: 0;">US$12.99 - US$9.99</h1>
                                 <div class="button-holder">
-                                    <button class="cardbutton cardbutton-locked">Locked</button>
-                                    <button class="cardbutton cardbutton-locked">Locked</button>
+                                    <button class="cardbutton cardbutton-locked">Coming Soon...</button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                 </div>
+
             </div>
 
         </div>
@@ -670,7 +1391,7 @@
 
     <script>
 
-document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
+        document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
             const inputField = copyLinkParent.querySelector(".copy-pp");
             const copyButton = copyLinkParent.querySelector(".button-pp");
             const text = inputField.value;
@@ -685,59 +1406,6 @@ document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
                 setTimeout(() => (inputField.value = text), 2000);
             });
         });
-
-
-        function dynamicOneTwo() {
-            let banner1 = document.getElementById('dynamicbanner1');
-            let banner2 = document.getElementById('dynamicbanner2');
-
-            if (banner1.classList.contains('dynamicbanner1')) {
-                banner1.classList.add('hidden');
-            }
-
-            if (banner2.classList.contains('dynamicbanner2')) {
-                banner2.classList.remove('hidden');
-            }
-        }
-
-        function dynamicTwoThree() {
-            let banner2 = document.getElementById('dynamicbanner2');
-            let banner3 = document.getElementById('dynamicbanner3');
-
-            if (banner2.classList.contains('dynamicbanner2')) {
-                banner2.classList.add('hidden');
-            }
-
-            if (banner3.classList.contains('dynamicbanner3')) {
-                banner3.classList.remove('hidden');
-            }
-        }
-
-        function dynamicThreeFour() {
-            let banner3 = document.getElementById('dynamicbanner3');
-            let banner4 = document.getElementById('dynamicbanner4');
-
-            if (banner3.classList.contains('dynamicbanner3')) {
-                banner3.classList.add('hidden');
-            }
-
-            if (banner4.classList.contains('dynamicbanner4')) {
-                banner4.classList.remove('hidden');
-            }
-        }
-
-        function dynamicFourOne() {
-            let banner4 = document.getElementById('dynamicbanner4');
-            let banner1 = document.getElementById('dynamicbanner1');
-
-            if (banner4.classList.contains('dynamicbanner4')) {
-                banner4.classList.add('hidden');
-            }
-
-            if (banner1.classList.contains('dynamicbanner1')) {
-                banner1.classList.remove('hidden');
-            }
-        }
 
 
         function toggleDevTools() {
@@ -792,125 +1460,6 @@ document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
             }
         }
 
-        function toggleBundles() {
-            let bundles = document.getElementById('main-thing');
-            let button = document.getElementById('bundles-button');
-
-            if (bundles.classList.contains('bundles-hidden')) {
-                bundles.classList.remove('bundles-hidden');
-            } else {
-                bundles.classList.add('bundles-hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleDeco() {
-            let deco = document.getElementById('main-thing');
-            let button = document.getElementById('deco-button');
-
-            if (deco.classList.contains('deco-hidden')) {
-                deco.classList.remove('deco-hidden');
-            } else {
-                deco.classList.add('deco-hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleEffects() {
-            let effects = document.getElementById('main-thing');
-            let button = document.getElementById('effects-button');
-
-            if (effects.classList.contains('effect-hidden')) {
-                effects.classList.remove('effect-hidden');
-            } else {
-                effects.classList.add('effect-hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleUnpublished() {
-            let unpub = document.getElementById('main-thing');
-            let button = document.getElementById('unpublished-button');
-
-            if (unpub.classList.contains('unpub-hidden')) {
-                unpub.classList.remove('unpub-hidden');
-            } else {
-                unpub.classList.add('unpub-hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleInShop() {
-            let inshop = document.getElementById('main-thing');
-            let button = document.getElementById('in-shop-button');
-
-            if (inshop.classList.contains('in-shop')) {
-                inshop.classList.remove('in-shop');
-            } else {
-                inshop.classList.add('in-shop');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleBanners() {
-            let banner = document.getElementById('main-thing');
-            let button = document.getElementById('banner-button');
-
-            if (banner.classList.contains('banners-hidden')) {
-                banner.classList.remove('banners-hidden');
-            } else {
-                banner.classList.add('banners-hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
-        function toggleDynamicBanners() {
-            let banners = document.getElementById('dynamicbanners');
-            let button = document.getElementById('dynamic-button');
-
-            if (banners.classList.contains('hidden')) {
-                banners.classList.remove('hidden');
-            } else {
-                banners.classList.add('hidden');
-            }
-
-            if (button.classList.contains('server-button-blue')) {
-                button.classList.remove('server-button-blue');
-            } else {
-                button.classList.add('server-button-blue');
-            }
-        }
-
         function toggleSettings() {
             let bundles = document.getElementById('settings-menu');
             let button = document.getElementById('settings-button');
@@ -946,14 +1495,14 @@ document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
         }
 
 
-        function toggleExtraInfo() {
+        function toggleUnreleasedTabs() {
             let open = document.getElementById('main-thing');
-            let button = document.getElementById('extra-info-button');
+            let button = document.getElementById('unreleased-tabs-button');
 
-            if (open.classList.contains('open')) {
-                open.classList.remove('open');
+            if (open.classList.contains('unreleased-tabs-hidden')) {
+                open.classList.remove('unreleased-tabs-hidden');
             } else {
-                open.classList.add('open');
+                open.classList.add('unreleased-tabs-hidden');
             }
 
             if (button.classList.contains('server-button-blue')) {
@@ -970,6 +1519,11 @@ document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
             localStorage.theme = "background-light";
         });
 
+        document.getElementById("theme-reset-button").addEventListener("click", e => {
+            document.body.className = "darkmode";
+            localStorage.theme = "darkmode";
+        });
+
         document.getElementById("dark-theme-button").addEventListener("click", e => {
             document.body.className = "darkmode";
             localStorage.theme = "darkmode";
@@ -983,6 +1537,21 @@ document.querySelectorAll(".copy-link").forEach((copyLinkParent) => {
         document.getElementById("black-theme-button").addEventListener("click", e => {
             document.body.className = "background-black";
             localStorage.theme = "background-black";
+        });
+
+        document.getElementById("red-theme-button").addEventListener("click", e => {
+            document.body.className = "background-theme-red";
+            localStorage.theme = "background-theme-red";
+        });
+
+        document.getElementById("blue-theme-button").addEventListener("click", e => {
+            document.body.className = "background-theme-blue";
+            localStorage.theme = "background-theme-blue";
+        });
+
+        document.getElementById("image-theme-button").addEventListener("click", e => {
+            document.body.className = "background-theme-image";
+            localStorage.theme = "background-theme-image";
         });
 
         document.getElementById("dynamic-theme-button").addEventListener("click", e => {
